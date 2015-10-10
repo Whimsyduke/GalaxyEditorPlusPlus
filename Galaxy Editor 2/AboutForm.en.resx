@@ -452,7 +452,7 @@
     <value>141, 16</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Version : v3.1.0 - c0.0.1</value>
+    <value>Version : v3.1.0 - c0.1.2</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>422, 204</value>

@@ -95,19 +95,9 @@ namespace Galaxy_Editor_2
 
         private void CrawlAndParseMpqs()
         {
-            ////Console.WriteLine("Sc2 Path:");
-            ////Console.WriteLine(Options.General.SC2Exe.FullName);
-            //if (Options.General.SC2Exe == null) return ;
-            //DirectoryInfo versionDir = new DirectoryInfo(Options.General.SC2Exe.Directory + @"\Mods");
+            //Get Libs from TriggerLibs Directory
             DirectoryInfo versionDir = new DirectoryInfo("TriggerLibs");
-            //if (!versionDir.Exists) return;
             if (!versionDir.Exists) return;
-            ////Console.WriteLine("Versions Path:");
-            ////Console.WriteLine(versionDir.FullName);
-
-            //// These are all the patch folders of starcraft
-            //// Every folder may contain multiple "SC2Archive" files which may contain trigger natives
-            //System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
             System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
             List<FileInfo> galaxyFiles = new List<FileInfo>();
             galaxyFiles.AddRange(versionDir.GetFiles("*.galaxy"));
@@ -120,6 +110,17 @@ namespace Galaxy_Editor_2
                 string fileContent = File.ReadAllText(file.FullName, Encoding.ASCII);
                 ParseFile(fileContent);
             }
+            ////Console.WriteLine("Sc2 Path:");
+            ////Console.WriteLine(Options.General.SC2Exe.FullName);
+            //if (Options.General.SC2Exe == null) return ;
+            //DirectoryInfo versionDir = new DirectoryInfo(Options.General.SC2Exe.Directory + @"\Mods");
+            //if (!versionDir.Exists) return;
+            ////Console.WriteLine("Versions Path:");
+            ////Console.WriteLine(versionDir.FullName);
+
+            //// These are all the patch folders of starcraft
+            //// Every folder may contain multiple "SC2Archive" files which may contain trigger natives
+            //System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
             //foreach (var subDir in versionDir.GetDirectories())
             //{
             //    List<FileInfo> filesToSearch = new List<FileInfo>();
@@ -143,7 +144,20 @@ namespace Galaxy_Editor_2
             //    }
             //}
         }
+        //public void AddModFunction(FileInfo mod)
+        //{
+        //    System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
+        //    MpqEditor.MpqReader fileReader = new MpqEditor.MpqReader(mod.FullName);
+        //    if (!fileReader.Valid) return;
 
+        //    string[] foundGalaxyFiles = fileReader.FindFiles("*.galaxy");
+        //    foreach (var file in foundGalaxyFiles)
+        //    {
+        //        //Console.WriteLine("\tfile: " + file);
+        //        string fileContent = enc.GetString(fileReader.ExtractFile(file));
+        //        ParseFile(fileContent);
+        //    }
+        //}
         private void ParseFile(string fileContents)
         {
             ParseFunctions(fileContents);
