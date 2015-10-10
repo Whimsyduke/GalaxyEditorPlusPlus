@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ALL_Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Delegates_Text1" xml:space="preserve">
+    <value>No possible methods found for delegate invoke.</value>
+  </data>
+  <data name="ErrorText1" xml:space="preserve">
+    <value>Found multiple candidates for the main entry</value>
+  </data>
+  <data name="ErrorText10" xml:space="preserve">
+    <value>Matching </value>
+  </data>
+  <data name="ErrorText100" xml:space="preserve">
+    <value>Matching declaration</value>
+  </data>
+  <data name="ErrorText101" xml:space="preserve">
+    <value>You can not access a non-static property in a static context.</value>
+  </data>
+  <data name="ErrorText102" xml:space="preserve">
+    <value>Unable to use struct fields outside of methods.</value>
+  </data>
+  <data name="ErrorText103" xml:space="preserve">
+    <value>+ is not defined for type </value>
+  </data>
+  <data name="ErrorText104" xml:space="preserve">
+    <value> is only defined for (bool </value>
+  </data>
+  <data name="ErrorText105" xml:space="preserve">
+    <value>Found no definitions of (</value>
+  </data>
+  <data name="ErrorText106" xml:space="preserve">
+    <value>Matching operator</value>
+  </data>
+  <data name="ErrorText107" xml:space="preserve">
+    <value>Matched default </value>
+  </data>
+  <data name="ErrorText108" xml:space="preserve">
+    <value>Multiple definitions for (</value>
+  </data>
+  <data name="ErrorText109" xml:space="preserve">
+    <value>) found.</value>
+  </data>
+  <data name="ErrorText11" xml:space="preserve">
+    <value>Found multiple structs/classes matching </value>
+  </data>
+  <data name="ErrorText110" xml:space="preserve">
+    <value>- is not defined for type </value>
+  </data>
+  <data name="ErrorText111" xml:space="preserve">
+    <value>"! is not defined for type </value>
+  </data>
+  <data name="ErrorText112" xml:space="preserve">
+    <value>Constant fields must be initialized.</value>
+  </data>
+  <data name="ErrorText113" xml:space="preserve">
+    <value>Constant fields' initializer must be constant.</value>
+  </data>
+  <data name="ErrorText114" xml:space="preserve">
+    <value>++ and -- expressions can only reside inside methods.</value>
+  </data>
+  <data name="ErrorText115" xml:space="preserve">
+    <value>Pointers must be cast to either int or string.</value>
+  </data>
+  <data name="ErrorText116" xml:space="preserve">
+    <value>Expected cast to</value>
+  </data>
+  <data name="ErrorText117" xml:space="preserve">
+    <value>Expected cast to string.</value>
+  </data>
+  <data name="ErrorText118" xml:space="preserve">
+    <value>Sharp casts can only be used from pointers to int/string and vice versa.</value>
+  </data>
+  <data name="ErrorText119" xml:space="preserve">
+    <value>Pointers must be cast from either int or string.</value>
+  </data>
+  <data name="ErrorText12" xml:space="preserve">
+    <value>Constructors must have same name as the enclosing struct.</value>
+  </data>
+  <data name="ErrorText120" xml:space="preserve">
+    <value>Expected cast from</value>
+  </data>
+  <data name="ErrorText121" xml:space="preserve">
+    <value>Expected cast from string.</value>
+  </data>
+  <data name="ErrorText122" xml:space="preserve">
+    <value>Unable to cast from </value>
+  </data>
+  <data name="ErrorText123" xml:space="preserve">
+    <value>  to </value>
+  </data>
+  <data name="ErrorText124" xml:space="preserve">
+    <value>Method matching by name and number of parameters</value>
+  </data>
+  <data name="ErrorText125" xml:space="preserve">
+    <value>Unable to find a matching method.</value>
+  </data>
+  <data name="ErrorText126" xml:space="preserve">
+    <value>Matches dynamic array resize.</value>
+  </data>
+  <data name="ErrorText127" xml:space="preserve">
+    <value>Found multiple matching methods.</value>
+  </data>
+  <data name="ErrorText128" xml:space="preserve">
+    <value>Found multiple implicitly matching methods.</value>
+  </data>
+  <data name="ErrorText129" xml:space="preserve">
+    <value>Argument </value>
+  </data>
+  <data name="ErrorText13" xml:space="preserve">
+    <value>You can only define one deconstructor in a </value>
+  </data>
+  <data name="ErrorText130" xml:space="preserve">
+    <value>  must be a variable, as the parameter is marked as out or ref.</value>
+  </data>
+  <data name="ErrorText131" xml:space="preserve">
+    <value>Inline methods can only be called from inside other methods.</value>
+  </data>
+  <data name="ErrorText132" xml:space="preserve">
+    <value>  can not be a constant variable, as the parameter is marked as out or ref.</value>
+  </data>
+  <data name="ErrorText133" xml:space="preserve">
+    <value>Inline methods can only be called from inside methods, constructors or properties.</value>
+  </data>
+  <data name="ErrorText134" xml:space="preserve">
+    <value>The condition of the if can't be a struct or array.</value>
+  </data>
+  <data name="ErrorText135" xml:space="preserve">
+    <value>The then and else part of a ? expression must be assignable one way or the other.</value>
+  </data>
+  <data name="ErrorText136" xml:space="preserve">
+    <value>The keyword this can only be used inside struct constructors, deconstructors, classes or enrichments.</value>
+  </data>
+  <data name="ErrorText137" xml:space="preserve">
+    <value>The keyword this can not be used in a static context.</value>
+  </data>
+  <data name="ErrorText138" xml:space="preserve">
+    <value>You can't create a new instance of an enum.</value>
+  </data>
+  <data name="ErrorText139" xml:space="preserve">
+    <value>Matching enum</value>
+  </data>
+  <data name="ErrorText14" xml:space="preserve">
+    <value>The player must be an integer literal.</value>
+  </data>
+  <data name="ErrorText140" xml:space="preserve">
+    <value>Could not find a constructor matching: (</value>
+  </data>
+  <data name="ErrorText141" xml:space="preserve">
+    <value>Candidate </value>
+  </data>
+  <data name="ErrorText142" xml:space="preserve">
+    <value>Ambiguous constructor call. Found multiple matching constructor definitions.</value>
+  </data>
+  <data name="ErrorText143" xml:space="preserve">
+    <value>Instance creation expression must be in a method, since a constructor must be called.</value>
+  </data>
+  <data name="ErrorText144" xml:space="preserve">
+    <value>Constructors are only defined for struct types</value>
+  </data>
+  <data name="ErrorText145" xml:space="preserve">
+    <value>Can only delete dynamically allocated types.</value>
+  </data>
+  <data name="ErrorText146" xml:space="preserve">
+    <value>Unable to delete object from here, since a matching deconstructor is private.</value>
+  </data>
+  <data name="ErrorText147" xml:space="preserve">
+    <value>Deconstructor</value>
+  </data>
+  <data name="ErrorText148" xml:space="preserve">
+    <value>Unable to delete object from here, since a matching deconstructor is protected.</value>
+  </data>
+  <data name="ErrorText149" xml:space="preserve">
+    <value>Expected something of pointer type</value>
+  </data>
+  <data name="ErrorText15" xml:space="preserve">
+    <value>Other deconstructor</value>
+  </data>
+  <data name="ErrorText150" xml:space="preserve">
+    <value>Dynamic typed array can not put a requirement on the dimension.</value>
+  </data>
+  <data name="ErrorText151" xml:space="preserve">
+    <value>Unable to assign from type </value>
+  </data>
+  <data name="ErrorText152" xml:space="preserve">
+    <value>  to type </value>
+  </data>
+  <data name="ErrorText153" xml:space="preserve">
+    <value>Unable to assign to a const field.</value>
+  </data>
+  <data name="ErrorText154" xml:space="preserve">
+    <value>Used delegate</value>
+  </data>
+  <data name="ErrorText155" xml:space="preserve">
+    <value>Inconsistent accessibility. Private types used in public context.</value>
+  </data>
+  <data name="ErrorText156" xml:space="preserve">
+    <value>Method marked as trigger, but does not match the signature (bool, bool):bool</value>
+  </data>
+  <data name="ErrorText157" xml:space="preserve">
+    <value>Not all code paths return a value.</value>
+  </data>
+  <data name="ErrorText158" xml:space="preserve">
+    <value>Not all code paths of the getter return a value</value>
+  </data>
+  <data name="ErrorText159" xml:space="preserve">
+    <value> to type void</value>
+  </data>
+  <data name="ErrorText16" xml:space="preserve">
+    <value>Deconstructors must have same name as the enclosing struct.</value>
+  </data>
+  <data name="ErrorText160" xml:space="preserve">
+    <value>This function must return something of type </value>
+  </data>
+  <data name="ErrorText161" xml:space="preserve">
+    <value>The getter must return something of type </value>
+  </data>
+  <data name="ErrorText162" xml:space="preserve">
+    <value>Parameter marked as out is not assigned a value</value>
+  </data>
+  <data name="ErrorText163" xml:space="preserve">
+    <value>No matching base constructor found.</value>
+  </data>
+  <data name="ErrorText164" xml:space="preserve">
+    <value>Base struct</value>
+  </data>
+  <data name="ErrorText165" xml:space="preserve">
+    <value>Base constructor call matched multiple constructors.</value>
+  </data>
+  <data name="ErrorText166" xml:space="preserve">
+    <value>Struct array markers must be constant.</value>
+  </data>
+  <data name="ErrorText167" xml:space="preserve">
+    <value>Enrichment array markers must be constant.</value>
+  </data>
+  <data name="ErrorText168" xml:space="preserve">
+    <value>Dimensions of array types must be constant expressions.</value>
+  </data>
+  <data name="ErrorText169" xml:space="preserve">
+    <value>  did not match any defined fields or properties.</value>
+  </data>
+  <data name="ErrorText17" xml:space="preserve">
+    <value>A delegate can not be called the same name as a primitive.</value>
+  </data>
+  <data name="ErrorText170" xml:space="preserve">
+    <value>matched multiple defined fields or properties</value>
+  </data>
+  <data name="ErrorText171" xml:space="preserve">
+    <value>Unable to use struct in classes, constructors and deconstructors. Use this instead.</value>
+  </data>
+  <data name="ErrorText172" xml:space="preserve">
+    <value>  did not match any defined struct fields.</value>
+  </data>
+  <data name="ErrorText173" xml:space="preserve">
+    <value>Found multiple matching declarations</value>
+  </data>
+  <data name="ErrorText174" xml:space="preserve">
+    <value>  did not match any definitions.</value>
+  </data>
+  <data name="ErrorText175" xml:space="preserve">
+    <value>Found no matching declarations</value>
+  </data>
+  <data name="ErrorText176" xml:space="preserve">
+    <value>Whatever that is, it's not allowed in a type</value>
+  </data>
+  <data name="ErrorText177" xml:space="preserve">
+    <value>Invalid type name. Must be "&lt;namespace&gt;.&lt;struct name&gt;".</value>
+  </data>
+  <data name="ErrorText178" xml:space="preserve">
+    <value>The ? operator can only be used in statements.</value>
+  </data>
+  <data name="ErrorText179" xml:space="preserve">
+    <value>Enum member</value>
+  </data>
+  <data name="ErrorText18" xml:space="preserve">
+    <value>Only void return are allowed here.</value>
+  </data>
+  <data name="ErrorText180" xml:space="preserve">
+    <value>Found multiple enum members with the value </value>
+  </data>
+  <data name="ErrorText181" xml:space="preserve">
+    <value>Typedefs can't be marked as protected.</value>
+  </data>
+  <data name="ErrorText182" xml:space="preserve">
+    <value>Custom operators must have exactly two parameters.</value>
+  </data>
+  <data name="ErrorText183" xml:space="preserve">
+    <value>Constant fields must have an initializer</value>
+  </data>
+  <data name="ErrorText184" xml:space="preserve">
+    <value>Only fields inside structs or classes can be marked as protected.</value>
+  </data>
+  <data name="ErrorText185" xml:space="preserve">
+    <value>This type of property declaration must be in a struct, class or enrichment.</value>
+  </data>
+  <data name="ErrorText186" xml:space="preserve">
+    <value>Assignments have to be inside methods</value>
+  </data>
+  <data name="ErrorText187" xml:space="preserve">
+    <value>The keyword value can only be used in property setters</value>
+  </data>
+  <data name="ErrorText188" xml:space="preserve">
+    <value>Break statements must be inside for, while or switch statements</value>
+  </data>
+  <data name="ErrorText189" xml:space="preserve">
+    <value>Continue statements must be inside for or while statemetns</value>
+  </data>
+  <data name="ErrorText19" xml:space="preserve">
+    <value>String obfuscation will not work in this context. I had some problems with triggers being initialized incorrectly.</value>
+  </data>
+  <data name="ErrorText190" xml:space="preserve">
+    <value>Const variables must have an initializer</value>
+  </data>
+  <data name="ErrorText191" xml:space="preserve">
+    <value>Parameters can not be const</value>
+  </data>
+  <data name="ErrorText192" xml:space="preserve">
+    <value>Triggers can not be marked as protected.</value>
+  </data>
+  <data name="ErrorText193" xml:space="preserve">
+    <value>A deconstructor can't take parameters</value>
+  </data>
+  <data name="ErrorText194" xml:space="preserve">
+    <value>A deconstructors in enrichments can't be protected.</value>
+  </data>
+  <data name="ErrorText195" xml:space="preserve">
+    <value>Delegates can not have a body.</value>
+  </data>
+  <data name="ErrorText196" xml:space="preserve">
+    <value>Delegates may not be marked as inline.</value>
+  </data>
+  <data name="ErrorText197" xml:space="preserve">
+    <value>Delegates may not be marked as trigger.</value>
+  </data>
+  <data name="ErrorText198" xml:space="preserve">
+    <value>Delegates may not be marked as static.</value>
+  </data>
+  <data name="ErrorText199" xml:space="preserve">
+    <value>Delegates may not be marked as native.</value>
+  </data>
+  <data name="ErrorText2" xml:space="preserve">
+    <value>It is not possible to override fields.</value>
+  </data>
+  <data name="ErrorText20" xml:space="preserve">
+    <value>Other field string</value>
+  </data>
+  <data name="ErrorText200" xml:space="preserve">
+    <value>Only methods inside structs or classes can be marked as protected.</value>
+  </data>
+  <data name="ErrorText201" xml:space="preserve">
+    <value>Structs or classes can not be marked as protected.</value>
+  </data>
+  <data name="ErrorText202" xml:space="preserve">
+    <value>Can only cast to string, text, int or fixed.</value>
+  </data>
+  <data name="ErrorText203" xml:space="preserve">
+    <value>A local declaration must be inside a block</value>
+  </data>
+  <data name="ErrorText204" xml:space="preserve">
+    <value>Expected a variable name</value>
+  </data>
+  <data name="ErrorText205" xml:space="preserve">
+    <value>Expected an initializer</value>
+  </data>
+  <data name="ErrorText206" xml:space="preserve">
+    <value>Expected macro name</value>
+  </data>
+  <data name="ErrorText207" xml:space="preserve">
+    <value>You can't declare new macros inside a macro.</value>
+  </data>
+  <data name="ErrorText208" xml:space="preserve">
+    <value>Current macro</value>
+  </data>
+  <data name="ErrorText209" xml:space="preserve">
+    <value>Found no matching #endmacro</value>
+  </data>
+  <data name="ErrorText21" xml:space="preserve">
+    <value>If you dont use an explicit string literal here, it will not be possible to rename triggers</value>
+  </data>
+  <data name="ErrorText210" xml:space="preserve">
+    <value>Expected identifier or right parenthesis</value>
+  </data>
+  <data name="ErrorText211" xml:space="preserve">
+    <value>Expected comma or right parenthesis</value>
+  </data>
+  <data name="ErrorText212" xml:space="preserve">
+    <value>Conflicting macro</value>
+  </data>
+  <data name="ErrorText213" xml:space="preserve">
+    <value>Found multiple macros with same signature.</value>
+  </data>
+  <data name="ErrorText214" xml:space="preserve">
+    <value>Macro invocation not closed</value>
+  </data>
+  <data name="ErrorText215" xml:space="preserve">
+    <value>Expected right parenthesis</value>
+  </data>
+  <data name="ErrorText216" xml:space="preserve">
+    <value>Macro in cycle</value>
+  </data>
+  <data name="ErrorText217" xml:space="preserve">
+    <value>Found a cycle in macros</value>
+  </data>
+  <data name="ErrorText218" xml:space="preserve">
+    <value>No matching macro found.</value>
+  </data>
+  <data name="ErrorText219" xml:space="preserve">
+    <value>Unused method</value>
+  </data>
+  <data name="ErrorText22" xml:space="preserve">
+    <value>Other non literal TriggerCreate call</value>
+  </data>
+  <data name="ErrorText220" xml:space="preserve">
+    <value>] expecting:</value>
+  </data>
+  <data name="ErrorText23" xml:space="preserve">
+    <value>You can only specify one library name.</value>
+  </data>
+  <data name="ErrorText24" xml:space="preserve">
+    <value>You can only specify one library version.</value>
+  </data>
+  <data name="ErrorText25" xml:space="preserve">
+    <value>Invalid library name.</value>
+  </data>
+  <data name="ErrorText26" xml:space="preserve">
+    <value>Invalid library version.</value>
+  </data>
+  <data name="ErrorText27" xml:space="preserve">
+    <value>Invalid format. It must be on the form "(lib1:ver1),lib2:ver2,..."</value>
+  </data>
+  <data name="ErrorText28" xml:space="preserve">
+    <value>The library </value>
+  </data>
+  <data name="ErrorText29" xml:space="preserve">
+    <value>  is marked as required, but could not be found.</value>
+  </data>
+  <data name="ErrorText3" xml:space="preserve">
+    <value>A struct can not inherit from a class.</value>
+  </data>
+  <data name="ErrorText30" xml:space="preserve">
+    <value>Member of cycle</value>
+  </data>
+  <data name="ErrorText31" xml:space="preserve">
+    <value>Cycle of libaray dependancies found. One of them will not have all it's dependancies initialized.</value>
+  </data>
+  <data name="ErrorText32" xml:space="preserve">
+    <value>Other local variable</value>
+  </data>
+  <data name="ErrorText33" xml:space="preserve">
+    <value>You can not have two local varaiables within same scope who has the same name</value>
+  </data>
+  <data name="ErrorText34" xml:space="preserve">
+    <value>A paramter can not be marked as both ref and out.</value>
+  </data>
+  <data name="ErrorText35" xml:space="preserve">
+    <value>The keyword global can only be used inside methods</value>
+  </data>
+  <data name="ErrorText36" xml:space="preserve">
+    <value>When the keyword struct is used in this context, it has to be inside a method.</value>
+  </data>
+  <data name="ErrorText37" xml:space="preserve">
+    <value>Target trigger not found</value>
+  </data>
+  <data name="ErrorText38" xml:space="preserve">
+    <value>Matching method</value>
+  </data>
+  <data name="ErrorText39" xml:space="preserve">
+    <value>Multiple target triggers found</value>
+  </data>
+  <data name="ErrorText4" xml:space="preserve">
+    <value>Overridden </value>
+  </data>
+  <data name="ErrorText40" xml:space="preserve">
+    <value>TriggerCreate that does not have a constant literal</value>
+  </data>
+  <data name="ErrorText41" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="ErrorText42" xml:space="preserve">
+    <value>You have a non constant TriggerCreate. This prevent the compiler from renaming triggers. You also have two triggers with the same name though.</value>
+  </data>
+  <data name="ErrorText43" xml:space="preserve">
+    <value>You must specify the dimentions of the array here</value>
+  </data>
+  <data name="ErrorText44" xml:space="preserve">
+    <value>Base type must be a struct or a class.</value>
+  </data>
+  <data name="ErrorText45" xml:space="preserve">
+    <value>The number of generic variables does not match.</value>
+  </data>
+  <data name="ErrorText46" xml:space="preserve">
+    <value>Target </value>
+  </data>
+  <data name="ErrorText47" xml:space="preserve">
+    <value>Target struct is a generic type. You must specify types for the generics.</value>
+  </data>
+  <data name="ErrorText48" xml:space="preserve">
+    <value>Matching </value>
+  </data>
+  <data name="ErrorText49" xml:space="preserve">
+    <value>Could not find any types matching </value>
+  </data>
+  <data name="ErrorText5" xml:space="preserve">
+    <value>Enherited class</value>
+  </data>
+  <data name="ErrorText50" xml:space="preserve">
+    <value>Matches primitive</value>
+  </data>
+  <data name="ErrorText51" xml:space="preserve">
+    <value>Matching typedef</value>
+  </data>
+  <data name="ErrorText52" xml:space="preserve">
+    <value>Matching </value>
+  </data>
+  <data name="ErrorText53" xml:space="preserve">
+    <value>Matching delegate</value>
+  </data>
+  <data name="ErrorText54" xml:space="preserve">
+    <value>Matching generic</value>
+  </data>
+  <data name="ErrorText55" xml:space="preserve">
+    <value>Found multiple types matching </value>
+  </data>
+  <data name="ErrorText56" xml:space="preserve">
+    <value>You can not enrich this type.</value>
+  </data>
+  <data name="ErrorText57" xml:space="preserve">
+    <value>Zero division during constant folding.</value>
+  </data>
+  <data name="ErrorText58" xml:space="preserve">
+    <value>Division by zero</value>
+  </data>
+  <data name="ErrorText59" xml:space="preserve">
+    <value>Dimensions of array types must integer expressions.</value>
+  </data>
+  <data name="ErrorText6" xml:space="preserve">
+    <value>It is not possible to override methods.</value>
+  </data>
+  <data name="ErrorText60" xml:space="preserve">
+    <value>Matching field</value>
+  </data>
+  <data name="ErrorText61" xml:space="preserve">
+    <value>Dimensions of array types must be constant expressions.</value>
+  </data>
+  <data name="ErrorText62" xml:space="preserve">
+    <value>Matching property</value>
+  </data>
+  <data name="ErrorText63" xml:space="preserve">
+    <value>Candidate</value>
+  </data>
+  <data name="ErrorText64" xml:space="preserve">
+    <value>Unused struct: </value>
+  </data>
+  <data name="ErrorText65" xml:space="preserve">
+    <value>Unread field: </value>
+  </data>
+  <data name="ErrorText66" xml:space="preserve">
+    <value>You have unused definitions.</value>
+  </data>
+  <data name="ErrorText67" xml:space="preserve">
+    <value>Unread local: </value>
+  </data>
+  <data name="ErrorText68" xml:space="preserve">
+    <value>Method in cycle</value>
+  </data>
+  <data name="ErrorText69" xml:space="preserve">
+    <value>You are not allowed to make a cycle of method calls with methods marked with inline.</value>
+  </data>
+  <data name="ErrorText7" xml:space="preserve">
+    <value>It is not possible to override properties.</value>
+  </data>
+  <data name="ErrorText70" xml:space="preserve">
+    <value>Struct in cycle</value>
+  </data>
+  <data name="ErrorText71" xml:space="preserve">
+    <value>You are not allowed to make a cyclic dependancy with structs.</value>
+  </data>
+  <data name="ErrorText72" xml:space="preserve">
+    <value>Found no matching properties or arrays</value>
+  </data>
+  <data name="ErrorText73" xml:space="preserve">
+    <value>Found multiple matching array indexes.</value>
+  </data>
+  <data name="ErrorText74" xml:space="preserve">
+    <value>Matches normal array index.</value>
+  </data>
+  <data name="ErrorText75" xml:space="preserve">
+    <value>Property has no getter</value>
+  </data>
+  <data name="ErrorText76" xml:space="preserve">
+    <value>The left side of the . must be of type struct, class, or something which is enriched</value>
+  </data>
+  <data name="ErrorText77" xml:space="preserve">
+    <value>Matching enrichment</value>
+  </data>
+  <data name="ErrorText78" xml:space="preserve">
+    <value>No matching property found in enrichment.</value>
+  </data>
+  <data name="ErrorText79" xml:space="preserve">
+    <value>Unable to find a field in the struct called </value>
+  </data>
+  <data name="ErrorText8" xml:space="preserve">
+    <value>You can not make a cycle of inheritance.</value>
+  </data>
+  <data name="ErrorText80" xml:space="preserve">
+    <value>Matching struct:</value>
+  </data>
+  <data name="ErrorText81" xml:space="preserve">
+    <value>The struct variable is marked as private. It can only be accessed from inside the struct where it is defined.</value>
+  </data>
+  <data name="ErrorText82" xml:space="preserve">
+    <value>Matching local</value>
+  </data>
+  <data name="ErrorText83" xml:space="preserve">
+    <value>The struct variable is marked as protected. It can only be accessed from inside the struct where it is defined, or a subtype thereof.</value>
+  </data>
+  <data name="ErrorText84" xml:space="preserve">
+    <value>Variable is marked as static. Access it with</value>
+  </data>
+  <data name="ErrorText85" xml:space="preserve">
+    <value>Matching struct field</value>
+  </data>
+  <data name="ErrorText86" xml:space="preserve">
+    <value>Variable is not marked as static. Access it with you must access it through an instance of</value>
+  </data>
+  <data name="ErrorText87" xml:space="preserve">
+    <value>The struct property is marked as private. It can only be accessed from inside the struct where it is defined.</value>
+  </data>
+  <data name="ErrorText88" xml:space="preserve">
+    <value>The struct property is marked as protected. It can only be accessed from inside the struct where it is defined, or a subtype thereof.</value>
+  </data>
+  <data name="ErrorText89" xml:space="preserve">
+    <value>Property is marked as static. Access it with</value>
+  </data>
+  <data name="ErrorText9" xml:space="preserve">
+    <value>No type found named </value>
+  </data>
+  <data name="ErrorText90" xml:space="preserve">
+    <value>Matching struct property</value>
+  </data>
+  <data name="ErrorText91" xml:space="preserve">
+    <value>Property is not marked as static. Access it with you must access it through an instance of </value>
+  </data>
+  <data name="ErrorText92" xml:space="preserve">
+    <value>Unable to use struct fields outside of methods.</value>
+  </data>
+  <data name="ErrorText93" xml:space="preserve">
+    <value>The type in a delegate creation expression must be a delegate type</value>
+  </data>
+  <data name="ErrorText94" xml:space="preserve">
+    <value>Method must match exactly. Implicitly matching methods are not allowed.</value>
+  </data>
+  <data name="ErrorText95" xml:space="preserve">
+    <value>Method must be referenced from a dynamic context.</value>
+  </data>
+  <data name="ErrorText96" xml:space="preserve">
+    <value>Method must be a global method, or static struct/class method, or it must be refferenced from a dynamic context.</value>
+  </data>
+  <data name="ErrorText97" xml:space="preserve">
+    <value>Parameter </value>
+  </data>
+  <data name="ErrorText98" xml:space="preserve">
+    <value>  marked as out is used before a value has been assigned to it.</value>
+  </data>
+  <data name="ErrorText99" xml:space="preserve">
+    <value>You can not access a non-static variable in a static context.</value>
+  </data>
+  <data name="FT_Text1" xml:space="preserve">
+    <value>Transforming code (</value>
+  </data>
+  <data name="FT_Text10" xml:space="preserve">
+    <value>): Transforming properties to methods (Phase 1)</value>
+  </data>
+  <data name="FT_Text11" xml:space="preserve">
+    <value>): Removing dead code.</value>
+  </data>
+  <data name="FT_Text12" xml:space="preserve">
+    <value>): Moving methods members out of structs.</value>
+  </data>
+  <data name="FT_Text13" xml:space="preserve">
+    <value>): Invoking initializers.</value>
+  </data>
+  <data name="FT_Text14" xml:space="preserve">
+    <value>): Moving assignments out to their own statement.</value>
+  </data>
+  <data name="FT_Text15" xml:space="preserve">
+    <value>): Transforming properties to methods (Phase 2).</value>
+  </data>
+  <data name="FT_Text16" xml:space="preserve">
+    <value>): Fixing invokes (sync/assync).</value>
+  </data>
+  <data name="FT_Text17" xml:space="preserve">
+    <value>): Removing empty structs.</value>
+  </data>
+  <data name="FT_Text18" xml:space="preserve">
+    <value>): Making delegates.</value>
+  </data>
+  <data name="FT_Text19" xml:space="preserve">
+    <value>): Transforming inline methods (Run 1).</value>
+  </data>
+  <data name="FT_Text2" xml:space="preserve">
+    <value>): Removing namespaces.</value>
+  </data>
+  <data name="FT_Text20" xml:space="preserve">
+    <value>): Removing unneeded ref parameters.</value>
+  </data>
+  <data name="FT_Text21" xml:space="preserve">
+    <value>): Expanding struct equality tests.</value>
+  </data>
+  <data name="FT_Text22" xml:space="preserve">
+    <value>): Transforming pointers.</value>
+  </data>
+  <data name="FT_Text23" xml:space="preserve">
+    <value>): Transforming inline methods (Run 2).</value>
+  </data>
+  <data name="FT_Text24" xml:space="preserve">
+    <value>): Splitting local structs into primitives.</value>
+  </data>
+  <data name="FT_Text25" xml:space="preserve">
+    <value>): Removnig redundant assignments.</value>
+  </data>
+  <data name="FT_Text26" xml:space="preserve">
+    <value>): Folding constants.</value>
+  </data>
+  <data name="FT_Text27" xml:space="preserve">
+    <value>): Optimizing.</value>
+  </data>
+  <data name="FT_Text28" xml:space="preserve">
+    <value>): Making short names.</value>
+  </data>
+  <data name="FT_Text29" xml:space="preserve">
+    <value>): Making unique names.</value>
+  </data>
+  <data name="FT_Text3" xml:space="preserve">
+    <value>): Moving static members out.</value>
+  </data>
+  <data name="FT_Text30" xml:space="preserve">
+    <value>): Renaming references to variables whose names have changed.</value>
+  </data>
+  <data name="FT_Text31" xml:space="preserve">
+    <value>): Obfuscating strings.</value>
+  </data>
+  <data name="FT_Text32" xml:space="preserve">
+    <value>): Mergeing methods if they are the same,</value>
+  </data>
+  <data name="FT_Text33" xml:space="preserve">
+    <value>): Generating includes (merging to one file if selected).</value>
+  </data>
+  <data name="FT_Text4" xml:space="preserve">
+    <value>): Removing constant variables</value>
+  </data>
+  <data name="FT_Text5" xml:space="preserve">
+    <value>): Locating main entry.</value>
+  </data>
+  <data name="FT_Text6" xml:space="preserve">
+    <value>The source file containing the main entry function should be placed in root folder to be able to overwrite MapScript.galaxy.</value>
+  </data>
+  <data name="FT_Text7" xml:space="preserve">
+    <value>): Setting default values for struct variables</value>
+  </data>
+  <data name="FT_Text8" xml:space="preserve">
+    <value>): Transforming expression ifs.</value>
+  </data>
+  <data name="FT_Text9" xml:space="preserve">
+    <value>): Renaming unicode identifiers and strings.</value>
+  </data>
+  <data name="GC_Text1" xml:space="preserve">
+    <value>The compiler is already working. Close this message box and try again.
+If this takes more than a couple of seconds, it's most likely an infinite loop.</value>
+  </data>
+  <data name="GC_Text10" xml:space="preserve">
+    <value>Linking usages to declarations</value>
+  </data>
+  <data name="GC_Text11" xml:space="preserve">
+    <value>Checking types</value>
+  </data>
+  <data name="GC_Text12" xml:space="preserve">
+    <value>Transforming code</value>
+  </data>
+  <data name="GC_Text13" xml:space="preserve">
+    <value>Generating code</value>
+  </data>
+  <data name="GC_Text14" xml:space="preserve">
+    <value>Compilation finished successfully</value>
+  </data>
+  <data name="GC_Text15" xml:space="preserve">
+    <value>Compilation terminated with errors</value>
+  </data>
+  <data name="GC_Text2" xml:space="preserve">
+    <value>Compiler already running</value>
+  </data>
+  <data name="GC_Text3" xml:space="preserve">
+    <value>Parsing</value>
+  </data>
+  <data name="GC_Text4" xml:space="preserve">
+    <value>Weeding</value>
+  </data>
+  <data name="GC_Text5" xml:space="preserve">
+    <value>Building enviroment</value>
+  </data>
+  <data name="GC_Text6" xml:space="preserve">
+    <value>Checking enviroment</value>
+  </data>
+  <data name="GC_Text7" xml:space="preserve">
+    <value>Linking types</value>
+  </data>
+  <data name="GC_Text8" xml:space="preserve">
+    <value>Fixing generics</value>
+  </data>
+  <data name="GC_Text9" xml:space="preserve">
+    <value>Fixing enheritance</value>
+  </data>
+  <data name="ME_Text1" xml:space="preserve">
+    <value>Unable to open the map.</value>
+  </data>
+  <data name="ME_Text10" xml:space="preserve">
+    <value>The file </value>
+  </data>
+  <data name="ME_Text11" xml:space="preserve">
+    <value> already exists in the project folder. Do you wan't to overwrite it with the one from the map?</value>
+  </data>
+  <data name="ME_Text12" xml:space="preserve">
+    <value>Override</value>
+  </data>
+  <data name="ME_Text13" xml:space="preserve">
+    <value>An error occured while extracting </value>
+  </data>
+  <data name="ME_Text14" xml:space="preserve">
+    <value> from the map.</value>
+  </data>
+  <data name="ME_Text15" xml:space="preserve">
+    <value>Unable to read the file in an mpq.</value>
+  </data>
+  <data name="ME_Text16" xml:space="preserve">
+    <value>Unable to open the map to fetch </value>
+  </data>
+  <data name="ME_Text17" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="ME_Text18" xml:space="preserve">
+    <value>Unable to open the file </value>
+  </data>
+  <data name="ME_Text19" xml:space="preserve">
+    <value> in the mpq </value>
+  </data>
+  <data name="ME_Text2" xml:space="preserve">
+    <value>You cannot name a file other than the root file as MapScript.galaxy</value>
+  </data>
+  <data name="ME_Text20" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="ME_Text3" xml:space="preserve">
+    <value>Unable to copy </value>
+  </data>
+  <data name="ME_Text4" xml:space="preserve">
+    <value>to the map.
+There are most likely too many files.
+Try setting the "Join output to one file" flag in the options menu.</value>
+  </data>
+  <data name="ME_Text5" xml:space="preserve">
+    <value>Unable to copy map. Is any files in the target directory in use?</value>
+  </data>
+  <data name="ME_Text6" xml:space="preserve">
+    <value>Unable to open the source map for copying.</value>
+  </data>
+  <data name="ME_Text7" xml:space="preserve">
+    <value>Unable to save the galaxy++ files to the map. Is it open in another program?</value>
+  </data>
+  <data name="ME_Text8" xml:space="preserve">
+    <value>Unable to extract </value>
+  </data>
+  <data name="ME_Text9" xml:space="preserve">
+    <value> from the map.</value>
+  </data>
+  <data name="SCEF_MissData" xml:space="preserve">
+    <value>Missing data</value>
+  </data>
+  <data name="SCEF_MissData_NotLoad_Text" xml:space="preserve">
+    <value>StarCraft 2 Executable not found. Note that you cannot use any of the StarCraft 2 natives before you specify the location.</value>
+  </data>
+  <data name="SCEF_MissData_Text" xml:space="preserve">
+    <value>I lost track of where StarCraft II is located. Can you help me?</value>
+  </data>
+  <data name="TL_Text1" xml:space="preserve">
+    <value>I lost track of where Starcraft II is located. Can you help me?</value>
+  </data>
+  <data name="TL_Text2" xml:space="preserve">
+    <value>Missing data</value>
+  </data>
+</root>

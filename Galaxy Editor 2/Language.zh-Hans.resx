@@ -1,0 +1,1018 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ALL_Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Delegates_Text1" xml:space="preserve">
+    <value>没有可用的方法来进行委托调用。</value>
+  </data>
+  <data name="ErrorText1" xml:space="preserve">
+    <value>找到多个入口主程序</value>
+  </data>
+  <data name="ErrorText10" xml:space="preserve">
+    <value>匹配</value>
+  </data>
+  <data name="ErrorText100" xml:space="preserve">
+    <value>匹配声明</value>
+  </data>
+  <data name="ErrorText101" xml:space="preserve">
+    <value>无法在非静态脚本中访问非静态的参数。</value>
+  </data>
+  <data name="ErrorText102" xml:space="preserve">
+    <value>无法在方法外使用结构体字段。</value>
+  </data>
+  <data name="ErrorText103" xml:space="preserve">
+    <value>+没被定义成为变量类型</value>
+  </data>
+  <data name="ErrorText104" xml:space="preserve">
+    <value>只被定义为(bool </value>
+  </data>
+  <data name="ErrorText105" xml:space="preserve">
+    <value>没找到对应的声明(</value>
+  </data>
+  <data name="ErrorText106" xml:space="preserve">
+    <value>匹配操作</value>
+  </data>
+  <data name="ErrorText107" xml:space="preserve">
+    <value>匹配定义</value>
+  </data>
+  <data name="ErrorText108" xml:space="preserve">
+    <value>发现多重声明(</value>
+  </data>
+  <data name="ErrorText109" xml:space="preserve">
+    <value>) 。</value>
+  </data>
+  <data name="ErrorText11" xml:space="preserve">
+    <value>发现过多的结构体/类匹配 </value>
+  </data>
+  <data name="ErrorText110" xml:space="preserve">
+    <value>-没被定义成为变量类型</value>
+  </data>
+  <data name="ErrorText111" xml:space="preserve">
+    <value>！没被定义成为变量类型</value>
+  </data>
+  <data name="ErrorText112" xml:space="preserve">
+    <value>常量（Constant）字段必须初始化。</value>
+  </data>
+  <data name="ErrorText113" xml:space="preserve">
+    <value>常量（Constant）字段初始化列表的内容必须为常量。</value>
+  </data>
+  <data name="ErrorText114" xml:space="preserve">
+    <value>++ 和 -- 只能在方法中使用。</value>
+  </data>
+  <data name="ErrorText115" xml:space="preserve">
+    <value>指针必须显式转换成整数或字符串。</value>
+  </data>
+  <data name="ErrorText116" xml:space="preserve">
+    <value>预显式转换</value>
+  </data>
+  <data name="ErrorText117" xml:space="preserve">
+    <value>预声明字符串。</value>
+  </data>
+  <data name="ErrorText118" xml:space="preserve">
+    <value>准确显式转换只能用于指针转换成字符或整数，反之亦然。</value>
+  </data>
+  <data name="ErrorText119" xml:space="preserve">
+    <value>指针必须显式转换为整数或字符串之一。</value>
+  </data>
+  <data name="ErrorText12" xml:space="preserve">
+    <value>封闭结构中的构造函数必须与其有相同名称。</value>
+  </data>
+  <data name="ErrorText120" xml:space="preserve">
+    <value>扩展显式转换自</value>
+  </data>
+  <data name="ErrorText121" xml:space="preserve">
+    <value>扩展显式转换自字符串。</value>
+  </data>
+  <data name="ErrorText122" xml:space="preserve">
+    <value>无法显式的转换</value>
+  </data>
+  <data name="ErrorText123" xml:space="preserve">
+    <value>成为</value>
+  </data>
+  <data name="ErrorText124" xml:space="preserve">
+    <value>方法使用名称和参数数量进行匹配。</value>
+  </data>
+  <data name="ErrorText125" xml:space="preserve">
+    <value>无法找到匹配的方法。</value>
+  </data>
+  <data name="ErrorText126" xml:space="preserve">
+    <value>匹配动态数组大小调整。</value>
+  </data>
+  <data name="ErrorText127" xml:space="preserve">
+    <value>发现多个匹配的方法。</value>
+  </data>
+  <data name="ErrorText128" xml:space="preserve">
+    <value>发现多个隐含的匹配方法。</value>
+  </data>
+  <data name="ErrorText129" xml:space="preserve">
+    <value>自变量</value>
+  </data>
+  <data name="ErrorText13" xml:space="preserve">
+    <value>你只能定义一个析构函数在</value>
+  </data>
+  <data name="ErrorText130" xml:space="preserve">
+    <value>必须为变量，且参数被标记为Out或Ref。</value>
+  </data>
+  <data name="ErrorText131" xml:space="preserve">
+    <value>内联方法只能被从内部其他方法调用。</value>
+  </data>
+  <data name="ErrorText132" xml:space="preserve">
+    <value>不能为常量，且参数被标记为Out或Ref。</value>
+  </data>
+  <data name="ErrorText133" xml:space="preserve">
+    <value>内嵌方法只能被内嵌的方法、构造函数、属性来调用。</value>
+  </data>
+  <data name="ErrorText134" xml:space="preserve">
+    <value>If的条件不能为结构体或数组。</value>
+  </data>
+  <data name="ErrorText135" xml:space="preserve">
+    <value>Then和？表达式中的部分必须明确的与其他部分区分。</value>
+  </data>
+  <data name="ErrorText136" xml:space="preserve">
+    <value>关键字This只能用在结构体的构造函数、析构函数、类或扩充内容。</value>
+  </data>
+  <data name="ErrorText137" xml:space="preserve">
+    <value>关键字This不能用于静态脚本。</value>
+  </data>
+  <data name="ErrorText138" xml:space="preserve">
+    <value>你不能新建一个枚举的实例。</value>
+  </data>
+  <data name="ErrorText139" xml:space="preserve">
+    <value>匹配枚举</value>
+  </data>
+  <data name="ErrorText14" xml:space="preserve">
+    <value>玩家必须为整数型的字面量。</value>
+  </data>
+  <data name="ErrorText140" xml:space="preserve">
+    <value>无法找到匹配的构造函数： (</value>
+  </data>
+  <data name="ErrorText141" xml:space="preserve">
+    <value>选择对象</value>
+  </data>
+  <data name="ErrorText142" xml:space="preserve">
+    <value>不明确的构造函数的调用。找到多个匹配的构造函数定义。</value>
+  </data>
+  <data name="ErrorText143" xml:space="preserve">
+    <value>实例创建表达式必须是一个方法，因为构造函数必须能够调用。</value>
+  </data>
+  <data name="ErrorText144" xml:space="preserve">
+    <value>构造函数必须定义为结构体的类型。</value>
+  </data>
+  <data name="ErrorText145" xml:space="preserve">
+    <value>英语
+
+
+
+日语
+
+
+
+
+
+只能删除动态分配的类型。</value>
+  </data>
+  <data name="ErrorText146" xml:space="preserve">
+    <value>无法在此删除一个对象，因为匹配的析构函数是私有的（Private）。</value>
+  </data>
+  <data name="ErrorText147" xml:space="preserve">
+    <value>析构函数</value>
+  </data>
+  <data name="ErrorText148" xml:space="preserve">
+    <value>无法在此删除一个对象，因为匹配的析构函数是保护的（Protected）。</value>
+  </data>
+  <data name="ErrorText149" xml:space="preserve">
+    <value>预指针类型</value>
+  </data>
+  <data name="ErrorText15" xml:space="preserve">
+    <value>其他解析函数</value>
+  </data>
+  <data name="ErrorText150" xml:space="preserve">
+    <value>不能把一个维度上的要求放在动态类型的数组上。</value>
+  </data>
+  <data name="ErrorText151" xml:space="preserve">
+    <value>无法以变量类型</value>
+  </data>
+  <data name="ErrorText152" xml:space="preserve">
+    <value>来访问类型</value>
+  </data>
+  <data name="ErrorText153" xml:space="preserve">
+    <value>无法访问常量字段。</value>
+  </data>
+  <data name="ErrorText154" xml:space="preserve">
+    <value>已用委托</value>
+  </data>
+  <data name="ErrorText155" xml:space="preserve">
+    <value>可访问性不一致，私有类型（Private）使用在公开（Public）脚本中。</value>
+  </data>
+  <data name="ErrorText156" xml:space="preserve">
+    <value>方法被标记为触发，但是没使用触发动作函数的语法格式 (bool, bool):bool。</value>
+  </data>
+  <data name="ErrorText157" xml:space="preserve">
+    <value>并非所有代码路径都有返回值。</value>
+  </data>
+  <data name="ErrorText158" xml:space="preserve">
+    <value>并非所有代码路径的设置方法都有返回值。</value>
+  </data>
+  <data name="ErrorText159" xml:space="preserve">
+    <value>来访问空类型</value>
+  </data>
+  <data name="ErrorText16" xml:space="preserve">
+    <value>封闭结构中的析构函数必须与其有相同名称。</value>
+  </data>
+  <data name="ErrorText160" xml:space="preserve">
+    <value>此函数必须返回值，值类型为</value>
+  </data>
+  <data name="ErrorText161" xml:space="preserve">
+    <value>此设置方法必须返回值，值类型为</value>
+  </data>
+  <data name="ErrorText162" xml:space="preserve">
+    <value>标记为Out的参数没有分配值。</value>
+  </data>
+  <data name="ErrorText163" xml:space="preserve">
+    <value>没有找到匹配的基本构造函数。</value>
+  </data>
+  <data name="ErrorText164" xml:space="preserve">
+    <value>基本结构体</value>
+  </data>
+  <data name="ErrorText165" xml:space="preserve">
+    <value>基本构造函数匹配过多的构造函数。</value>
+  </data>
+  <data name="ErrorText166" xml:space="preserve">
+    <value>结构体数组标记必须是常量。</value>
+  </data>
+  <data name="ErrorText167" xml:space="preserve">
+    <value>扩充数组标记必须是常量。</value>
+  </data>
+  <data name="ErrorText168" xml:space="preserve">
+    <value>动态数组类型的标记必须是常量表达式。</value>
+  </data>
+  <data name="ErrorText169" xml:space="preserve">
+    <value>不匹配任何定义字段或者参数。</value>
+  </data>
+  <data name="ErrorText17" xml:space="preserve">
+    <value>委派不能与其原始对象同名。</value>
+  </data>
+  <data name="ErrorText170" xml:space="preserve">
+    <value>匹配过多定义字段或者参数。</value>
+  </data>
+  <data name="ErrorText171" xml:space="preserve">
+    <value>无法在类（Class）中使用结构体（Struct），构造函数与析构函数，用this替代。</value>
+  </data>
+  <data name="ErrorText172" xml:space="preserve">
+    <value>不匹配任何定义的结构体字段</value>
+  </data>
+  <data name="ErrorText173" xml:space="preserve">
+    <value>找到过多的匹配声明。</value>
+  </data>
+  <data name="ErrorText174" xml:space="preserve">
+    <value>不匹配任何声明。</value>
+  </data>
+  <data name="ErrorText175" xml:space="preserve">
+    <value>找不到匹配的声明。</value>
+  </data>
+  <data name="ErrorText176" xml:space="preserve">
+    <value>无论那是什么，不允许放入一个类型中。</value>
+  </data>
+  <data name="ErrorText177" xml:space="preserve">
+    <value>无效的类型名，必须为"&lt;namespace&gt;.&lt;struct name&gt;"。</value>
+  </data>
+  <data name="ErrorText178" xml:space="preserve">
+    <value>?表达式必须用于语句之中。</value>
+  </data>
+  <data name="ErrorText179" xml:space="preserve">
+    <value>枚举数据</value>
+  </data>
+  <data name="ErrorText18" xml:space="preserve">
+    <value>只有Void型函数可以在这里返回。</value>
+  </data>
+  <data name="ErrorText180" xml:space="preserve">
+    <value>发现多个枚举成员对应</value>
+  </data>
+  <data name="ErrorText181" xml:space="preserve">
+    <value>类型定义无法标记成为保护（protected）。</value>
+  </data>
+  <data name="ErrorText182" xml:space="preserve">
+    <value>自定义操作需要额外的两个参数。</value>
+  </data>
+  <data name="ErrorText183" xml:space="preserve">
+    <value>常量字段必须有初始值。</value>
+  </data>
+  <data name="ErrorText184" xml:space="preserve">
+    <value>只有位于结构体和类内部的字段才能标记为保护（Protected）</value>
+  </data>
+  <data name="ErrorText185" xml:space="preserve">
+    <value>这类的参数声明必须在结构体、类或扩充内。</value>
+  </data>
+  <data name="ErrorText186" xml:space="preserve">
+    <value>赋值必须在方法中进行。</value>
+  </data>
+  <data name="ErrorText187" xml:space="preserve">
+    <value>关键字的值只能用于属性设置。</value>
+  </data>
+  <data name="ErrorText188" xml:space="preserve">
+    <value>Break语句必须用在For、 While或者Switch语句之中。</value>
+  </data>
+  <data name="ErrorText189" xml:space="preserve">
+    <value>Continue语句必须用在For、 While或者Switch语句之中。</value>
+  </data>
+  <data name="ErrorText19" xml:space="preserve">
+    <value>在此脚本下字符混淆功能无法应用，触发器初始化过程出错。</value>
+  </data>
+  <data name="ErrorText190" xml:space="preserve">
+    <value>常量必须有初始值。</value>
+  </data>
+  <data name="ErrorText191" xml:space="preserve">
+    <value>参数不能为常量。</value>
+  </data>
+  <data name="ErrorText192" xml:space="preserve">
+    <value>触发不能标记为保护（Protected）</value>
+  </data>
+  <data name="ErrorText193" xml:space="preserve">
+    <value>析构函数没有参数。</value>
+  </data>
+  <data name="ErrorText194" xml:space="preserve">
+    <value>析构函数的扩充不能保护（protected）。</value>
+  </data>
+  <data name="ErrorText195" xml:space="preserve">
+    <value>委托不能拥有体部分。</value>
+  </data>
+  <data name="ErrorText196" xml:space="preserve">
+    <value>委托不能标记为排列。</value>
+  </data>
+  <data name="ErrorText197" xml:space="preserve">
+    <value>委托不能标记为触发。</value>
+  </data>
+  <data name="ErrorText198" xml:space="preserve">
+    <value>委托不能标记为静态。</value>
+  </data>
+  <data name="ErrorText199" xml:space="preserve">
+    <value>委托不能标记为本地。</value>
+  </data>
+  <data name="ErrorText2" xml:space="preserve">
+    <value>无法覆盖次字段。</value>
+  </data>
+  <data name="ErrorText20" xml:space="preserve">
+    <value>其他字符字段</value>
+  </data>
+  <data name="ErrorText200" xml:space="preserve">
+    <value>只有位于结构体和类内部的方法才能标记为保护（Protected）</value>
+  </data>
+  <data name="ErrorText201" xml:space="preserve">
+    <value>结构体和类不能标记为保护（Protected）</value>
+  </data>
+  <data name="ErrorText202" xml:space="preserve">
+    <value>只能转换为字符，文本，整数和实数。</value>
+  </data>
+  <data name="ErrorText203" xml:space="preserve">
+    <value>本地声明必须位于块中。</value>
+  </data>
+  <data name="ErrorText204" xml:space="preserve">
+    <value>要求为变量名</value>
+  </data>
+  <data name="ErrorText205" xml:space="preserve">
+    <value>要求为初始化列表</value>
+  </data>
+  <data name="ErrorText206" xml:space="preserve">
+    <value>要求为宏名称</value>
+  </data>
+  <data name="ErrorText207" xml:space="preserve">
+    <value>不能在宏中声明宏</value>
+  </data>
+  <data name="ErrorText208" xml:space="preserve">
+    <value>当前宏</value>
+  </data>
+  <data name="ErrorText209" xml:space="preserve">
+    <value>找不到匹配的#endmacro</value>
+  </data>
+  <data name="ErrorText21" xml:space="preserve">
+    <value>如果不在这里指定字符串字面量，将不会重命名触发器</value>
+  </data>
+  <data name="ErrorText210" xml:space="preserve">
+    <value>要求为标识符或右括号</value>
+  </data>
+  <data name="ErrorText211" xml:space="preserve">
+    <value>要求为逗号或右括号</value>
+  </data>
+  <data name="ErrorText212" xml:space="preserve">
+    <value>冲突的宏</value>
+  </data>
+  <data name="ErrorText213" xml:space="preserve">
+    <value>找到多个宏使用相同的标记。</value>
+  </data>
+  <data name="ErrorText214" xml:space="preserve">
+    <value>宏调用没有关闭</value>
+  </data>
+  <data name="ErrorText215" xml:space="preserve">
+    <value>需要右括号</value>
+  </data>
+  <data name="ErrorText216" xml:space="preserve">
+    <value>宏循环</value>
+  </data>
+  <data name="ErrorText217" xml:space="preserve">
+    <value>宏中发现循环调用</value>
+  </data>
+  <data name="ErrorText218" xml:space="preserve">
+    <value>找不到匹配的宏</value>
+  </data>
+  <data name="ErrorText219" xml:space="preserve">
+    <value>未使用方法：</value>
+  </data>
+  <data name="ErrorText22" xml:space="preserve">
+    <value>其他无字面量的TriggerCreate调用</value>
+  </data>
+  <data name="ErrorText220" xml:space="preserve">
+    <value>] 需要:</value>
+  </data>
+  <data name="ErrorText23" xml:space="preserve">
+    <value>你只能指定一个库名。</value>
+  </data>
+  <data name="ErrorText24" xml:space="preserve">
+    <value>你只能指定一个库版本号。</value>
+  </data>
+  <data name="ErrorText25" xml:space="preserve">
+    <value>无效的库名</value>
+  </data>
+  <data name="ErrorText26" xml:space="preserve">
+    <value>无效的库版本号</value>
+  </data>
+  <data name="ErrorText27" xml:space="preserve">
+    <value>无效的格式化，必须为"(lib1:ver1),lib2:ver2,..."</value>
+  </data>
+  <data name="ErrorText28" xml:space="preserve">
+    <value>库</value>
+  </data>
+  <data name="ErrorText29" xml:space="preserve">
+    <value>被标记为需要，但是找不到。</value>
+  </data>
+  <data name="ErrorText3" xml:space="preserve">
+    <value>结构体不能从类中继承。</value>
+  </data>
+  <data name="ErrorText30" xml:space="preserve">
+    <value>循环成员</value>
+  </data>
+  <data name="ErrorText31" xml:space="preserve">
+    <value>发现循环依赖。其中的一项没有正确的依赖初始化。</value>
+  </data>
+  <data name="ErrorText32" xml:space="preserve">
+    <value>其他本地变量</value>
+  </data>
+  <data name="ErrorText33" xml:space="preserve">
+    <value>无法以同样的变量名声明两个本地变量。</value>
+  </data>
+  <data name="ErrorText34" xml:space="preserve">
+    <value>一个参数不能同时被标记为ref和out。</value>
+  </data>
+  <data name="ErrorText35" xml:space="preserve">
+    <value>全局关键字只能用在方法内部。</value>
+  </data>
+  <data name="ErrorText36" xml:space="preserve">
+    <value>在此脚本下，关键字struct必须使用在方法内部。</value>
+  </data>
+  <data name="ErrorText37" xml:space="preserve">
+    <value>无法找到目标触发。</value>
+  </data>
+  <data name="ErrorText38" xml:space="preserve">
+    <value>匹配方法</value>
+  </data>
+  <data name="ErrorText39" xml:space="preserve">
+    <value>找到多个目标触发</value>
+  </data>
+  <data name="ErrorText4" xml:space="preserve">
+    <value>覆盖 </value>
+  </data>
+  <data name="ErrorText40" xml:space="preserve">
+    <value>触发创建没有使用字符常字面量。</value>
+  </data>
+  <data name="ErrorText41" xml:space="preserve">
+    <value>触发</value>
+  </data>
+  <data name="ErrorText42" xml:space="preserve">
+    <value>使用非恒定字符串创建触发器. 这将会阻止重命名触发器，而得到两个同名触发器。</value>
+  </data>
+  <data name="ErrorText43" xml:space="preserve">
+    <value>需要在此指定数组尺寸。</value>
+  </data>
+  <data name="ErrorText44" xml:space="preserve">
+    <value>基本类型必须为结构体或类。</value>
+  </data>
+  <data name="ErrorText45" xml:space="preserve">
+    <value>泛型变量数量不匹配。</value>
+  </data>
+  <data name="ErrorText46" xml:space="preserve">
+    <value>目标</value>
+  </data>
+  <data name="ErrorText47" xml:space="preserve">
+    <value>目标结构体为泛型类型，你需要指定其泛型。</value>
+  </data>
+  <data name="ErrorText48" xml:space="preserve">
+    <value>匹配</value>
+  </data>
+  <data name="ErrorText49" xml:space="preserve">
+    <value>无法找到匹配的类型</value>
+  </data>
+  <data name="ErrorText5" xml:space="preserve">
+    <value>继承类</value>
+  </data>
+  <data name="ErrorText50" xml:space="preserve">
+    <value>原始匹配</value>
+  </data>
+  <data name="ErrorText51" xml:space="preserve">
+    <value>匹配类型定义</value>
+  </data>
+  <data name="ErrorText52" xml:space="preserve">
+    <value>匹配</value>
+  </data>
+  <data name="ErrorText53" xml:space="preserve">
+    <value>匹配委托</value>
+  </data>
+  <data name="ErrorText54" xml:space="preserve">
+    <value>匹配泛型</value>
+  </data>
+  <data name="ErrorText55" xml:space="preserve">
+    <value>发现多种匹配</value>
+  </data>
+  <data name="ErrorText56" xml:space="preserve">
+    <value>你不能扩充这个类型。</value>
+  </data>
+  <data name="ErrorText57" xml:space="preserve">
+    <value>常量中除数为0</value>
+  </data>
+  <data name="ErrorText58" xml:space="preserve">
+    <value>除数为0</value>
+  </data>
+  <data name="ErrorText59" xml:space="preserve">
+    <value>数组尺寸必须为整数表达式。</value>
+  </data>
+  <data name="ErrorText6" xml:space="preserve">
+    <value>无法覆盖方法。</value>
+  </data>
+  <data name="ErrorText60" xml:space="preserve">
+    <value>匹配字段</value>
+  </data>
+  <data name="ErrorText61" xml:space="preserve">
+    <value>数组尺寸必须为常量。</value>
+  </data>
+  <data name="ErrorText62" xml:space="preserve">
+    <value>匹配参数</value>
+  </data>
+  <data name="ErrorText63" xml:space="preserve">
+    <value>筛选</value>
+  </data>
+  <data name="ErrorText64" xml:space="preserve">
+    <value>未用结构体：</value>
+  </data>
+  <data name="ErrorText65" xml:space="preserve">
+    <value>未用字段：</value>
+  </data>
+  <data name="ErrorText66" xml:space="preserve">
+    <value>存在未使用的声明。</value>
+  </data>
+  <data name="ErrorText67" xml:space="preserve">
+    <value>未用本地变量：</value>
+  </data>
+  <data name="ErrorText68" xml:space="preserve">
+    <value>循环调用方法</value>
+  </data>
+  <data name="ErrorText69" xml:space="preserve">
+    <value>不允许存在循环调用的排列方法。</value>
+  </data>
+  <data name="ErrorText7" xml:space="preserve">
+    <value>无法覆盖特性。</value>
+  </data>
+  <data name="ErrorText70" xml:space="preserve">
+    <value>循环结构体</value>
+  </data>
+  <data name="ErrorText71" xml:space="preserve">
+    <value>不允许存在循环依赖的结构体。</value>
+  </data>
+  <data name="ErrorText72" xml:space="preserve">
+    <value>没找到匹配的参数或数组。</value>
+  </data>
+  <data name="ErrorText73" xml:space="preserve">
+    <value>发现多个匹配的数组引用。</value>
+  </data>
+  <data name="ErrorText74" xml:space="preserve">
+    <value>匹配正常的数组引用。</value>
+  </data>
+  <data name="ErrorText75" xml:space="preserve">
+    <value>属性没有读取。</value>
+  </data>
+  <data name="ErrorText76" xml:space="preserve">
+    <value>”.“的左侧必须是结构体或者类等扩充类型。</value>
+  </data>
+  <data name="ErrorText77" xml:space="preserve">
+    <value>匹配扩充</value>
+  </data>
+  <data name="ErrorText78" xml:space="preserve">
+    <value>扩充过程中没有匹配的参数。</value>
+  </data>
+  <data name="ErrorText79" xml:space="preserve">
+    <value>没有找到结构体调用的字段。</value>
+  </data>
+  <data name="ErrorText8" xml:space="preserve">
+    <value>无法进行循环继承。</value>
+  </data>
+  <data name="ErrorText80" xml:space="preserve">
+    <value>匹配结构体：</value>
+  </data>
+  <data name="ErrorText81" xml:space="preserve">
+    <value>结构体变量标记为Private. 它只能在定义处访问。</value>
+  </data>
+  <data name="ErrorText82" xml:space="preserve">
+    <value>匹配本地变量</value>
+  </data>
+  <data name="ErrorText83" xml:space="preserve">
+    <value>结构体变量被标记为Protected. 只能在结构体定义处或亚型内部访问。</value>
+  </data>
+  <data name="ErrorText84" xml:space="preserve">
+    <value>变量被标记为Static，访问需</value>
+  </data>
+  <data name="ErrorText85" xml:space="preserve">
+    <value>匹配结构体字段</value>
+  </data>
+  <data name="ErrorText86" xml:space="preserve">
+    <value>变量没有标记为静态（Static），访问此变量需要访问其对应实体</value>
+  </data>
+  <data name="ErrorText87" xml:space="preserve">
+    <value>结构体被标记为私有（Private），只允许在结构体内部定义处访问。</value>
+  </data>
+  <data name="ErrorText88" xml:space="preserve">
+    <value>结构体标记为保护（Protected）. 只允许在结构体内部定义处或子类型出访问。</value>
+  </data>
+  <data name="ErrorText89" xml:space="preserve">
+    <value>属性被标记为静态。访问需要</value>
+  </data>
+  <data name="ErrorText9" xml:space="preserve">
+    <value>找不到变量类型</value>
+  </data>
+  <data name="ErrorText90" xml:space="preserve">
+    <value>匹配结构体属性</value>
+  </data>
+  <data name="ErrorText91" xml:space="preserve">
+    <value>属性没有被标记为静态. 访问其需方位其实例</value>
+  </data>
+  <data name="ErrorText92" xml:space="preserve">
+    <value>无法在方法前使用结构体（Struct）字段。.</value>
+  </data>
+  <data name="ErrorText93" xml:space="preserve">
+    <value>委托表达式的类型必须是委托类型。</value>
+  </data>
+  <data name="ErrorText94" xml:space="preserve">
+    <value>方法必须完全匹配，不允许隐式匹配。</value>
+  </data>
+  <data name="ErrorText95" xml:space="preserve">
+    <value>方法必须从一个动态的脚本引用。</value>
+  </data>
+  <data name="ErrorText96" xml:space="preserve">
+    <value>方法必须为一个全局的方法，或静态（Static）结构体/类的方法，或者必须从一个动态的脚本引用。</value>
+  </data>
+  <data name="ErrorText97" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="ErrorText98" xml:space="preserve">
+    <value>标记的Out前值在分配前使用。</value>
+  </data>
+  <data name="ErrorText99" xml:space="preserve">
+    <value>无法在非静态脚本中访问非静态的变量。</value>
+  </data>
+  <data name="FT_Text1" xml:space="preserve">
+    <value>转换代码 (</value>
+  </data>
+  <data name="FT_Text10" xml:space="preserve">
+    <value>): 转换方法的参数（步骤1）</value>
+  </data>
+  <data name="FT_Text11" xml:space="preserve">
+    <value>): 移除无效代码</value>
+  </data>
+  <data name="FT_Text12" xml:space="preserve">
+    <value>): 移动方法成员到结构体外</value>
+  </data>
+  <data name="FT_Text13" xml:space="preserve">
+    <value>): 引用初始化列表</value>
+  </data>
+  <data name="FT_Text14" xml:space="preserve">
+    <value>): 赋值移出所在语句。</value>
+  </data>
+  <data name="FT_Text15" xml:space="preserve">
+    <value>): 转换方法的参数（步骤2）</value>
+  </data>
+  <data name="FT_Text16" xml:space="preserve">
+    <value>): 修正引用 (语法/类语法)</value>
+  </data>
+  <data name="FT_Text17" xml:space="preserve">
+    <value>): 删除空结构体</value>
+  </data>
+  <data name="FT_Text18" xml:space="preserve">
+    <value>): 生成委派</value>
+  </data>
+  <data name="FT_Text19" xml:space="preserve">
+    <value>): 转换内嵌方法 (步骤1)</value>
+  </data>
+  <data name="FT_Text2" xml:space="preserve">
+    <value>): 删除命名空间</value>
+  </data>
+  <data name="FT_Text20" xml:space="preserve">
+    <value>): 删除不必要的引用参数</value>
+  </data>
+  <data name="FT_Text21" xml:space="preserve">
+    <value>): 扩充结构等价测试</value>
+  </data>
+  <data name="FT_Text22" xml:space="preserve">
+    <value>): 转换指针</value>
+  </data>
+  <data name="FT_Text23" xml:space="preserve">
+    <value>): 转换内嵌方法 (步骤2)</value>
+  </data>
+  <data name="FT_Text24" xml:space="preserve">
+    <value>): 本地结构分割为原始形式</value>
+  </data>
+  <data name="FT_Text25" xml:space="preserve">
+    <value>): 删除冗余赋值</value>
+  </data>
+  <data name="FT_Text26" xml:space="preserve">
+    <value>): 压缩常量</value>
+  </data>
+  <data name="FT_Text27" xml:space="preserve">
+    <value>): 优化</value>
+  </data>
+  <data name="FT_Text28" xml:space="preserve">
+    <value>):生成短名字</value>
+  </data>
+  <data name="FT_Text29" xml:space="preserve">
+    <value>): 生成唯一名</value>
+  </data>
+  <data name="FT_Text3" xml:space="preserve">
+    <value>): 移动静态成员</value>
+  </data>
+  <data name="FT_Text30" xml:space="preserve">
+    <value>): 重命名已经更能的变量名</value>
+  </data>
+  <data name="FT_Text31" xml:space="preserve">
+    <value>): 模糊字符</value>
+  </data>
+  <data name="FT_Text32" xml:space="preserve">
+    <value>): 合并相似方法</value>
+  </data>
+  <data name="FT_Text33" xml:space="preserve">
+    <value>):生成Includes (合并相同选择)</value>
+  </data>
+  <data name="FT_Text4" xml:space="preserve">
+    <value>): 删除常量</value>
+  </data>
+  <data name="FT_Text5" xml:space="preserve">
+    <value>): 定位入口主程序</value>
+  </data>
+  <data name="FT_Text6" xml:space="preserve">
+    <value>为了能够覆盖MapScript.galaxy，带有主入口函数的的脚本需要放在根目录下</value>
+  </data>
+  <data name="FT_Text7" xml:space="preserve">
+    <value>): 设定结构体的初始值</value>
+  </data>
+  <data name="FT_Text8" xml:space="preserve">
+    <value>): 转换if表达式</value>
+  </data>
+  <data name="FT_Text9" xml:space="preserve">
+    <value>): 重名Unicode定义和变量</value>
+  </data>
+  <data name="GC_Text1" xml:space="preserve">
+    <value>编译器正在运行，请关闭此窗口并在结束后再次执行编译。
+如果它持续了较长时间，可能是它进入了死循环.</value>
+  </data>
+  <data name="GC_Text10" xml:space="preserve">
+    <value>连接已用声明</value>
+  </data>
+  <data name="GC_Text11" xml:space="preserve">
+    <value>检测类型</value>
+  </data>
+  <data name="GC_Text12" xml:space="preserve">
+    <value>编译代码</value>
+  </data>
+  <data name="GC_Text13" xml:space="preserve">
+    <value>生成代码</value>
+  </data>
+  <data name="GC_Text14" xml:space="preserve">
+    <value>编译成功</value>
+  </data>
+  <data name="GC_Text15" xml:space="preserve">
+    <value>编译失败</value>
+  </data>
+  <data name="GC_Text2" xml:space="preserve">
+    <value>编译正在运行</value>
+  </data>
+  <data name="GC_Text3" xml:space="preserve">
+    <value>分析中</value>
+  </data>
+  <data name="GC_Text4" xml:space="preserve">
+    <value>整理中</value>
+  </data>
+  <data name="GC_Text5" xml:space="preserve">
+    <value>生成环境</value>
+  </data>
+  <data name="GC_Text6" xml:space="preserve">
+    <value>检测环境</value>
+  </data>
+  <data name="GC_Text7" xml:space="preserve">
+    <value>连接类型</value>
+  </data>
+  <data name="GC_Text8" xml:space="preserve">
+    <value>准备泛型</value>
+  </data>
+  <data name="GC_Text9" xml:space="preserve">
+    <value>准备继承</value>
+  </data>
+  <data name="ME_Text1" xml:space="preserve">
+    <value>无法打开地图。</value>
+  </data>
+  <data name="ME_Text10" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="ME_Text11" xml:space="preserve">
+    <value>已经存在于工程目录下，是否使用从地图中解压出的文件将其覆盖？</value>
+  </data>
+  <data name="ME_Text12" xml:space="preserve">
+    <value>覆盖</value>
+  </data>
+  <data name="ME_Text13" xml:space="preserve">
+    <value>在从地图中解压</value>
+  </data>
+  <data name="ME_Text14" xml:space="preserve">
+    <value>时发生了一个错误。</value>
+  </data>
+  <data name="ME_Text15" xml:space="preserve">
+    <value>无法在MPQ中读取此文件。</value>
+  </data>
+  <data name="ME_Text16" xml:space="preserve">
+    <value>无法打开名为</value>
+  </data>
+  <data name="ME_Text17" xml:space="preserve">
+    <value>的文件。</value>
+  </data>
+  <data name="ME_Text18" xml:space="preserve">
+    <value>无法打开</value>
+  </data>
+  <data name="ME_Text19" xml:space="preserve">
+    <value>于</value>
+  </data>
+  <data name="ME_Text2" xml:space="preserve">
+    <value>你不能把根文件命名为MapScript.galaxy以外的名字。</value>
+  </data>
+  <data name="ME_Text20" xml:space="preserve">
+    <value>之中。</value>
+  </data>
+  <data name="ME_Text3" xml:space="preserve">
+    <value>不能复制 </value>
+  </data>
+  <data name="ME_Text4" xml:space="preserve">
+    <value>到指定地图。
+似乎存在的文件过多。
+尝试使用目录中选项-设置打开设置窗口，并勾选"合并为单个文件"选项来解决此问题。.</value>
+  </data>
+  <data name="ME_Text5" xml:space="preserve">
+    <value>无法复制文件，确认目录中文件是否正在被使用。</value>
+  </data>
+  <data name="ME_Text6" xml:space="preserve">
+    <value>无法打开用于复制的源文件！</value>
+  </data>
+  <data name="ME_Text7" xml:space="preserve">
+    <value>无法保存 galaxy++ 文件到地图，确认是否被其他程序锁占用？</value>
+  </data>
+  <data name="ME_Text8" xml:space="preserve">
+    <value>无法从地图中解压</value>
+  </data>
+  <data name="ME_Text9" xml:space="preserve">
+    <value> 。</value>
+  </data>
+  <data name="SCEF_MissData" xml:space="preserve">
+    <value>数据丢失</value>
+  </data>
+  <data name="SCEF_MissData_NotLoad_Text" xml:space="preserve">
+    <value>没有找到StarCraft 2启动程序. 注意！在确定客户端启动程序路径前无法使用本地函数。</value>
+  </data>
+  <data name="SCEF_MissData_Text" xml:space="preserve">
+    <value>丢失StarCraft II客户端位置信息，请重新定位！</value>
+  </data>
+  <data name="TL_Text1" xml:space="preserve">
+    <value>丢失StarCraft II客户端位置信息，请重新定位！</value>
+  </data>
+  <data name="TL_Text2" xml:space="preserve">
+    <value>数据丢失</value>
+  </data>
+</root>
