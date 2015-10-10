@@ -117,20 +117,110 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="richTextBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Chinese Edition
-3.1.0
-*Add Chinese Language.
-*For the reason that the server of the original author, Delete the server-related functions and the updata.
-*Fixed bugs when you click the cancel button at choose the SCII .
-*You can change the UI Language.(Some can not).
-*Add "Go To" to right click menu(Ctrl+G).
+    <value>中文版本
+3.1.0-c0.1.2
+*其他细节更新。
 
-Original Edition
+3.1.0-c0.1.1
+*修正因SC2的3.0版本更新导致的无法读取MPQ下的数据，默认的Libs文件放在TriggerLibs目录下，当SC2版本更新导致基本Galaxy更新时，需要手动更新此目录下的*.galaxy文件。
+
+3.1.0-c0.0.1
+*添加中文语言。并对原始英文做细节修改。
+*鉴于原作者服务器瘫痪或因为墙而无法连接，删除上传相关的内容，也删除了软件的自动更新。
+*修正选择SCII客户端时点击取消引发的一些bug。
+
+Started: 23 Febuary 2011 17:26
+
+Ideas:
+New features
+* Hotkeys for new files/folders
+* Cut and paste of files/folders, in addition to drag
+* Option for compile on save
+* Search definition need an indication of where that definition is
+* Open/close all brackets
+* Open/close all brackets below cursor
+* A right click menu would be nice, including usual stuff like c&amp;p etc etc.
+* Option to write as many statments on same line as possible.
+* static struct methods
+* Rightclick -&gt; Go to definition, find usages
+* When text is marked and { is pressed, insert a {} around marked text
+* Load any script files (not only project files)
+* Runtime pointer checks &lt;--- you seem to have forgotten something here &gt;:(
+* End hunger
+* Support for mod files. [save script to mod(no InitMap(), or root files needed), and load mod as an dependancy(look in/modify map dependancies)]
+	Need more info to make it propper. Need a naming map from the galaxy++ mod code to the galaxy version contained in the mod (if the user wrote the mod in galaxy++)
+
+	Looking trough what I need to do to add support for mod files. at first glance, it might seem really easy.. but there some stuff to be done - the generated file shouldn't be renamed to Mapscript, and there are no main entry in mods. \\
+If I'm gonna do it, I also want to allow for loading dependencies. \\
+What is saved in the mods are raw galaxy code, so I am going to need to be able to generate and parse a naming map, so people can still refer to the normal galaxy names.. Also, for the decl names int the map script - they can must be renamed to not collide with anything from the dependencies' raw galaxy.
+
+It would probably be these naming maps that would be specified as dependencies rather than an actual mod file. (since the code in the mods might be secret, apart from the names of public declarations, and the actual mod file might not be available)
+
+To avoid any name clash between dependencies, all declarations in a mod has to contain some unique part, like a mod id.
+
+It must be possible to generate a naming map based on current galaxy code, without renaming any declarations (for current galaxy and gui mods).
+
+The initializes of the mods have to be called from the map code. \\
+GUI mods also have a special initializer function (they are a collection of libraries, each of which has an initializer). Assuming the GUI code is converted to script by the normal editor, and a naming map is generated from that, the init function would have to be identified among potential custom script functions.
+
+What is the generated script file(s) in GUI mods going to be called? - they must be included.
+
+A rather annoying problem - all the G{{{++}}} code for generic types would have to be saved in the naming map, since structs would need to be generated based on the users choice for the generic types. 
+
+If I really want to be thorough, I could make a service for creators of mods to upload the naming map to my server, so my editor would look at the map dependencies, and load the naming map from my server automatically.
+
+I might also need to add another visibility modifier for stuff private to the mod.
+
+So.. yeah. allowing to save the script to mods is just a matter of activating a bit of commented code.  But loading dependencies call for a bit of work. : /
+
+* Support for libraries (SC2Lib) - Requires GUI to galaxy++ compiler
+* Option to not auto indent
+* Option to set the spaces used in indentation.
+* Cast struct types down + overriding 
+	Require all data to be saved when casting up - not practical with the array solution
+	Also requires an aditional field to save the runtime type of objects.
+* Add interfaces (properties, methods) = delegates in subclasses
+
+Reworking of current features
+* On run, if starcraft is open, send a message to starcraft about loading a new map (how..?!)
+* Custom hotkeys
+* In find, if esc pressed, hide
+* Watch files for external changes. Offer reloading if changed.
+* Change delegates to use triggers (like sync invoke, with a variable trigger)
+* Change sync/async invokes to use arrays instead of the data table to send arguments
+
+Bugs
+
+* Something with if(...){} &lt;--- {} indentation
+* Array indexes must be of integer type (not byte variables)
+
+- UNABLE TO REPLICATE
+* Some exception with ctrl v
+- UNABLE TO REPLICATE
+* Autocompletion for namespace globals not working correctly (suggesting non namespace stuff)
+* Not possible to search after the start of the search has been reached
+- UNABLE TO REPLICATE
+* Creating a new file or folder and not renaming it immediately causes an unhandled exception, so does trying to rename a file and then cancelling it.
+- UNABLE TO REPLICATE
+* un-intending multiple lines by pressing CTRL + Tab results in an unhandled exception
+//* The suggestion box tooltip is not hidden &lt;--- hidden, but not fixed (now it never shows)
+- UNABLE TO REPLICATE
+* You can still change code while the compiler works. After this, every try to compile throws an unhandled exception.
+- UNABLE TO REPLICATE
+If you select text from bottom to top and press shift + tab to remove an intendation, you get an unhandled exception. If the text was selected from top to botton, you don't.
+
+Not likely
+* Option to use pure galaxy
+
+
+
+Galaxy syntax highlighting only on output script
+Don't include native lib if not needed
+
+
+
+
 3.1.0
 * Fixed an issue where pointers to a byte would be fetched as int when used as an array index.
 * Fixed an error that occured when the compiler tried to inline a method called from a field declaration.
@@ -227,7 +317,7 @@ v 2.9.2
 
 v 2.9.1
 * Fixed an issue where using compile and save from a project not in the default Projects folder would cause an error.
-* SharedClasses.dll did not get properly updated in previous release, and as a result, no errors could be reported.
+* SharedClasses.dll did not get properly updated in previous release. As a result, no errors could be reported.
 
 v 2.9.0
 * Fixed an issue where expression ifs could be given the wrong type.
@@ -245,6 +335,7 @@ v 2.8.9
 * Fixed an issue where (new Foo()-&gt;Bar()) would call Bar before the constructor of Foo.
 * Fixed an issue where assignments to a variable inside a while condition was not translated correctly
 * Setting the visible property of a dialog to true now shows the dialog as soon as it is created.
+
 
 v 2.8.8
 * Fixed an issue about the updater not being able to delete the Fonts directory.
@@ -376,6 +467,7 @@ v 2.5.5
 * The #Invoke keyword is now called InvokeSync
 * The #trigger keyword is now called Trigger
 
+
 v 2.5.3
 * Fixed some bugs.
 
@@ -445,6 +537,8 @@ v 2.3.0
 * Added expression if's. See documentation.
 * Moved the update check out into it's own thread, so the program doesn't freeze when checking for updates.
 
+
+
 v2.2.5
 * Added enrichments. See documentation.
 * Tooltips will now wrap to next line instead of going out of the screen.
@@ -482,6 +576,7 @@ v2.1.7
 * The editor now accepts + and - for points, like galaxy does.
 * Added typedefs. (typedef int* pInt;)
 * Fixed an error that made trigger definitions conflict incorrectly with some methods.
+
 
 v2.1.6
 * Fixed an error that apeard if the project input and output map was the same.
@@ -566,6 +661,7 @@ v 1.9.0
 * Fixed a bug where pointer refferences inside a new expression would not be converted correctly.
 * Fixed an error where struct methods were not always declared before use in the output.
 
+
 v 1.8.0
 * Added pointers - see documentation for details
 * Fixed a crash that occured when scrolling the editor with the suggestion box open.
@@ -578,12 +674,14 @@ v 1.8.0
 * If the mouse is over the suggestion box, and you scroll, it will now scroll in the list.
 * The editor now remembers closed blocks when closed.
 
+
 v 1.7.7
 * Fixed a crash
 
 v 1.7.6
 * Fixed a crash that occured when referrencing a local inside an if
 * Added a status bar for the compile status.
+
 
 Release 1.7.5
 * Optimized the editor (for speed).
@@ -641,81 +739,62 @@ Release 1.6
 * Fixed a bug that created unnecessary bulkCopyVar variables.
 * Fixed a crash that occured when pressing ctrl-f with text marked.
 
+
 Release 5:
-* Fixed a potential crash
-* Added #ref and #out to the list of keywords (formatting and suggestions)
-* Improved the mapping from pixel to textpoint in the editor
+Fixed a potential crash
+Added #ref and #out to the list of keywords (formatting and suggestions)
+Improved the mapping from pixel to textpoint in the editor
+
+Todo:
+When scrolling to the right in the editor, the text scrolls over the left margain
+
 
 Release 4:
-* Added namespaces
-* Extended list of avalible functions. Think I caught em all.
-* Optimized the editor to reduce lag in large files.
+Added namespaces
+Extended list of avalible functions. Think I caught em all.
+Optimized the editor to reduce lag in large files.
+
+
 
 Release 3:
-* Added ctrl + a
-* Pressing tab with text marked will now indent marked lines instead of removing the marked text
-* Fixed a crash that sometimes occured if marked text was removed.
-* Fixed a bug that rejected null to be assigned to nullable types.
-* Added find and replace
+Added ctrl + a
+Pressing tab with text marked will now indent marked lines instead of removing the marked text
+Fixed a crash that sometimes occured if marked text was removed.
+Fixed a bug that rejected null to be assigned to nullable types.
+Added find and replace
+
+
 
 Release 2:
-* Added a function to compile and run the script (copy the script to your map, and test it in starcraft)
-* Added a featuere to collapse blocks in the editor
-* Changed i++: It now functions as you would expect from other languages
-* Added ++i
-* Fixed an error that gave an incorrect result when having multiple assignments to the same variable in the same statement
-* Added an option to join all output files into one
-* Added added an option to rename declarations to very short names
-* The main form now remembers it's position and size when you close and open it
-* Fixed a bug that prevented compiler from running, if a source file had been removed.
-* Fixed a bug that caused struct variables to not be displayed in the suggestion list when inside struct methods.
-* Added a go to line option (ctrl + g)
-* Bulk copy parameters are now pr default passed value type
-* Added #ref to specify that a parameter should be passed as refference type
-* Added #out to specify that a parameter should function as an extra return value
-* If the standard library is used, and no calls to initialize it is made by the user, the compiler now inserts a call.
-* Fixed/improved some other bugs/features
-* Improved auto indentation - now does it when ; or { is inserted
-* Fixed a bug in the suggestion list - struct variables was added twice, and the scollbar was not being updated
-* Optimized #inline. while will only be there if needed
-* Now automatically calls standard lib init
-* Changed text formatting</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
-    <value>richTextBox1</value>
+
+Big
+Added a function to compile and run the script (copy the script to your map, and test it in starcraft)
+Added a featuere to collapse blocks in the editor
+Changed i++: It now functions as you would expect from other languages
+Added ++i
+Fixed an error that gave an incorrect result when having multiple assignments to the same variable in the same statement
+Added an option to join all output files into one
+Added added an option to rename declarations to very short names
+The main form now remembers it's position and size when you close and open it
+Fixed a bug that prevented compiler from running, if a source file had been removed.
+Fixed a bug that caused struct variables to not be displayed in the suggestion list when inside struct methods.
+Added a go to line option (ctrl + g)
+Bulk copy parameters are now pr default passed value type
+Added #ref to specify that a parameter should be passed as refference type
+Added #out to specify that a parameter should function as an extra return value
+If the standard library is used, and no calls to initialize it is made by the user, the compiler now inserts a call.
+Fixed/improved some other bugs/features
+
+
+Small
+Shouldnt display argument tooltip in method declaration when type is void
+Improved auto indentation - now does it when ; or { is inserted
+Fixed a bug in the suggestion list - struct variables was added twice, and the scollbar was not being updated
+optimized #inline. while will only be there if needed
+now automatically calls standard lib init
+changed text formatting</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>642, 426</value>
-  </data>
-  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>642, 426</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Change_log_form</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="richTextBox1.WordWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Change log</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAA8AEBAQAAAAAAAoAQAA9gAAABAQAAABABgAaAMAAB4CAAAQEAAAAQAgAGgEAACGBQAAICAQAAAA
@@ -3905,16 +3984,4 @@ Release 2:
         //////////////////8=
 </value>
   </data>
-  <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;richTextBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>zh-CN</value>
-  </metadata>
 </root>
