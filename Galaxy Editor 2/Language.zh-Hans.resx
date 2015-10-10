@@ -1004,7 +1004,7 @@
     <value>数据丢失</value>
   </data>
   <data name="SCEF_MissData_NotLoad_Text" xml:space="preserve">
-    <value>没有找到StarCraft 2启动程序. 注意！在确定客户端启动程序路径前无法使用本地函数。</value>
+    <value>没有找到StarCraft 2启动程序. 注意！在确定客户端启动程序路径前无法直接运行SC2。</value>
   </data>
   <data name="SCEF_MissData_Text" xml:space="preserve">
     <value>丢失StarCraft II客户端位置信息，请重新定位！</value>

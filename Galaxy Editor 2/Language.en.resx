@@ -994,7 +994,7 @@ Try setting the "Join output to one file" flag in the options menu.</value>
     <value>Missing data</value>
   </data>
   <data name="SCEF_MissData_NotLoad_Text" xml:space="preserve">
-    <value>StarCraft 2 Executable not found. Note that you cannot use any of the StarCraft 2 natives before you specify the location.</value>
+    <value>StarCraft 2 Executable not found. Note that you cannot run SC2.</value>
   </data>
   <data name="SCEF_MissData_Text" xml:space="preserve">
     <value>I lost track of where StarCraft II is located. Can you help me?</value>

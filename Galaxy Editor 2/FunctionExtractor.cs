@@ -95,42 +95,56 @@ namespace Galaxy_Editor_2
 
         private void CrawlAndParseMpqs()
         {
-            //Console.WriteLine("Sc2 Path:");
-            //Console.WriteLine(Options.General.SC2Exe.FullName);
-            if (Options.General.SC2Exe == null) return ;
-            DirectoryInfo versionDir = new DirectoryInfo(Options.General.SC2Exe.Directory + @"\Mods");
+            ////Console.WriteLine("Sc2 Path:");
+            ////Console.WriteLine(Options.General.SC2Exe.FullName);
+            //if (Options.General.SC2Exe == null) return ;
+            //DirectoryInfo versionDir = new DirectoryInfo(Options.General.SC2Exe.Directory + @"\Mods");
+            DirectoryInfo versionDir = new DirectoryInfo("TriggerLibs");
+            //if (!versionDir.Exists) return;
             if (!versionDir.Exists) return;
-            //Console.WriteLine("Versions Path:");
-            //Console.WriteLine(versionDir.FullName);
+            ////Console.WriteLine("Versions Path:");
+            ////Console.WriteLine(versionDir.FullName);
 
-            // These are all the patch folders of starcraft
-            // Every folder may contain multiple "SC2Archive" files which may contain trigger natives
+            //// These are all the patch folders of starcraft
+            //// Every folder may contain multiple "SC2Archive" files which may contain trigger natives
+            //System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
             System.Text.ASCIIEncoding enc = new System.Text.ASCIIEncoding();
+            List<FileInfo> galaxyFiles = new List<FileInfo>();
+            galaxyFiles.AddRange(versionDir.GetFiles("*.galaxy"));
             foreach (var subDir in versionDir.GetDirectories())
             {
-                List<FileInfo> filesToSearch = new List<FileInfo>();
-                //filesToSearch.AddRange(subDir.GetFiles("*.SC2Archive"));
-                //filesToSearch.AddRange(subDir.GetFiles("*.SC2Data"));
-                filesToSearch.AddRange(subDir.GetFiles("*Base.SC2Data"));
-                foreach (var archive in filesToSearch)
-                {
-                    //Console.WriteLine("looking at: " + archive.FullName + "...");
-
-                    MpqEditor.MpqReader fileReader = new MpqEditor.MpqReader(archive.FullName);
-                    if (!fileReader.Valid) continue;
-
-                    string[] foundGalaxyFiles = fileReader.FindFiles("*.galaxy");
-                    foreach (var file in foundGalaxyFiles)
-                    {
-                        //Console.WriteLine("\tfile: " + file);
-                        string fileContent = enc.GetString(fileReader.ExtractFile(file));
-                        ParseFile(fileContent);
-                    }
-                }
+                galaxyFiles.AddRange(subDir.GetFiles("*.galaxy"));
             }
+            foreach (FileInfo file in galaxyFiles)
+            {
+                string fileContent = File.ReadAllText(file.FullName, Encoding.ASCII);
+                ParseFile(fileContent);
+            }
+            //foreach (var subDir in versionDir.GetDirectories())
+            //{
+            //    List<FileInfo> filesToSearch = new List<FileInfo>();
+            //    //filesToSearch.AddRange(subDir.GetFiles("*.SC2Archive"));
+            //    //filesToSearch.AddRange(subDir.GetFiles("*.SC2Data"));
+            //    filesToSearch.AddRange(subDir.GetFiles("*Base.SC2Data"));
+            //    foreach (var archive in filesToSearch)
+            //    {
+            //        //Console.WriteLine("looking at: " + archive.FullName + "...");
+
+            //        MpqEditor.MpqReader fileReader = new MpqEditor.MpqReader(archive.FullName);
+            //        if (!fileReader.Valid) continue;
+
+            //        string[] foundGalaxyFiles = fileReader.FindFiles("*.galaxy");
+            //        foreach (var file in foundGalaxyFiles)
+            //        {
+            //            //Console.WriteLine("\tfile: " + file);
+            //            string fileContent = enc.GetString(fileReader.ExtractFile(file));
+            //            ParseFile(fileContent);
+            //        }
+            //    }
+            //}
         }
 
-		private void ParseFile(string fileContents)
+        private void ParseFile(string fileContents)
         {
             ParseFunctions(fileContents);
 			ParseConstants(fileContents);
