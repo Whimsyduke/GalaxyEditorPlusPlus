@@ -355,6 +355,7 @@ void AINewDetector (int player, unit u, bool offerToScout) {
 //  AIAddDetectionDangerUnits
 //--------------------------------------------------------------------------------------------------
 void AIAddDetectionDangerUnits (int player) {
+    AIAddDetectionDanger(player, c_TU_WidowMine);
     AIAddDetectionDanger(player, c_TU_Ghost);
     AIAddDetectionDanger(player, c_TU_Banshee);
     AIAddDetectionDanger(player, c_TB_GhostAcademy);
@@ -363,6 +364,8 @@ void AIAddDetectionDangerUnits (int player) {
     AIAddDetectionDanger(player, c_PB_DarkShrine);
     AIAddDetectionDanger(player, c_ZU_SwarmHost);
     AIAddDetectionDanger(player, c_ZU_Locust);
+    AIAddDetectionDanger(player, c_ZU_Lurker);
+    AIAddDetectionDanger(player, c_ZB_LurkerDen);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -370,15 +373,18 @@ void AIAddDetectionDangerUnits (int player) {
 //--------------------------------------------------------------------------------------------------
 void AIAddAirDangerUnits (int player) {
     AIAddAirDanger(player, c_TU_Banshee);
+    AIAddAirDanger(player, c_TU_Liberator);
     AIAddAirDanger(player, c_TU_Battlecruiser);
     AIAddAirDanger(player, c_TB_StarportTechLab);
     AIAddAirDanger(player, c_TB_FusionCore);
     AIAddAirDanger(player, c_PU_VoidRay);
     AIAddAirDanger(player, c_PU_Carrier);
     AIAddAirDanger(player, c_PU_Tempest);
+    AIAddAirDanger(player, c_PU_Mothership);
     AIAddAirDanger(player, c_PB_Stargate);
     AIAddAirDanger(player, c_PB_FleetBeacon);
     AIAddAirDanger(player, c_ZU_Mutalisk);
+    AIAddAirDanger(player, c_ZU_Viper);
     AIAddAirDanger(player, c_ZU_BroodLord);
     AIAddAirDanger(player, c_ZB_Spire);
     AIAddAirDanger(player, c_ZB_GreaterSpire);

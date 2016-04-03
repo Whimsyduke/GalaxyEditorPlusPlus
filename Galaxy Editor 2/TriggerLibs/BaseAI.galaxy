@@ -302,7 +302,11 @@ void AICampaignStart (int player) {
     AISetDefenseRadii(player, 6.0, 7.0, 9.0);
 
     AIReqCountAsBuiltObject(player, "Larva");
+    AITechCountFixupSingle(player, "Overlord", "Overseer");
+    AITechCountFixupSingle(player, "Overlord", "OverlordTransport");
     AITechCountFixupSingle(player, "Spire", "GreaterSpire");
+    AITechCountFixupSingle(player, "HydraliskDen", "LurkerDen");
+    AITechCountFixupSingle(player, "HydraliskDen", "LurkerDenMP");
     AITechCountFixupInOrder(player, "Hatchery", "Lair", "Hive");
     AITechCountFixupEither(player, "CommandCenter", "OrbitalCommand", "PlanetaryFortress");
     AIReqAddSpecialMaker("Nuke", "GhostAcademy", "ArmSiloWithNuke", 0);

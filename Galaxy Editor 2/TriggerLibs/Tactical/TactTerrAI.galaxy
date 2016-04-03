@@ -1018,10 +1018,7 @@ static bool CallDownMule (int player, unit aiUnit) {
         return false;
     }
 
-    targetGroup = AIFindUnits(player, c_TU_SCV, UnitGetPosition(aiUnit), 
-                            AIAbilityFixed(player, c_AB_CalldownMULE, c_fieldRange0),
-                            c_noMaxCount
-    );
+    targetGroup = AIGetWorkers(player);
 
     //  Find only scv's that are gathering minerals and are close to their mineral target.
     targetGroup = AIFilterGathering(targetGroup, c_resourceTypeMinerals, c_maxDistanceToMinerals);
@@ -1203,8 +1200,7 @@ void AIThinkKD8Charge (int player, unit aiUnit, unitgroup scanGroup) {
 //  *** Raven ***
 //--------------------------------------------------------------------------------------------------
 const int c_autoTurretCooldown = c_tactTimerFirst;
-const int c_pointDefCooldown = c_tactTimerSecond;
-const int c_hsMissileCooldown = c_tactTimerThird;
+const int c_hsMissileCooldown = c_tactTimerSecond;
 
 const int c_seekerMissileMinMarker = 0;
 const int c_seekerMissileMaxMarker = 0;
@@ -1376,10 +1372,10 @@ static bool CastAutoTurret (int player, unit aiUnit, unitgroup scanGroup, bool l
 
     if (AIIsCampaign(player)) {
         if (AIPlayerDifficulty(player) < c_campAdvanced) {
-            cooldown = 10.0;
+            cooldown = 11.0;
         }
         else if (AIPlayerDifficulty(player) < c_campExpert) {
-            cooldown = 5.0;
+            cooldown = 7.0;
         }
     }
 
@@ -1395,6 +1391,16 @@ void AIThinkRaven (int player, unit aiUnit, unitgroup scanGroup) {
     marker mark;
     bool lowVitality;
     fixed cooldown;
+    fixed sharedCoolDown = 0.0;
+
+    if (AIIsCampaign(player)) {
+        if (AIPlayerDifficulty(player) < c_campExpert) {
+            sharedCoolDown = 10.0;
+        }
+        else {
+            sharedCoolDown = 6.0;
+        }
+    }
     
     if (!AIIsCampaign(player)) {
         if (AIPlayerDifficulty(player) <= c_skirMedium) {
@@ -1407,13 +1413,19 @@ void AIThinkRaven (int player, unit aiUnit, unitgroup scanGroup) {
     mark = AIMarker(aiUnit, c_MK_SeekerMissile);
     ord = HunterSeekerMissile(player, aiUnit, scanGroup, mark);
     if (ord != null) {
-        if (AIIsCampaign(player) && AIPlayerDifficulty(player) < c_campExpert) {
-            cooldown = 5.0;
+        if (AIIsCampaign(player)) {
+            if (AIPlayerDifficulty(player) < c_campExpert) {
+                cooldown = 11.0;
+            }
+            else {
+                cooldown = 7.0;
+            }
         }
         else {
             cooldown = 2.0;
         }
         AICastCooldown(aiUnit, ord, mark, c_castRetreat, c_hsMissileCooldown, cooldown);
+        AISetCooldown(aiUnit, c_autoTurretCooldown, sharedCoolDown);
         return;
     }
 
@@ -1427,6 +1439,7 @@ void AIThinkRaven (int player, unit aiUnit, unitgroup scanGroup) {
 
     lowVitality = UnitGetPropertyInt(aiUnit, c_unitPropVitalityPercent, c_unitPropCurrent) < c_RavenLowVitalityPercent;
     if (CastAutoTurret(player, aiUnit, scanGroup, lowVitality)) {
+        AISetCooldown(aiUnit, c_hsMissileCooldown, sharedCoolDown);
         return;
     }
 }
@@ -1698,6 +1711,9 @@ void AIThinkLiberatorAG (int player, unit aiUnit, unitgroup scanGroup) {
 //--------------------------------------------------------------------------------------------------
 const int c_liberatorMaxTargetRange = 15;
 
+const fixed c_liberatorMinTargetTime = 2.5;
+fixed[c_maxPlayers] g_liberatorLastGround;
+
 void AIThinkLiberator (int player, unit aiUnit, unitgroup scanGroup) {
     order ord;
     int inAirCount;
@@ -1707,7 +1723,13 @@ void AIThinkLiberator (int player, unit aiUnit, unitgroup scanGroup) {
     point bestPoint;
     region enemyRegion;
     unitfilter filter;
+    int minHits;
+    fixed minScore;
     
+    if (player >= c_maxPlayers || player < 0) {
+        return; // this shouldn't happen?
+    }
+
     ord = AICreateOrder(player, c_AB_LiberatorDefenderMode, 0);
     
     //  Check to see if this is a valid order at all (requires armory)
@@ -1717,6 +1739,11 @@ void AIThinkLiberator (int player, unit aiUnit, unitgroup scanGroup) {
 
     // Stay in mobile air mode while force moving
     if (AIControlForceToMove(aiUnit)) {
+        return;
+    }
+
+    // Only transition liberators to ground mode one at a time, helps them spread out the targetting.
+    if (g_liberatorLastGround[player] > (AIGetTime() - c_liberatorMinTargetTime)) {
         return;
     }
 
@@ -1751,16 +1778,27 @@ void AIThinkLiberator (int player, unit aiUnit, unitgroup scanGroup) {
     }
 
     // if there are air targets and barely any ground targets, stay in air mode
-    if (inAirCount > 0 && onGroundCount <= 2) {
+    if (inAirCount >= 8) {
+        minHits = 12;
+        minScore = 9.1;
+    } else if (inAirCount > 0) {
+        minHits = 3;
+        minScore = 2.1;
+    } else {        
+        minHits = 1;
+        minScore = 0.5;
+    }
+    
+    if (onGroundCount < minHits) {
         return;
     }
 
     // find the best area to attack on the ground
     bestPoint = AIBestTargetPoint(
         targetGroupGround,
-        1, // min hits
+        minHits, // min hits
         80, // damage base
-        0.5, // min score
+        minScore, // min score
         AIEffectFixed(player, c_EF_LiberatorAGSearch, c_fieldAreaRadius0),
         UnitGetPosition(aiUnit),
         10,
@@ -1772,6 +1810,7 @@ void AIThinkLiberator (int player, unit aiUnit, unitgroup scanGroup) {
     
     OrderSetTargetPoint(ord, bestPoint);
     if (UnitOrderIsValid(aiUnit, ord)) {
+        g_liberatorLastGround[player] = AIGetTime();
         AICast(aiUnit, ord, c_noMarker, c_castHold);
     }
 }

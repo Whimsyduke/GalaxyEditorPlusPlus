@@ -40,6 +40,7 @@ const int c_heroFlagExcludeFromMapIntro = 3;
 const int c_heroFlagGoodForModeA = 4;
 const int c_heroFlagGoodForModeB = 5;
 const int c_heroFlagAllowAIRandomSelection = 6;
+const int c_heroFlagShowInStore = 7;
 const string c_heroFlagFlyerName = "Flyer";
 const string c_heroFlagRandomName = "Random";
 const string c_heroFlagUsesMountName = "UsesMount";
@@ -47,6 +48,7 @@ const string c_heroFlagExcludeFromMapIntroName = "ExcludeFromMapIntro";
 const string c_heroFlagGoodForModeAName = "GoodForModeA";
 const string c_heroFlagGoodForModeBName = "GoodForModeB";
 const string c_heroFlagAllowAIRandomSelectionName = "AllowAIRandomSelection";
+const string c_heroFlagShowInStoreName = "ShowInStore";
 
 //  EHeroRole
 const int c_heroRoleWarrior = 0;
@@ -195,16 +197,6 @@ const string c_heroUniverseWarcraftName = "Warcraft";
 const string c_heroUniverseDiabloName = "Diablo";
 const string c_heroUniverseHeroesName = "Heroes";
 const string c_heroUniverseRetroName = "Retro";
-
-//  EHeroTalentAccess
-const int c_heroTalentAccessFree = 0;
-const int c_heroTalentAccessHeroic = 1;
-const int c_heroTalentAccessAdvanced = 2;
-const int c_heroTalentAccessExpert = 3;
-const string c_heroTalentAccessFreeName = "Free";
-const string c_heroTalentAccessHeroicName = "Heroic";
-const string c_heroTalentAccessAdvancedName = "Advanced";
-const string c_heroTalentAccessExpertName = "Expert";
 
 //  EHeroAbilFlag
 const int c_heroAbilFlagShowInHeroSelect = 0;

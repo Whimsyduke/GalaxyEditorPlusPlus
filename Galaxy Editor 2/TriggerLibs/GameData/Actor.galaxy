@@ -130,6 +130,7 @@ const int c_classIdCActorTurret = 117;
 const int c_classIdCActorUnit = 118;
 const int c_classIdCActorUnitRing = 119;
 const int c_classIdCActorMissile = 120;
+const int c_classIdCActorMinimap = 121;
 const string c_classIdCActorName = "CActor";
 const string c_classIdCActorBaseName = "CActorBase";
 const string c_classIdCActorBearingsName = "CActorBearings";
@@ -251,6 +252,7 @@ const string c_classIdCActorTurretName = "CActorTurret";
 const string c_classIdCActorUnitName = "CActorUnit";
 const string c_classIdCActorUnitRingName = "CActorUnitRing";
 const string c_classIdCActorMissileName = "CActorMissile";
+const string c_classIdCActorMinimapName = "CActorMinimap";
 
 //  EUnitStatusGroup
 const int c_unitStatusGroupOwner = 0;

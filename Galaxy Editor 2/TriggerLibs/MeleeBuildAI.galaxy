@@ -17,50 +17,53 @@ const int e_buildType_HighTech              =  8;
 const int e_buildType_Special               =  9;
 const int e_buildType_Mixed                 = 10;
 // zerg 1 base openings  (timing)
-const int e_buildType_z1b_LingBane          = 23;
-const int e_buildType_z1b_Roach             = 24;
-const int e_buildType_z1b_LingRoach         = 25;
+const int e_buildType_z1b_LingBane          = 30;
+const int e_buildType_z1b_Roach             = 31;
+const int e_buildType_z1b_LingRoach         = 32;
 // zerg 2-3 base openings  (power)
-const int e_buildType_z2b_PureMuta          = 27;
-const int e_buildType_z2b_LingBaneMuta      = 28;
-const int e_buildType_z2b_CapPureRoach      = 29;
-const int e_buildType_z2b_RoachInfest       = 30;
-const int e_buildType_z2b_RoachHydra        = 31;
-const int e_buildType_z2b_SwarmHost         = 32;
+const int e_buildType_z2b_PureMuta          = 40;
+const int e_buildType_z2b_LingBaneMuta      = 41;
+const int e_buildType_z2b_CapPureRoach      = 42;
+const int e_buildType_z2b_RoachInfest       = 43;
+const int e_buildType_z2b_RoachHydra        = 44;
+const int e_buildType_z2b_SwarmHost         = 45;  // Swarm Only
+const int e_buildType_z2b_RoachRavager      = 46;  // Void Only
 // zerg macro/lategame (macro)
-const int e_buildType_zm_MacroInfest        = 34;
-const int e_buildType_zm_MacroUltra         = 35;
-const int e_buildType_zm_MacroBrood         = 36;
+const int e_buildType_zm_MacroInfest        = 50;
+const int e_buildType_zm_MacroHydraLurker   = 51;  // Void Only
+const int e_buildType_zm_MacroUltra         = 52;
+const int e_buildType_zm_MacroBrood         = 53;
 // terran 1 base openings  (timing)
-const int e_buildType_t1b_MMStim            = 43;
-const int e_buildType_t1b_HellionMara       = 44;
-const int e_buildType_t1b_MariSiege         = 45;
-const int e_buildType_t1b_CloakBanshee      = 46;
+const int e_buildType_t1b_MMStim            = 70;
+const int e_buildType_t1b_HellionMara       = 71;
+const int e_buildType_t1b_MariSiege         = 72;
+const int e_buildType_t1b_CloakBanshee      = 73;
 // terran 2-3 base openings  (power)
-const int e_buildType_t2b_MMMedivac         = 48;
-const int e_buildType_t2b_MMSiege           = 49;
-const int e_buildType_t2b_SiegeBanshee      = 50;
-const int e_buildType_t2b_HellionSiege      = 51;
-const int e_buildType_t2b_SiegeThor         = 52;
+const int e_buildType_t2b_MMMedivac         = 80;
+const int e_buildType_t2b_MMSiege           = 81;
+const int e_buildType_t2b_SiegeBanshee      = 82;
+const int e_buildType_t2b_HellionSiege      = 83;
+const int e_buildType_t2b_SiegeThor         = 84;
 // terran macro/lategame (macro)
-const int e_buildType_tm_MacroMMM           = 54;
-const int e_buildType_tm_MacroMech          = 55;
-const int e_buildType_tm_MacroThorBC        = 56;
+const int e_buildType_tm_MacroMMM           = 90;
+const int e_buildType_tm_MacroMech          = 91;
+const int e_buildType_tm_MacroThorBC        = 92;
 // protoss 1 base openings  (timing)
-const int e_buildType_p1b_FourGate          = 64;
-const int e_buildType_p1b_StalkerRobo       = 65;
-const int e_buildType_p1b_StalkerBlink      = 66;
-const int e_buildType_p1b_DTRush            = 67;
+const int e_buildType_p1b_FourGate          = 110;
+const int e_buildType_p1b_Adept             = 111;  // Void Only
+const int e_buildType_p1b_StalkerRobo       = 112;
+const int e_buildType_p1b_StalkerBlink      = 113;
+const int e_buildType_p1b_DTRush            = 114;
 // protoss 2-3 base openings  (power)
-const int e_buildType_p2b_SevenGate         = 69;
-const int e_buildType_p2b_GateImmortal      = 70;
-const int e_buildType_p2b_GateColossi       = 71;
-const int e_buildType_p2b_GateAir           = 72;
-const int e_buildType_p2b_VoidPhoenix       = 73;
+const int e_buildType_p2b_SevenGate         = 120;
+const int e_buildType_p2b_GateImmortal      = 121;
+const int e_buildType_p2b_GateColossi       = 122;
+const int e_buildType_p2b_GateAir           = 123;
+const int e_buildType_p2b_VoidPhoenix       = 124;
 // protoss macro/lategame (macro)
-const int e_buildType_pm_MacroGateImm       = 75;
-const int e_buildType_pm_MacroColossi       = 76;
-const int e_buildType_pm_MacroGateAir       = 77;
+const int e_buildType_pm_MacroGateImm       = 130;
+const int e_buildType_pm_MacroColossi       = 131;
+const int e_buildType_pm_MacroGateAir       = 132;
 
 //--------------------------------------------------------------------------------------------------
 //  AISetupGenericCustomBuildMenusAll
@@ -219,11 +222,11 @@ void AISetNextBuildFromPlayerInput (int player) {
         AISetUserInt(player, c_specificLobbyBuild, lobbyBuild);
         AISetUserInt(player, c_openingBuildType, e_buildType_Timing);
     }
-    else if (lobbyBuild >= e_buildType_z2b_PureMuta && lobbyBuild <= e_buildType_z2b_SwarmHost) {
+    else if (lobbyBuild >= e_buildType_z2b_PureMuta && lobbyBuild <= e_buildType_z2b_RoachRavager) {
         AISetUserInt(player, c_specificLobbyBuild, lobbyBuild);
         AISetUserInt(player, c_openingBuildType, e_buildType_Power);
     }
-    else if (lobbyBuild == e_buildType_zm_MacroInfest) {
+    else if (lobbyBuild == e_buildType_zm_MacroInfest || lobbyBuild == e_buildType_zm_MacroHydraLurker) {
         AISetUserInt(player, c_specificLobbyBuild, lobbyBuild);
         AISetUserInt(player, c_openingBuildType, e_buildType_Macro);
         AISetUserInt(player, c_lateGameBuildType, e_buildType_Core);

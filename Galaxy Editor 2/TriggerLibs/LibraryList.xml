@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <TriggerData>
-    <library id="1" external="TriggerLibs/SwarmCampaignLib"/>
-    <library id="2" external="TriggerLibs/SwarmCampaignDataHelperLib"/>
+    <library id="1" external="TriggerLibs/NativeLib" sharedExt="1"/>
 </TriggerData>

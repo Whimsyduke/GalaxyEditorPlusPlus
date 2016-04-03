@@ -468,12 +468,11 @@
       <DependentUpon>Change log form.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Change log form.zh-CN.resx">
+    <EmbeddedResource Include="Change log form.zh-CHS.resx">
       <DependentUpon>Change log form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Change log form.zh-Hans.resx">
       <DependentUpon>Change log form.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CompileModWindow.en.resx">
       <DependentUpon>CompileModWindow.cs</DependentUpon>
@@ -1074,7 +1073,6 @@
     <Content Include="Fonts\FontStandardExtended68.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Galaxy++ Editor_TemporaryKey.pfx" />
     <None Include="Resources\compiledEffect" />
     <None Include="Resources\error.png" />
     <None Include="Resources\Screenshot2011-11-13 14_07_13.jpg" />
@@ -1138,7 +1136,6 @@
     <Content Include="Precompiled.LibraryData">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\Standard libraries\Standard\ExtraMethods.galaxy" />
     <None Include="Resources\PropertiesImage.bmp" />
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
@@ -1204,70 +1201,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Changelog.txt" />
-    <None Include="Resources\Standard libraries\Standard\AI.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\BuildAI.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\CampaignAI.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\DebugGalaxy.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Abil.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Achievement.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\AchievementTerm.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Actor.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Alert.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\AttachMethod.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Beam.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Behavior.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Button.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Camera.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Cliff.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\CliffMesh.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Conversation.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\ConversationState.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Cursor.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\DSP.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Effect.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Error.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Footprint.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\FoW.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Game.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\GameData.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\GameDataAllNatives.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\GameUI.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Item.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\ItemClass.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\ItemContainer.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Light.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Loot.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Model.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Mover.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Race.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Requirement.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\RequirementNode.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Reverb.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Reward.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\ScoreResult.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\ScoreValue.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Sound.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Soundtrack.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Tactical.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\TargetFind.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\TargetSort.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Terrain.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\TerrainObject.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\TerrainTex.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Texture.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Tile.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Turret.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Unit.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Upgrade.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Validator.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Water.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\GameData\Weapon.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\MeleeAI.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\NativeLib.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\natives.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\RequirementsAI.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\TacticalAI.galaxy" />
-    <None Include="Resources\Standard libraries\Standard\TestNatives.galaxy" />
     <None Include="TriggerLibs\AI.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -1280,22 +1213,10 @@
     <None Include="TriggerLibs\CampaignAI.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="TriggerLibs\CampaignLib.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\CampaignLib.SC2Lib">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\CampaignLib_h.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="TriggerLibs\Computer.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TriggerLibs\DebugAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\DebugGalaxy.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TriggerLibs\GameData\Abil.galaxy">
@@ -1490,6 +1411,9 @@
     <None Include="TriggerLibs\GameData\ScoreResult.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="TriggerLibs\GameData\ScoreValue.galaxy">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="TriggerLibs\GameData\Shape.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -1568,18 +1492,6 @@
     <None Include="TriggerLibs\GameData\Weapon.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="TriggerLibs\GAx3.Galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\LibertyLib.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\LibertyLib.SC2Lib">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\LibertyLib_h.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="TriggerLibs\MeleeAI.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -1604,79 +1516,13 @@
     <None Include="TriggerLibs\NativeLib_h.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="TriggerLibs\NativeLib_vendor.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="TriggerLibs\natives.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\Protoss.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossChIn.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossChRe.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossChVi.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossEasy.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossHard.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossHdVH.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossHigh.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossMdHd.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossMedi.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossVyEy.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Protoss\ProtossVyHd.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TriggerLibs\RequirementsAI.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TriggerLibs\SharedAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmCampaignDataHelperLib.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmCampaignDataHelperLib.SC2Lib">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmCampaignDataHelperLib_h.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmCampaignLib.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmCampaignLib.SC2Lib">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmCampaignLib_h.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmLib.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmLib.SC2Lib">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SwarmLib_h.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TriggerLibs\Tactical\TactCampAI.galaxy">
@@ -1692,84 +1538,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TriggerLibs\Tactical\TactZergAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\Terran.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranChIn.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranChRe.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranChVi.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranEasy.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranHard.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranHdVH.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranHigh.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranMdHd.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranMedi.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranVyEy.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Terran\TerranVyHd.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Test.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\TestNatives.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\Zerg.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergChIn.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergChRe.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergChVi.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergEasy.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergHard.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergHdVH.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergHigh.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergMdHd.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergMedi.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergVyEy.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Zerg\ZergVyHd.galaxy">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

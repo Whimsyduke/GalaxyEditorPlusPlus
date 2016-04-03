@@ -534,6 +534,7 @@ order CorePhotonOvercharge (int player, unit aiUnit, unitgroup scanGroup) {
 
 const fixed c_mtwRange  = 9.0;
 const fixed c_mtwRadius = 3.5;
+const int c_timeWarpCooldown = c_tactTimerFirst;
 
 order CoreTimeWarp (int player, unit aiUnit, unitgroup scanGroup) {
     order ord;
@@ -544,6 +545,10 @@ order CoreTimeWarp (int player, unit aiUnit, unitgroup scanGroup) {
     point targetPoint;
 
     if (AIIsCampaign(player)) {
+        return null;
+    }
+
+    if (!AITactCooldownAllow(aiUnit, c_timeWarpCooldown)) {        
         return null;
     }
 
@@ -640,6 +645,7 @@ order CoreMassRecall (int player, unit aiUnit, unitgroup scanGroup) {
 }
 
 //--------------------------------------------------------------------------------------------------
+
 void AIThinkMothershipCore (int player, unit aiUnit, unitgroup scanGroup) {
     order ord;
 
@@ -651,7 +657,7 @@ void AIThinkMothershipCore (int player, unit aiUnit, unitgroup scanGroup) {
 
     ord = CoreTimeWarp(player, aiUnit, scanGroup);
     if (ord != null) {
-        AICast(aiUnit, ord, c_noMarker, c_castHold);
+        AICastCooldown(aiUnit, ord, c_noMarker, c_castHold, c_timeWarpCooldown, 5);
         return;
     }
 
@@ -712,7 +718,7 @@ void AIThinkMothership (int player, unit aiUnit, unitgroup scanGroup) {
 
     ord = CoreTimeWarp(player, aiUnit, scanGroup);
     if (ord != null) {
-        AICast(aiUnit, ord, c_noMarker, c_castHold);
+        AICastCooldown(aiUnit, ord, c_noMarker, c_castHold, c_timeWarpCooldown, 5);
         return;
     }
 

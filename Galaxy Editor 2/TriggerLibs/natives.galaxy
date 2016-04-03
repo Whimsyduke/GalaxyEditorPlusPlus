@@ -25,6 +25,7 @@ include "TriggerLibs/GameData/GameDataAllNatives.galaxy"
 // - Effect History
 // - Environment
 // - Game
+// - Game User
 // - Looping
 // - Markers
 // - Math
@@ -1597,6 +1598,7 @@ native int      DialogControlGetSelectedItem (int control, int player);
 native void     DialogControlInvokeAsText (int control, playergroup players, string method, text param1, text param2, text param3, text param4); // Blizzard maps only
 native void     DialogControlInvokeAsString (int control, playergroup players, string method, string param1, string param2, string param3, string param4); // Blizzard maps only
 
+native void     DialogControlSetAnimationState (int control, playergroup players, string animationStateName, string eventName);
 native void     DialogControlSendAnimationEvent (int control, playergroup players, string eventName);
 native void     DialogControlSetAnimationSpeed (int control, playergroup players, string animationName, fixed speed);
 native void     DialogControlSetAnimationTime (int control, playergroup players, string animationName, fixed speed);
@@ -1695,6 +1697,9 @@ native fixed    WorldHeight (int inType, point inPos);  // inType uses the c_hei
 
 // Shrub
 native bool     InShrub (point inPos);
+
+// Custom cell attributes
+native bool     HasCustomCellAttribute (point inPos, int inAtt);
 
 // Miscellaneous
 const int c_backgroundFixed     = 0; // Attached to camera position (never appears to move)
@@ -1882,6 +1887,17 @@ native void     TriggerAddEventCheatUsed (trigger t, int player, int inCheat);
 
 native string   EventChatMessage (bool matchedOnly);
 native int      EventCheatUsed ();
+
+//--------------------------------------------------------------------------------------------------
+// Game User
+//--------------------------------------------------------------------------------------------------
+native text     GameUserName (int gameUser);
+native string   GameUserHandle (int gameUser);
+
+native void     GameUserDisplayMessage (int gameUser, int messageArea, text messageText);
+native void     GameUserClearMessages (int gameUser, int messageArea);
+
+native int EventGameUser ();
 
 //--------------------------------------------------------------------------------------------------
 // Looping
@@ -2319,6 +2335,11 @@ native void         PingSetObserver (int p, bool isObserver);
 native void         TriggerAddEventPing (trigger t, int player);
 
 native unit         EventPingUnit ();
+native string       EventPingUnitType ();
+native int          EventPingUnitControlPlayer ();
+native int          EventPingUnitUpkeepPlayer ();
+native point        EventPingUnitPosition ();
+native bool         EventPingUnitIsUnderConstruction ();
 native point        EventPingPoint ();
 native bool         EventPingedMinimap ();
 native int          EventPingOption ();
@@ -4529,6 +4550,8 @@ native unit UnitGroupRandomUnit (unitgroup inGroup, int inType);
 native bool UnitGroupHasUnit (unitgroup inGroup, unit inUnit);
 native bool UnitGroupTestPlane (unitgroup inGroup, int inPlane);
 native unit UnitGroupNearestUnit (unitgroup inGroup, point inPoint);
+
+native void UnitGroupPauseAll (unitgroup inGroup, bool inPause);
 
 //--------------------------------------------------------------------------------------------------
 // Unit Reference

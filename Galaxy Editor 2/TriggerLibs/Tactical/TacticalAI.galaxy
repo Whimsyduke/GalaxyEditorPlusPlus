@@ -119,6 +119,7 @@ const int c_buildingTypeProduction  = 0x1;
 const int c_buildingTypeTownHall    = 0x2;
 const int c_buildingTypeActive      = 0x4;
 native unitgroup AIGetBuildingGroup (int player, int flags);
+native unitgroup AIGetWorkers (int player);
 native unit AIGetClosestUnit (unit u, unitgroup group, bool needsPath);
 
 native fixed AIUnitGroupStrength (unitgroup inGroup);
