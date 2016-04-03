@@ -34,11 +34,9 @@ namespace Galaxy_Editor_2
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.projectView = new Galaxy_Editor_2.TreeViewDragDrop();
             this.projectViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.objectBrowserSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.tabStrip = new FarsiLibrary.Win.FATabStrip();
             this.ObjectBrowserPanel = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.mapObjectBrowserPage = new System.Windows.Forms.TabPage();
@@ -54,7 +52,6 @@ namespace Galaxy_Editor_2
             this.CBUnitFilterCompress = new System.Windows.Forms.CheckBox();
             this.BTNUnitFilterReset = new System.Windows.Forms.Button();
             this.BTNUnitFilterInsert = new System.Windows.Forms.Button();
-            this.messageView = new Galaxy_Editor_2.TreeViewDragDrop();
             this.messageViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.CBShowWarnings = new System.Windows.Forms.CheckBox();
@@ -122,6 +119,9 @@ namespace Galaxy_Editor_2
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.TBFind = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.TBComment = new System.Windows.Forms.ToolStripButton();
+            this.TBUncomment = new System.Windows.Forms.ToolStripButton();
             this.editorRightClick = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.RightClickCut = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickCopy = new System.Windows.Forms.ToolStripMenuItem();
@@ -134,6 +134,9 @@ namespace Galaxy_Editor_2
             this.TSInsertConstructor = new System.Windows.Forms.ToolStripMenuItem();
             this.goToDeclarationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ObjectBrowserTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.projectView = new Galaxy_Editor_2.TreeViewDragDrop();
+            this.tabStrip = new FarsiLibrary.Win.FATabStrip();
+            this.messageView = new Galaxy_Editor_2.TreeViewDragDrop();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -146,7 +149,6 @@ namespace Galaxy_Editor_2
             this.objectBrowserSplitContainer.Panel1.SuspendLayout();
             this.objectBrowserSplitContainer.Panel2.SuspendLayout();
             this.objectBrowserSplitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabStrip)).BeginInit();
             this.ObjectBrowserPanel.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.mapObjectBrowserPage.SuspendLayout();
@@ -160,6 +162,7 @@ namespace Galaxy_Editor_2
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.editorRightClick.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabStrip)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -180,34 +183,6 @@ namespace Galaxy_Editor_2
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.ObjectBrowserTooltip.SetToolTip(this.splitContainer1.Panel2, resources.GetString("splitContainer1.Panel2.ToolTip"));
             this.ObjectBrowserTooltip.SetToolTip(this.splitContainer1, resources.GetString("splitContainer1.ToolTip"));
-            // 
-            // projectView
-            // 
-            resources.ApplyResources(this.projectView, "projectView");
-            this.projectView.AllowDrop = true;
-            this.projectView.DragCursor = null;
-            this.projectView.DragCursorType = Galaxy_Editor_2.DragCursorType.None;
-            this.projectView.DragImageIndex = 0;
-            this.projectView.DragMode = System.Windows.Forms.DragDropEffects.Move;
-            this.projectView.DragNodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.projectView.DragNodeOpacity = 0.3D;
-            this.projectView.DragOverNodeBackColor = System.Drawing.SystemColors.Highlight;
-            this.projectView.DragOverNodeForeColor = System.Drawing.SystemColors.HighlightText;
-            this.projectView.ImageList = this.projectViewImageList;
-            this.projectView.Name = "projectView";
-            this.ObjectBrowserTooltip.SetToolTip(this.projectView, resources.GetString("projectView.ToolTip"));
-            this.projectView.DragStart += new Galaxy_Editor_2.DragItemEventHandler(this.projectView_DragStart);
-            this.projectView.DragComplete += new Galaxy_Editor_2.DragCompleteEventHandler(this.projectView_DragComplete);
-            this.projectView.DragCompleteValid += new Galaxy_Editor_2.DragCompletionValidEventHandler(this.projectView_DragCompleteValid);
-            this.projectView.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.projectView_BeforeLabelEdit);
-            this.projectView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.projectView_AfterLabelEdit);
-            this.projectView.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.projectView_AfterCollapse);
-            this.projectView.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.projectView_AfterExpand);
-            this.projectView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.projectView_AfterSelect);
-            this.projectView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.projectView_KeyDown);
-            this.projectView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.projectView_KeyPress);
-            this.projectView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.projectView_MouseDoubleClick);
-            this.projectView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.projectView_MouseDown);
             // 
             // projectViewImageList
             // 
@@ -258,14 +233,6 @@ namespace Galaxy_Editor_2
             this.objectBrowserSplitContainer.Panel2.Controls.Add(this.ObjectBrowserPanel);
             this.ObjectBrowserTooltip.SetToolTip(this.objectBrowserSplitContainer.Panel2, resources.GetString("objectBrowserSplitContainer.Panel2.ToolTip"));
             this.ObjectBrowserTooltip.SetToolTip(this.objectBrowserSplitContainer, resources.GetString("objectBrowserSplitContainer.ToolTip"));
-            // 
-            // tabStrip
-            // 
-            resources.ApplyResources(this.tabStrip, "tabStrip");
-            this.tabStrip.Name = "tabStrip";
-            this.ObjectBrowserTooltip.SetToolTip(this.tabStrip, resources.GetString("tabStrip.ToolTip"));
-            this.tabStrip.TabStripItemClosing += new FarsiLibrary.Win.TabStripItemClosingHandler(this.tabStrip_TabStripItemClosing);
-            this.tabStrip.TabStripItemSelectionChanged += new FarsiLibrary.Win.TabStripItemChangedHandler(this.tabStrip_TabStripItemSelectionChanged);
             // 
             // ObjectBrowserPanel
             // 
@@ -384,24 +351,6 @@ namespace Galaxy_Editor_2
             this.ObjectBrowserTooltip.SetToolTip(this.BTNUnitFilterInsert, resources.GetString("BTNUnitFilterInsert.ToolTip"));
             this.BTNUnitFilterInsert.UseVisualStyleBackColor = true;
             this.BTNUnitFilterInsert.Click += new System.EventHandler(this.BTNUnitFilterInsert_Click);
-            // 
-            // messageView
-            // 
-            resources.ApplyResources(this.messageView, "messageView");
-            this.messageView.AllowDrop = true;
-            this.messageView.DragCursor = null;
-            this.messageView.DragCursorType = Galaxy_Editor_2.DragCursorType.None;
-            this.messageView.DragImageIndex = 0;
-            this.messageView.DragMode = System.Windows.Forms.DragDropEffects.Move;
-            this.messageView.DragNodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageView.DragNodeOpacity = 0.3D;
-            this.messageView.DragOverNodeBackColor = System.Drawing.SystemColors.Highlight;
-            this.messageView.DragOverNodeForeColor = System.Drawing.SystemColors.HighlightText;
-            this.messageView.ImageList = this.messageViewImageList;
-            this.messageView.Name = "messageView";
-            this.ObjectBrowserTooltip.SetToolTip(this.messageView, resources.GetString("messageView.ToolTip"));
-            this.messageView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.messageView_KeyDown);
-            this.messageView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.messageView_MouseDoubleClick);
             // 
             // messageViewImageList
             // 
@@ -748,7 +697,10 @@ namespace Galaxy_Editor_2
             this.toolStripSeparator1,
             this.TBRun,
             this.toolStripSeparator4,
-            this.TBFind});
+            this.TBFind,
+            this.toolStripSeparator7,
+            this.TBComment,
+            this.TBUncomment});
             this.toolStrip1.Name = "toolStrip1";
             this.ObjectBrowserTooltip.SetToolTip(this.toolStrip1, resources.GetString("toolStrip1.ToolTip"));
             // 
@@ -892,6 +844,25 @@ namespace Galaxy_Editor_2
             this.TBFind.Name = "TBFind";
             this.TBFind.Click += new System.EventHandler(this.TBFind_Click);
             // 
+            // toolStripSeparator7
+            // 
+            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            // 
+            // TBComment
+            // 
+            resources.ApplyResources(this.TBComment, "TBComment");
+            this.TBComment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TBComment.Name = "TBComment";
+            this.TBComment.Click += new System.EventHandler(this.TBComment_Click);
+            // 
+            // TBUncomment
+            // 
+            resources.ApplyResources(this.TBUncomment, "TBUncomment");
+            this.TBUncomment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.TBUncomment.Name = "TBUncomment";
+            this.TBUncomment.Click += new System.EventHandler(this.TBUncomment_Click);
+            // 
             // editorRightClick
             // 
             resources.ApplyResources(this.editorRightClick, "editorRightClick");
@@ -970,6 +941,60 @@ namespace Galaxy_Editor_2
             this.goToDeclarationToolStripMenuItem.Name = "goToDeclarationToolStripMenuItem";
             this.goToDeclarationToolStripMenuItem.Click += new System.EventHandler(this.goToDeclarationToolStripMenuItem_Click);
             // 
+            // projectView
+            // 
+            resources.ApplyResources(this.projectView, "projectView");
+            this.projectView.AllowDrop = true;
+            this.projectView.DragCursor = null;
+            this.projectView.DragCursorType = Galaxy_Editor_2.DragCursorType.None;
+            this.projectView.DragImageIndex = 0;
+            this.projectView.DragMode = System.Windows.Forms.DragDropEffects.Move;
+            this.projectView.DragNodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectView.DragNodeOpacity = 0.3D;
+            this.projectView.DragOverNodeBackColor = System.Drawing.SystemColors.Highlight;
+            this.projectView.DragOverNodeForeColor = System.Drawing.SystemColors.HighlightText;
+            this.projectView.ImageList = this.projectViewImageList;
+            this.projectView.Name = "projectView";
+            this.ObjectBrowserTooltip.SetToolTip(this.projectView, resources.GetString("projectView.ToolTip"));
+            this.projectView.DragStart += new Galaxy_Editor_2.DragItemEventHandler(this.projectView_DragStart);
+            this.projectView.DragComplete += new Galaxy_Editor_2.DragCompleteEventHandler(this.projectView_DragComplete);
+            this.projectView.DragCompleteValid += new Galaxy_Editor_2.DragCompletionValidEventHandler(this.projectView_DragCompleteValid);
+            this.projectView.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.projectView_BeforeLabelEdit);
+            this.projectView.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.projectView_AfterLabelEdit);
+            this.projectView.AfterCollapse += new System.Windows.Forms.TreeViewEventHandler(this.projectView_AfterCollapse);
+            this.projectView.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.projectView_AfterExpand);
+            this.projectView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.projectView_AfterSelect);
+            this.projectView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.projectView_KeyDown);
+            this.projectView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.projectView_KeyPress);
+            this.projectView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.projectView_MouseDoubleClick);
+            this.projectView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.projectView_MouseDown);
+            // 
+            // tabStrip
+            // 
+            resources.ApplyResources(this.tabStrip, "tabStrip");
+            this.tabStrip.Name = "tabStrip";
+            this.ObjectBrowserTooltip.SetToolTip(this.tabStrip, resources.GetString("tabStrip.ToolTip"));
+            this.tabStrip.TabStripItemClosing += new FarsiLibrary.Win.TabStripItemClosingHandler(this.tabStrip_TabStripItemClosing);
+            this.tabStrip.TabStripItemSelectionChanged += new FarsiLibrary.Win.TabStripItemChangedHandler(this.tabStrip_TabStripItemSelectionChanged);
+            // 
+            // messageView
+            // 
+            resources.ApplyResources(this.messageView, "messageView");
+            this.messageView.AllowDrop = true;
+            this.messageView.DragCursor = null;
+            this.messageView.DragCursorType = Galaxy_Editor_2.DragCursorType.None;
+            this.messageView.DragImageIndex = 0;
+            this.messageView.DragMode = System.Windows.Forms.DragDropEffects.Move;
+            this.messageView.DragNodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageView.DragNodeOpacity = 0.3D;
+            this.messageView.DragOverNodeBackColor = System.Drawing.SystemColors.Highlight;
+            this.messageView.DragOverNodeForeColor = System.Drawing.SystemColors.HighlightText;
+            this.messageView.ImageList = this.messageViewImageList;
+            this.messageView.Name = "messageView";
+            this.ObjectBrowserTooltip.SetToolTip(this.messageView, resources.GetString("messageView.ToolTip"));
+            this.messageView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.messageView_KeyDown);
+            this.messageView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.messageView_MouseDoubleClick);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -1000,7 +1025,6 @@ namespace Galaxy_Editor_2
             this.objectBrowserSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.objectBrowserSplitContainer)).EndInit();
             this.objectBrowserSplitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tabStrip)).EndInit();
             this.ObjectBrowserPanel.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.mapObjectBrowserPage.ResumeLayout(false);
@@ -1021,6 +1045,7 @@ namespace Galaxy_Editor_2
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.editorRightClick.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabStrip)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1129,11 +1154,9 @@ namespace Galaxy_Editor_2
         private System.Windows.Forms.ToolStripMenuItem chineseSimpleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jumpToolStripMenuItem;
-
-
-
-
-
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton TBComment;
+        private System.Windows.Forms.ToolStripButton TBUncomment;
     }
 }
 

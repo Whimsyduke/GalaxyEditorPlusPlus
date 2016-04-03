@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Galaxy_Editor_2.Compiler;
 using Galaxy_Editor_2.Compiler.Contents;
@@ -30,7 +31,8 @@ namespace Galaxy_Editor_2.Editor_control
 
         public class Caret
         {
-            public TextPoint Position {
+            public TextPoint Position
+            {
                 get { return GetPosition(true); }
                 private set
                 {
@@ -129,7 +131,7 @@ namespace Galaxy_Editor_2.Editor_control
                                                //Horizontal scrollbar
                                                Size.Height - (horizontalScrollBar.Visible ? horizontalScrollBar.Height : 0)
                     );
-                rect.X += fonts.CharWidth*lines.Count.ToString().Length + 3;
+                rect.X += fonts.CharWidth * lines.Count.ToString().Length + 3;
 
                 rect.Width -= rect.X;
                 rect.Height -= rect.Y;
@@ -150,7 +152,7 @@ namespace Galaxy_Editor_2.Editor_control
             BackColor = Color.White;
 
 
-            
+
 
 
             horizontalScrollBar = new HScrollBar();
@@ -367,7 +369,7 @@ namespace Galaxy_Editor_2.Editor_control
             Rectangle textRegion = TextRegion;
             //Set max values
             //Number of lines minus the number of lines that can be displayed
-            int visibleLineCount = textRegion.Height/fonts.Base.Height;
+            int visibleLineCount = textRegion.Height / fonts.Base.Height;
             verticalScrollBar.Maximum = Math.Max(0, lines.Count - visibleLineCount);
 
             //Update text region if needed
@@ -402,7 +404,7 @@ namespace Galaxy_Editor_2.Editor_control
             base.WndProc(ref m);
         }*/
 
-        
+
 
         private Bitmap bg = new Bitmap(10, 10);
         private int lastLineNumerWidth;
@@ -411,88 +413,88 @@ namespace Galaxy_Editor_2.Editor_control
         {
             try
             {
-            int lineNumberWidth = lines.Count.ToString().Length;
-            if (lineNumberWidth != lastLineNumerWidth)
-            {
-                InvalidateAll = true;
-                lastLineNumerWidth = lineNumberWidth;
-            }
-            Graphics g = Graphics.FromImage(bg);
-            //InvalidateAll = true;
-            //e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
-            int lineNr = verticalScrollBar.Value;
-            Rectangle textRegion = TextRegion;
-            Rectangle bounds = new Rectangle(textRegion.X - horizontalScrollBar.Value, textRegion.Y, textRegion.Width + horizontalScrollBar.Value, fonts.Base.Height);
-
-            Pen controlPen = new Pen(Color.FromArgb(165, 165, 165));
-            int leftLineCenter = textRegion.X - 6;
-            g.FillRectangle(Brushes.White, 0, 0, textRegion.X, e.ClipRectangle.Y + e.ClipRectangle.Height);
-            g.DrawLine(controlPen, leftLineCenter, e.ClipRectangle.Y, leftLineCenter,
-                                e.ClipRectangle.Y + e.ClipRectangle.Height);
-            while (bounds.Y < textRegion.Y + textRegion.Height)
-            {
-                if (lineNr < lines.Count)
+                int lineNumberWidth = lines.Count.ToString().Length;
+                if (lineNumberWidth != lastLineNumerWidth)
                 {
-                    if (!lines[lineNr].LineVisible)
-                    {
-                        lineNr++;
-                        continue;
-                    }
+                    InvalidateAll = true;
+                    lastLineNumerWidth = lineNumberWidth;
+                }
+                Graphics g = Graphics.FromImage(bg);
+                //InvalidateAll = true;
+                //e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
+                int lineNr = verticalScrollBar.Value;
+                Rectangle textRegion = TextRegion;
+                Rectangle bounds = new Rectangle(textRegion.X - horizontalScrollBar.Value, textRegion.Y, textRegion.Width + horizontalScrollBar.Value, fonts.Base.Height);
 
-
-                    //Draw line nr
+                Pen controlPen = new Pen(Color.FromArgb(165, 165, 165));
+                int leftLineCenter = textRegion.X - 6;
+                g.FillRectangle(Brushes.White, 0, 0, textRegion.X, e.ClipRectangle.Y + e.ClipRectangle.Height);
+                g.DrawLine(controlPen, leftLineCenter, e.ClipRectangle.Y, leftLineCenter,
+                                    e.ClipRectangle.Y + e.ClipRectangle.Height);
+                while (bounds.Y < textRegion.Y + textRegion.Height)
+                {
+                    if (lineNr < lines.Count)
                     {
-                        string text = (lineNr + 1).ToString();
-                        while (text.Length < lines.Count.ToString().Length)
-                            text = " " + text;
-                        for (int i = 0; i < text.Length; i++)
+                        if (!lines[lineNr].LineVisible)
                         {
+                            lineNr++;
+                            continue;
+                        }
 
-                            Font font = fonts.Base;
-                            g.DrawString(text[i].ToString(), font, Brushes.Gray,
-                                         i*fonts.CharWidth, bounds.Y);
+
+                        //Draw line nr
+                        {
+                            string text = (lineNr + 1).ToString();
+                            while (text.Length < lines.Count.ToString().Length)
+                                text = " " + text;
+                            for (int i = 0; i < text.Length; i++)
+                            {
+
+                                Font font = fonts.Base;
+                                g.DrawString(text[i].ToString(), font, Brushes.Gray,
+                                             i * fonts.CharWidth, bounds.Y);
+                            }
+                        }
+
+                        //Draw +/- to the left
+                        if (lines[lineNr].BlockEndLine != null)
+                        {
+                            int buttonSize = 9;
+                            int lineMid = bounds.Y + bounds.Height / 2;
+                            g.FillRectangle(Brushes.White, leftLineCenter - buttonSize / 2 - 1,
+                                                     lineMid - buttonSize / 2 - 1,
+                                                     buttonSize + 2, buttonSize + 2);
+                            g.DrawRectangle(controlPen, leftLineCenter - buttonSize / 2, lineMid - buttonSize / 2,
+                                                     buttonSize - 1,
+                                                     buttonSize - 1);
+                            //Draw -
+                            g.DrawLine(Pens.Black, leftLineCenter - buttonSize / 2 + 2, lineMid,
+                                                leftLineCenter + buttonSize / 2 - 2, lineMid);
+                            //Draw +
+                            if (!lines[lineNr].BlockVisible)
+                                g.DrawLine(Pens.Black, leftLineCenter, lineMid - buttonSize / 2 + 2,
+                                                    leftLineCenter, lineMid + buttonSize / 2 - 2);
                         }
                     }
+                    DrawLine(lineNr, g, bounds, fonts);
 
-                    //Draw +/- to the left
-                    if (lines[lineNr].BlockEndLine != null)
+                    //Draw caret
+                    if (caret.GetPosition(true).Line == lineNr)
                     {
-                        int buttonSize = 9;
-                        int lineMid = bounds.Y + bounds.Height / 2;
-                        g.FillRectangle(Brushes.White, leftLineCenter - buttonSize / 2 - 1,
-                                                 lineMid - buttonSize / 2 - 1,
-                                                 buttonSize + 2, buttonSize + 2);
-                        g.DrawRectangle(controlPen, leftLineCenter - buttonSize / 2, lineMid - buttonSize / 2,
-                                                 buttonSize - 1,
-                                                 buttonSize - 1);
-                        //Draw -
-                        g.DrawLine(Pens.Black, leftLineCenter - buttonSize / 2 + 2, lineMid,
-                                            leftLineCenter + buttonSize / 2 - 2, lineMid);
-                        //Draw +
-                        if (!lines[lineNr].BlockVisible)
-                            g.DrawLine(Pens.Black, leftLineCenter, lineMid - buttonSize / 2 + 2,
-                                                leftLineCenter, lineMid + buttonSize / 2 - 2);
+                        Point caretpos = GetPixelAtTextpoint(caret.GetPosition(true));
+                        g.DrawLine(caret.Shown && Focused ? Pens.Black : Pens.White, caretpos.X, caretpos.Y, caretpos.X,
+                                            caretpos.Y + bounds.Height - 1);
                     }
-                }
-                DrawLine(lineNr, g, bounds, fonts);
 
-                //Draw caret
-                if (caret.GetPosition(true).Line == lineNr)
-                {
-                    Point caretpos = GetPixelAtTextpoint(caret.GetPosition(true));
-                    g.DrawLine(caret.Shown && Focused ? Pens.Black : Pens.White, caretpos.X, caretpos.Y, caretpos.X,
-                                        caretpos.Y + bounds.Height - 1);
+                    lineNr++;
+                    bounds.Y += bounds.Height;
                 }
 
-                lineNr++;
-                bounds.Y += bounds.Height;
-            }
-
-            //g.Flush();
-            InvalidateAll = false;
-            e.Graphics.DrawImage(bg, 0, 0);
-            //e.Graphics.DrawImage(snowman, ClientSize.Width - snowman.Width, ClientSize.Height - snowman.Height);
-            //base.OnPaint(e);
+                //g.Flush();
+                InvalidateAll = false;
+                e.Graphics.DrawImage(bg, 0, 0);
+                //e.Graphics.DrawImage(snowman, ClientSize.Width - snowman.Width, ClientSize.Height - snowman.Height);
+                //base.OnPaint(e);
 
             }
             catch (Exception err)
@@ -504,7 +506,7 @@ namespace Galaxy_Editor_2.Editor_control
         private void DrawLine(int lineNr, Graphics g, Rectangle bounds, FontScheme fonts)
         {
             Line line = lineNr < lines.Count ? lines[lineNr] : null;
-            
+
 
             if (line != null)
             {
@@ -519,13 +521,13 @@ namespace Galaxy_Editor_2.Editor_control
                 if (line.BlockEndLine != null && !line.BlockVisible)
                 {
                     //Draw ... box
-                    Rectangle boxBounds = new Rectangle(bounds.X + (line.Text.Length + 1) * fonts.CharWidth, bounds.Y, 4*fonts.CharWidth, bounds.Height - 1);
+                    Rectangle boxBounds = new Rectangle(bounds.X + (line.Text.Length + 1) * fonts.CharWidth, bounds.Y, 4 * fonts.CharWidth, bounds.Height - 1);
                     Pen controlPen = new Pen(Color.FromArgb(165, 165, 165));
                     g.DrawRectangle(controlPen, boxBounds);
                     for (int i = 0; i < 3; i++)
                     {
                         g.DrawString(".", fonts.Base, new SolidBrush(controlPen.Color), boxBounds.X + i * fonts.CharWidth, boxBounds.Y);
-                        
+
                     }
                 }
 
@@ -539,7 +541,7 @@ namespace Galaxy_Editor_2.Editor_control
 
         private void DrawString(Graphics g, int lineNr, string text, Rectangle bounds)
         {
-            
+
             for (int i = 0; i <= text.Length; i++)
             {
                 TextPoint textPoint = new TextPoint(lineNr, i);
@@ -550,7 +552,7 @@ namespace Galaxy_Editor_2.Editor_control
                     if (i < text.Length && text[i] > 0xFF)
                         width += fonts.CharWidth;
                     else if (i < text.Length && text[i] == '\t')
-                        width = 4*fonts.CharWidth;
+                        width = 4 * fonts.CharWidth;
                     g.FillRectangle(new SolidBrush(Color.FromArgb(173, 214, 255)), pixel.X,
                                     pixel.Y, width, fonts.Base.Height);
                 }
@@ -567,7 +569,7 @@ namespace Galaxy_Editor_2.Editor_control
                 if (text[i] > 0xFF)
                     x += fonts.CharWidth;
                 else if (text[i] == '\t')
-                    x += 3*fonts.CharWidth;
+                    x += 3 * fonts.CharWidth;
             }
         }
 
@@ -577,7 +579,7 @@ namespace Galaxy_Editor_2.Editor_control
             g.FillRectangle(IsReadonly ? new SolidBrush(Color.FromArgb(240, 240, 240)) : Brushes.White, bounds);
         }
 
-        
+
 
         private DateTime lastMouseDown;
         private Point lastMouseDownPos;
@@ -588,7 +590,7 @@ namespace Galaxy_Editor_2.Editor_control
                 horizontalScrollBar.Value = Math.Max(0, Math.Min(horizontalScrollBar.Value + 50, horizontalScrollBar.Maximum));
                 return;
             }
-            if ( e.Button == MouseButtons.XButton2)
+            if (e.Button == MouseButtons.XButton2)
             {
                 horizontalScrollBar.Value = Math.Max(0, Math.Min(horizontalScrollBar.Value - 50, horizontalScrollBar.Maximum));
                 return;
@@ -634,7 +636,7 @@ namespace Galaxy_Editor_2.Editor_control
                 lastMouseDownPos.Y -= e.Y;
                 lastMouseDownPos.X *= lastMouseDownPos.X;
                 lastMouseDownPos.Y *= lastMouseDownPos.Y;
-                if (!shift && (DateTime.Now - lastMouseDown).TotalMilliseconds < SystemInformation.DoubleClickTime && 
+                if (!shift && (DateTime.Now - lastMouseDown).TotalMilliseconds < SystemInformation.DoubleClickTime &&
                     lastMouseDownPos.X < SystemInformation.DoubleClickSize.Width && lastMouseDownPos.Y < SystemInformation.DoubleClickSize.Height)
                 {
                     //Mark current word
@@ -696,7 +698,7 @@ namespace Galaxy_Editor_2.Editor_control
             }
         }
 
-        
+
 
         protected override void OnMouseUp(MouseEventArgs e)
         {
@@ -722,7 +724,7 @@ namespace Galaxy_Editor_2.Editor_control
                     //Ensure visible
                     if (e.X > TextRegion.Width + TextRegion.X && horizontalScrollBar.Visible)
                     {
-                        int pixelsOut = Math.Min(10, e.X - TextRegion.Width - TextRegion.X)/2;
+                        int pixelsOut = Math.Min(10, e.X - TextRegion.Width - TextRegion.X) / 2;
                         horizontalScrollBar.Value = Math.Min(horizontalScrollBar.Maximum,
                                                              horizontalScrollBar.Value + pixelsOut);
                     }
@@ -730,7 +732,7 @@ namespace Galaxy_Editor_2.Editor_control
                     {
                         int pixelsOut = Math.Min(10, TextRegion.X - e.X);
                         horizontalScrollBar.Value = Math.Max(0,
-                                                             horizontalScrollBar.Value - pixelsOut)/2;   
+                                                             horizontalScrollBar.Value - pixelsOut) / 2;
                     }
                     if (e.Y > TextRegion.Height + TextRegion.Y && verticalScrollBar.Visible)
                     {
@@ -749,7 +751,7 @@ namespace Galaxy_Editor_2.Editor_control
                     caret.SetPosition(mousePos, true);
                     caret.Shown = true;
                     Invalidate();
-                    
+
                 }
             }
         }
@@ -777,7 +779,7 @@ namespace Galaxy_Editor_2.Editor_control
             if (ModifierKeys == Keys.Shift)
                 horizontalScrollBar.Value = Math.Max(0, Math.Min(horizontalScrollBar.Value - e.Delta / 12, horizontalScrollBar.Maximum));
             else
-                verticalScrollBar.Value = Math.Max(0, Math.Min(verticalScrollBar.Value - e.Delta/30, verticalScrollBar.Maximum));
+                verticalScrollBar.Value = Math.Max(0, Math.Min(verticalScrollBar.Value - e.Delta / 30, verticalScrollBar.Maximum));
         }
 
 
@@ -821,7 +823,7 @@ namespace Galaxy_Editor_2.Editor_control
             if (PreviewKeyDown != null) PreviewKeyDown(this, e);
             if (!e.Handled)
                 e.Handled = ExecuteKey(e);
-            
+
 
             base.OnKeyDown(e);
         }
@@ -836,11 +838,11 @@ namespace Galaxy_Editor_2.Editor_control
             if (shift) keys = e.KeyData ^ Keys.Shift;
             if (ctrl) keys = keys ^ Keys.Control;
             //Only handle special keys
-            
+
             switch (keys)
             {
                 case Keys.Tab:
-                    
+
                     if (IsReadonly) break;
                     if (!TextMarked)
                     {
@@ -900,7 +902,7 @@ namespace Galaxy_Editor_2.Editor_control
                         UndoSys.TextAdded(textInsert, this, caretPos);
                         caretPos.Pos += textInsert.Length;
                         caret.SetPosition(caretPos, true);
-                        ExtendedLines(new List<Line>(){lines[caretPos.Line]});
+                        ExtendedLines(new List<Line>() { lines[caretPos.Line] });
                         Invalidate();
                         TextEdited();
                         CaretMoved(false);
@@ -910,7 +912,7 @@ namespace Galaxy_Editor_2.Editor_control
                     List<Line> modifiedLines = new List<Line>();
                     int min = Math.Min(caretPos.Line, mouseDownPos.Line);
                     int max = Math.Max(caretPos.Line, mouseDownPos.Line);
-                    
+
 
                     string oldText = "";
                     for (int i = min; i <= max; i++)
@@ -973,7 +975,7 @@ namespace Galaxy_Editor_2.Editor_control
                     caret.SetPosition(caretPos, true);
 
                     spacesMarkStart += 4 * lines[mouseDownPos.Line].Indents;
-                    if (!Options.Editor.ReplaceTabsWithSpaces && spacesMarkStart != 0)  spacesMarkStart /= Math.Abs(spacesMarkStart);
+                    if (!Options.Editor.ReplaceTabsWithSpaces && spacesMarkStart != 0) spacesMarkStart /= Math.Abs(spacesMarkStart);
                     mouseDownPos = new TextPoint(mouseDownPos.Line, mouseDownPos.Pos + spacesMarkStart);
 
                     ExtendedLines(modifiedLines);
@@ -988,7 +990,7 @@ namespace Galaxy_Editor_2.Editor_control
                         DeleteMarkedText();
                         caretPos = caret.GetPosition(true);
                     }
-                        //Li|ne1
+                    //Li|ne1
                     else if (lines[caretPos.Line].Text.Length > caretPos.Pos)
                     {
                         string removedPart = lines[caretPos.Line].Text.Substring(caretPos.Pos, 1);
@@ -1014,7 +1016,7 @@ namespace Galaxy_Editor_2.Editor_control
                         {
                             lines[i].Invalidated = true;
                         }
-                        ExtendedLines(new List<Line>{lines[caretPos.Line]});
+                        ExtendedLines(new List<Line> { lines[caretPos.Line] });
                         UpdateBlocks();
                         Invalidate();
                         TextEdited();
@@ -1082,11 +1084,11 @@ namespace Galaxy_Editor_2.Editor_control
                     {
                         extraNewLine = new Line(newLine.Text);
                         newLines.Add(extraNewLine);
-                        lines.Insert(caretPos.Line + 1, extraNewLine);  
+                        lines.Insert(caretPos.Line + 1, extraNewLine);
                         newLine.Text = "";
                     }
                     string oldNewLineText = newLine.Text;
-                    lines.Insert(caretPos.Line + 1, newLine);     
+                    lines.Insert(caretPos.Line + 1, newLine);
                     lines[caretPos.Line].Text = lines[caretPos.Line].Text.Substring(0, caretPos.Pos);
                     lines[caretPos.Line].edited = true;
                     lines[caretPos.Line].Restyle(fonts, lines, caretPos.Line);
@@ -1105,7 +1107,7 @@ namespace Galaxy_Editor_2.Editor_control
                             undoText += "\n" + extraNewLine.Text;
                     }
 
-                    caret.SetPosition(new TextPoint(caretPos.Line + 1, Options.Editor.ReplaceTabsWithSpaces ? newLine.Indents*4 : newLine.Indents), true);
+                    caret.SetPosition(new TextPoint(caretPos.Line + 1, Options.Editor.ReplaceTabsWithSpaces ? newLine.Indents * 4 : newLine.Indents), true);
                     //InvalidateAll = true;
                     for (int l = caretPos.Line; l < lines.Count; l++)
                     {
@@ -1119,7 +1121,7 @@ namespace Galaxy_Editor_2.Editor_control
                     TextEdited();
                     CaretMoved();
                     return true;
-                case Keys.Right: 
+                case Keys.Right:
                     if (!TextMarked)
                     {
                         TextMarked = shift;
@@ -1480,7 +1482,7 @@ namespace Galaxy_Editor_2.Editor_control
                     Copy(e.KeyValue == 'X');
                     return true;
                 }
-               
+
                 //Paste
                 if (e.KeyValue == 'V' && !IsReadonly)
                 {
@@ -1511,7 +1513,7 @@ namespace Galaxy_Editor_2.Editor_control
                     return true;
                 }
 
-                if (e.KeyValue  == 'F' || e.KeyValue == 'R')
+                if (e.KeyValue == 'F' || e.KeyValue == 'R')
                 {
                     //FindAndReplaceForm.form.SetStart(((Form1.OpenFileData)Tag).File, caretPos);
                     OpenFindAndReplace();
@@ -1527,6 +1529,19 @@ namespace Galaxy_Editor_2.Editor_control
                 if (e.KeyValue == 'Y')
                 {
                     UndoSys.Redo();
+                    return true;
+                }
+                if (e.KeyValue == 191)
+                {
+                    Comment(true);
+                    return true;
+                }
+            }
+            if (e.Modifiers == (Keys.Control | Keys.Shift))
+            {
+                if (e.KeyValue == 191)
+                {
+                    Comment(false);
                     return true;
                 }
             }
@@ -1633,7 +1648,7 @@ namespace Galaxy_Editor_2.Editor_control
         {
             if (!TextMarked)
                 return;
-            
+
             TextPoint min = TextPoint.Min(caret.GetPosition(true), mouseDownPos);
             TextPoint max = TextPoint.Max(caret.GetPosition(true), mouseDownPos);
             string removedText = "";
@@ -1646,7 +1661,7 @@ namespace Galaxy_Editor_2.Editor_control
                     else
                         removedText += lines[line].Text.Remove(0, min.Pos) + "\n";
                 }
-                else 
+                else
                 {
                     if (line == max.Line)
                         removedText += lines[line].Text.Substring(0, max.Pos);
@@ -1738,7 +1753,7 @@ namespace Galaxy_Editor_2.Editor_control
                             break;
                     }
                     lines[caretPos.Line].Indents = lines[caretPos.Line].GetWantedIndents(fonts, lines, caretPos.Line);
-                    spaces += 4*lines[caretPos.Line].Indents;
+                    spaces += 4 * lines[caretPos.Line].Indents;
                     if (spaces > 0)
                     {
                         undoText = "";
@@ -1807,7 +1822,7 @@ namespace Galaxy_Editor_2.Editor_control
                         }
                         currentPos.Pos--;
                     }
-                    
+
                     if (startLine >= 0)
                     {
                         string oldText = "";
@@ -1824,7 +1839,7 @@ namespace Galaxy_Editor_2.Editor_control
                                 insertedOldText += lines[i].Text.Substring(0, caretPos.Pos);
                             else
                                 insertedOldText += lines[i].Text + "\n";
-                                
+
                         }
 
                         int spaces = 0;
@@ -1861,7 +1876,7 @@ namespace Galaxy_Editor_2.Editor_control
 
                         spaces += 4 * lines[caretPos.Line].Indents;
                         if (!Options.Editor.ReplaceTabsWithSpaces) spaces /= 4;
-                            
+
                         caretPos = new TextPoint(caretPos.Line, caretPos.Pos + 1 + spaces);
                         caret.SetPosition(caretPos, true);
 
@@ -1882,7 +1897,7 @@ namespace Galaxy_Editor_2.Editor_control
                 if (undoText != "")
                     UndoSys.TextAdded(undoText, this, undoPos);
                 e.Handled = true;
-                ExtendedLines(new List<Line>() {lines[caretPos.Line]});
+                ExtendedLines(new List<Line>() { lines[caretPos.Line] });
                 TextEdited();
                 CaretMoved();
                 Invalidate();
@@ -1916,7 +1931,7 @@ namespace Galaxy_Editor_2.Editor_control
             if (!textRegion.Contains(caretPixel) || !textRegion.Contains(caretPixel.X, caretPixel.Y + fonts.Base.Height))
             {
                 //If current line is not fully visible, scroll as little as possible
-                int visibleLines = textRegion.Height/fonts.Base.Height;
+                int visibleLines = textRegion.Height / fonts.Base.Height;
                 if (caretPos.Line < verticalScrollBar.Value)
                     verticalScrollBar.Value = caretPos.Line;
                 if (caretPos.Line + 1 > verticalScrollBar.Value + visibleLines)
@@ -1974,11 +1989,11 @@ namespace Galaxy_Editor_2.Editor_control
                 }
             }
             point.Pos = pos;
-           /* if (point.Pos % fonts.CharWidth >= fonts.CharWidth / 2)
-                point.Pos += fonts.CharWidth;
-            point.Pos /= fonts.CharWidth;*/
+            /* if (point.Pos % fonts.CharWidth >= fonts.CharWidth / 2)
+                 point.Pos += fonts.CharWidth;
+             point.Pos /= fonts.CharWidth;*/
             point.Pos = Math.Max(0, Math.Min(point.Pos, lines[point.Line].Text.Length));
-            
+
             return point;
         }
 
@@ -1995,7 +2010,7 @@ namespace Galaxy_Editor_2.Editor_control
             point.Line -= hiddenLines;
 
             Point p = new Point();
-            p.Y = (point.Line - verticalScrollBar.Value)*fonts.Base.Height + textRegion.Y;
+            p.Y = (point.Line - verticalScrollBar.Value) * fonts.Base.Height + textRegion.Y;
             p.X = (textRegion.X + 2 - horizontalScrollBar.Value);
             for (int i = 0; i < point.Pos; i++)
             {
@@ -2005,7 +2020,7 @@ namespace Galaxy_Editor_2.Editor_control
                     if (lines[point.Line].Text[i] > 0xFF)
                         p.X += fonts.CharWidth;
                     else if (lines[point.Line].Text[i] == '\t')
-                        p.X += 3*fonts.CharWidth;
+                        p.X += 3 * fonts.CharWidth;
                 }
             }
             //p.X = (textRegion.X + 2 - horizontalScrollBar.Value + fonts.CharWidth * point.Pos);
@@ -2094,7 +2109,7 @@ namespace Galaxy_Editor_2.Editor_control
             lines[pos.Line].Text += texts[0];
             lines[pos.Line].Invalidated = true;
             lines[pos.Line].edited = true;
-            List<Line> editedLines = new List<Line>(){lines[pos.Line]};
+            List<Line> editedLines = new List<Line>() { lines[pos.Line] };
             for (int i = 1; i < texts.Length; i++)
             {
                 Line newLine = new Line(texts[i]);
@@ -2290,7 +2305,7 @@ when to update blocks?
             int lastLine = -1;
             while (NextTextPoint(ref point))
             {
-                
+
                 for (int i = lastLine + 1; i <= point.Line; i++)
                 {
                     if (!lines[i].BlockVisible)
@@ -2322,7 +2337,7 @@ when to update blocks?
                         if (openBrackets.Count == 0 || openBrackets[openBrackets.Count - 1].Line < openPoint.Line)
                         {
                             //Only add it if collapsing it causes some lines to be invis
-                            if (openPoint.Line + 1< point.Line)
+                            if (openPoint.Line + 1 < point.Line)
                             {
                                 lines[openPoint.Line].BlockEndLine = lines[point.Line];
                                 if (hiddenBlocks.Contains(lines[openPoint.Line]))
@@ -2376,7 +2391,7 @@ when to update blocks?
             return false;
         }
 
-       
+
 
         private void EnsureLineVisible(int line)
         {
@@ -2406,14 +2421,14 @@ when to update blocks?
             {
                 if (token is TWhiteSpace || token is TTraditionalComment || token is TEndOfLineComment || token is TDocumentationComment)
                     continue;
-                    tokens.Add(token);
+                tokens.Add(token);
             }
             int nameIndex = -1;
             for (int i = 0; i < tokens.Count; i++)
             {
                 Token t = tokens[i];
                 if (t is TIdentifier &&
-                    t.Pos - 1 <= caretPos.Pos && 
+                    t.Pos - 1 <= caretPos.Pos &&
                     t.Pos + t.Text.Length - 1 >= caretPos.Pos)
                 {
                     token = t;
@@ -2711,15 +2726,72 @@ when to update blocks?
 
             SourceFileContents file = item.ParentFile.File;
 
-            Form1.Form.OpenFile((FileItem) file.Item);
+            Form1.Form.OpenFile((FileItem)file.Item);
             caretPos = item.Position;
             caretPos.Pos--;
             Form1.Form.CurrentOpenFile.OpenFile.Editor.MoveCaretTo(caretPos);
-
-
-
-
         }
-
+        public void Comment(bool add)
+        {
+            TextPoint caretPos = caret.GetPosition(true);
+            string temp;
+            if (TextMarked)
+            {
+                TextPoint min = TextPoint.Min(caretPos, mouseDownPos);
+                TextPoint max = TextPoint.Max(caretPos, mouseDownPos);
+                for (int line = min.Line; line <= max.Line; line++)
+                {
+                    if (add)
+                    {
+                        temp = @"//" + lines[line].Text;
+                        UndoSys.TextReplaced(lines[line].Text, temp, this, new TextPoint(line, 0));
+                        lines[line].Text = temp;
+                        min.Pos = 0;
+                        max.Pos = lines[line].Text.Count();
+                        Mark(min, max);
+                    }
+                    else
+                    {
+                        Regex regex = new Regex(@"^ *");
+                        string codeStr = regex.Replace(lines[line].Text, "");
+                        if (codeStr.StartsWith(@"//"))
+                        {
+                            temp = lines[line].Text.Replace(codeStr, "") + codeStr.Substring(2);
+                            UndoSys.TextReplaced(lines[line].Text, temp, this, new TextPoint(line, 0));
+                            lines[line].Text = temp;
+                            min.Pos = 0;
+                            max.Pos = lines[line].Text.Count();
+                            Mark(min, max);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (add)
+                {
+                    temp = @"//" + lines[caretPos.Line].Text;
+                    UndoSys.TextReplaced(lines[caretPos.Line].Text, temp, this, new TextPoint(caretPos.Line, 0));
+                    lines[caretPos.Line].Text = temp;
+                    caretPos.Pos += 2;
+                    caret.SetPosition(caretPos, true);
+                }
+                else
+                {
+                    Regex regex = new Regex(@"^ *");
+                    string codeStr = regex.Replace(lines[caretPos.Line].Text, "");
+                    if (codeStr.StartsWith(@"//"))
+                    {
+                        temp = lines[caretPos.Line].Text.Replace(codeStr, "") + codeStr.Substring(2);
+                        UndoSys.TextReplaced(lines[caretPos.Line].Text, temp, this, new TextPoint(caretPos.Line, 0));
+                        lines[caretPos.Line].Text = temp;
+                        caretPos.Pos -= 2;
+                        caret.SetPosition(caretPos, true);
+                    }
+                }
+            }
+            InvalidateAll = true;
+            Invalidate();
+        }
     }
 }

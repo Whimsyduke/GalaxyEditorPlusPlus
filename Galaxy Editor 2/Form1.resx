@@ -327,14 +327,17 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;objectBrowserSplitContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TBNewFolder.Text" xml:space="preserve">
+    <value>toolStripButton6</value>
   </data>
   <data name="&gt;&gt;RightClickPaste.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TBDelete.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;renameToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;projectView.Name" xml:space="preserve">
     <value>projectView</value>
@@ -384,9 +387,6 @@
   <data name="messageView.ImageIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="TBCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
   <data name="&gt;&gt;ObjectBrowserCatagory.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -420,14 +420,14 @@
   <data name="TBRefreshObjectList.Text" xml:space="preserve">
     <value>toolStripButton1</value>
   </data>
+  <data name="&gt;&gt;TBUncomment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ObjectBrowserPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="&gt;&gt;createAccountToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newFileToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Text29.Text" xml:space="preserve">
@@ -436,8 +436,8 @@
   <data name="&gt;&gt;messageView.Type" xml:space="preserve">
     <value>Galaxy_Editor_2.TreeViewDragDrop, Galaxy++ Editor, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="projectSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
   </data>
   <data name="BTNUnitFilterInsert.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -767,6 +767,9 @@
         kRRJkRRJkRRJkRTJX1AU5f8AiOX6E74Wr6IAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="&gt;&gt;mapObjectBrowserPage.Name" xml:space="preserve">
+    <value>mapObjectBrowserPage</value>
+  </data>
   <data name="&gt;&gt;projectSettingsToolStripMenuItem.Name" xml:space="preserve">
     <value>projectSettingsToolStripMenuItem</value>
   </data>
@@ -794,6 +797,9 @@
   <data name="TBRefreshObjectList.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
+  <data name="&gt;&gt;TBSaveAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="closeProjectToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -817,6 +823,9 @@
   </data>
   <data name="TBCopy.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
+  </data>
+  <data name="TBSaveAll.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="TBRedo.ToolTipText" xml:space="preserve">
     <value>Redo (Ctrl+Y)</value>
@@ -961,8 +970,11 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   <data name="&gt;&gt;TBNewProject.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="BTNUnitFilterReset.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;toolStripSeparator7.Name" xml:space="preserve">
+    <value>toolStripSeparator7</value>
+  </data>
+  <data name="TBNewFolder.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="TBNewFolder.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -984,6 +996,9 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   </data>
   <data name="Text3.Text" xml:space="preserve">
     <value>A project with the name</value>
+  </data>
+  <data name="toolStrip2.Text" xml:space="preserve">
+    <value>toolStrip2</value>
   </data>
   <data name="TBSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1026,9 +1041,6 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   <data name="&gt;&gt;objectBrowserSplitContainer.Panel1.Parent" xml:space="preserve">
     <value>objectBrowserSplitContainer</value>
   </data>
-  <data name="TBSave.Text" xml:space="preserve">
-    <value>toolStripButton2</value>
-  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1053,8 +1065,8 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;sourceFileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ObjectBrowserCatagory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 25</value>
   </data>
   <data name="UnitFilterGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 196</value>
@@ -1086,14 +1098,14 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   <data name="CBShowErrors.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;compileToolStripMenuItem.Name" xml:space="preserve">
+    <value>compileToolStripMenuItem</value>
+  </data>
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;CBUnitFilterCompress.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TBNewFolder.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
   <data name="Text24.Text" xml:space="preserve">
     <value>File names may not contain the characters: </value>
@@ -1128,8 +1140,8 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="buildToolStripMenuItem.Text" xml:space="preserve">
-    <value>Build</value>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
   </data>
   <data name="&gt;&gt;projectToolStripMenuItem.Name" xml:space="preserve">
     <value>projectToolStripMenuItem</value>
@@ -1148,6 +1160,9 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   </data>
   <data name="TBRedo.Text" xml:space="preserve">
     <value>toolStripButton4</value>
+  </data>
+  <data name="&gt;&gt;sourceFileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1181,6 +1196,9 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   </data>
   <data name="&gt;&gt;buildToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolStrip2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1285,9 +1303,6 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="uploadLibraryToolStripMenuItem.Text" xml:space="preserve">
-    <value>Upload Library</value>
-  </data>
   <data name="renameToolStripMenuItem.Text" xml:space="preserve">
     <value>Rename</value>
   </data>
@@ -1345,6 +1360,12 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   <data name="newProjectToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 22</value>
   </data>
+  <data name="tabStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="aboutToolStripMenuItem1.Text" xml:space="preserve">
     <value>About</value>
   </data>
@@ -1353,6 +1374,9 @@ You can find it at\nhttp://www.microsoft.com/download/en/details.aspx?id=15163</
   </data>
   <data name="&gt;&gt;saveToolStripMenuItem1.Name" xml:space="preserve">
     <value>saveToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;TBNewFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="uploadLibraryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 22</value>
@@ -1405,9 +1429,6 @@ Do you wish to open the map now?</value>
   </data>
   <data name="&gt;&gt;TBCopy.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;newDialogToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Text41.Text" xml:space="preserve">
     <value>Unable to copy the map. Is the output file in use?</value>
@@ -1498,9 +1519,6 @@ Do you wish to open the map now?</value>
         ej5HOpdcbTRIXCkKFRpUgIEBAF6o8iMkW7QoAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="panel2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Save.Text" xml:space="preserve">
     <value>Saved</value>
   </data>
@@ -1525,6 +1543,9 @@ Do you wish to open the map now?</value>
   <data name="&gt;&gt;toolStrip2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="projectView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 409</value>
+  </data>
   <data name="&gt;&gt;editorRightClick.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1533,9 +1554,6 @@ Do you wish to open the map now?</value>
   </data>
   <data name="buildOnlyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 22</value>
-  </data>
-  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
-    <value>columnHeader2</value>
   </data>
   <data name="&gt;&gt;uploadLibraryToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1555,9 +1573,6 @@ Do you wish to open the map now?</value>
   <data name="Text11.Text" xml:space="preserve">
     <value>Are you sure you wish to completely remove the folder </value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
   <data name="&gt;&gt;objectBrowserSplitContainer.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -1572,9 +1587,6 @@ Do you wish to open the map now?</value>
   </data>
   <data name="removeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 22</value>
-  </data>
-  <data name="ObjectBrowserCatagory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 25</value>
   </data>
   <data name="removeToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value>Del</value>
@@ -4848,11 +4860,11 @@ Are you sure you wish to close?</value>
   <data name="TBRun.Text" xml:space="preserve">
     <value>toolStripSplitButton1</value>
   </data>
+  <data name="&gt;&gt;projectView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Text21.Text" xml:space="preserve">
     <value>Unable to rename the project. Invalid directory name.</value>
-  </data>
-  <data name="&gt;&gt;openInExploreToolStripMenuItem.Name" xml:space="preserve">
-    <value>openInExploreToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;BTNUnitFilterReset.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -4863,9 +4875,6 @@ Are you sure you wish to close?</value>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="tabStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
   <data name="Text16.Text" xml:space="preserve">
     <value>Remove File</value>
   </data>
@@ -4875,8 +4884,8 @@ Are you sure you wish to close?</value>
   <data name="TBCopy.ToolTipText" xml:space="preserve">
     <value>Copy (Ctrl+C)</value>
   </data>
-  <data name="&gt;&gt;compileToolStripMenuItem.Name" xml:space="preserve">
-    <value>compileToolStripMenuItem</value>
+  <data name="buildToolStripMenuItem.Text" xml:space="preserve">
+    <value>Build</value>
   </data>
   <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>
@@ -4890,6 +4899,9 @@ Are you sure you wish to close?</value>
   <data name="viewToolStripMenuItem.Text" xml:space="preserve">
     <value>View</value>
   </data>
+  <data name="BTNUnitFilterReset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;projectView.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
   </data>
@@ -4899,8 +4911,8 @@ Are you sure you wish to close?</value>
   <data name="objectBrowserSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
     <value>530</value>
   </data>
-  <data name="toolStrip2.Text" xml:space="preserve">
-    <value>toolStrip2</value>
+  <data name="&gt;&gt;TBPaste.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="goToDeclarationToolStripMenuItem.Text" xml:space="preserve">
     <value>Go to Declaration</value>
@@ -4941,6 +4953,9 @@ Did you forget to define the main entry?</value>
   </data>
   <data name="deleteProjectToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete project</value>
+  </data>
+  <data name="&gt;&gt;TBUncomment.Name" xml:space="preserve">
+    <value>TBUncomment</value>
   </data>
   <data name="saveToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 22</value>
@@ -4983,9 +4998,6 @@ Did you forget to define the main entry?</value>
   </data>
   <data name="tabStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="BTNUnitFilterReset.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -5108,6 +5120,828 @@ Did you forget to define the main entry?</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
+  </data>
+  <data name="TBComment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 22</value>
+  </data>
+  <data name="Text35.Text" xml:space="preserve">
+    <value>Unable to find the root file.
+Did you forget to define the main entry?</value>
+  </data>
+  <data name="TBRun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 22</value>
+  </data>
+  <data name="&gt;&gt;LanguageToolStripMenuItem.Name" xml:space="preserve">
+    <value>LanguageToolStripMenuItem</value>
+  </data>
+  <data name="Text10.Text" xml:space="preserve">
+    <value>Remove Project</value>
+  </data>
+  <data name="Text25.Text" xml:space="preserve">
+    <value>Unable to rename the folder. Invalid folder name.</value>
+  </data>
+  <data name="deleteProjectToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Delete</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>972, 24</value>
+  </data>
+  <data name="&gt;&gt;objectBrowserSplitContainer.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="TBNewFolder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAqpJREFUOE/FkmssFXAYxs93ZS0mqrHIWmpntTRd6DJdXU43oVhyEqOt0pi5JKbc
+        c6lZMka5n6Mo0qKdhKMpx61DLZRVWGVy6aik8+vEWeuirW/9tvfDf3veZ+/7vH/B74xX2QQUhJmJtM9/
+        Y1xx0GREvsd+oNVdRyXbVdWSsylmtOmA/ieFk+iMn8UsrWxmSvKSXSqLYxiS2jBQ6cyYXMzbGk/Gm5yH
+        OzOWtwqF83S00pnRGPCsPYcPD72h3QNeiOH5Xr42raEq3bFWK/s7cqk/qrp9qOq3o+6whsdCkBszec2A
+        d4WreFXqgOSSPxkp4VxKDOFibBDa1mmkWWH01J1ipH4XNBjCPWMoN0BdZEivZAMdkh28qXEHpc9U/WGQ
+        nxnLWN9l1HU2TJYZMpE/n8/5C6FUn5bC3ZTmRiPJjqIgI5IraWfISg3jclIIaQnB02a5GdGM9USjzN1A
+        o1RMv8Sa7pKt9NUe4fUNW0aVYdB7VpNNJPSEwtMA6DxGW7EzJzxFVwXZaVEMd8XCy0RuFJ1noNqV9mKH
+        HyN/adOE26oJV+HEpNyej9Wb6boqxOvQxpGTXo7LBJmpEbx/Ekmv/DRlBYl86gikX6bduU1zEYUrkw9E
+        fJRtY7RyPYMlK4n0NcfVVi9lKoP0pNMMtgdzLS+B5to4zYj+mkschWZ31I17mLi/E9WdjQyVWfKmaCmK
+        c3NwszfFcsnsJVMGafEhPJaFcz0vHrrDoUUz7qP9TNQ7oLq7meFyK95JhPTlLEaZqEeEjxkrLIwqppq/
+        cyEmCOmVOJQ3/WiQ+lJb6I0sV0xVtge3M925lX6Aip/KzW6R2mqFiZ22XSBIPhtIcoQ3McGHCT3uwgmx
+        CE/nLezdsRbbdUJWC81ZaroAYyN9DObqYqin++s/+M8IBN8A77TNbCSU8KsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="&gt;&gt;searchDefinitionsToolStripMenuItem.Name" xml:space="preserve">
+    <value>searchDefinitionsToolStripMenuItem</value>
+  </data>
+  <data name="saveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LanguageToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RightClickFind.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+F</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 20</value>
+  </data>
+  <data name="newProjectToolStripMenuItem.Text" xml:space="preserve">
+    <value>New project</value>
+  </data>
+  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="CBShowErrors.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;projectViewProjectMenu.Name" xml:space="preserve">
+    <value>projectViewProjectMenu</value>
+  </data>
+  <data name="BTNUnitFilterInsert.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="compilerStatusText.Text" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="&gt;&gt;runToolStripMenuItem.Name" xml:space="preserve">
+    <value>runToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;TBRefreshObjectList.Name" xml:space="preserve">
+    <value>TBRefreshObjectList</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 53</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Text30.Text" xml:space="preserve">
+    <value>You have unsaved files. Do you wish to save them?</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jumpToolStripMenuItem.Name" xml:space="preserve">
+    <value>jumpToolStripMenuItem</value>
+  </data>
+  <data name="TBUncomment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="TBUndo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Galaxy++ editor by Beier Translate Whimsyduke</value>
+  </data>
+  <data name="&gt;&gt;TBNewFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Text20.Text" xml:space="preserve">
+    <value>Unable to move item since another item of same name exists at the destination.</value>
+  </data>
+  <data name="&gt;&gt;newToolStripMenuItem.Name" xml:space="preserve">
+    <value>newToolStripMenuItem</value>
+  </data>
+  <data name="Text5.Text" xml:space="preserve">
+    <value>Project already exists</value>
+  </data>
+  <data name="&gt;&gt;TBFind.Name" xml:space="preserve">
+    <value>TBFind</value>
+  </data>
+  <data name="ObjectBrowserList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Text43.Text" xml:space="preserve">
+    <value>Unable to copy to test file. If Starcraft II is already running, please shut it down first.</value>
+  </data>
+  <data name="buildOnlyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Build only</value>
+  </data>
+  <data name="TBSaveAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;compileAndSaveToolStripMenuItem.Name" xml:space="preserve">
+    <value>compileAndSaveToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;saveAllToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TBPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="TBSave.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="GEFile.Text" xml:space="preserve">
+    <value>G++ project properties file(properties.dat)|properties.dat</value>
+  </data>
+  <data name="compileAndSaveAsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Compile and save as</value>
+  </data>
+  <data name="runToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 22</value>
+  </data>
+  <data name="&gt;&gt;manageAccountToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 20</value>
+  </data>
+  <data name="&gt;&gt;ObjectBrowserList.Name" xml:space="preserve">
+    <value>ObjectBrowserList</value>
+  </data>
+  <data name="Text14.Text" xml:space="preserve">
+    <value>Are you sure you wish to completely remove the file </value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ObjectBrowserPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="optionsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="&gt;&gt;tabStrip.Name" xml:space="preserve">
+    <value>tabStrip</value>
+  </data>
+  <data name="&gt;&gt;TBUndo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="objectBrowserSplitContainer.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;UnitFilterGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;newDialogToolStripMenuItem.Name" xml:space="preserve">
+    <value>newDialogToolStripMenuItem</value>
+  </data>
+  <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="&gt;&gt;buildToolStripMenuItem.Name" xml:space="preserve">
+    <value>buildToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Text39.Text" xml:space="preserve">
+    <value>Missing data</value>
+  </data>
+  <data name="&gt;&gt;newFileToolStripMenuItem.Name" xml:space="preserve">
+    <value>newFileToolStripMenuItem</value>
+  </data>
+  <data name="splitContainer1.Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CBShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 3</value>
+  </data>
+  <data name="RightClickPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 22</value>
+  </data>
+  <data name="&gt;&gt;mapObjectBrowserToolStripMenuItem.Name" xml:space="preserve">
+    <value>mapObjectBrowserToolStripMenuItem</value>
+  </data>
+  <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;messageViewImageList.Name" xml:space="preserve">
+    <value>messageViewImageList</value>
+  </data>
+  <data name="Text34.Text" xml:space="preserve">
+    <value>Could not locate file in project.</value>
+  </data>
+  <data name="Text33.Text" xml:space="preserve">
+    <value>Could not locate token.</value>
+  </data>
+  <data name="&gt;&gt;removeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="newDialogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="&gt;&gt;TBPaste.Name" xml:space="preserve">
+    <value>TBPaste</value>
+  </data>
+  <data name="projectView.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Text13.Text" xml:space="preserve">
+    <value>Remove Folder</value>
+  </data>
+  <data name="TBDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAU5JREFUOE9joAr4uWTa/5fNRf9fzuz9DxXCC95P7vm/KjMVofZCUer/HzM6//+a
+        1v7/W1fV/zud9VgN+jG54/+lvGTslhycOvH/s+rc/z+zQv5/DXf4fzPUCUXhV1fd/5v9nAm7cF9azP8n
+        xhL/X6uz/7/ioP3/ekHa/4tynP93e1gT1owMLumI/L+txPn/sgzz/5OeVqRpBoEDZkr/L6vx/n+ozff/
+        XKgbaQZctlD8/8BC7v+GlNj/27MS/382Ev1/OB8p1PGBC2by/2/pCf1fHR0K13CoovD/OzNpwgbc9TEB
+        a97uaIqhGBS4oECFcjHBpeSQ/zeMxP6fNpDCqeiyh+n/PU3VmPKf5s38D7L9rrkMweg67YTpOoZn1YX/
+        H0e4/7/rZvj/VlkmXgMOVVdgyl+pyPv/Jsbt/0UzBbya8QKQC44lBJFvAHmAgQEAbG+sSUvJLEEAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="buildOnlyToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F9</value>
+  </data>
+  <data name="newFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="changeToAnotherVersionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="&gt;&gt;TBSaveAll.Name" xml:space="preserve">
+    <value>TBSaveAll</value>
+  </data>
+  <data name="BTNUnitFilterInsert.Text" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="splitContainer1.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;saveProjectAsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libraryServerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="&gt;&gt;objectBrowserSplitContainer.Panel1.Name" xml:space="preserve">
+    <value>objectBrowserSplitContainer.Panel1</value>
+  </data>
+  <data name="TBSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="messageView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>770, 96</value>
+  </data>
+  <data name="toolStrip2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 25</value>
+  </data>
+  <data name="activateToolStripMenuItem.Text" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="ObjectBrowserPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
+    <value>283</value>
+  </data>
+  <data name="compileAndCopyToMapToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="mapObjectBrowserPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="TBRedo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="openExistingProjectToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Existing Project</value>
+  </data>
+  <data name="TBFind.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Text17.Text" xml:space="preserve">
+    <value>That item is read only.
+To remove it you must remove the entire library.</value>
+  </data>
+  <data name="CBUnitFilterCompress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Text23.Text" xml:space="preserve">
+    <value>Unable to rename the directory, as another the directory of same name already exists.</value>
+  </data>
+  <data name="&gt;&gt;downloadLibraryToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ObjectBrowserList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tabStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="compileAndCopyToMapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 22</value>
+  </data>
+  <data name="TBNewProject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="TBCut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;CBUnitFilterCompress.Name" xml:space="preserve">
+    <value>CBUnitFilterCompress</value>
+  </data>
+  <data name="&gt;&gt;BTNUnitFilterInsert.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="activateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="projectViewImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB8
+        GQAAAk1TRnQBSQFMAgEBBgEAAWABDgFMAQ8BEAEAARABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABIAMAAQEBAAEYBgABGBIAMP8GAAESAR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BLwES
+        AR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BL2YAAc8BawFsAckBaAFpAbIBWwFcAX8CPwFu
+        AZIBogFqAYsBnAFZAXYBhwFDAVgBaQEoATUBQwF0AZwBigFwAZYBhgFeAYEBdAFHAWQBWwErAUABOwb/
+        AwABRAE6ATMBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEe
+        ARcBJgEeARcBJgEeARcBJgEeARcBLAEkARtjAAHQAW0BbgHoAY4BjwHmAYkBigG2AlsBcQGWAaYBWAHF
+        AeEBTQG+Ad0BTQG+Ad0BWwG6AdsBdwGfAY0BaAHQAZcBXgHMAZEBXgHMAZEBagHLAZsBPgFsAV8D/wFL
+        AUMBPgFEAToBMwE1AS8BIgFxAbYBFgFxAbYBFgETASABBAFOAXUBHwFOAXUBHwFOAXUBHwFOAXUBHwET
+        ASABBAFxAbYBFgFxAbYBFgEzAS0BIgEsASQBGwE2ATEBLGAAAdIBcQFyAaYCbAGgAWMBZAGMAksBdAGb
+        AawBYgGjAb0BVwGYAbQBTQGNAasBSwGAAZwBegGlAZIBbQGyAZIBYgGpAYkBWAGgAYEBVAGSAXkBOwG8
+        AX0BPgFsAV8BSwFDAT4BRAE6ATMBcQG2ARYBIgE2AQQBIgE2AQQBIgE2AQQBIgE2AQQBIgE2AQQBIgE2
+        AQQBIgE2AQQBIgE2AQQBIgE2AQQBIgE2AQQBcQG2ARYBLAEkARsBNgExASxgAAHWAXgBeQH2AaoBqwHw
+        AZ0BngHLAmgBdwGhAbEBYwHTAfMBXAHQAfMBVQHNAfIBWwG6AdsBfgGqAZUBdAHiAagBbgHhAaUBZwHf
+        AaEBagHLAZsBOwG8AX0BPgFsAV8BSwFDAT4BRAE6ATMBcQG2ARYBEwEgAQQBEwEgAQQBEwEgAQQBEwEg
+        AQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBcQG2ARYBLAEkARsBNgExASxgAAHa
+        AYIBgwHDAn8BvAF0AXUBpAJZAXwBpgG3AWkBpgG9AV8BnAG0AVUBkAGsAUsBgAGcAYMBsAGbAXMBswGU
+        AWkBqgGMAV8BoQGFAVQBkgF5ATsBvAF9AUABbgFhAUsBQwE+AUQBOgEzASIBNgEEASIBNgEEASIBNgEE
+        ASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASwBJAEb
+        ATYBMQEsYAAB3wGKAYsB/QG5AbsB+QGwAbEBzgFuAW0BfwGsAb0BfgHeAfUBeAHcAfQBcQHZAfQBWwG6
+        AdsBhgG1AZ8BjAHnAbQBhwHlAbABgAHkAa4BagHLAZsBOwG8AX0BQwFyAWUBSwFDAT4BRAE6ATMBTgF1
+        AR8BEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEg
+        AQQBTgF1AR8BLAEkARsBNgExASxgAAHjAZMBlAH/Ab0BvgH9AbcBuQHPAXEBcAGDAbIBwwGLAeMB9QGF
+        AeEB9AF+Ad4B9AFbAboB2wGKAbsBowGXAegBuQGSAecBtgGMAeYBswFqAcsBmwE7AbwBfQFHAXYBaAFL
+        AUMBPgFEAToBMwFOAXUBHwEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEi
+        ATYBBAEiATYBBAEiATYBBAFOAXUBHwEsASQBGwE2ATEBLGAAAecBmwGcAf8BvQG+Af8BvQG+AdEBdAFz
+        AYgBtwHJAZYB5wH2AZEB5gH2AYoB4wH1AVsBugHbAY8BwQGpAaEB6gG/AZ0B6gG8AZYB6AG4AWoBywGb
+        ATsBvAF9AUsBewFrAUsBQwE+AUQBOgEzAU4BdQEfARMBIAEEARMBIAEEARMBIAEEARMBIAEEARMBIAEE
+        ARMBIAEEARMBIAEEARMBIAEEARMBIAEEARMBIAEEAU4BdQEfASwBJAEbATYBMQEsYAAB7AGkAaUB/wG9
+        Ab4B/wG9Ab4B0gJ2AYsBvAHOAZ8B6wH2AZsB6gH2AZYB5wH2AVsBugHbAZMBxgGtAakB6wHCAaYB6wHA
+        AaEB6gG/AWoBywGbATsBvAF9AU8BgAFwAUsBQwE+AUQBOgEzAU4BdQEfASIBNgEEASIBNgEEASIBNgEE
+        ASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEAU4BdQEfASwBJAEbATYBMQEs
+        YAAB8AGsAa0BzQKFAcUBegF7AawCXQGNAcAB0gF4Aa0BvgFvAaIBtQFmAZcBrAFLAYABnAGVAcoBsAGA
+        AbUBmgF3AawBkwFuAaMBiwFUAZIBeQE7AbwBfQFUAYQBcwFLAUMBPgFEAToBMwETASABBAETASABBAET
+        ASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAEs
+        ASQBGwE2ATEBLGAAAfQBswG0Af8BvQG+Af8BvQG+AdMCeQGPAcMB1QGrAfAB9wGrAfAB9wGoAe8B9wFb
+        AboB2wGXAcwBsgG0Ae4ByAG0Ae4ByAGxAe0BxgFqAcsBmwE7AbwBfQFZAYoBeAFLAUMBPgFEAToBMwFx
+        AbYBFgEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEi
+        ATYBBAFxAbYBFgEsASQBGwE2ATEBLGAAAfUBtgG3AfUBtgG3Ae0BpwGpAc8CcQGPAcMB1QGFAbQBxwF6
+        AaQBtAFwAZUBpgFqAYsBnAGXAcwBsgGNAb8BqAGBAa0BmAF2AZ8BjQFwAZYBhgE7AbwBfQFeAZABfQFL
+        AUMBPgFEAToBMwFxAbYBFgETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAET
+        ASABBAETASABBAETASABBAFxAbYBFgEsASQBGwE2ATEBLGAAA/8B1gGiAZ0BkgF9AW0B5QHgAdwBzQGZ
+        AZ4BkQGyAbkBkAF8AW0B5QHgAdwD/wFqAYsBnAGWAbQBowGLAXEBegHkAd0B3wP/AXABlgGGAWQBlQGB
+        AUsBQwE+AUQBOgEzAUMCOwFxAbYBFgFxAbYBFgEqAT8BEwFOAXUBHwFOAXUBHwFOAXUBHwFOAXUBHwEr
+        AUABEwFxAbYBFgFxAbYBFgFJAUABPgEsASQBGwE2ATEBLGAABv8BxgGZAZIBlQF9AW4B9AHsAegBywGR
+        AZYBjAGrAbMBhgGDAX0B9AHsAegB4gHzAfUBagGLAZwD/wGFAX4BfwHyAekB7QHkAfIB6QFwAZYBhgMA
+        AVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFE
+        AVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEYwAw/wYAAYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGB
+        AYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGB9gAD/wG3AaIBkwFjAUkBNQFj
+        AUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFj
+        AUkBNQFjAUkBNQP/EgAD/wEzAZkBMwEAAWYBAAPdA/9FAAG3AaIBkwFjAUkBNQFjAUkBNQFjAUkBNQFj
+        AUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQkAA/8BtwGiAZMB9wHlAdwB3QHP
+        AcgB2AHJAcEB0wHCAbkBzwG8AbIBygG2AaoBxgGwAaQBwgGrAZ4BvgGmAZgBugGgAZIBtAGaAYwBsAGV
+        AYYBYwFJATUD/xIAA/EBAAGAAgABMwEAA5kG/wMAA/8GAAF1AYQBjwFmAYABjwFgAXkBhwFXAW4BewFO
+        AWIBbwFEAVYBYQE5AUgBUgEuAToBQwElAS4BNQEbASIBKQEUARkBHgEOARIBFgEOARMBGA8AAbcBogGT
+        A/8BtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBYwFJATUJAAP/
+        AbcBogGTAfkB6QHiAfkB6QHiAfkB6QHiAfgB5gHdAfcB4gHYAfUB3gHTAfQB2wHOAfMB1wHKAfIB1AHF
+        AfEB0AHBAfABzQG8AbYBnAGOAWMBSQE1A/8GAAb/AwABMwGZATMBAAFmAgABgAIAAWYCAAEzAgABgAEA
+        AZkBzAGZAwAD1wYAAXcBhwGSAYkBoQGrAWoBsgHUAWkBqwHGAWYBpwHCAWIBowG+AV8BnwG6AVwBnAG3
+        AVkBmAG1AVkBmAG0AVkBmAG0AVkBmAG0ASMBTAFdAeMC5QwAAbcBogGTBv8B/AH6AfkB9wHxAe4B8QHn
+        AeEB7AHdAdUB5gHTAckB4QHKAb0BtwGiAZMBYwFJATUJAAP/AbcBogGTAfkB7gHoAfkB7gHoAfkB7gHo
+        AeoBjwFgAeoBhAFPAeYBeAE/Ad8BbwE2AdIBZgEwAcEBXQEqAfIB1QHGAfEB0QHCAbwBowGVAWMBSQE1
+        A/8GAAEzAZkBMwEAAYACAAEzAgABZgEAA/EJAAGZAcwBmQEAAWYCAAFmAgABZgcAAXoBigGVAX4BvgHT
+        AYoBpAGuAX4B3AH/AV8BzwH/AVUBywH/AUwBxAH6AUEBvAH1ATcBswHwAS4BqgHrASQBoAHlARMBjAHU
+        ASMBZwGAAYQBjAGPDAABtwGiAZMD/wHqAZwBdAHqAZIBZAHqAYcBVAHoAXwBRQHiAXMBOgHZAWsBMwHk
+        Ac8BxAG3AaIBkwFjAUkBNQkAA/8BtwGiAZMB+wHyAe0B+wHyAe0B+wHyAe0B+gHuAekB+QHqAeQB+AHn
+        AeAB9wHkAdoB9gHhAdUB9QHcAdEB9AHYAcwB8wHVAccBwgGqAZ4BYwFJATUD/wYAATMBmQEzAQABZgIA
+        ATMEAAP/CQAD/wGZAcwBmQEAAWYCAAFmAQAD8QP/AX0BjgGYAXkB0gHsAYsBpAGtAYkBwgHOAXEB2AH/
+        AWUB0wH/AVwBzgH/AVEByQH+AUkBwQH6AT8BuQH1ATQBsAHuASkBqAHpARABhQHNASIBSwFbAvQB9QkA
+        AbcBogGTCf8B/QH8AfsB+AHzAfAB8gHpAeMB7QHfAdgB5wHVAcsBtwGiAZMBYwFJATUJAAP/AbcBogGT
+        AfwB9gHzAfwB9gHzAfwB9gHzAeoBjwFgAeoBhAFPAeYBeAE/Ad8BbwE2AdIBZgEwAcEBXQEqAfQB3gHT
+        AfMB2gHNAccBsQGlAWMBSQE1A/8KAAGAAQABZgGZAWYD/xMAAWYBAAPAA/8DAAGAAZEBnAGBAdcB7wF9
+        AcUB4AGMAaYBsAGAAd0B/gFoAdMB/wFnAdQB/wFiAdEB/wFYAc0B/wFOAccB/AFGAb4B9wE7AbYB8gEx
+        AawB7AElAWkBgQGpAbgBvwkAAboBpQGWA/8B6gGcAXQB6gGSAWQB6gGHAVQB6AF8AUUB4gFzAToB2QFq
+        ATMB6wHbAdMBtwGiAZMBYwFJATUJAAP/AboBpQGWAf0B+QH2Af0B+QH2Af0B+QH2AfwB9gHzAfwB8wHv
+        AfoB8AHrAfoB7QHnAfgB6QHhAfcB5QHdAfYB4gHYAfUB3wHTAcwBuAGuAWMBSQE1A/8JAAEzAZkBMwHA
+        AdwBwAP/EwABZgEAATMBmQEzBgABgwGVAZ8BiQHcAfEBjAHiAf8BjQGoAbEBjAG6AccBdAHYAf8BZwHU
+        Af8BZwHUAf8BZwHUAf8BXwHQAf8BVAHNAf8BSwHFAfwBQQG7AfcBLgGiAdsBWQFtAXoC9AH1BgABvgGp
+        AZoD/wHsAfMB7AFzAbMBcwEJAVsBCQGcAcQBmwH4AfQB8QH0AesB5gHuAeEB2gG3AaIBkwFjAUkBNQkA
+        A/8BvgGpAZoB/gH8AfsB/gH8AfsBpQFPASUB/QH5AfgBqwG4AZEBVAF4AS0BigFwAUgBzgGxAZ4B+AHq
+        AeQBpQFPASUB9gHiAdoB0gHAAbgBYwFJATUD/wkAATMBmQEzA8AD/xMAAWYBAAFmAZkBZgYAAYYBmgGj
+        AZIB4QHyAZgB6AH9AYABxAHeAY4BpwGwAYEB3gH9AYQB4AH/AYQB4AH/AYQB4AH/AYQB4AH/AYEB3wH/
+        AXsB3QH/AXQB2AH/AWsB1gH/AVYBqQHRAa4BtQG7BgABowGnAYUBWwGSAVsBNgF9ATYBegG0AXoBrgHQ
+        Aa4BXAGcAVsBOwF7AToBeAGxAXQB8QHnAeEBtwGiAZMBYwFJATUJAAP/AcMBrgGeA/4BpQFPASUE/gH9
+        AfwBfgGCATsBkAGTAUIBcAF3ATEBdgGnAWcB+gHuAekB+QHrAeUBpQFPASUB2QHJAcEBYwFJATUD/wYA
+        A/8BAAGAAgABZgEAA/8PAAP/AQABMwEAA7IGAAGIAZwBpQGaAeYB8wGfAesB+wGYAegB/gGLAawBuQGL
+        AawBuQGKAaoBtwGIAaYBswGGAaMBrwGDAZ8BqgGBAZoBpgF/AZUBoQF8AZEBnQF6AY4BmQF5AYsBlQF3
+        AYgBkwYAAasBqgGMARMBVgETAZABvAGQCf8BRAGFAUQBTwGQAU0B9QHtAekBtwGiAZMBYwFJATUJAAP/
+        AcgBsgGjBv8BpQFPASUD/wFjAbYBYgHDAcgBnQGiAZEBOgGcAcYBigH7AfIB7gGlAU8BJQH5AewB5gHf
+        AdIBzAFjAUkBNQP/BwABgAIAAWYCAAEzAQADsgMACf8EAAFmAgABZgIAATMBAAPXA/8BiwGgAagBoAHq
+        AfYBpgHuAfkBnwHrAfsBmAHoAf4BegHaAf8BZwHUAf8BZwHUAf8BZwHUAf8BZwHUAf8BZwHUAf8BZwHU
+        Af8BdwGIAZMPAAHMAbYBpwFFAY4BRQHcAewB3An/AZ8BwAGfAXwBrgF7AbcBogGTAbcBogGTAWQBSgE2
+        CQAD/wHMAbYBpwz/AdYB8gHSAZkBygGLAawBrwF8Ae8B8QHmAfwB9gHzAfsB9AHvAeoB4gHdAeUB2wHV
+        AWQBSgE2A/8DAAP/A9cBZgGZAWYDmQEzAWYCMwFmATMD4wPxA7IBAAGAAgABZgEAA7IBAAGABwABjgGi
+        AasBpwHuAfYBqwHwAfcBpgHuAfkBnwHrAfsBmAHoAf0BcQHUAfsBiQGeAacBhgGZAaMBggGUAZ8BfgGQ
+        AZoBegGMAZcBdwGIAZMPAAG+AbUBnAEnAWwBJwGuAdABrgn/AWYBngFmAUkBfAE8AWQBSgE2AWQBSgE2
+        AWQBSgE2CQAD/wHRAbsBqxP/Af4B/QH+AvsB/QH5AfgBtwGiAZMBZAFKATYBZAFKATYBZAFKATYD/w8A
+        A+oBAAFmAgABgAIAATMCAAEzAQABZgGZAWYDAAP/CQABjwGkAawBoAHSAdoBqwHwAfcBqwHwAfcBpgHu
+        AfkBnwHrAfsBjQGhAaoB1AHcAd8eAAGjAbEBhwEtAW0CLQF2AS0BrQHSAa0B2AHpAdgBjwG8AY8BHgFn
+        AR4BPAGBATIB1AHFAboBYwFJATUBzAHCAbsJAAP/AdUBvwGvFv8D/gH8AfsBuQGkAZUB1AHFAboBYwFJ
+        ATUBwQGyAacD/w8AA/8DAAEzAZkBMwEAAWYBAAPqEgAB6AHrAewBjwGkAawBjwGkAawBjwGkAawBjwGk
+        AawBjwGkAawBzwHZAd4hAAHXAcIBsgH3AfoB9wHGAd4BxgFEAZUBRAEIAVkBCAFlAaEBZQHhAewB4QG7
+        AaoBmAFjAUkBNQHNAcMBuwwAA/8B2AHCAbIa/wH+AcABqwGcAWMBSQE1AcIBswGnBv8VAAPjAcAB3AHA
+        A/ED/0UAAdgBwgGyAdgBwgGyAdgBwgGyAcsBwQGqAWwBngFcAdQBvgGuAc8BuQGpAckBswGkAeQB3gHZ
+        DwAD/wHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHUAb4BrgHP
+        AbkBqQHJAbMBpAHiAdYBzQn/FQAJ/3IAMP8BQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEB
+        FgAD/wMAAcABAwYAAYABAWYAAYABAQYAAcABAwQABv8CAAH8AR8C/wHAAQcCAAH8AQsBAAEHAcABBwIA
+        AcgBCwEAAQMBwAEHAgABwQHDAQABAwHAAQcCAAHFAcABAAEBAcABBwIAAeMB8QEAAQEBwAEHAgAB4wHz
+        AgABwAEHAgAB4wHzAgABwAEHAgABwwHjAgABwAEHAgABwgEgAQABBwHAAQcCAAGAAQMBAAEHAcABBwIA
+        AfgBFwEAAf8BwAEHAgAB+gE/AQEB/wHAAQ8CAAH+AR8C/wHAAR8CAAH+AT8E/xgACw==
+</value>
+  </data>
+  <data name="&gt;&gt;RightClickCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="TBPaste.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;goToDeclarationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RightClickFind.Text" xml:space="preserve">
+    <value>Find/Replace</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="saveAllToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Shift+S</value>
+  </data>
+  <data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="&gt;&gt;newProjectToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TBNewProject.ToolTipText" xml:space="preserve">
+    <value>New Project</value>
+  </data>
+  <data name="ObjectBrowserPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;changeToAnotherVersionToolStripMenuItem.Name" xml:space="preserve">
+    <value>changeToAnotherVersionToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;toolStrip2.Name" xml:space="preserve">
+    <value>toolStrip2</value>
+  </data>
+  <data name="&gt;&gt;RightClickPaste.Name" xml:space="preserve">
+    <value>RightClickPaste</value>
+  </data>
+  <data name="TBRefreshObjectList.ToolTipText" xml:space="preserve">
+    <value>Refresh list</value>
+  </data>
+  <data name="tabStrip.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="mapObjectBrowserPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="downloadLibraryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="&gt;&gt;BTNUnitFilterReset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;CBUnitFilterCompress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;objectBrowserSplitContainer.Name" xml:space="preserve">
+    <value>objectBrowserSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;BTNUnitFilterInsert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;libraryServerToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TBSaveAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="Text37.Text" xml:space="preserve">
+    <value>Unable to copy to map</value>
+  </data>
+  <data name="TBPaste.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="openInExploreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="&gt;&gt;TBRefreshObjectList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer2.Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TSInsertConstructor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 22</value>
+  </data>
+  <data name="RightClickCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 22</value>
+  </data>
+  <data name="Text27.Text" xml:space="preserve">
+    <value>Unable to rename item. Another item of same name probally already exists.</value>
+  </data>
+  <data name="mapObjectBrowserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 22</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ObjectBrowserTooltip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="saveAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Save All</value>
+  </data>
+  <data name="saveToolStripMenuItem1.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="compileToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F9</value>
+  </data>
+  <data name="newDialogToolStripMenuItem.Text" xml:space="preserve">
+    <value>New Dialog</value>
+  </data>
+  <data name="mapObjectBrowserPage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnitFilterGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;newFolderToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="renameToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>F2</value>
+  </data>
+  <data name="messageView.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;reportErrorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="searchDefinitionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Search definitions</value>
+  </data>
+  <data name="&gt;&gt;compileAndSaveAsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TBRun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;TBNewFile.Name" xml:space="preserve">
+    <value>TBNewFile</value>
+  </data>
+  <data name="&gt;&gt;createAccountToolStripMenuItem.Name" xml:space="preserve">
+    <value>createAccountToolStripMenuItem</value>
+  </data>
+  <data name="ObjectBrowserCatagory.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Standard</value>
+  </data>
+  <data name="&gt;&gt;compileAndSaveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="projectSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Project settings</value>
+  </data>
+  <data name="objectBrowserSplitContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="newToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;projectToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="messageViewImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
+        BQAAAk1TRnQBSQFMAgEBAgEAAWABDgFMAQ8BEAEAARABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAFA
+        AwABEAMAAQEBAAEYBgABDBIAYP9gAGD/YAAS/wGxAbUBzgGVAZkBtgGbAZ0BtgLAAc9C/2AADP8BlgGh
+        Ac0BOQFPAacBEQExAaQBCgEuAasBCAEpAaABEgEmAYMBSQFOAYABvQG8AcoV/wFxAcoB4QEPAXwBmAEQ
+        AX0BmQEQAX0BmQEQAYABnAEQAYABmwEQAX0BmQEQAX0BmQEQAX4BmgEkAZMBrwn/YAAJ/wGIAZgBzwEZ
+        AT4BtAEBATEBywEAAS8B1QEAATEB1gEAATAB1AEAAS4BzwEBAScBqAEfASgBbwK8AcsS/wERAbMB2QEN
+        AdMB6QEBAcQB6QEBAdIB6QEWAVICYwFcAXABAgHNAekBAQG+AekBBAHRAekBGAGXAbYJ/2AABv8BvQHH
+        AecBJAFIAb4BBgE3AeABEAFCAeYBDgE+Ad8BDAE8AdcBCgE4Ac8BCQE0AccBCQE0AccBAgEnAacBSQFN
+        AYAS/wE4AcoB5QE0AfoB/gEUAfIB/wEAAfIB/wEDAVsBXgEkAUoBTgEAAekB/wECAdoB/wESAeQB7QEw
+        AYUBnAn/YAAG/wF+AZIB1QEQAUAB3gEbAUgB/QP/AaQBtwH2AQ4BPwHfAaMBtQHwA/8BCQE0AccBAAEv
+        Ac4BEQEkAYICwAHQD/8BfAHeAe8BNgHSAecBVQL/AQgB/QH/AQEB3gHvAQIBzwHlAQAB6QH/ARIB8gH/
+        ARwBnwG2AYQBrwG7Cf9gAAb/AVYBcwHOAS4BYAH5AS0BYwH/AYQBnwH6A/8BlQGrAfUD/wF/AZkB7AEK
+        ATkB0AEAATMB1gEJASoBnwGbAZ0BthL/ATkBzAHlAXsB+QH7ATgC/wEjAY8BlAEzAXQBgQEAAv8BDwHw
+        AfQBLQGFAZwM/2AABv8BUQFvAdABWQGDAf8BTgF6Af8BNQFkAfwBuAHIAfwD/wGxAcIB+AEPAUEB4gEM
+        AT0B2gEAATUB3QEKAS4BqgGVAZgBthL/AYEB3gHuAUUB0gHoAXcC/wE+AW8BdwFVAVABYQEBAv8BFgGx
+        AcYBYgGaAaoM/2AABv8BbQGHAdkBWgGAAfYBbwGSAf8BpgG7BP8BngG0AfsD/wGCAZ0B9AEPAUEB4gEA
+        ATEB4gESATIBpAGwAbUBzhX/ATgBywHlAXwB9wH7AUkBNQExAUkCAAENAv0BKwGIAZ8P/2AABv8BoAGx
+        AeYBUgF1AeQBgwGhBP8BwQHQAf8BQQFuAfwBrAG/AfwD/wERAUQB6gECATQB2AE5AU4Bphj/AYcB4QHw
+        AT4B2AHtAVQBmQGUAScBagFpAREB0gHbAU0BkwGmD/9gAAn/AWUBgQHbAWYBhwHvAYgBpgH/AYQBpAH/
+        AW8BkgH/AVkBggH/ATUBZQH/ASQBVgH0AR0BQQG8AZYBoQHNG/8BOAHLAeUBSwH1AfoBKQL/ASoBjQGi
+        Ev9gAAz/AWYBgwHbAVcBeQHkAWQBiAH2AWcBjQH/AUUBcQH7ATwBZwHtASkBTAHFAYoBmQHQHv8BkwHh
+        Ae8BMgHUAeoBLgHrAe8BRAGQAaQS/2AAD/8BoQGxAeYBbQGGAdkBUAFuAc8BVwFzAc4BgAGUAdUBvQHG
+        Aeck/wFbAdMB6QFlAdEB4BX/YABg/2AAYP9gAAFCAU0BPgcAAT4DAAEoAwABQAMAARADAAEBAQABAQUA
+        AYAXAAP/lwAL
+</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;RightClickFind.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RightClickCopy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="deleteProjectToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAU5JREFUOE9joAr4uWTa/5fNRf9fzuz9DxXCC95P7vm/KjMVofZCUer/HzM6//+a
+        1v7/W1fV/zud9VgN+jG54/+lvGTslhycOvH/s+rc/z+zQv5/DXf4fzPUCUXhV1fd/5v9nAm7cF9azP8n
+        xhL/X6uz/7/ioP3/ekHa/4tynP93e1gT1owMLumI/L+txPn/sgzz/5OeVqRpBoEDZkr/L6vx/n+ozff/
+        XKgbaQZctlD8/8BC7v+GlNj/27MS/382Ev1/OB8p1PGBC2by/2/pCf1fHR0K13CoovD/OzNpwgbc9TEB
+        a97uaIqhGBS4oECFcjHBpeSQ/zeMxP6fNpDCqeiyh+n/PU3VmPKf5s38D7L9rrkMweg67YTpOoZn1YX/
+        H0e4/7/rZvj/VlkmXgMOVVdgyl+pyPv/Jsbt/0UzBbya8QKQC44lBJFvAHmAgQEAbG+sSUvJLEEAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="ObjectBrowserList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="renameToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="projectViewMenu.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TBCut.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem1.Name" xml:space="preserve">
+    <value>aboutToolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;removeToolStripMenuItem.Name" xml:space="preserve">
+    <value>removeToolStripMenuItem</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator6.Name" xml:space="preserve">
+    <value>toolStripSeparator6</value>
+  </data>
+  <data name="RightClickPaste.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+V</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="toolStrip2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TBNewFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAAf9JREFUOE+tkF1Ik1Ech73oxosuIogMoosgwwsJ+4Bs0Y0Vsy+DRR8rAl0RdRHS
+        LjJHQygivImJUjmsNkctVLYm5VZqNQ2m4ZKl5Wq45VA3ne7NRVPXnnrXSwrZ2EUP/Dhwzvk9/M/JWkzy
+        Q+lyvyHvmla7a5m0lRnxPmVet9PC6y4HfssJWjus6CxnaX7aidnuptHmwmhzVUvX/0boUeRGbcXE35xm
+        1n2OkOswXst2VLVKApMBbj9+zlZ5GRXVhkdSZYHk4Jmc+b5TRcEXCvh8Enz74V0B/idyGtq05F9cT0GV
+        DEf3+5Tkys0HZqn6G59xS+mwfmNP9OVO6M+F7rVgW4XwMJ+QtYSrNSXINHK2Fav+RKou8Mq4N0ew/xI4
+        VkPLGmhayXTbQWIz09zrbKCyRUON4VkqSwrm3h6R9ddvoq5qHZHGXILt5Qj2PYyPDFJ0vYgDtw4RinxL
+        CcRnSLUFnKZ9K6ru36FMdwynfgMVzWqaXCaO1x6lsHIHautlAmPCvwUid80dkEzg9bRSbiknW5lNfZce
+        IRZndCKGNzCVXlBnciCi1odR6cIoboTZrRmn8NIXNp8fwvNpIr1APFzMfOIH0Zk4I6GvfByO0Dswlplg
+        yQkuDNHlDmY+wexcginhe+rjBnyTuDyjtPcEMhOIa7qkFYiHmUSq/A+ysn4Ce6rFUE0wfPIAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Unit Filter Generator</value>
+  </data>
+  <data name="mapObjectBrowserToolStripMenuItem.Text" xml:space="preserve">
+    <value>Right menu</value>
+  </data>
+  <data name="&gt;&gt;TBComment.Name" xml:space="preserve">
+    <value>TBComment</value>
   </data>
   <data name="newProjectToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5573,812 +6407,8 @@ Did you forget to define the main entry?</value>
         2Pg/++8xxcb/2X+PKTb+z/57TLHxf/bfYkz6P+JQmOVh82m8AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
-  </data>
-  <data name="Text35.Text" xml:space="preserve">
-    <value>Unable to find the root file.
-Did you forget to define the main entry?</value>
-  </data>
-  <data name="TBRun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 22</value>
-  </data>
-  <data name="&gt;&gt;LanguageToolStripMenuItem.Name" xml:space="preserve">
-    <value>LanguageToolStripMenuItem</value>
-  </data>
-  <data name="Text10.Text" xml:space="preserve">
-    <value>Remove Project</value>
-  </data>
-  <data name="Text25.Text" xml:space="preserve">
-    <value>Unable to rename the folder. Invalid folder name.</value>
-  </data>
-  <data name="deleteProjectToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Delete</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>972, 24</value>
-  </data>
-  <data name="&gt;&gt;objectBrowserSplitContainer.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
-  </data>
-  <data name="TBNewFolder.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAqpJREFUOE/FkmssFXAYxs93ZS0mqrHIWmpntTRd6DJdXU43oVhyEqOt0pi5JKbc
-        c6lZMka5n6Mo0qKdhKMpx61DLZRVWGVy6aik8+vEWeuirW/9tvfDf3veZ+/7vH/B74xX2QQUhJmJtM9/
-        Y1xx0GREvsd+oNVdRyXbVdWSsylmtOmA/ieFk+iMn8UsrWxmSvKSXSqLYxiS2jBQ6cyYXMzbGk/Gm5yH
-        OzOWtwqF83S00pnRGPCsPYcPD72h3QNeiOH5Xr42raEq3bFWK/s7cqk/qrp9qOq3o+6whsdCkBszec2A
-        d4WreFXqgOSSPxkp4VxKDOFibBDa1mmkWWH01J1ipH4XNBjCPWMoN0BdZEivZAMdkh28qXEHpc9U/WGQ
-        nxnLWN9l1HU2TJYZMpE/n8/5C6FUn5bC3ZTmRiPJjqIgI5IraWfISg3jclIIaQnB02a5GdGM9USjzN1A
-        o1RMv8Sa7pKt9NUe4fUNW0aVYdB7VpNNJPSEwtMA6DxGW7EzJzxFVwXZaVEMd8XCy0RuFJ1noNqV9mKH
-        HyN/adOE26oJV+HEpNyej9Wb6boqxOvQxpGTXo7LBJmpEbx/Ekmv/DRlBYl86gikX6bduU1zEYUrkw9E
-        fJRtY7RyPYMlK4n0NcfVVi9lKoP0pNMMtgdzLS+B5to4zYj+mkschWZ31I17mLi/E9WdjQyVWfKmaCmK
-        c3NwszfFcsnsJVMGafEhPJaFcz0vHrrDoUUz7qP9TNQ7oLq7meFyK95JhPTlLEaZqEeEjxkrLIwqppq/
-        cyEmCOmVOJQ3/WiQ+lJb6I0sV0xVtge3M925lX6Aip/KzW6R2mqFiZ22XSBIPhtIcoQ3McGHCT3uwgmx
-        CE/nLezdsRbbdUJWC81ZaroAYyN9DObqYqin++s/+M8IBN8A77TNbCSU8KsAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="&gt;&gt;searchDefinitionsToolStripMenuItem.Name" xml:space="preserve">
-    <value>searchDefinitionsToolStripMenuItem</value>
-  </data>
-  <data name="saveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+S</value>
-  </data>
-  <data name="&gt;&gt;saveToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LanguageToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RightClickFind.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+F</value>
-  </data>
-  <data name="searchDefinitionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
-  </data>
-  <data name="newProjectToolStripMenuItem.Text" xml:space="preserve">
-    <value>New project</value>
-  </data>
-  <data name="&gt;&gt;toolStrip1.Name" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="CBShowErrors.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;projectViewProjectMenu.Name" xml:space="preserve">
-    <value>projectViewProjectMenu</value>
-  </data>
-  <data name="BTNUnitFilterInsert.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TBSave.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="compilerStatusText.Text" xml:space="preserve">
-    <value>Ready</value>
-  </data>
-  <data name="&gt;&gt;runToolStripMenuItem.Name" xml:space="preserve">
-    <value>runToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;TBRefreshObjectList.Name" xml:space="preserve">
-    <value>TBRefreshObjectList</value>
-  </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 53</value>
-  </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Text30.Text" xml:space="preserve">
-    <value>You have unsaved files. Do you wish to save them?</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;jumpToolStripMenuItem.Name" xml:space="preserve">
-    <value>jumpToolStripMenuItem</value>
-  </data>
-  <data name="TBUndo.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>Insert</value>
-  </data>
-  <data name="&gt;&gt;TBNewFolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Text20.Text" xml:space="preserve">
-    <value>Unable to move item since another item of same name exists at the destination.</value>
-  </data>
-  <data name="&gt;&gt;newToolStripMenuItem.Name" xml:space="preserve">
-    <value>newToolStripMenuItem</value>
-  </data>
-  <data name="Text5.Text" xml:space="preserve">
-    <value>Project already exists</value>
-  </data>
-  <data name="&gt;&gt;TBFind.Name" xml:space="preserve">
-    <value>TBFind</value>
-  </data>
-  <data name="ObjectBrowserList.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Text43.Text" xml:space="preserve">
-    <value>Unable to copy to test file. If Starcraft II is already running, please shut it down first.</value>
-  </data>
-  <data name="buildOnlyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Build only</value>
-  </data>
-  <data name="TBSaveAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="&gt;&gt;compileAndSaveToolStripMenuItem.Name" xml:space="preserve">
-    <value>compileAndSaveToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;saveAllToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TBPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="tabStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GEFile.Text" xml:space="preserve">
-    <value>G++ project properties file(properties.dat)|properties.dat</value>
-  </data>
-  <data name="compileAndSaveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Compile and save as</value>
-  </data>
-  <data name="runToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 22</value>
-  </data>
-  <data name="&gt;&gt;newToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
-  </data>
-  <data name="&gt;&gt;ObjectBrowserList.Name" xml:space="preserve">
-    <value>ObjectBrowserList</value>
-  </data>
-  <data name="Text14.Text" xml:space="preserve">
-    <value>Are you sure you wish to completely remove the file </value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ObjectBrowserPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="optionsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
-  </data>
-  <data name="&gt;&gt;tabStrip.Name" xml:space="preserve">
-    <value>tabStrip</value>
-  </data>
-  <data name="&gt;&gt;TBUndo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="objectBrowserSplitContainer.Panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;UnitFilterGrid.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;newDialogToolStripMenuItem.Name" xml:space="preserve">
-    <value>newDialogToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;buildToolStripMenuItem.Name" xml:space="preserve">
-    <value>buildToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Text39.Text" xml:space="preserve">
-    <value>Missing data</value>
-  </data>
-  <data name="&gt;&gt;newFileToolStripMenuItem.Name" xml:space="preserve">
-    <value>newFileToolStripMenuItem</value>
-  </data>
-  <data name="splitContainer1.Panel2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CBShowWarnings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 3</value>
-  </data>
-  <data name="RightClickPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
-  </data>
-  <data name="&gt;&gt;mapObjectBrowserToolStripMenuItem.Name" xml:space="preserve">
-    <value>mapObjectBrowserToolStripMenuItem</value>
-  </data>
-  <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;messageViewImageList.Name" xml:space="preserve">
-    <value>messageViewImageList</value>
-  </data>
-  <data name="Text34.Text" xml:space="preserve">
-    <value>Could not locate file in project.</value>
-  </data>
-  <data name="Text33.Text" xml:space="preserve">
-    <value>Could not locate token.</value>
-  </data>
-  <data name="&gt;&gt;removeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="newDialogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="&gt;&gt;TBPaste.Name" xml:space="preserve">
-    <value>TBPaste</value>
-  </data>
-  <data name="projectView.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Text13.Text" xml:space="preserve">
-    <value>Remove Folder</value>
-  </data>
-  <data name="TBDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAU5JREFUOE9joAr4uWTa/5fNRf9fzuz9DxXCC95P7vm/KjMVofZCUer/HzM6//+a
-        1v7/W1fV/zud9VgN+jG54/+lvGTslhycOvH/s+rc/z+zQv5/DXf4fzPUCUXhV1fd/5v9nAm7cF9azP8n
-        xhL/X6uz/7/ioP3/ekHa/4tynP93e1gT1owMLumI/L+txPn/sgzz/5OeVqRpBoEDZkr/L6vx/n+ozff/
-        XKgbaQZctlD8/8BC7v+GlNj/27MS/382Ev1/OB8p1PGBC2by/2/pCf1fHR0K13CoovD/OzNpwgbc9TEB
-        a97uaIqhGBS4oECFcjHBpeSQ/zeMxP6fNpDCqeiyh+n/PU3VmPKf5s38D7L9rrkMweg67YTpOoZn1YX/
-        H0e4/7/rZvj/VlkmXgMOVVdgyl+pyPv/Jsbt/0UzBbya8QKQC44lBJFvAHmAgQEAbG+sSUvJLEEAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="&gt;&gt;TBCut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="newFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="changeToAnotherVersionToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
-  </data>
-  <data name="&gt;&gt;TBSaveAll.Name" xml:space="preserve">
-    <value>TBSaveAll</value>
-  </data>
-  <data name="BTNUnitFilterInsert.Text" xml:space="preserve">
-    <value>Insert</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="splitContainer1.Panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;saveProjectAsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="libraryServerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="&gt;&gt;objectBrowserSplitContainer.Panel1.Name" xml:space="preserve">
-    <value>objectBrowserSplitContainer.Panel1</value>
-  </data>
-  <data name="TBSave.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="messageView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>770, 96</value>
-  </data>
-  <data name="toolStrip2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 25</value>
-  </data>
-  <data name="activateToolStripMenuItem.Text" xml:space="preserve">
-    <value>Enabled</value>
-  </data>
-  <data name="ObjectBrowserPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
-    <value>283</value>
-  </data>
-  <data name="compileAndCopyToMapToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="mapObjectBrowserPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="TBRedo.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="openExistingProjectToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Existing Project</value>
-  </data>
-  <data name="TBFind.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Text17.Text" xml:space="preserve">
-    <value>That item is read only.
-To remove it you must remove the entire library.</value>
-  </data>
-  <data name="CBUnitFilterCompress.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Text23.Text" xml:space="preserve">
-    <value>Unable to rename the directory, as another the directory of same name already exists.</value>
-  </data>
-  <data name="&gt;&gt;downloadLibraryToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ObjectBrowserList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="compileAndCopyToMapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 22</value>
-  </data>
-  <data name="TBNewProject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="TBCut.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;CBUnitFilterCompress.Name" xml:space="preserve">
-    <value>CBUnitFilterCompress</value>
-  </data>
-  <data name="&gt;&gt;BTNUnitFilterInsert.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="activateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="projectViewImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB8
-        GQAAAk1TRnQBSQFMAgEBBgEAAWABDgE4AQ8BEAEAARABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAFA
-        AwABIAMAAQEBAAEYBgABGBIAMP8GAAESAR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BLwES
-        AR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BLwESAR0BL2YAAc8BawFsAckBaAFpAbIBWwFcAX8CPwFu
-        AZIBogFqAYsBnAFZAXYBhwFDAVgBaQEoATUBQwF0AZwBigFwAZYBhgFeAYEBdAFHAWQBWwErAUABOwb/
-        AwABRAE6ATMBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEeARcBJgEe
-        ARcBJgEeARcBJgEeARcBJgEeARcBLAEkARtjAAHQAW0BbgHoAY4BjwHmAYkBigG2AlsBcQGWAaYBWAHF
-        AeEBTQG+Ad0BTQG+Ad0BWwG6AdsBdwGfAY0BaAHQAZcBXgHMAZEBXgHMAZEBagHLAZsBPgFsAV8D/wFL
-        AUMBPgFEAToBMwE1AS8BIgFxAbYBFgFxAbYBFgETASABBAFOAXUBHwFOAXUBHwFOAXUBHwFOAXUBHwET
-        ASABBAFxAbYBFgFxAbYBFgEzAS0BIgEsASQBGwE2ATEBLGAAAdIBcQFyAaYCbAGgAWMBZAGMAksBdAGb
-        AawBYgGjAb0BVwGYAbQBTQGNAasBSwGAAZwBegGlAZIBbQGyAZIBYgGpAYkBWAGgAYEBVAGSAXkBOwG8
-        AX0BPgFsAV8BSwFDAT4BRAE6ATMBcQG2ARYBIgE2AQQBIgE2AQQBIgE2AQQBIgE2AQQBIgE2AQQBIgE2
-        AQQBIgE2AQQBIgE2AQQBIgE2AQQBIgE2AQQBcQG2ARYBLAEkARsBNgExASxgAAHWAXgBeQH2AaoBqwHw
-        AZ0BngHLAmgBdwGhAbEBYwHTAfMBXAHQAfMBVQHNAfIBWwG6AdsBfgGqAZUBdAHiAagBbgHhAaUBZwHf
-        AaEBagHLAZsBOwG8AX0BPgFsAV8BSwFDAT4BRAE6ATMBcQG2ARYBEwEgAQQBEwEgAQQBEwEgAQQBEwEg
-        AQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBcQG2ARYBLAEkARsBNgExASxgAAHa
-        AYIBgwHDAn8BvAF0AXUBpAJZAXwBpgG3AWkBpgG9AV8BnAG0AVUBkAGsAUsBgAGcAYMBsAGbAXMBswGU
-        AWkBqgGMAV8BoQGFAVQBkgF5ATsBvAF9AUABbgFhAUsBQwE+AUQBOgEzASIBNgEEASIBNgEEASIBNgEE
-        ASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASwBJAEb
-        ATYBMQEsYAAB3wGKAYsB/QG5AbsB+QGwAbEBzgFuAW0BfwGsAb0BfgHeAfUBeAHcAfQBcQHZAfQBWwG6
-        AdsBhgG1AZ8BjAHnAbQBhwHlAbABgAHkAa4BagHLAZsBOwG8AX0BQwFyAWUBSwFDAT4BRAE6ATMBTgF1
-        AR8BEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEgAQQBEwEg
-        AQQBTgF1AR8BLAEkARsBNgExASxgAAHjAZMBlAH/Ab0BvgH9AbcBuQHPAXEBcAGDAbIBwwGLAeMB9QGF
-        AeEB9AF+Ad4B9AFbAboB2wGKAbsBowGXAegBuQGSAecBtgGMAeYBswFqAcsBmwE7AbwBfQFHAXYBaAFL
-        AUMBPgFEAToBMwFOAXUBHwEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEi
-        ATYBBAEiATYBBAEiATYBBAFOAXUBHwEsASQBGwE2ATEBLGAAAecBmwGcAf8BvQG+Af8BvQG+AdEBdAFz
-        AYgBtwHJAZYB5wH2AZEB5gH2AYoB4wH1AVsBugHbAY8BwQGpAaEB6gG/AZ0B6gG8AZYB6AG4AWoBywGb
-        ATsBvAF9AUsBewFrAUsBQwE+AUQBOgEzAU4BdQEfARMBIAEEARMBIAEEARMBIAEEARMBIAEEARMBIAEE
-        ARMBIAEEARMBIAEEARMBIAEEARMBIAEEARMBIAEEAU4BdQEfASwBJAEbATYBMQEsYAAB7AGkAaUB/wG9
-        Ab4B/wG9Ab4B0gJ2AYsBvAHOAZ8B6wH2AZsB6gH2AZYB5wH2AVsBugHbAZMBxgGtAakB6wHCAaYB6wHA
-        AaEB6gG/AWoBywGbATsBvAF9AU8BgAFwAUsBQwE+AUQBOgEzAU4BdQEfASIBNgEEASIBNgEEASIBNgEE
-        ASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEASIBNgEEAU4BdQEfASwBJAEbATYBMQEs
-        YAAB8AGsAa0BzQKFAcUBegF7AawCXQGNAcAB0gF4Aa0BvgFvAaIBtQFmAZcBrAFLAYABnAGVAcoBsAGA
-        AbUBmgF3AawBkwFuAaMBiwFUAZIBeQE7AbwBfQFUAYQBcwFLAUMBPgFEAToBMwETASABBAETASABBAET
-        ASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAEs
-        ASQBGwE2ATEBLGAAAfQBswG0Af8BvQG+Af8BvQG+AdMCeQGPAcMB1QGrAfAB9wGrAfAB9wGoAe8B9wFb
-        AboB2wGXAcwBsgG0Ae4ByAG0Ae4ByAGxAe0BxgFqAcsBmwE7AbwBfQFZAYoBeAFLAUMBPgFEAToBMwFx
-        AbYBFgEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEiATYBBAEi
-        ATYBBAFxAbYBFgEsASQBGwE2ATEBLGAAAfUBtgG3AfUBtgG3Ae0BpwGpAc8CcQGPAcMB1QGFAbQBxwF6
-        AaQBtAFwAZUBpgFqAYsBnAGXAcwBsgGNAb8BqAGBAa0BmAF2AZ8BjQFwAZYBhgE7AbwBfQFeAZABfQFL
-        AUMBPgFEAToBMwFxAbYBFgETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAETASABBAET
-        ASABBAETASABBAETASABBAFxAbYBFgEsASQBGwE2ATEBLGAAA/8B1gGiAZ0BkgF9AW0B5QHgAdwBzQGZ
-        AZ4BkQGyAbkBkAF8AW0B5QHgAdwD/wFqAYsBnAGWAbQBowGLAXEBegHkAd0B3wP/AXABlgGGAWQBlQGB
-        AUsBQwE+AUQBOgEzAUMCOwFxAbYBFgFxAbYBFgEqAT8BEwFOAXUBHwFOAXUBHwFOAXUBHwFOAXUBHwEr
-        AUABEwFxAbYBFgFxAbYBFgFJAUABPgEsASQBGwE2ATEBLGAABv8BxgGZAZIBlQF9AW4B9AHsAegBywGR
-        AZYBjAGrAbMBhgGDAX0B9AHsAegB4gHzAfUBagGLAZwD/wGFAX4BfwHyAekB7QHkAfIB6QFwAZYBhgMA
-        AVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFE
-        AVQBSgFEAVQBSgFEAVQBSgFEAVQBSgFEYwAw/wYAAYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGB
-        AYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGBAYQBggGB9gAD/wG3AaIBkwFjAUkBNQFj
-        AUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFj
-        AUkBNQFjAUkBNQP/EgAD/wEzAZkBMwEAAWYBAAPdA/9FAAG3AaIBkwFjAUkBNQFjAUkBNQFjAUkBNQFj
-        AUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQFjAUkBNQkAA/8BtwGiAZMB9wHlAdwB3QHP
-        AcgB2AHJAcEB0wHCAbkBzwG8AbIBygG2AaoBxgGwAaQBwgGrAZ4BvgGmAZgBugGgAZIBtAGaAYwBsAGV
-        AYYBYwFJATUD/xIAA/EBAAGAAgABMwEAA5kG/wMAA/8GAAF1AYQBjwFmAYABjwFgAXkBhwFXAW4BewFO
-        AWIBbwFEAVYBYQE5AUgBUgEuAToBQwElAS4BNQEbASIBKQEUARkBHgEOARIBFgEOARMBGA8AAbcBogGT
-        A/8BtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBtwGiAZMBYwFJATUJAAP/
-        AbcBogGTAfkB6QHiAfkB6QHiAfkB6QHiAfgB5gHdAfcB4gHYAfUB3gHTAfQB2wHOAfMB1wHKAfIB1AHF
-        AfEB0AHBAfABzQG8AbYBnAGOAWMBSQE1A/8GAAb/AwABMwGZATMBAAFmAgABgAIAAWYCAAEzAgABgAEA
-        AZkBzAGZAwAD1wYAAXcBhwGSAYkBoQGrAWoBsgHUAWkBqwHGAWYBpwHCAWIBowG+AV8BnwG6AVwBnAG3
-        AVkBmAG1AVkBmAG0AVkBmAG0AVkBmAG0ASMBTAFdAeMC5QwAAbcBogGTBv8B/AH6AfkB9wHxAe4B8QHn
-        AeEB7AHdAdUB5gHTAckB4QHKAb0BtwGiAZMBYwFJATUJAAP/AbcBogGTAfkB7gHoAfkB7gHoAfkB7gHo
-        AeoBjwFgAeoBhAFPAeYBeAE/Ad8BbwE2AdIBZgEwAcEBXQEqAfIB1QHGAfEB0QHCAbwBowGVAWMBSQE1
-        A/8GAAEzAZkBMwEAAYACAAEzAgABZgEAA/EJAAGZAcwBmQEAAWYCAAFmAgABZgcAAXoBigGVAX4BvgHT
-        AYoBpAGuAX4B3AH/AV8BzwH/AVUBywH/AUwBxAH6AUEBvAH1ATcBswHwAS4BqgHrASQBoAHlARMBjAHU
-        ASMBZwGAAYQBjAGPDAABtwGiAZMD/wHqAZwBdAHqAZIBZAHqAYcBVAHoAXwBRQHiAXMBOgHZAWsBMwHk
-        Ac8BxAG3AaIBkwFjAUkBNQkAA/8BtwGiAZMB+wHyAe0B+wHyAe0B+wHyAe0B+gHuAekB+QHqAeQB+AHn
-        AeAB9wHkAdoB9gHhAdUB9QHcAdEB9AHYAcwB8wHVAccBwgGqAZ4BYwFJATUD/wYAATMBmQEzAQABZgIA
-        ATMEAAP/CQAD/wGZAcwBmQEAAWYCAAFmAQAD8QP/AX0BjgGYAXkB0gHsAYsBpAGtAYkBwgHOAXEB2AH/
-        AWUB0wH/AVwBzgH/AVEByQH+AUkBwQH6AT8BuQH1ATQBsAHuASkBqAHpARABhQHNASIBSwFbAvQB9QkA
-        AbcBogGTCf8B/QH8AfsB+AHzAfAB8gHpAeMB7QHfAdgB5wHVAcsBtwGiAZMBYwFJATUJAAP/AbcBogGT
-        AfwB9gHzAfwB9gHzAfwB9gHzAeoBjwFgAeoBhAFPAeYBeAE/Ad8BbwE2AdIBZgEwAcEBXQEqAfQB3gHT
-        AfMB2gHNAccBsQGlAWMBSQE1A/8KAAGAAQABZgGZAWYD/xMAAWYBAAPAA/8DAAGAAZEBnAGBAdcB7wF9
-        AcUB4AGMAaYBsAGAAd0B/gFoAdMB/wFnAdQB/wFiAdEB/wFYAc0B/wFOAccB/AFGAb4B9wE7AbYB8gEx
-        AawB7AElAWkBgQGpAbgBvwkAAboBpQGWA/8B6gGcAXQB6gGSAWQB6gGHAVQB6AF8AUUB4gFzAToB2QFq
-        ATMB6wHbAdMBtwGiAZMBYwFJATUJAAP/AboBpQGWAf0B+QH2Af0B+QH2Af0B+QH2AfwB9gHzAfwB8wHv
-        AfoB8AHrAfoB7QHnAfgB6QHhAfcB5QHdAfYB4gHYAfUB3wHTAcwBuAGuAWMBSQE1A/8JAAEzAZkBMwHA
-        AdwBwAP/EwABZgEAATMBmQEzBgABgwGVAZ8BiQHcAfEBjAHiAf8BjQGoAbEBjAG6AccBdAHYAf8BZwHU
-        Af8BZwHUAf8BZwHUAf8BXwHQAf8BVAHNAf8BSwHFAfwBQQG7AfcBLgGiAdsBWQFtAXoC9AH1BgABvgGp
-        AZoD/wHsAfMB7AFzAbMBcwEJAVsBCQGcAcQBmwH4AfQB8QH0AesB5gHuAeEB2gG3AaIBkwFjAUkBNQkA
-        A/8BvgGpAZoB/gH8AfsB/gH8AfsBpQFPASUB/QH5AfgBqwG4AZEBVAF4AS0BigFwAUgBzgGxAZ4B+AHq
-        AeQBpQFPASUB9gHiAdoB0gHAAbgBYwFJATUD/wkAATMBmQEzA8AD/xMAAWYBAAFmAZkBZgYAAYYBmgGj
-        AZIB4QHyAZgB6AH9AYABxAHeAY4BpwGwAYEB3gH9AYQB4AH/AYQB4AH/AYQB4AH/AYQB4AH/AYEB3wH/
-        AXsB3QH/AXQB2AH/AWsB1gH/AVYBqQHRAa4BtQG7BgABowGnAYUBWwGSAVsBNgF9ATYBegG0AXoBrgHQ
-        Aa4BXAGcAVsBOwF7AToBeAGxAXQB8QHnAeEBtwGiAZMBYwFJATUJAAP/AcMBrgGeA/4BpQFPASUE/gH9
-        AfwBfgGCATsBkAGTAUIBcAF3ATEBdgGnAWcB+gHuAekB+QHrAeUBpQFPASUB2QHJAcEBYwFJATUD/wYA
-        A/8BAAGAAgABZgEAA/8PAAP/AQABMwEAA7IGAAGIAZwBpQGaAeYB8wGfAesB+wGYAegB/gGLAawBuQGL
-        AawBuQGKAaoBtwGIAaYBswGGAaMBrwGDAZ8BqgGBAZoBpgF/AZUBoQF8AZEBnQF6AY4BmQF5AYsBlQF3
-        AYgBkwYAAasBqgGMARMBVgETAZABvAGQCf8BRAGFAUQBTwGQAU0B9QHtAekBtwGiAZMBYwFJATUJAAP/
-        AcgBsgGjBv8BpQFPASUD/wFjAbYBYgHDAcgBnQGiAZEBOgGcAcYBigH7AfIB7gGlAU8BJQH5AewB5gHf
-        AdIBzAFjAUkBNQP/BwABgAIAAWYCAAEzAQADsgMACf8EAAFmAgABZgIAATMBAAPXA/8BiwGgAagBoAHq
-        AfYBpgHuAfkBnwHrAfsBmAHoAf4BegHaAf8BZwHUAf8BZwHUAf8BZwHUAf8BZwHUAf8BZwHUAf8BZwHU
-        Af8BdwGIAZMPAAHMAbYBpwFFAY4BRQHcAewB3An/AZ8BwAGfAXwBrgF7AbcBogGTAbcBogGTAWQBSgE2
-        CQAD/wHMAbYBpwz/AdYB8gHSAZkBygGLAawBrwF8Ae8B8QHmAfwB9gHzAfsB9AHvAeoB4gHdAeUB2wHV
-        AWQBSgE2A/8DAAP/A9cBZgGZAWYDmQEzAWYCMwFmATMD4wPxA7IBAAGAAgABZgEAA7IBAAGABwABjgGi
-        AasBpwHuAfYBqwHwAfcBpgHuAfkBnwHrAfsBmAHoAf0BcQHUAfsBiQGeAacBhgGZAaMBggGUAZ8BfgGQ
-        AZoBegGMAZcBdwGIAZMPAAG+AbUBnAEnAWwBJwGuAdABrgn/AWYBngFmAUkBfAE8AWQBSgE2AWQBSgE2
-        AWQBSgE2CQAD/wHRAbsBqxP/Af4B/QH+AvsB/QH5AfgBtwGiAZMBZAFKATYBZAFKATYBZAFKATYD/w8A
-        A+oBAAFmAgABgAIAATMCAAEzAQABZgGZAWYDAAP/CQABjwGkAawBoAHSAdoBqwHwAfcBqwHwAfcBpgHu
-        AfkBnwHrAfsBjQGhAaoB1AHcAd8eAAGjAbEBhwEtAW0CLQF2AS0BrQHSAa0B2AHpAdgBjwG8AY8BHgFn
-        AR4BPAGBATIB1AHFAboBYwFJATUBzAHCAbsJAAP/AdUBvwGvFv8D/gH8AfsBuQGkAZUB1AHFAboBYwFJ
-        ATUBwQGyAacD/w8AA/8DAAEzAZkBMwEAAWYBAAPqEgAB6AHrAewBjwGkAawBjwGkAawBjwGkAawBjwGk
-        AawBjwGkAawBzwHZAd4hAAHXAcIBsgH3AfoB9wHGAd4BxgFEAZUBRAEIAVkBCAFlAaEBZQHhAewB4QG7
-        AaoBmAFjAUkBNQHNAcMBuwwAA/8B2AHCAbIa/wH+AcABqwGcAWMBSQE1AcIBswGnBv8VAAPjAcAB3AHA
-        A/ED/0UAAdgBwgGyAdgBwgGyAdgBwgGyAcsBwQGqAWwBngFcAdQBvgGuAc8BuQGpAckBswGkAeQB3gHZ
-        DwAD/wHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHYAcIBsgHUAb4BrgHP
-        AbkBqQHJAbMBpAHiAdYBzQn/FQAJ/3IAMP8BQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEB
-        FgAD/wMAAcABAwYAAYABAWYAAYABAQYAAcABAwQABv8CAAH8AR8C/wHAAQcCAAH8AQsBAAEHAcABBwIA
-        AcgBCwEAAQMBwAEHAgABwQHDAQABAwHAAQcCAAHFAcABAAEBAcABBwIAAeMB8QEAAQEBwAEHAgAB4wHz
-        AgABwAEHAgAB4wHzAgABwAEHAgABwwHjAgABwAEHAgABwgEgAQABBwHAAQcCAAGAAQMBAAEHAcABBwIA
-        AfgBFwEAAf8BwAEHAgAB+gE/AQEB/wHAAQ8CAAH+AR8C/wHAAR8CAAH+AT8E/xgACw==
-</value>
-  </data>
-  <data name="&gt;&gt;RightClickCopy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TBPaste.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;goToDeclarationToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;compileAndSaveAsToolStripMenuItem.Name" xml:space="preserve">
-    <value>compileAndSaveAsToolStripMenuItem</value>
-  </data>
-  <data name="RightClickFind.Text" xml:space="preserve">
-    <value>Find/Replace</value>
-  </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="saveAllToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Shift+S</value>
-  </data>
-  <data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="&gt;&gt;newProjectToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TBNewProject.ToolTipText" xml:space="preserve">
-    <value>New Project</value>
-  </data>
-  <data name="ObjectBrowserPanel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;changeToAnotherVersionToolStripMenuItem.Name" xml:space="preserve">
-    <value>changeToAnotherVersionToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;toolStrip2.Name" xml:space="preserve">
-    <value>toolStrip2</value>
-  </data>
-  <data name="&gt;&gt;RightClickPaste.Name" xml:space="preserve">
-    <value>RightClickPaste</value>
-  </data>
-  <data name="TBRefreshObjectList.ToolTipText" xml:space="preserve">
-    <value>Refresh list</value>
-  </data>
-  <data name="tabStrip.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="mapObjectBrowserPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="downloadLibraryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
-  </data>
-  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="&gt;&gt;BTNUnitFilterReset.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;objectBrowserSplitContainer.Name" xml:space="preserve">
-    <value>objectBrowserSplitContainer</value>
-  </data>
-  <data name="&gt;&gt;mapObjectBrowserPage.Name" xml:space="preserve">
-    <value>mapObjectBrowserPage</value>
-  </data>
-  <data name="&gt;&gt;libraryServerToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TBSaveAll.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="Text37.Text" xml:space="preserve">
-    <value>Unable to copy to map</value>
-  </data>
-  <data name="TBPaste.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="openInExploreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="&gt;&gt;TBRefreshObjectList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TSInsertConstructor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 22</value>
-  </data>
-  <data name="RightClickCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
-  </data>
-  <data name="Text27.Text" xml:space="preserve">
-    <value>Unable to rename item. Another item of same name probally already exists.</value>
-  </data>
-  <data name="mapObjectBrowserToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 22</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ObjectBrowserTooltip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="saveToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="compileToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F9</value>
-  </data>
-  <data name="newDialogToolStripMenuItem.Text" xml:space="preserve">
-    <value>New Dialog</value>
-  </data>
-  <data name="projectSettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
-  </data>
-  <data name="mapObjectBrowserPage.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UnitFilterGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;newFolderToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="renameToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>F2</value>
-  </data>
-  <data name="messageView.SelectedImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="&gt;&gt;reportErrorToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="searchDefinitionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Search definitions</value>
-  </data>
-  <data name="buildOnlyToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F9</value>
-  </data>
-  <data name="&gt;&gt;compileAndSaveAsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TBRun.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;TBNewFile.Name" xml:space="preserve">
-    <value>TBNewFile</value>
-  </data>
-  <data name="&gt;&gt;createAccountToolStripMenuItem.Name" xml:space="preserve">
-    <value>createAccountToolStripMenuItem</value>
-  </data>
-  <data name="ObjectBrowserCatagory.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Standard</value>
-  </data>
-  <data name="&gt;&gt;compileAndSaveToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="projectSettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Project settings</value>
-  </data>
-  <data name="objectBrowserSplitContainer.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="newToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 22</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;projectToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="messageViewImageList.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        BQAAAk1TRnQBSQFMAgEBAgEAAWABDgE4AQ8BEAEAARABAAT/ARkBEAj/AUIBTQE2BwABNgMAASgDAAFA
-        AwABEAMAAQEBAAEYBgABDBIAYP9gAGD/YAAS/wGxAbUBzgGVAZkBtgGbAZ0BtgLAAc9C/2AADP8BlgGh
-        Ac0BOQFPAacBEQExAaQBCgEuAasBCAEpAaABEgEmAYMBSQFOAYABvQG8AcoV/wFxAcoB4QEPAXwBmAEQ
-        AX0BmQEQAX0BmQEQAYABnAEQAYABmwEQAX0BmQEQAX0BmQEQAX4BmgEkAZMBrwn/YAAJ/wGIAZgBzwEZ
-        AT4BtAEBATEBywEAAS8B1QEAATEB1gEAATAB1AEAAS4BzwEBAScBqAEfASgBbwK8AcsS/wERAbMB2QEN
-        AdMB6QEBAcQB6QEBAdIB6QEWAVICYwFcAXABAgHNAekBAQG+AekBBAHRAekBGAGXAbYJ/2AABv8BvQHH
-        AecBJAFIAb4BBgE3AeABEAFCAeYBDgE+Ad8BDAE8AdcBCgE4Ac8BCQE0AccBCQE0AccBAgEnAacBSQFN
-        AYAS/wE4AcoB5QE0AfoB/gEUAfIB/wEAAfIB/wEDAVsBXgEkAUoBTgEAAekB/wECAdoB/wESAeQB7QEw
-        AYUBnAn/YAAG/wF+AZIB1QEQAUAB3gEbAUgB/QP/AaQBtwH2AQ4BPwHfAaMBtQHwA/8BCQE0AccBAAEv
-        Ac4BEQEkAYICwAHQD/8BfAHeAe8BNgHSAecBVQL/AQgB/QH/AQEB3gHvAQIBzwHlAQAB6QH/ARIB8gH/
-        ARwBnwG2AYQBrwG7Cf9gAAb/AVYBcwHOAS4BYAH5AS0BYwH/AYQBnwH6A/8BlQGrAfUD/wF/AZkB7AEK
-        ATkB0AEAATMB1gEJASoBnwGbAZ0BthL/ATkBzAHlAXsB+QH7ATgC/wEjAY8BlAEzAXQBgQEAAv8BDwHw
-        AfQBLQGFAZwM/2AABv8BUQFvAdABWQGDAf8BTgF6Af8BNQFkAfwBuAHIAfwD/wGxAcIB+AEPAUEB4gEM
-        AT0B2gEAATUB3QEKAS4BqgGVAZgBthL/AYEB3gHuAUUB0gHoAXcC/wE+AW8BdwFVAVABYQEBAv8BFgGx
-        AcYBYgGaAaoM/2AABv8BbQGHAdkBWgGAAfYBbwGSAf8BpgG7BP8BngG0AfsD/wGCAZ0B9AEPAUEB4gEA
-        ATEB4gESATIBpAGwAbUBzhX/ATgBywHlAXwB9wH7AUkBNQExAUkCAAENAv0BKwGIAZ8P/2AABv8BoAGx
-        AeYBUgF1AeQBgwGhBP8BwQHQAf8BQQFuAfwBrAG/AfwD/wERAUQB6gECATQB2AE5AU4Bphj/AYcB4QHw
-        AT4B2AHtAVQBmQGUAScBagFpAREB0gHbAU0BkwGmD/9gAAn/AWUBgQHbAWYBhwHvAYgBpgH/AYQBpAH/
-        AW8BkgH/AVkBggH/ATUBZQH/ASQBVgH0AR0BQQG8AZYBoQHNG/8BOAHLAeUBSwH1AfoBKQL/ASoBjQGi
-        Ev9gAAz/AWYBgwHbAVcBeQHkAWQBiAH2AWcBjQH/AUUBcQH7ATwBZwHtASkBTAHFAYoBmQHQHv8BkwHh
-        Ae8BMgHUAeoBLgHrAe8BRAGQAaQS/2AAD/8BoQGxAeYBbQGGAdkBUAFuAc8BVwFzAc4BgAGUAdUBvQHG
-        Aeck/wFbAdMB6QFlAdEB4BX/YABg/2AAYP9gAAFCAU0BPgcAAT4DAAEoAwABQAMAARADAAEBAQABAQUA
-        AYAXAAP/lwAL
-</value>
-  </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="&gt;&gt;RightClickFind.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RightClickCopy.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="deleteProjectToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAU5JREFUOE9joAr4uWTa/5fNRf9fzuz9DxXCC95P7vm/KjMVofZCUer/HzM6//+a
-        1v7/W1fV/zud9VgN+jG54/+lvGTslhycOvH/s+rc/z+zQv5/DXf4fzPUCUXhV1fd/5v9nAm7cF9azP8n
-        xhL/X6uz/7/ioP3/ekHa/4tynP93e1gT1owMLumI/L+txPn/sgzz/5OeVqRpBoEDZkr/L6vx/n+ozff/
-        XKgbaQZctlD8/8BC7v+GlNj/27MS/382Ev1/OB8p1PGBC2by/2/pCf1fHR0K13CoovD/OzNpwgbc9TEB
-        a97uaIqhGBS4oECFcjHBpeSQ/zeMxP6fNpDCqeiyh+n/PU3VmPKf5s38D7L9rrkMweg67YTpOoZn1YX/
-        H0e4/7/rZvj/VlkmXgMOVVdgyl+pyPv/Jsbt/0UzBbya8QKQC44lBJFvAHmAgQEAbG+sSUvJLEEAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="ObjectBrowserList.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="renameToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="projectViewMenu.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="TBCut.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;aboutToolStripMenuItem1.Name" xml:space="preserve">
-    <value>aboutToolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;removeToolStripMenuItem.Name" xml:space="preserve">
-    <value>removeToolStripMenuItem</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator6.Name" xml:space="preserve">
-    <value>toolStripSeparator6</value>
-  </data>
-  <data name="RightClickPaste.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+V</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStrip2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TBNewFile.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAf9JREFUOE+tkF1Ik1Ech73oxosuIogMoosgwwsJ+4Bs0Y0Vsy+DRR8rAl0RdRHS
-        LjJHQygivImJUjmsNkctVLYm5VZqNQ2m4ZKl5Wq45VA3ne7NRVPXnnrXSwrZ2EUP/Dhwzvk9/M/JWkzy
-        Q+lyvyHvmla7a5m0lRnxPmVet9PC6y4HfssJWjus6CxnaX7aidnuptHmwmhzVUvX/0boUeRGbcXE35xm
-        1n2OkOswXst2VLVKApMBbj9+zlZ5GRXVhkdSZYHk4Jmc+b5TRcEXCvh8Enz74V0B/idyGtq05F9cT0GV
-        DEf3+5Tkys0HZqn6G59xS+mwfmNP9OVO6M+F7rVgW4XwMJ+QtYSrNSXINHK2Fav+RKou8Mq4N0ew/xI4
-        VkPLGmhayXTbQWIz09zrbKCyRUON4VkqSwrm3h6R9ddvoq5qHZHGXILt5Qj2PYyPDFJ0vYgDtw4RinxL
-        CcRnSLUFnKZ9K6ru36FMdwynfgMVzWqaXCaO1x6lsHIHautlAmPCvwUid80dkEzg9bRSbiknW5lNfZce
-        IRZndCKGNzCVXlBnciCi1odR6cIoboTZrRmn8NIXNp8fwvNpIr1APFzMfOIH0Zk4I6GvfByO0Dswlplg
-        yQkuDNHlDmY+wexcginhe+rjBnyTuDyjtPcEMhOIa7qkFYiHmUSq/A+ysn4Ce6rFUE0wfPIAAAAASUVO
-        RK5CYII=
-</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Unit Filter Generator</value>
-  </data>
-  <data name="mapObjectBrowserToolStripMenuItem.Text" xml:space="preserve">
-    <value>Right menu</value>
-  </data>
-  <data name="&gt;&gt;projectSettingsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TBNewFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;openInExploreToolStripMenuItem.Name" xml:space="preserve">
+    <value>openInExploreToolStripMenuItem</value>
   </data>
   <data name="projectView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6412,11 +6442,8 @@ To remove it you must remove the entire library.</value>
   <data name="BTNUnitFilterReset.Text" xml:space="preserve">
     <value>Reset</value>
   </data>
-  <data name="CBShowErrors.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;projectView.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;objectBrowserSplitContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="newFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 22</value>
@@ -6481,9 +6508,6 @@ To remove it you must remove the entire library.</value>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
-  <data name="TBNewFolder.Text" xml:space="preserve">
-    <value>toolStripButton6</value>
-  </data>
   <data name="&gt;&gt;messageView.Parent" xml:space="preserve">
     <value>splitContainer2.Panel2</value>
   </data>
@@ -6523,8 +6547,8 @@ To remove it you must remove the entire library.</value>
   <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="splitContainer2.Panel2.ToolTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;newFileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="jumpToolStripMenuItem.Text" xml:space="preserve">
     <value>Jump</value>
@@ -6544,11 +6568,11 @@ To remove it you must remove the entire library.</value>
   <data name="TBFind.Text" xml:space="preserve">
     <value>toolStripButton1</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
+  <data name="TBSave.Text" xml:space="preserve">
+    <value>toolStripButton2</value>
   </data>
-  <data name="saveAllToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save All</value>
+  <data name="&gt;&gt;projectSettingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;newProjectToolStripMenuItem.Name" xml:space="preserve">
     <value>newProjectToolStripMenuItem</value>
@@ -6559,8 +6583,11 @@ To remove it you must remove the entire library.</value>
   <data name="changeLogToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>229, 22</value>
   </data>
-  <data name="&gt;&gt;TBSaveAll.Type" xml:space="preserve">
+  <data name="&gt;&gt;TBCut.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newDialogToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CBUnitFilterCompress.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 30</value>
@@ -6568,8 +6595,8 @@ To remove it you must remove the entire library.</value>
   <data name="&gt;&gt;BTNUnitFilterReset.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="projectView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>198, 409</value>
+  <data name="BTNUnitFilterReset.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="buildToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
@@ -6580,8 +6607,8 @@ To remove it you must remove the entire library.</value>
   <data name="&gt;&gt;TBFind.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;manageAccountToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel2.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;CBShowWarnings.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -6620,8 +6647,8 @@ To remove it you must remove the entire library.</value>
   <data name="&gt;&gt;activateToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TBSaveAll.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="uploadLibraryToolStripMenuItem.Text" xml:space="preserve">
+    <value>Upload Library</value>
   </data>
   <data name="&gt;&gt;ObjectBrowserList.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -6683,8 +6710,8 @@ To remove it you must remove the entire library.</value>
   <data name="&gt;&gt;toolStripSeparator4.Name" xml:space="preserve">
     <value>toolStripSeparator4</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Galaxy++ editor by Beier Translate Whimsyduke</value>
+  <data name="searchDefinitionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
   </data>
   <data name="&gt;&gt;TBRedo.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -6742,8 +6769,8 @@ To remove it you must remove the entire library.</value>
   <data name="&gt;&gt;UnitFilterGrid.Type" xml:space="preserve">
     <value>System.Windows.Forms.PropertyGrid, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="TBCut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
   </data>
   <data name="&gt;&gt;objectBrowserSplitContainer.Panel2.Parent" xml:space="preserve">
     <value>objectBrowserSplitContainer</value>
@@ -6751,17 +6778,17 @@ To remove it you must remove the entire library.</value>
   <data name="TBFind.ToolTipText" xml:space="preserve">
     <value>Find (Ctrl+F)</value>
   </data>
-  <data name="&gt;&gt;TBPaste.Type" xml:space="preserve">
+  <data name="&gt;&gt;TBComment.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BTNUnitFilterInsert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;compileAndSaveAsToolStripMenuItem.Name" xml:space="preserve">
+    <value>compileAndSaveAsToolStripMenuItem</value>
   </data>
   <data name="projectToolStripMenuItem.Text" xml:space="preserve">
     <value>Project</value>
   </data>
-  <data name="&gt;&gt;renameToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="CBShowErrors.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;TBSave.Name" xml:space="preserve">
     <value>TBSave</value>

@@ -665,6 +665,8 @@ namespace Galaxy_Editor_2
                     TBRedo.Enabled =
                     TBRun.Enabled =
                     TBFind.Enabled =
+                    TBComment.Enabled =
+                    TBUncomment.Enabled =
                     ObjectBrowserPanel.Enabled = false;
                 librariesNode = null;
                 projectView.ContextMenuStrip = projectViewProjectMenu;
@@ -2435,6 +2437,8 @@ namespace Galaxy_Editor_2
                 TBRedo.Enabled =
                 TBCut.Enabled =
                 TBCopy.Enabled =
+                TBComment.Enabled =
+                TBUncomment.Enabled =
                 TBPaste.Enabled = false;
             if (tabStrip.SelectedItem == null)
             {
@@ -2453,11 +2457,13 @@ namespace Galaxy_Editor_2
                     TBUndo.Enabled = openFile.Editor.UndoSys.CanUndo;
                     TBRedo.Enabled = openFile.Editor.UndoSys.CanRedo;
                     RightClickCut.Enabled =
-                        RightClickPaste.Enabled =
-                        TBCut.Enabled =
-                        TBPaste.Enabled = !openFile.Editor.IsReadonly;
+                    RightClickPaste.Enabled =
+                    TBCut.Enabled =
+                    TBPaste.Enabled = !openFile.Editor.IsReadonly;
                     TBCopy.Enabled =
-                        RightClickCopy.Enabled = true;
+                    TBComment.Enabled =
+                    TBUncomment.Enabled =
+                    RightClickCopy.Enabled = true;
                 }
                 closedTabStrip = false;
             }
@@ -2478,6 +2484,8 @@ namespace Galaxy_Editor_2
                         RightClickCut.Enabled =
                             RightClickPaste.Enabled =
                             TBCut.Enabled =
+                            TBComment.Enabled =
+                            TBUncomment.Enabled =
                             TBPaste.Enabled = !openFile.CodeEditor.IsReadonly;
                         TBCopy.Enabled =
                             RightClickCopy.Enabled = true;
@@ -2495,6 +2503,8 @@ namespace Galaxy_Editor_2
                         RightClickCut.Enabled =
                             RightClickPaste.Enabled =
                             TBCut.Enabled =
+                            TBComment.Enabled =
+                            TBUncomment.Enabled =
                             TBPaste.Enabled = !openFile.DesignerEditor.IsReadonly;
                         TBCopy.Enabled =
                             RightClickCopy.Enabled = true;
@@ -2517,6 +2527,8 @@ namespace Galaxy_Editor_2
                     RightClickCut.Enabled =
                         RightClickPaste.Enabled =
                         TBCut.Enabled =
+                        TBComment.Enabled =
+                        TBUncomment.Enabled =
                         TBPaste.Enabled = !openFile.Editor.IsReadonly;
                     TBCopy.Enabled =
                         RightClickCopy.Enabled = true;
@@ -4086,7 +4098,23 @@ namespace Galaxy_Editor_2
            this.Refresh();
        }
 
-       private void jumpToolStripMenuItem_Click(object sender, EventArgs e)
+        private void TBComment_Click(object sender, EventArgs e)
+        {
+            if (CurrentOpenFile != null)
+            {
+                CurrentOpenFile.OpenFile.Editor.Comment(true);
+            }
+        }
+
+        private void TBUncomment_Click(object sender, EventArgs e)
+        {
+            if (CurrentOpenFile != null)
+            {
+                CurrentOpenFile.OpenFile.Editor.Comment(false);
+            }
+        }
+
+        private void jumpToolStripMenuItem_Click(object sender, EventArgs e)
        {
            SendKeys.Send("^g");
        }
