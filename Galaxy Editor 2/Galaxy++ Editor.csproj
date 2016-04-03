@@ -450,6 +450,8 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Content Include="Resources\Comment.png" />
+    <Content Include="Resources\Uncomment.png" />
     <Content Include="TriggerLibs\LibraryList.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
