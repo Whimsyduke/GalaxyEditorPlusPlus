@@ -2792,6 +2792,7 @@ when to update blocks?
             }
             InvalidateAll = true;
             Invalidate();
+            TextEdited();
         }
     }
 }
