@@ -13,30 +13,42 @@ namespace Galaxy_Editor_2
         public static GalaxyKeywords Primitives = new GalaxyKeywords(Options.FontStyles.Primitives,
                                                                      new[]
                                                                          {
-                                                                            "int", "point", "marker", "string", "abilcmd",
-                                                                            "wave", "unit", "bool", "void", "fixed",
-                                                                            "unitgroup", "waveinfo", "text", "wavetarget",
-                                                                            "actorscope", "actor", "doodad", "bank",
-                                                                            "camerainfo", "color", "aifilter", "byte",
-                                                                            "order", "playergroup", "region", "revealer",
-                                                                            "sound", "soundlink", "timer",
-                                                                            "transmissionsource", "trigger", "unitfilter",
-                                                                            "unitref", "handle", "char"
+                                                                            //"int", "point", "marker", "string", "abilcmd",
+                                                                            //"wave", "unit", "bool", "void", "fixed",
+                                                                            //"unitgroup", "waveinfo", "text", "wavetarget",
+                                                                            //"actorscope", "actor", "doodad", "bank",
+                                                                            //"camerainfo", "color", "aifilter", "byte",
+                                                                            //"order", "playergroup", "region", "revealer",
+                                                                            //"sound", "soundlink", "timer",
+                                                                            //"transmissionsource", "trigger", "unitfilter",
+                                                                            //"unitref", "handle", "char"
+                                                                            "abilcmd", "aifilter", "actor", "actorscope", "bank",
+                                                                            "bool", "byte", "camerainfo", "char", "color", "doodad",
+                                                                            "effecthistory", "fixed", "generichandle", "int", "marker",
+                                                                            "order", "playergroup", "point", "region", "revealer", "sound",
+                                                                            "soundlink", "string", "text", "timer", "transmissionsource",
+                                                                            "trigger", "unit", "unitfilter", "unitgroup", "void", "wave",
+                                                                            "waveinfo", "wavetarget"
                                                                          });
 
         public static GalaxyKeywords NullablePrimitives =
             new GalaxyKeywords(Options.FontStyles.Primitives,
                                new[]
                                    {
-                                       "point", "marker", "string", "abilcmd",
-                                       "wave", "unit", 
-                                       "unitgroup", "waveinfo", "text", "wavetarget",
-                                       "actorscope", "actor", "doodad", "bank",
-                                       "camerainfo", "aifilter",
-                                       "order", "playergroup", "region", "revealer",
-                                       "sound", "soundlink", "timer",
-                                       "transmissionsource", "trigger", "unitfilter",
-                                       "unitref", "handle"//, "null"
+                                        //"point", "marker", "string", "abilcmd",
+                                        //"wave", "unit", 
+                                        //"unitgroup", "waveinfo", "text", "wavetarget",
+                                        //"actorscope", "actor", "doodad", "bank",
+                                        //"camerainfo", "aifilter",
+                                        //"order", "playergroup", "region", "revealer",
+                                        //"sound", "soundlink", "timer",
+                                        //"transmissionsource", "trigger", "unitfilter",
+                                        //"unitref", "handle"//, "null"
+                                        "abilcmd", "aifilter", "actor", "actorscope", "bank",
+                                        "camerainfo", "doodad", "effecthistory", "generichandle",
+                                        "marker", "order", "playergroup", "point", "region", "revealer",
+                                        "sound", "soundlink", "string", "text", "timer", "transmissionsource",
+                                        "trigger", "unit", "unitfilter", "unitgroup", "wave", "waveinfo", "wavetarget"
                                    });
 
         public static GalaxyKeywords InMethodKeywords = new GalaxyKeywords(Options.FontStyles.Keywords,
@@ -63,7 +75,8 @@ namespace Galaxy_Editor_2
                                                                            "Trigger", "ref", "out", "Initializer",
                                                                            "events", "conditions", "actions", "class",
                                                                            "delegate", "typedef", "get", "set", "enrich", 
-                                                                           "public", "private", "protected", "operator", "enum"
+                                                                           "public", "private", "protected", "operator", "enum",
+                                                                           "arrayref", "funcref", "structref"
                                                                        });
         
         public static GalaxyKeywords InitializerKeywords =
