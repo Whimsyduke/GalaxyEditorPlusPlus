@@ -2883,4 +2883,84 @@ namespace Galaxy_Editor_2.Compiler.Generated.node
             ((Analysis)sw).CaseEOF(this);
         }
     }
+
+
+    [Serializable]
+    public sealed class TArrayRef : Token
+    {
+        public TArrayRef(string text)
+        {
+            Text = text;
+        }
+
+        public TArrayRef(string text, int line, int pos)
+        {
+            Text = text;
+            Line = line;
+            Pos = pos;
+        }
+
+        public override Object Clone()
+        {
+            return new TArrayRef(Text, Line, Pos);
+        }
+
+        public override void Apply(Switch sw)
+        {
+            ((Analysis)sw).CaseTArrayRef(this);
+        }
+    }
+
+
+    [Serializable]
+    public sealed class TStructRef : Token
+    {
+        public TStructRef(string text)
+        {
+            Text = text;
+        }
+
+        public TStructRef(string text, int line, int pos)
+        {
+            Text = text;
+            Line = line;
+            Pos = pos;
+        }
+
+        public override Object Clone()
+        {
+            return new TStructRef(Text, Line, Pos);
+        }
+
+        public override void Apply(Switch sw)
+        {
+            ((Analysis)sw).CaseTStructRef(this);
+        }
+    }
+
+    [Serializable]
+    public sealed class TFuncRef : Token
+    {
+        public TFuncRef(string text)
+        {
+            Text = text;
+        }
+
+        public TFuncRef(string text, int line, int pos)
+        {
+            Text = text;
+            Line = line;
+            Pos = pos;
+        }
+
+        public override Object Clone()
+        {
+            return new TFuncRef(Text, Line, Pos);
+        }
+
+        public override void Apply(Switch sw)
+        {
+            ((Analysis)sw).CaseTFuncRef(this);
+        }
+    }
 }

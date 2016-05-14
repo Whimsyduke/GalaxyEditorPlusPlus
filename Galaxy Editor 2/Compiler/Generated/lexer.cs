@@ -1382,6 +1382,39 @@ namespace Galaxy_Editor_2.Compiler.Generated.lexer
                                     line = accept_line;
                                     return token;
                                 }
+                            case 108:
+                                {
+                                    Token token = New108(
+                                        GetText(accept_length),
+                                        start_line + 1,
+                                        start_pos + 1);
+                                    PushBack(accept_length);
+                                    pos = accept_pos;
+                                    line = accept_line;
+                                    return token;
+                                }
+                            case 109:
+                                {
+                                    Token token = New109(
+                                        GetText(accept_length),
+                                        start_line + 1,
+                                        start_pos + 1);
+                                    PushBack(accept_length);
+                                    pos = accept_pos;
+                                    line = accept_line;
+                                    return token;
+                                }
+                            case 110:
+                                {
+                                    Token token = New110(
+                                        GetText(accept_length),
+                                        start_line + 1,
+                                        start_pos + 1);
+                                    PushBack(accept_length);
+                                    pos = accept_pos;
+                                    line = accept_line;
+                                    return token;
+                                }
                         }
                     }
                     else
@@ -1512,6 +1545,9 @@ namespace Galaxy_Editor_2.Compiler.Generated.lexer
         private Token New105(String text, int line, int pos) { return new TCommentBegin(text, line, pos); }
         private Token New106(String text, int line, int pos) { return new TCommentEnd(text, line, pos); }
         private Token New107(String text, int line, int pos) { return new TUnknown(text, line, pos); }
+        private Token New108(String text, int line, int pos) { return new TArrayRef(text, line, pos); }
+        private Token New109(String text, int line, int pos) { return new TStructRef(text, line, pos); }
+        private Token New110(String text, int line, int pos) { return new TFuncRef(text, line, pos); }
 
         private int GetChar()
         {

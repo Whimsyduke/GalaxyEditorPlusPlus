@@ -272,6 +272,9 @@ namespace Galaxy_Editor_2.Compiler.Generated.analysis
         void CaseTCommentEnd(TCommentEnd node);
         void CaseTUnknown(TUnknown node);
         void CaseEOF(EOF node);
+        void CaseTArrayRef(TArrayRef node);
+        void CaseTStructRef(TStructRef node);
+        void CaseTFuncRef(TFuncRef node);
     }
 
 
@@ -1357,6 +1360,18 @@ namespace Galaxy_Editor_2.Compiler.Generated.analysis
         }
 
         public virtual void CaseEOF(EOF node)
+        {
+            DefaultCase(node);
+        }
+        public virtual void CaseTArrayRef(TArrayRef node)
+        {
+            DefaultCase(node);
+        }
+        public virtual void CaseTStructRef(TStructRef node)
+        {
+            DefaultCase(node);
+        }
+        public virtual void CaseTFuncRef(TFuncRef node)
         {
             DefaultCase(node);
         }

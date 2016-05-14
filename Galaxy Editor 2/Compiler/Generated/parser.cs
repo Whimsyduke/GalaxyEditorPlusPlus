@@ -572,6 +572,18 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         {
             index = 104;
         }
+        public override void CaseTArrayRef(TArrayRef node)
+        {
+            index = 105;
+        }
+        public override void CaseTStructRef(TStructRef node)
+        {
+            index = 106;
+        }
+        public override void CaseTFuncRef(TFuncRef node)
+        {
+            index = 106;
+        }
     }
 
     [Serializable]
