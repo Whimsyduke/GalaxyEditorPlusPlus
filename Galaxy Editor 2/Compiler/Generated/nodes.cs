@@ -4,272 +4,273 @@ using System;
 using System.Collections;
 using System.Text;
 
-namespace Galaxy_Editor_2.Compiler.Generated.node {
-
-[Serializable]
-public abstract class Node : Switchable, ICloneable
+namespace Galaxy_Editor_2.Compiler.Generated.node
 {
-    private Node parent_node;
 
-    public abstract Object Clone();
-    public abstract void Apply (Switch s);
-
-    public Node Parent()
+    [Serializable]
+    public abstract class Node : Switchable, ICloneable
     {
-        return parent_node;
-    }
+        private Node parent_node;
 
-    internal void Parent(Node parent_node)
-    {
-        this.parent_node = parent_node;
-    }
+        public abstract Object Clone();
+        public abstract void Apply(Switch s);
 
-    internal abstract void RemoveChild(Node child);
-    internal abstract void ReplaceChild(Node oldChild, Node newChild);
-
-    public void ReplaceBy(Node node)
-    {
-        if(parent_node != null)
+        public Node Parent()
         {
-            parent_node.ReplaceChild(this, node);
+            return parent_node;
+        }
+
+        internal void Parent(Node parent_node)
+        {
+            this.parent_node = parent_node;
+        }
+
+        internal abstract void RemoveChild(Node child);
+        internal abstract void ReplaceChild(Node oldChild, Node newChild);
+
+        public void ReplaceBy(Node node)
+        {
+            if (parent_node != null)
+            {
+                parent_node.ReplaceChild(this, node);
+            }
+        }
+
+        protected string ToString(Node node)
+        {
+            if (node != null)
+            {
+                return node.ToString();
+            }
+
+            return "";
+        }
+
+        protected string ToString(IList list)
+        {
+            StringBuilder s = new StringBuilder();
+
+            foreach (Node n in list)
+            {
+                s.Append(n.ToString());
+            }
+
+            return s.ToString();
+        }
+
+        protected Node CloneNode(Node node)
+        {
+            if (node != null)
+            {
+                return (Node)node.Clone();
+            }
+
+            return null;
+        }
+
+        protected IList CloneList(IList list)
+        {
+            // list not owned by anyone so no need for TypedList
+            IList clone = new ArrayList();
+
+            foreach (Node n in list)
+            {
+                clone.Add(n.Clone());
+            }
+
+            return clone;
         }
     }
 
-    protected string ToString(Node node)
+    internal interface Cast
     {
-        if(node != null)
+        Object Cast(Object o);      // take ownership
+        Object UnCast(Object o);    // release ownership
+    }
+
+    [Serializable]
+    internal class NodeCast : Cast
+    {
+        private static NodeCast instance = new NodeCast();
+
+        public static NodeCast Instance
         {
-            return node.ToString();
+            get { return instance; }
         }
 
-        return "";
-    }
-
-    protected string ToString(IList list)
-    {
-        StringBuilder s = new StringBuilder();
-
-        foreach (Node n in list)
+        private NodeCast()
         {
-            s.Append(n.ToString());
         }
 
-        return s.ToString();
-    }
-
-    protected Node CloneNode(Node node)
-    {
-        if(node != null)
+        public Object Cast(Object o)
         {
-            return (Node) node.Clone();
+            return (Node)o;
         }
 
-        return null;
-    }
-
-    protected IList CloneList(IList list)
-    {
-        // list not owned by anyone so no need for TypedList
-        IList clone = new ArrayList();
-
-        foreach (Node n in list)
+        public Object UnCast(Object o)
         {
-            clone.Add(n.Clone());
-        }
-
-        return clone;
-    }
-}
-
-internal interface Cast
-{
-    Object Cast(Object o);      // take ownership
-    Object UnCast(Object o);    // release ownership
-}
-
-[Serializable]
-internal class NodeCast : Cast
-{
-    private static NodeCast instance = new NodeCast();
-
-    public static NodeCast Instance
-    {
-      get { return instance; }
-    }
-
-    private NodeCast()
-    {
-    }
-
-    public Object Cast(Object o)
-    {
-        return (Node) o;
-    }
-
-    public Object UnCast(Object o)
-    {
-        return o;
-    }
-}
-
-[Serializable]
-internal class NoCast : Cast
-{
-    private static NoCast instance = new NoCast();
-
-    public static NoCast Instance
-    {
-      get { return instance; }
-    }
-
-    private NoCast()
-    {
-    }
-
-    public Object Cast(Object o)
-    {
-        return o;
-    }
-
-    public Object UnCast(Object o)
-    {
-        return o;
-    }
-}
-
-public interface Switch
-{
-}
-
-public interface Switchable
-{
-    void Apply(Switch sw);
-}
-
-[Serializable]
-public class TypedList : IList
-{
-    private ArrayList list;
-    private Cast cast;
-
-    public TypedList()
-    {
-        list = new ArrayList();
-        cast = NoCast.Instance;
-    }
-
-    public TypedList(ICollection c)
-    {
-        list = new ArrayList ();
-        cast = NoCast.Instance;
-        AddAll(c);
-    }
-
-    internal TypedList(Cast cast)
-    {
-        list = new ArrayList ();
-        this.cast = cast;
-    }
-
-    internal TypedList(ICollection c, Cast cast)
-    {
-        list = new ArrayList ();
-        this.cast = cast;
-        AddAll(c);
-    }
-
-    internal Cast GetCast()
-    {
-        return cast;
-    }
-
-    public int Add(Object o)
-    {
-        return list.Add(cast.Cast(o));
-    }
-
-    public void AddAll (ICollection c)
-    {
-        foreach (Node n in c)
-        {
-          list.Add(cast.Cast(n));
+            return o;
         }
     }
 
-    public int Count
+    [Serializable]
+    internal class NoCast : Cast
     {
-      get { return list.Count; }
+        private static NoCast instance = new NoCast();
+
+        public static NoCast Instance
+        {
+            get { return instance; }
+        }
+
+        private NoCast()
+        {
+        }
+
+        public Object Cast(Object o)
+        {
+            return o;
+        }
+
+        public Object UnCast(Object o)
+        {
+            return o;
+        }
     }
 
-    public bool IsSynchronized
+    public interface Switch
     {
-      get { return list.IsSynchronized; }
     }
 
-    public Object SyncRoot
+    public interface Switchable
     {
-      get { return list.SyncRoot; }
+        void Apply(Switch sw);
     }
 
-    public void CopyTo(Array array, int index)
+    [Serializable]
+    public class TypedList : IList
     {
-      list.CopyTo (array, index);
-    }
+        private ArrayList list;
+        private Cast cast;
 
-    public bool IsFixedSize
-    {
-      get { return list.IsFixedSize; }
-    }
+        public TypedList()
+        {
+            list = new ArrayList();
+            cast = NoCast.Instance;
+        }
 
-    public bool IsReadOnly
-    {
-      get { return list.IsReadOnly; }
-    }
+        public TypedList(ICollection c)
+        {
+            list = new ArrayList();
+            cast = NoCast.Instance;
+            AddAll(c);
+        }
 
-    public Object this[int index]
-    {
-      get { return list[index]; }
-      set { list[index] = cast.Cast(value); }
-    }
+        internal TypedList(Cast cast)
+        {
+            list = new ArrayList();
+            this.cast = cast;
+        }
 
-    public IEnumerator GetEnumerator()
-    {
-      return list.GetEnumerator();
-    }
+        internal TypedList(ICollection c, Cast cast)
+        {
+            list = new ArrayList();
+            this.cast = cast;
+            AddAll(c);
+        }
 
-    public void Clear ()
-    {
-      foreach (Node n in list)
-          cast.UnCast(n);
-      list.Clear();
-    }
+        internal Cast GetCast()
+        {
+            return cast;
+        }
 
-    public bool Contains (Object value)
-    {
-      return list.Contains(value);
-    }
+        public int Add(Object o)
+        {
+            return list.Add(cast.Cast(o));
+        }
 
-    public int IndexOf (Object value)
-    {
-      return list.IndexOf(value);
-    }
+        public void AddAll(ICollection c)
+        {
+            foreach (Node n in c)
+            {
+                list.Add(cast.Cast(n));
+            }
+        }
 
-    public void Insert (int index, Object value)
-    {
-      list.Insert(index, cast.Cast(value));
-    }
+        public int Count
+        {
+            get { return list.Count; }
+        }
 
-    public void Remove (Object value)
-    {
-      int n = list.IndexOf(value);
-      if ( n != -1 )
-          RemoveAt(n);  // this will UnCast
-    }
+        public bool IsSynchronized
+        {
+            get { return list.IsSynchronized; }
+        }
 
-    public void RemoveAt (int index)
-    {
-      cast.UnCast(list[index]);
-      list.RemoveAt(index);
+        public Object SyncRoot
+        {
+            get { return list.SyncRoot; }
+        }
+
+        public void CopyTo(Array array, int index)
+        {
+            list.CopyTo(array, index);
+        }
+
+        public bool IsFixedSize
+        {
+            get { return list.IsFixedSize; }
+        }
+
+        public bool IsReadOnly
+        {
+            get { return list.IsReadOnly; }
+        }
+
+        public Object this[int index]
+        {
+            get { return list[index]; }
+            set { list[index] = cast.Cast(value); }
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return list.GetEnumerator();
+        }
+
+        public void Clear()
+        {
+            foreach (Node n in list)
+                cast.UnCast(n);
+            list.Clear();
+        }
+
+        public bool Contains(Object value)
+        {
+            return list.Contains(value);
+        }
+
+        public int IndexOf(Object value)
+        {
+            return list.IndexOf(value);
+        }
+
+        public void Insert(int index, Object value)
+        {
+            list.Insert(index, cast.Cast(value));
+        }
+
+        public void Remove(Object value)
+        {
+            int n = list.IndexOf(value);
+            if (n != -1)
+                RemoveAt(n);  // this will UnCast
+        }
+
+        public void RemoveAt(int index)
+        {
+            cast.UnCast(list[index]);
+            list.RemoveAt(index);
+        }
     }
-}
 } // namespace Galaxy_Editor_2.Compiler.Generated.node
