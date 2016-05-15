@@ -582,7 +582,11 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         }
         public override void CaseTFuncRef(TFuncRef node)
         {
-            index = 106;
+            index = 107;
+        }
+        public override void CaseTDo(TDo node)
+        {
+            index = 108;
         }
     }
 
@@ -27092,15 +27096,15 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
     };
 
         private static int[][][] gotoTable = {
-      new int[][] {//1402
+      new int[][] {//0
         new int[] {-1, 10},
       },
-      new int[][] {//1403
+      new int[][] {//1
         new int[] {-1, 11},
         new int[] {27, 61},
         new int[] {66, 61},
       },
-      new int[][] {//1404
+      new int[][] {//2
         new int[] {-1, 35},
         new int[] {2, 31},
         new int[] {3, 32},
@@ -27237,7 +27241,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 338},
         new int[] {1398, 338},
       },
-      new int[][] {//1405
+      new int[][] {//3
         new int[] {-1, 12},
         new int[] {28, 63},
         new int[] {62, 63},
@@ -27245,47 +27249,47 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {179, 63},
         new int[] {181, 63},
       },
-      new int[][] {//1406
+      new int[][] {//4
         new int[] {-1, 13},
       },
-      new int[][] {//1407
+      new int[][] {//5
         new int[] {-1, 694},
         new int[] {630, 875},
       },
-      new int[][] {//1408
+      new int[][] {//6
         new int[] {-1, 695},
         new int[] {953, 1134},
       },
-      new int[][] {//1409
+      new int[][] {//7
         new int[] {-1, 951},
       },
-      new int[][] {//1410
+      new int[][] {//8
         new int[] {-1, 14},
       },
-      new int[][] {//1411
+      new int[][] {//9
         new int[] {-1, 408},
         new int[] {174, 439},
         new int[] {377, 620},
         new int[] {387, 631},
       },
-      new int[][] {//1412
+      new int[][] {//10
         new int[] {-1, 15},
       },
-      new int[][] {//1413
+      new int[][] {//11
         new int[] {-1, 16},
         new int[] {123, 302},
         new int[] {308, 302},
         new int[] {638, 885},
         new int[] {891, 885},
       },
-      new int[][] {//1414
+      new int[][] {//12
         new int[] {-1, 704},
         new int[] {632, 878},
         new int[] {705, 965},
         new int[] {879, 1080},
         new int[] {1267, 1326},
       },
-      new int[][] {//1415
+      new int[][] {//13
         new int[] {-1, 705},
         new int[] {632, 879},
         new int[] {704, 963},
@@ -27293,83 +27297,83 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1267, 1327},
         new int[] {1326, 1366},
       },
-      new int[][] {//1416
+      new int[][] {//14
         new int[] {-1, 17},
       },
-      new int[][] {//1417
+      new int[][] {//15
         new int[] {-1, 18},
       },
-      new int[][] {//1418
+      new int[][] {//16
         new int[] {-1, 684},
       },
-      new int[][] {//1419
+      new int[][] {//17
         new int[] {-1, 685},
         new int[] {684, 942},
       },
-      new int[][] {//1420
+      new int[][] {//18
         new int[] {-1, 686},
         new int[] {684, 943},
         new int[] {685, 945},
         new int[] {942, 1127},
       },
-      new int[][] {//1421
+      new int[][] {//19
         new int[] {-1, 19},
       },
-      new int[][] {//1422
+      new int[][] {//20
         new int[] {-1, 47},
       },
-      new int[][] {//1423
+      new int[][] {//21
         new int[] {-1, 132},
       },
-      new int[][] {//1424
+      new int[][] {//22
         new int[] {-1, 133},
       },
-      new int[][] {//1425
+      new int[][] {//23
         new int[] {-1, 134},
         new int[] {133, 321},
         new int[] {320, 560},
       },
-      new int[][] {//1426
+      new int[][] {//24
         new int[] {-1, 20},
       },
-      new int[][] {//1427
+      new int[][] {//25
         new int[] {-1, 21},
       },
-      new int[][] {//1428
+      new int[][] {//26
         new int[] {-1, 640},
         new int[] {437, 696},
         new int[] {642, 895},
         new int[] {698, 956},
       },
-      new int[][] {//1429
+      new int[][] {//27
         new int[] {-1, 22},
       },
-      new int[][] {//1430
+      new int[][] {//28
         new int[] {-1, 390},
         new int[] {172, 437},
         new int[] {391, 642},
         new int[] {438, 698},
       },
-      new int[][] {//1431
+      new int[][] {//29
         new int[] {-1, 637},
       },
-      new int[][] {//1432
+      new int[][] {//30
         new int[] {-1, 23},
       },
-      new int[][] {//1433
+      new int[][] {//31
         new int[] {-1, 126},
         new int[] {122, 300},
       },
-      new int[][] {//1434
+      new int[][] {//32
         new int[] {-1, 303},
         new int[] {308, 552},
       },
-      new int[][] {//1435
+      new int[][] {//33
         new int[] {-1, 36},
         new int[] {51, 154},
         new int[] {58, 173},
       },
-      new int[][] {//1436
+      new int[][] {//34
         new int[] {-1, 641},
         new int[] {437, 697},
         new int[] {640, 893},
@@ -27379,45 +27383,45 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {895, 1088},
         new int[] {956, 1136},
       },
-      new int[][] {//1437
+      new int[][] {//35
         new int[] {-1, -1},
       },
-      new int[][] {//1438
+      new int[][] {//36
         new int[] {-1, 886},
         new int[] {891, 1086},
       },
-      new int[][] {//1439
+      new int[][] {//37
         new int[] {-1, 24},
       },
-      new int[][] {//1440
+      new int[][] {//38
         new int[] {-1, 25},
         new int[] {123, 304},
         new int[] {308, 304},
         new int[] {638, 887},
         new int[] {891, 887},
       },
-      new int[][] {//1441
+      new int[][] {//39
         new int[] {-1, 26},
       },
-      new int[][] {//1442
+      new int[][] {//40
         new int[] {-1, 305},
         new int[] {638, 888},
         new int[] {891, 888},
       },
-      new int[][] {//1443
+      new int[][] {//41
         new int[] {-1, 306},
         new int[] {638, 889},
         new int[] {891, 889},
       },
-      new int[][] {//1444
+      new int[][] {//42
         new int[] {-1, 1017},
       },
-      new int[][] {//1445
+      new int[][] {//43
         new int[] {-1, 307},
         new int[] {638, 890},
         new int[] {891, 890},
       },
-      new int[][] {//1446
+      new int[][] {//44
         new int[] {-1, 1018},
         new int[] {156, 410},
         new int[] {176, 444},
@@ -27498,17 +27502,17 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1252, 1319},
         new int[] {1312, 1181},
       },
-      new int[][] {//1447
+      new int[][] {//45
         new int[] {-1, 646},
       },
-      new int[][] {//1448
+      new int[][] {//46
         new int[] {-1, 647},
       },
-      new int[][] {//1449
+      new int[][] {//47
         new int[] {-1, 648},
         new int[] {902, 1093},
       },
-      new int[][] {//1450
+      new int[][] {//48
         new int[] {-1, 137},
         new int[] {643, 897},
         new int[] {680, 938},
@@ -27528,7 +27532,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1277, 1334},
         new int[] {1278, 1335},
       },
-      new int[][] {//1451
+      new int[][] {//49
         new int[] {-1, 138},
         new int[] {410, 650},
         new int[] {444, 707},
@@ -27595,7 +27599,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1318, 1363},
         new int[] {1319, 1364},
       },
-      new int[][] {//1452
+      new int[][] {//50
         new int[] {-1, 313},
         new int[] {5, 37},
         new int[] {25, 59},
@@ -27654,37 +27658,37 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1083, 1239},
         new int[] {1238, 1311},
       },
-      new int[][] {//1453
+      new int[][] {//51
         new int[] {-1, 38},
       },
-      new int[][] {//1454
+      new int[][] {//52
         new int[] {-1, 39},
       },
-      new int[][] {//1455
+      new int[][] {//53
         new int[] {-1, 40},
       },
-      new int[][] {//1456
+      new int[][] {//54
         new int[] {-1, 41},
       },
-      new int[][] {//1457
+      new int[][] {//55
         new int[] {-1, 42},
       },
-      new int[][] {//1458
+      new int[][] {//56
         new int[] {-1, 43},
         new int[] {186, 458},
         new int[] {639, 892},
       },
-      new int[][] {//1459
+      new int[][] {//57
         new int[] {-1, 44},
       },
-      new int[][] {//1460
+      new int[][] {//58
         new int[] {-1, 45},
         new int[] {169, 434},
         new int[] {170, 435},
         new int[] {384, 628},
         new int[] {385, 629},
       },
-      new int[][] {//1461
+      new int[][] {//59
         new int[] {-1, 314},
         new int[] {579, 817},
         new int[] {586, 833},
@@ -27701,7 +27705,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1189, 1283},
         new int[] {1191, 1285},
       },
-      new int[][] {//1462
+      new int[][] {//60
         new int[] {-1, 139},
         new int[] {135, 339},
         new int[] {363, 339},
@@ -27722,10 +27726,10 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 339},
         new int[] {1398, 339},
       },
-      new int[][] {//1463
+      new int[][] {//61
         new int[] {-1, -1},
       },
-      new int[][] {//1464
+      new int[][] {//62
         new int[] {-1, 445},
         new int[] {364, 603},
         new int[] {388, 635},
@@ -27735,11 +27739,11 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1312, 1361},
         new int[] {1359, 1382},
       },
-      new int[][] {//1465
+      new int[][] {//63
         new int[] {-1, 340},
         new int[] {363, 601},
       },
-      new int[][] {//1466
+      new int[][] {//64
         new int[] {-1, 341},
         new int[] {1031, 1201},
         new int[] {1035, 1209},
@@ -27756,28 +27760,28 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 1356},
         new int[] {1398, 1399},
       },
-      new int[][] {//1467
+      new int[][] {//65
         new int[] {-1, 342},
       },
-      new int[][] {//1468
+      new int[][] {//66
         new int[] {-1, 1299},
       },
-      new int[][] {//1469
+      new int[][] {//67
         new int[] {-1, 1300},
       },
-      new int[][] {//1470
+      new int[][] {//68
         new int[] {-1, 1354},
       },
-      new int[][] {//1471
+      new int[][] {//69
         new int[] {-1, 1355},
       },
-      new int[][] {//1472
+      new int[][] {//70
         new int[] {-1, 343},
       },
-      new int[][] {//1473
+      new int[][] {//71
         new int[] {-1, -1},
       },
-      new int[][] {//1474
+      new int[][] {//72
         new int[] {-1, 1202},
         new int[] {1371, 1387},
         new int[] {1372, 1388},
@@ -27785,7 +27789,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1395, 1400},
         new int[] {1397, 1401},
       },
-      new int[][] {//1475
+      new int[][] {//73
         new int[] {-1, 344},
         new int[] {1031, 1203},
         new int[] {1371, 1203},
@@ -27794,58 +27798,58 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1395, 1203},
         new int[] {1397, 1203},
       },
-      new int[][] {//1476
+      new int[][] {//74
         new int[] {-1, 345},
       },
-      new int[][] {//1477
+      new int[][] {//75
         new int[] {-1, 346},
       },
-      new int[][] {//1478
+      new int[][] {//76
         new int[] {-1, 347},
       },
-      new int[][] {//1479
+      new int[][] {//77
         new int[] {-1, 348},
       },
-      new int[][] {//1480
+      new int[][] {//78
         new int[] {-1, 349},
       },
-      new int[][] {//1481
+      new int[][] {//79
         new int[] {-1, 350},
         new int[] {588, 836},
         new int[] {1294, 836},
       },
-      new int[][] {//1482
+      new int[][] {//80
         new int[] {-1, 351},
       },
-      new int[][] {//1483
+      new int[][] {//81
         new int[] {-1, 352},
       },
-      new int[][] {//1484
+      new int[][] {//82
         new int[] {-1, 1204},
       },
-      new int[][] {//1485
+      new int[][] {//83
         new int[] {-1, 837},
         new int[] {1294, 1346},
       },
-      new int[][] {//1486
+      new int[][] {//84
         new int[] {-1, 1048},
         new int[] {1049, 1221},
         new int[] {1346, 1373},
         new int[] {1374, 1390},
       },
-      new int[][] {//1487
+      new int[][] {//85
         new int[] {-1, 353},
       },
-      new int[][] {//1488
+      new int[][] {//86
         new int[] {-1, 1205},
       },
-      new int[][] {//1489
+      new int[][] {//87
         new int[] {-1, 354},
       },
-      new int[][] {//1490
+      new int[][] {//88
         new int[] {-1, 1206},
       },
-      new int[][] {//1491
+      new int[][] {//89
         new int[] {-1, 94},
         new int[] {83, 220},
         new int[] {84, 220},
@@ -27882,20 +27886,20 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 220},
         new int[] {1398, 220},
       },
-      new int[][] {//1492
+      new int[][] {//90
         new int[] {-1, 1133},
       },
-      new int[][] {//1493
+      new int[][] {//91
         new int[] {-1, 95},
       },
-      new int[][] {//1494
+      new int[][] {//92
         new int[] {-1, 96},
       },
-      new int[][] {//1495
+      new int[][] {//93
         new int[] {-1, 355},
         new int[] {1047, 1219},
       },
-      new int[][] {//1496
+      new int[][] {//94
         new int[] {-1, 97},
         new int[] {81, 208},
         new int[] {82, 208},
@@ -27955,7 +27959,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 356},
         new int[] {1398, 356},
       },
-      new int[][] {//1497
+      new int[][] {//95
         new int[] {-1, 98},
         new int[] {81, 209},
         new int[] {82, 209},
@@ -28003,14 +28007,14 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 357},
         new int[] {1398, 357},
       },
-      new int[][] {//1498
+      new int[][] {//96
         new int[] {-1, 99},
       },
-      new int[][] {//1499
+      new int[][] {//97
         new int[] {-1, 222},
         new int[] {227, 493},
       },
-      new int[][] {//1500
+      new int[][] {//98
         new int[] {-1, 100},
         new int[] {83, 223},
         new int[] {84, 236},
@@ -28046,7 +28050,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 236},
         new int[] {1398, 236},
       },
-      new int[][] {//1501
+      new int[][] {//99
         new int[] {-1, 101},
         new int[] {83, 224},
         new int[] {84, 237},
@@ -28082,7 +28086,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 237},
         new int[] {1398, 237},
       },
-      new int[][] {//1502
+      new int[][] {//100
         new int[] {-1, 499},
         new int[] {463, 729},
         new int[] {727, 979},
@@ -28113,10 +28117,10 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1212, 1298},
         new int[] {1282, 1336},
       },
-      new int[][] {//1503
+      new int[][] {//101
         new int[] {-1, 500},
       },
-      new int[][] {//1504
+      new int[][] {//102
         new int[] {-1, 102},
         new int[] {83, 225},
         new int[] {84, 238},
@@ -28152,10 +28156,10 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 358},
         new int[] {1398, 358},
       },
-      new int[][] {//1505
+      new int[][] {//103
         new int[] {-1, 103},
       },
-      new int[][] {//1506
+      new int[][] {//104
         new int[] {-1, 104},
         new int[] {135, 359},
         new int[] {363, 359},
@@ -28177,13 +28181,13 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 359},
         new int[] {1398, 359},
       },
-      new int[][] {//1507
+      new int[][] {//105
         new int[] {-1, 482},
       },
-      new int[][] {//1508
+      new int[][] {//106
         new int[] {-1, 483},
       },
-      new int[][] {//1509
+      new int[][] {//107
         new int[] {-1, 484},
         new int[] {468, 736},
         new int[] {486, 753},
@@ -28191,13 +28195,13 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {989, 1162},
         new int[] {991, 1163},
       },
-      new int[][] {//1510
+      new int[][] {//108
         new int[] {-1, 105},
       },
-      new int[][] {//1511
+      new int[][] {//109
         new int[] {-1, 106},
       },
-      new int[][] {//1512
+      new int[][] {//110
         new int[] {-1, 107},
         new int[] {81, 210},
         new int[] {82, 212},
@@ -28206,7 +28210,7 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {276, 523},
         new int[] {475, 746},
       },
-      new int[][] {//1513
+      new int[][] {//111
         new int[] {-1, 108},
         new int[] {135, 360},
         new int[] {363, 360},
@@ -28228,58 +28232,58 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 360},
         new int[] {1398, 360},
       },
-      new int[][] {//1514
+      new int[][] {//112
         new int[] {-1, 109},
         new int[] {277, 524},
         new int[] {278, 525},
       },
-      new int[][] {//1515
+      new int[][] {//113
         new int[] {-1, 110},
         new int[] {279, 526},
         new int[] {280, 527},
       },
-      new int[][] {//1516
+      new int[][] {//114
         new int[] {-1, 111},
         new int[] {281, 528},
         new int[] {282, 529},
         new int[] {283, 530},
         new int[] {284, 531},
       },
-      new int[][] {//1517
+      new int[][] {//115
         new int[] {-1, 112},
         new int[] {285, 532},
         new int[] {286, 533},
       },
-      new int[][] {//1518
+      new int[][] {//116
         new int[] {-1, 113},
         new int[] {287, 534},
       },
-      new int[][] {//1519
+      new int[][] {//117
         new int[] {-1, 114},
         new int[] {288, 535},
       },
-      new int[][] {//1520
+      new int[][] {//118
         new int[] {-1, 115},
         new int[] {289, 536},
       },
-      new int[][] {//1521
+      new int[][] {//119
         new int[] {-1, 116},
         new int[] {290, 537},
       },
-      new int[][] {//1522
+      new int[][] {//120
         new int[] {-1, 117},
         new int[] {292, 539},
       },
-      new int[][] {//1523
+      new int[][] {//121
         new int[] {-1, 118},
         new int[] {837, 1049},
         new int[] {1346, 1374},
       },
-      new int[][] {//1524
+      new int[][] {//122
         new int[] {-1, 119},
         new int[] {782, 1005},
       },
-      new int[][] {//1525
+      new int[][] {//123
         new int[] {-1, 501},
         new int[] {34, 120},
         new int[] {79, 200},
@@ -28327,10 +28331,10 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1293, 1345},
         new int[] {1352, 1378},
       },
-      new int[][] {//1526
+      new int[][] {//124
         new int[] {-1, 361},
       },
-      new int[][] {//1527
+      new int[][] {//125
         new int[] {-1, 581},
         new int[] {334, 587},
         new int[] {338, 591},
@@ -28360,17 +28364,17 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1337, 1369},
         new int[] {1338, 1370},
       },
-      new int[][] {//1528
+      new int[][] {//126
         new int[] {-1, 582},
       },
-      new int[][] {//1529
+      new int[][] {//127
         new int[] {-1, 830},
       },
-      new int[][] {//1530
+      new int[][] {//128
         new int[] {-1, 583},
         new int[] {582, 831},
       },
-      new int[][] {//1531
+      new int[][] {//129
         new int[] {-1, 825},
         new int[] {587, 834},
         new int[] {591, 839},
@@ -28400,22 +28404,22 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1369, 1385},
         new int[] {1370, 1386},
       },
-      new int[][] {//1532
+      new int[][] {//130
         new int[] {-1, 826},
         new int[] {1043, 1216},
       },
-      new int[][] {//1533
+      new int[][] {//131
         new int[] {-1, 827},
         new int[] {824, 1042},
       },
-      new int[][] {//1534
+      new int[][] {//132
         new int[] {-1, 828},
       },
-      new int[][] {//1535
+      new int[][] {//133
         new int[] {-1, 456},
         new int[] {576, 814},
       },
-      new int[][] {//1536
+      new int[][] {//134
         new int[] {-1, 121},
         new int[] {81, 211},
         new int[] {82, 211},
@@ -28475,37 +28479,38 @@ namespace Galaxy_Editor_2.Compiler.Generated.parser
         new int[] {1397, 362},
         new int[] {1398, 362},
       },
-      new int[][] {//1537
+      new int[][] {//135
         new int[] {-1, 1150},
       },
-      new int[][] {//1538
+      new int[][] {//136
         new int[] {-1, 27},
         new int[] {31, 66},
       },
-      new int[][] {//1539
+      new int[][] {//137
         new int[] {-1, 28},
         new int[] {27, 62},
         new int[] {31, 67},
         new int[] {64, 179},
         new int[] {66, 181},
       },
-      new int[][] {//1540
+      new int[][] {//138
         new int[] {-1, 308},
       },
-      new int[][] {//1541
+      new int[][] {//139
         new int[] {-1, 891},
       },
-      new int[][] {//1542
+      new int[][] {//140
         new int[] {-1, 363},
       },
-      new int[][] {//1543
+      new int[][] {//141
         new int[] {-1, 1393},
         new int[] {1391, 1398},
       },
-      new int[][] {//1544
+      new int[][] {//142
         new int[] {-1, 227},
       },
     };
+
 
 
         private static String[] errorMessages = {

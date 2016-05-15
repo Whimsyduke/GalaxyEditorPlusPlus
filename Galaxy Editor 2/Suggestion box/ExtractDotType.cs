@@ -204,7 +204,7 @@ namespace Galaxy_Editor_2.Suggestion_box
                             {
                                 if (tokens[i - 1] is TIdentifier)
                                     continue;
-                                if (tokens[i - 1] is TIf || tokens[i - 1] is TWhile)
+                                if (tokens[i - 1] is TIf || tokens[i - 1] is TWhile || tokens[i - 1] is TDo)
                                 {
                                     //We took the param too much. Remove it and break
                                     int parens = 0;

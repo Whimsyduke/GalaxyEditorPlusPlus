@@ -2963,4 +2963,29 @@ namespace Galaxy_Editor_2.Compiler.Generated.node
             ((Analysis)sw).CaseTFuncRef(this);
         }
     }
+    [Serializable]
+    public sealed class TDo : Token
+    {
+        public TDo(string text)
+        {
+            Text = text;
+        }
+
+        public TDo(string text, int line, int pos)
+        {
+            Text = text;
+            Line = line;
+            Pos = pos;
+        }
+
+        public override Object Clone()
+        {
+            return new TDo(Text, Line, Pos);
+        }
+
+        public override void Apply(Switch sw)
+        {
+            ((Analysis)sw).CaseTDo(this);
+        }
+    }
 }

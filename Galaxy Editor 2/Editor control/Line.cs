@@ -95,7 +95,7 @@ namespace Galaxy_Editor_2.Editor_control
                         if (lines[index - 1].tokens[i] is TSemicolon || lines[index - 1].tokens[i] is TLBrace)
                             break;
                         if (lines[index - 1].tokens[i] is TIf || lines[index - 1].tokens[i] is TWhile ||
-                            lines[index - 1].tokens[i] is TFor || lines[index - 1].tokens[i] is TElse)
+                            lines[index - 1].tokens[i] is TFor || lines[index - 1].tokens[i] is TElse || lines[index - 1].tokens[i] is TDo)
                         {
                             shortndentDepth = lines[index - 1].shortndentDepth + 1;
                             indents++;
