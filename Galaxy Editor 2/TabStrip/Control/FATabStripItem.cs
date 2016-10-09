@@ -146,7 +146,7 @@ namespace FarsiLibrary.Win
         {
         }
 
-        public FATabStripItem(string caption, Control displayControl) 
+        public FATabStripItem(string caption, Control displayControl)
         {
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             SetStyle(ControlStyles.ResizeRedraw, true);
@@ -256,5 +256,6 @@ namespace FarsiLibrary.Win
         }
 
         #endregion
+        
     }
 }

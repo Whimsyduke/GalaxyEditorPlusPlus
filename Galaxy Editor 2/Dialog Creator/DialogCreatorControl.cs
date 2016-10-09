@@ -23,6 +23,8 @@ namespace Galaxy_Editor_2.Dialog_Creator
         private DialogData data;
         public DialogCreatorControl()
         {
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             data = new DialogData();
             Dialog mainDialog = new Dialog(null, new Rectangle(0, 0, 500, 400), data);
             mainDialog.Anchor = Dialog_Creator.Enums.Anchor.Center;
@@ -33,6 +35,8 @@ namespace Galaxy_Editor_2.Dialog_Creator
 
         public DialogCreatorControl(DialogData d)
         {
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             data = d;
             InitializeComponent();
             graphicsControl1.Parent = this;

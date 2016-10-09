@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Galaxy_Editor_2</RootNamespace>
     <AssemblyName>Galaxy++ Editor</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -42,6 +42,7 @@
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -52,6 +53,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>icon.ico</ApplicationIcon>
@@ -480,6 +482,9 @@
     <EmbeddedResource Include="CompileModWindow.zh-Hans.resx">
       <DependentUpon>CompileModWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editor control\MyEditor.resx">
+      <DependentUpon>MyEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExceptionForm.en.resx">
       <DependentUpon>ExceptionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -549,6 +554,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearcDefinitionsForm.zh-Hans.resx">
       <DependentUpon>SearcDefinitionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabStrip\Control\FATabStrip.resx">
+      <DependentUpon>FATabStrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabStrip\Control\FATabStripItem.resx">
+      <DependentUpon>FATabStripItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UploadToMapForm.zh-Hans.resx">
       <DependentUpon>UploadToMapForm.cs</DependentUpon>

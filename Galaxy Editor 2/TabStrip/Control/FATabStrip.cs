@@ -764,7 +764,7 @@ namespace FarsiLibrary.Win
         public FATabStrip()
         {
             BeginInit();
-
+            
             SetStyle(ControlStyles.ContainerControl, true);
             SetStyle(ControlStyles.UserPaint, true);
             SetStyle(ControlStyles.ResizeRedraw, true);
@@ -785,7 +785,7 @@ namespace FarsiLibrary.Win
             closeButton = new FATabStripCloseButton(ToolStripRenderer);
             Font = defaultFont;
             sf = new StringFormat();
-
+            
             EndInit();
 
             UpdateLayout();
@@ -977,5 +977,6 @@ namespace FarsiLibrary.Win
         }
 
         #endregion
+
     }
 }

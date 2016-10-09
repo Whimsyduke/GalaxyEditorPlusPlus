@@ -284,6 +284,7 @@ namespace Galaxy_Editor_2
             // toolStrip2
             // 
             resources.ApplyResources(this.toolStrip2, "toolStrip2");
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ObjectBrowserCatagory,
             this.TBRefreshObjectList});
@@ -386,6 +387,7 @@ namespace Galaxy_Editor_2
             // menuStrip1
             // 
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.viewToolStripMenuItem,
@@ -588,6 +590,7 @@ namespace Galaxy_Editor_2
             // projectViewMenu
             // 
             resources.ApplyResources(this.projectViewMenu, "projectViewMenu");
+            this.projectViewMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.projectViewMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newFileToolStripMenuItem,
             this.newDialogToolStripMenuItem,
@@ -646,6 +649,7 @@ namespace Galaxy_Editor_2
             // projectViewProjectMenu
             // 
             resources.ApplyResources(this.projectViewProjectMenu, "projectViewProjectMenu");
+            this.projectViewProjectMenu.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.projectViewProjectMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newProjectToolStripMenuItem,
             this.deleteProjectToolStripMenuItem});
@@ -667,6 +671,7 @@ namespace Galaxy_Editor_2
             // statusStrip1
             // 
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compilerStatusText});
             this.statusStrip1.Name = "statusStrip1";
@@ -680,6 +685,7 @@ namespace Galaxy_Editor_2
             // toolStrip1
             // 
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TBNewProject,
             this.TBNewFile,
@@ -866,6 +872,7 @@ namespace Galaxy_Editor_2
             // editorRightClick
             // 
             resources.ApplyResources(this.editorRightClick, "editorRightClick");
+            this.editorRightClick.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.editorRightClick.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RightClickCut,
             this.RightClickCopy,
@@ -949,7 +956,7 @@ namespace Galaxy_Editor_2
             this.projectView.DragCursorType = Galaxy_Editor_2.DragCursorType.None;
             this.projectView.DragImageIndex = 0;
             this.projectView.DragMode = System.Windows.Forms.DragDropEffects.Move;
-            this.projectView.DragNodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectView.DragNodeFont = new System.Drawing.Font("Microsoft Sans Serif", 16.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.projectView.DragNodeOpacity = 0.3D;
             this.projectView.DragOverNodeBackColor = System.Drawing.SystemColors.Highlight;
             this.projectView.DragOverNodeForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1019,6 +1026,7 @@ namespace Galaxy_Editor_2
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.objectBrowserSplitContainer.Panel1.ResumeLayout(false);

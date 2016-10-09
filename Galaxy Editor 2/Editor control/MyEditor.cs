@@ -131,7 +131,7 @@ namespace Galaxy_Editor_2.Editor_control
                                                //Horizontal scrollbar
                                                Size.Height - (horizontalScrollBar.Visible ? horizontalScrollBar.Height : 0)
                     );
-                rect.X += fonts.CharWidth * lines.Count.ToString().Length + 3;
+                rect.X += (fonts.CharWidth * lines.Count.ToString().Length + 3) * 2;
 
                 rect.Width -= rect.X;
                 rect.Height -= rect.Y;
@@ -369,7 +369,7 @@ namespace Galaxy_Editor_2.Editor_control
             Rectangle textRegion = TextRegion;
             //Set max values
             //Number of lines minus the number of lines that can be displayed
-            int visibleLineCount = textRegion.Height / fonts.Base.Height;
+            int visibleLineCount = textRegion.Height / fonts.Base.Height / 2;
             verticalScrollBar.Maximum = Math.Max(0, lines.Count - visibleLineCount);
 
             //Update text region if needed
@@ -385,7 +385,7 @@ namespace Galaxy_Editor_2.Editor_control
                 verticalScrollBar.Visible = verticalScrollBar.Maximum > 0;
                 textRegion = TextRegion;
 
-                visibleLineCount = textRegion.Height / fonts.Base.Height;
+                visibleLineCount = textRegion.Height / fonts.Base.Height / 2;
                 verticalScrollBar.Maximum = Math.Max(0, lines.Count - visibleLineCount);
             }
             horizontalScrollBar.Visible = horizontalScrollBar.Maximum > 0;
@@ -424,7 +424,7 @@ namespace Galaxy_Editor_2.Editor_control
                 //e.Graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
                 int lineNr = verticalScrollBar.Value;
                 Rectangle textRegion = TextRegion;
-                Rectangle bounds = new Rectangle(textRegion.X - horizontalScrollBar.Value, textRegion.Y, textRegion.Width + horizontalScrollBar.Value, fonts.Base.Height);
+                Rectangle bounds = new Rectangle(textRegion.X - horizontalScrollBar.Value, textRegion.Y, textRegion.Width + horizontalScrollBar.Value, fonts.Base.Height * 2);
 
                 Pen controlPen = new Pen(Color.FromArgb(165, 165, 165));
                 int leftLineCenter = textRegion.X - 6;
@@ -452,7 +452,7 @@ namespace Galaxy_Editor_2.Editor_control
 
                                 Font font = fonts.Base;
                                 g.DrawString(text[i].ToString(), font, Brushes.Gray,
-                                             i * fonts.CharWidth, bounds.Y);
+                                             i * fonts.CharWidth * 2, bounds.Y);
                             }
                         }
 
@@ -521,12 +521,12 @@ namespace Galaxy_Editor_2.Editor_control
                 if (line.BlockEndLine != null && !line.BlockVisible)
                 {
                     //Draw ... box
-                    Rectangle boxBounds = new Rectangle(bounds.X + (line.Text.Length + 1) * fonts.CharWidth, bounds.Y, 4 * fonts.CharWidth, bounds.Height - 1);
+                    Rectangle boxBounds = new Rectangle(bounds.X + (line.Text.Length + 1) * fonts.CharWidth * 2, bounds.Y, 8 * fonts.CharWidth, bounds.Height - 1);
                     Pen controlPen = new Pen(Color.FromArgb(165, 165, 165));
                     g.DrawRectangle(controlPen, boxBounds);
                     for (int i = 0; i < 3; i++)
                     {
-                        g.DrawString(".", fonts.Base, new SolidBrush(controlPen.Color), boxBounds.X + i * fonts.CharWidth, boxBounds.Y);
+                        g.DrawString(".", fonts.Base, new SolidBrush(controlPen.Color), boxBounds.X + i * fonts.CharWidth * 2, boxBounds.Y);
 
                     }
                 }
@@ -548,13 +548,13 @@ namespace Galaxy_Editor_2.Editor_control
                 if (IsTextpointMarked(textPoint))
                 {
                     Point pixel = GetPixelAtTextpoint(textPoint);
-                    int width = fonts.CharWidth;
+                    int width = fonts.CharWidth * 2;
                     if (i < text.Length && text[i] > 0xFF)
-                        width += fonts.CharWidth;
+                        width += fonts.CharWidth * 2;
                     else if (i < text.Length && text[i] == '\t')
-                        width = 4 * fonts.CharWidth;
+                        width = 4 * fonts.CharWidth * 2;
                     g.FillRectangle(new SolidBrush(Color.FromArgb(173, 214, 255)), pixel.X,
-                                    pixel.Y, width, fonts.Base.Height);
+                                    pixel.Y, width, fonts.Base.Height * 2);
                 }
             }
             Font font = new Font(fonts.Base, lines[lineNr].GetFontStyle(0).Style);
@@ -565,11 +565,11 @@ namespace Galaxy_Editor_2.Editor_control
                 if (font.Style != modification.Style)
                     font = new Font(fonts.Base, modification.Style);
                 g.DrawString(text[i].ToString(), font, new SolidBrush(modification.Color), x, bounds.Y);
-                x += fonts.CharWidth;
+                x += fonts.CharWidth * 2;
                 if (text[i] > 0xFF)
-                    x += fonts.CharWidth;
+                    x += fonts.CharWidth * 2;
                 else if (text[i] == '\t')
-                    x += 3 * fonts.CharWidth;
+                    x += 3 * fonts.CharWidth * 2;
             }
         }
 
@@ -1928,10 +1928,10 @@ namespace Galaxy_Editor_2.Editor_control
             Rectangle textRegion = TextRegion;
             TextPoint caretPos = caret.GetPosition(true);
             Point caretPixel = GetPixelAtTextpoint(caret.GetPosition(false));
-            if (!textRegion.Contains(caretPixel) || !textRegion.Contains(caretPixel.X, caretPixel.Y + fonts.Base.Height))
+            if (!textRegion.Contains(caretPixel) || !textRegion.Contains(caretPixel.X, caretPixel.Y + fonts.Base.Height * 2))
             {
                 //If current line is not fully visible, scroll as little as possible
-                int visibleLines = textRegion.Height / fonts.Base.Height;
+                int visibleLines = textRegion.Height / fonts.Base.Height/ 2;
                 if (caretPos.Line < verticalScrollBar.Value)
                     verticalScrollBar.Value = caretPos.Line;
                 if (caretPos.Line + 1 > verticalScrollBar.Value + visibleLines)
@@ -1960,7 +1960,7 @@ namespace Galaxy_Editor_2.Editor_control
         {
             Rectangle textRegion = TextRegion;
             TextPoint point = new TextPoint();
-            point.Line = Math.Max(0, (y - textRegion.Y) / fonts.Base.Height + verticalScrollBar.Value);
+            point.Line = Math.Max(0, (y - textRegion.Y) / fonts.Base.Height / 2 + verticalScrollBar.Value);
             for (int i = 0; i <= point.Line && i < lines.Count; i++)
             {
                 if (!lines[i].LineVisible)
@@ -1975,11 +1975,11 @@ namespace Galaxy_Editor_2.Editor_control
             {
                 if (point.Pos < 0)
                     break;
-                int subtract = fonts.CharWidth;
+                int subtract = fonts.CharWidth * 2;
                 if (lines[point.Line].Text[pos] > 0xFF)
-                    subtract += fonts.CharWidth;
+                    subtract += fonts.CharWidth * 2;
                 else if (lines[point.Line].Text[pos] == '\t')
-                    subtract += 3 * fonts.CharWidth;
+                    subtract += 3 * fonts.CharWidth * 2;
                 point.Pos -= subtract;
                 if (point.Pos < 0)
                 {
@@ -2010,23 +2010,23 @@ namespace Galaxy_Editor_2.Editor_control
             point.Line -= hiddenLines;
 
             Point p = new Point();
-            p.Y = (point.Line - verticalScrollBar.Value) * fonts.Base.Height + textRegion.Y;
+            p.Y = (point.Line - verticalScrollBar.Value) * fonts.Base.Height * 2 + textRegion.Y;
             p.X = (textRegion.X + 2 - horizontalScrollBar.Value);
             for (int i = 0; i < point.Pos; i++)
             {
-                p.X += fonts.CharWidth;
+                p.X += fonts.CharWidth * 2;
                 if (point.Line < lines.Count && point.Line >= 0 && i < lines[point.Line].Text.Length)
                 {
                     if (lines[point.Line].Text[i] > 0xFF)
-                        p.X += fonts.CharWidth;
+                        p.X += fonts.CharWidth * 2;
                     else if (lines[point.Line].Text[i] == '\t')
-                        p.X += 3 * fonts.CharWidth;
+                        p.X += 3 * fonts.CharWidth * 2;
                 }
             }
             //p.X = (textRegion.X + 2 - horizontalScrollBar.Value + fonts.CharWidth * point.Pos);
             //p.X = fonts.GetWidth(lines[point.Line].Text.Substring(0, point.Pos));
             if (!upper)
-                p.Y += fonts.Base.Height;
+                p.Y += fonts.Base.Height * 2;
             return p;
         }
 
