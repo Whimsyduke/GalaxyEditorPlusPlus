@@ -150,10 +150,8 @@ namespace Galaxy_Editor_2.Editor_control
             InitializeComponent();
 
             BackColor = Color.White;
-
-
-
-
+            
+            
 
             horizontalScrollBar = new HScrollBar();
             horizontalScrollBar.Dock = DockStyle.Bottom;
