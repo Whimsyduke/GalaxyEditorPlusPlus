@@ -1814,7 +1814,7 @@ namespace Galaxy_Editor_2
                 {
                     target = new DirectoryInfo(Path.Combine(projectDir.FullName, newName));
                 }
-                catch(Exception err)
+                catch
                 {
                     MessageBox.Show(this, LocRM.GetString("Text21.Text"),
                                     LocRM.GetString("Error.Text"));
@@ -1891,7 +1891,7 @@ namespace Galaxy_Editor_2
                     {
                         target = new DirectoryInfo(projectDir.FullName + "\\" + newName);
                     }
-                    catch (Exception err)
+                    catch 
                     {
                         MessageBox.Show(this, LocRM.GetString("Text25.Text"),
                                         LocRM.GetString("Error.Text"));

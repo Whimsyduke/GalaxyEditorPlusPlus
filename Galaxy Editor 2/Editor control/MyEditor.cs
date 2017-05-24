@@ -220,7 +220,7 @@ namespace Galaxy_Editor_2.Editor_control
                         string text = GetText();
                         return text;
                     }
-                    catch (Exception err)
+                    catch
                     {
                         //Retry
                     }
@@ -820,7 +820,7 @@ namespace Galaxy_Editor_2.Editor_control
             OnKeyDown(e);
         }
 
-        public event KeyEventHandler PreviewKeyDown;
+        public new event KeyEventHandler PreviewKeyDown;
         protected override void OnKeyDown(KeyEventArgs e)
         {
             if (PreviewKeyDown != null) PreviewKeyDown(this, e);
@@ -1577,7 +1577,7 @@ namespace Galaxy_Editor_2.Editor_control
                 {
                     Clipboard.SetText(text.ToString());
                 }
-                catch (Exception err)
+                catch 
                 {
                     return;
                 }

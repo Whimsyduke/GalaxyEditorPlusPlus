@@ -112,17 +112,17 @@ namespace Galaxy_Editor_2
             {
                 if (FontFamily.Families.Any(family => family.Name.ToLower() == "consolas"))
                 {
-                    Options.Editor.Font = new Font(new FontFamily("Consolas"), 20);
+                    Options.Editor.Font = new Font(new FontFamily("Consolas"), 14);
                 }
                 else if (FontFamily.Families.Any(family => family.Name.ToLower() == "courier new"))
                 {
-                    Options.Editor.Font = new Font(new FontFamily("Courier New"), 20);
+                    Options.Editor.Font = new Font(new FontFamily("Courier New"), 14);
                 }
                 else
                 {
-                    Options.Editor.Font = new Font(FontFamily.Families[0], 20);
+                    Options.Editor.Font = new Font(FontFamily.Families[0], 14);
                 }
-                Options.Editor.CharWidth = 7;
+                Options.Editor.CharWidth = 14;
             }
 
             /*SmtpClient client = new SmtpClient("smtp.gmail.com", 587)

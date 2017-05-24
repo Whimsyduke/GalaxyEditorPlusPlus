@@ -94,7 +94,7 @@ namespace Galaxy_Editor_2.Dialog_Creator
             CBMainSelectedControl.SelectedItem = graphicsControl1.MainSelectedItem;
         }
 
-        private void ControlAdded(AbstractControl control)
+        private new void ControlAdded(AbstractControl control)
         {
             CBMainSelectedControl.Items.Add(control);
             if (CBMainSelectedControl.SelectedIndex == -1)
@@ -145,7 +145,7 @@ namespace Galaxy_Editor_2.Dialog_Creator
                 graphicsControl1.SetTargetHeight(int.Parse(TBScreenHeight.Text));
                 TBScreenHeight.BackColor = Color.White;
             }
-            catch (Exception err)
+            catch
             {
                 TBScreenHeight.BackColor = Color.Red;
             }
@@ -260,7 +260,7 @@ namespace Galaxy_Editor_2.Dialog_Creator
                 CancelIfNoneChecked();
         }
 
-        public void ControlRemoved(AbstractControl ctrl)
+        public new void ControlRemoved(AbstractControl ctrl)
         {
             CBMainSelectedControl.Items.Remove(ctrl);
             propertyGrid.SelectedObject = null;
