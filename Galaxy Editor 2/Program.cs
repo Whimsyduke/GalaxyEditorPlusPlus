@@ -122,7 +122,7 @@ namespace Galaxy_Editor_2
                 {
                     Options.Editor.Font = new Font(FontFamily.Families[0], 14);
                 }
-                Options.Editor.CharWidth = 7;
+                Options.Editor.CharWidth = 14;
             }
 
             /*SmtpClient client = new SmtpClient("smtp.gmail.com", 587)

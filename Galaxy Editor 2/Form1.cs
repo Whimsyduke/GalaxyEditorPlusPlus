@@ -235,8 +235,8 @@ namespace Galaxy_Editor_2
         public Form1()
         {
             //自动大小
-            AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            //AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 
             Form = this;
             compiler = new GalaxyCompiler(this);

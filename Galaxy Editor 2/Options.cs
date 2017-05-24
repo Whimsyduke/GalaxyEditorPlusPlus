@@ -387,7 +387,7 @@ namespace Galaxy_Editor_2
                 }
             }
 
-            private int charWidth = 7;
+            private int charWidth = 14;
             public int CharWidth
             {
                 get { return charWidth; }
