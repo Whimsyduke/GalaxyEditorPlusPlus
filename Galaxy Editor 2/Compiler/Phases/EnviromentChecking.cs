@@ -354,7 +354,9 @@ namespace Galaxy_Editor_2.Compiler.Phases
 
         public override void InAAProgram(AAProgram node)
         {
-            return;
+            ///WHTEST
+            //return;
+            ///\WHTEST
             //Check that there are not two diffrent definitions with same name, in same namespace
 
             for (int i = 0; i < node.GetSourceFiles().Count; i++)

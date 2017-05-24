@@ -114,7 +114,7 @@ namespace Galaxy_Editor_2.Compiler
                                 ast = parser.Parse();
                                 SimpleTransformations.Parse(ast);
                             }
-                            catch (Exception err)
+                            catch
                             {
                                 //Critical erros
                                 continue;

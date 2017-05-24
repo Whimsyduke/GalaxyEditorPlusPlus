@@ -30,7 +30,7 @@ namespace Galaxy_Editor_2.Compiler.Contents
         public List<EnrichmentDescription> Enrichments { get; private set; }
         public List<TypedefDescription> Typedefs { get; private set; }
         public List<NamespaceDescription> Namespaces { get; private set; }
-        public string Namespace;
+        public string Namespace = null;
 
         public SourceFileContents File
         {
@@ -498,7 +498,7 @@ namespace Galaxy_Editor_2.Compiler.Contents
                 Structs.Add(structDescription);
             }
 
-            private bool inEnrichment;
+            private bool inEnrichment = false;
             public override void CaseAEnrichmentDecl(AEnrichmentDecl node)
             {
                 EnrichmentDescription enrichmentDescription = new EnrichmentDescription(node);

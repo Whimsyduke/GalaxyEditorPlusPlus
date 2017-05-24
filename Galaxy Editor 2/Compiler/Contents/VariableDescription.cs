@@ -145,5 +145,10 @@ namespace Galaxy_Editor_2.Compiler.Contents
         }
 
         public IDeclContainer ParentFile { get; set; }
+        
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

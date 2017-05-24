@@ -192,6 +192,11 @@ namespace Galaxy_Editor_2.Compiler.Contents
                 MethodDescription method = new MethodDescription(node);
                 Deconstructors.Add(method);
             }
+
+            public override int GetHashCode()
+            {
+                return base.GetHashCode();
+            }
         }
 
         

@@ -19,7 +19,6 @@ namespace Galaxy_Editor_2.Compiler.Phases
 
         private ErrorCollection errors;
         private SharedData data;
-        private AASourceFile currentSourceFile;
         private DirectoryInfo outputDir;
         private StreamWriter stream;
         private int indents = 0;

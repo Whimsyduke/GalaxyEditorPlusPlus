@@ -13,6 +13,7 @@ using System.Net;
 using Galaxy_Editor_2.Compiler;
 using Galaxy_Editor_2.Suggestion_box;
 using Microsoft.Win32;
+using System.Runtime.InteropServices;
 
 namespace Galaxy_Editor_2
 {
@@ -43,7 +44,8 @@ namespace Galaxy_Editor_2
 
     static class Program
     {
-
+        [DllImport("user32.dll")]
+        private static extern void SetProcessDPIAware();
 
         //[STAThread]
         //static void Main(string[] args)
@@ -58,28 +60,28 @@ namespace Galaxy_Editor_2
         [STAThread]
         static void Main(string[] args)
         {
-           /* {
-                //Create a new RSACryptoServiceProvider object. 
-                RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(3072);
-                //RSA.KeySize = 2376;//Exactly enough to encrypt 256 bit keys
-                //Export the key information to an RSAParameters object.
-                //Pass false to export the public key information or pass
-                //true to export public and private key information.
-                //RSAParameters RSAParams = RSA.ExportParameters(false);
-                string s = RSA.ToXmlString(false);
-                FileInfo file = new FileInfo("serverPublicKey");
-                Stream stream = file.Open(FileMode.Create);
-                BinaryFormatter formatter = new BinaryFormatter();
-                formatter.Serialize(stream, s);
-                stream.Close();
+            /* {
+                 //Create a new RSACryptoServiceProvider object. 
+                 RSACryptoServiceProvider RSA = new RSACryptoServiceProvider(3072);
+                 //RSA.KeySize = 2376;//Exactly enough to encrypt 256 bit keys
+                 //Export the key information to an RSAParameters object.
+                 //Pass false to export the public key information or pass
+                 //true to export public and private key information.
+                 //RSAParameters RSAParams = RSA.ExportParameters(false);
+                 string s = RSA.ToXmlString(false);
+                 FileInfo file = new FileInfo("serverPublicKey");
+                 Stream stream = file.Open(FileMode.Create);
+                 BinaryFormatter formatter = new BinaryFormatter();
+                 formatter.Serialize(stream, s);
+                 stream.Close();
 
-                //RSAParams = RSA.ExportParameters(true);
-                s = RSA.ToXmlString(true);
-                file = new FileInfo("serverPrivateKey");
-                stream = file.Open(FileMode.Create);
-                formatter.Serialize(stream, s);
-                stream.Close();
-            }*/
+                 //RSAParams = RSA.ExportParameters(true);
+                 s = RSA.ToXmlString(true);
+                 file = new FileInfo("serverPrivateKey");
+                 stream = file.Open(FileMode.Create);
+                 formatter.Serialize(stream, s);
+                 stream.Close();
+             }*/
 
 
             /*if (args.Length > 0)
@@ -96,6 +98,7 @@ namespace Galaxy_Editor_2
                 compiler.Compile(true);
                 return;
             }*/
+            SetProcessDPIAware();
             for (int i = 0; i < args.Length; i++)
             {
                 if (args[i] == "-open")
@@ -122,7 +125,7 @@ namespace Galaxy_Editor_2
                 {
                     Options.Editor.Font = new Font(FontFamily.Families[0], 10);
                 }
-                Options.Editor.CharWidth = 7;
+                Options.Editor.CharWidth = 10;
             }
 
             /*SmtpClient client = new SmtpClient("smtp.gmail.com", 587)
