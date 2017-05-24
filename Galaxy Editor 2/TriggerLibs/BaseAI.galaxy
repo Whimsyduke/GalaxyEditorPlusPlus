@@ -145,6 +145,7 @@ void AIMeleeStart (int player) {
     AISetDifficulty(player, c_diffFleeWorkers,       (diff >= c_skirMedium));
     AISetDifficulty(player, c_diffFleeDanger,        (diff >= c_skirMedium));
     AISetDifficulty(player, c_diffTargetSpawners,    (diff >= c_skirMedium));
+    AISetDifficulty(player, c_diffAllowKiting,       (diff >= c_skirHard_VH));
 
     AISetDifficulty(player, c_diffDelayAdvTargetting,(diff <= c_skirMedium));       // deliberately target interceptors/locusts on medium and below
 
@@ -267,6 +268,7 @@ void AICampaignStart (int player) {
     AISetDifficulty(player, c_diffNormalTargetPrio,     (diff >= c_campAdvanced));
     AISetDifficulty(player, c_diffFleeDanger,           (diff >= c_campAdvanced));
     AISetDifficulty(player, c_diffTargetSpawners,       (diff >= c_campNormal));
+    AISetDifficulty(player, c_diffAllowKiting,          (diff >= c_campAdvanced));
 
     AISetDifficulty(player, c_diffOptimizeGas,          false);
     AISetDifficulty(player, c_diffNormalVision,         false);
@@ -312,6 +314,7 @@ void AICampaignStart (int player) {
     AIReqAddSpecialMaker("Nuke", "GhostAcademy", "ArmSiloWithNuke", 0);
     AIReqAddSpecialMaker("CreepTumorBurrowed", "CreepTumor", "BurrowCreepTumorDown", 0);
     AIReqAddSpecialMaker("CreepTumorBurrowed", "Queen", "QueenBuild", 0);
+	AIReqAddSpecialMaker("CreepTumorBurrowed", "QueenClassic", "QueenBuild", 0);
 
     AISetSpawnerTargettingDelay(player, "SpawnerActive", AICampaignDiffSelect(player, 8, 6, 4, 2));
 

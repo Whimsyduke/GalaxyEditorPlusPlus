@@ -157,12 +157,12 @@ namespace Galaxy_Editor_2.Compiler.Phases.Transformations
         {
             public static void Parse(AStructDecl str, AStructDecl clone, List<PType> types, SharedData data)
             {
-                FixGenericLinks fixer = new FixGenericLinks(clone, types, data)
-                    {original = str, clone = clone};
+                FixGenericLinks fixer = new FixGenericLinks(clone, types, data);
+                //FixGenericLinks fixer = new FixGenericLinks(clone, types, data){ original = str, clone = clone };
                 str.Apply(fixer);
             }
-
-            private AStructDecl original, clone;
+            
+            //private AStructDecl original, clone;
 
             private SharedData data;
             private List<PType> types;
