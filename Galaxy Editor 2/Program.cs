@@ -112,15 +112,15 @@ namespace Galaxy_Editor_2
             {
                 if (FontFamily.Families.Any(family => family.Name.ToLower() == "consolas"))
                 {
-                    Options.Editor.Font = new Font(new FontFamily("Consolas"), 10);
+                    Options.Editor.Font = new Font(new FontFamily("Consolas"), 20);
                 }
                 else if (FontFamily.Families.Any(family => family.Name.ToLower() == "courier new"))
                 {
-                    Options.Editor.Font = new Font(new FontFamily("Courier New"), 10);
+                    Options.Editor.Font = new Font(new FontFamily("Courier New"), 20);
                 }
                 else
                 {
-                    Options.Editor.Font = new Font(FontFamily.Families[0], 10);
+                    Options.Editor.Font = new Font(FontFamily.Families[0], 20);
                 }
                 Options.Editor.CharWidth = 7;
             }
