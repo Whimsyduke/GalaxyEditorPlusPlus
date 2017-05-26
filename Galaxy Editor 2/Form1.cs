@@ -2382,7 +2382,7 @@ namespace Galaxy_Editor_2
             if (messageView.SelectedNode == null) return;
             if (messageView.SelectedNode is ErrorCollection.Error)
             {
-                ErrorCollection.Error error = (ErrorCollection.Error)messageView.SelectedNode;
+                ErrorCollection.Error error = messageView.SelectedNode as ErrorCollection.Error;
                 FileInfo file = new FileInfo(openProjectSrcDir.Dir.FullName + "\\" + error.FileName + ".galaxy++");
                 
                 if (!file.Exists)
