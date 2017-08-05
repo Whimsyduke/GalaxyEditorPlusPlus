@@ -1421,6 +1421,7 @@ const int c_triggerControlTypeHeroCutscene              = 24;
 const int c_triggerControlTypeCountdownLabel            = 25;
 const int c_triggerControlTypeUnitStatusLabel           = 26;
 const int c_triggerControlTypeScoreValueFrame           = 27;
+const int c_triggerControlTypeGraphFrame                = 28;
 
 // Control properties
 const int c_triggerControlPropertyInvalid               = 0;
@@ -1500,6 +1501,7 @@ const int c_triggerControlPropertyUnitGroup             = 74;       // unitgroup
 const int c_triggerControlPropertyPlayerId              = 75;       // int
 const int c_triggerControlPropertyScoreValueLink        = 76;       // string
 const int c_triggerControlPropertyStateIndex            = 77;       // int
+const int c_triggerControlPropertyAnimationState        = 78;       // string
 
 // Image types
 const int c_triggerImageTypeNone                        = 0;
@@ -1594,6 +1596,11 @@ native void     DialogControlSelectItem (int control, playergroup players, int i
 native void     DialogControlClearSelectedItem (int control, playergroup players);
 native int      DialogControlGetItemCount (int control, int player);
 native int      DialogControlGetSelectedItem (int control, int player);
+
+native void     DialogControlAddDataPoint (int control, playergroup players, fixed xValue, fixed yValue, int index);
+native void     DialogControlRemoveAllDataPoints (int control, playergroup players);
+native void     DialogControlSetDataColor (int control, playergroup players, color value, int index);
+native void     DialogControlSetDataName (int control, playergroup players, text value, int index);
 
 native void     DialogControlInvokeAsText (int control, playergroup players, string method, text param1, text param2, text param3, text param4); // Blizzard maps only
 native void     DialogControlInvokeAsString (int control, playergroup players, string method, string param1, string param2, string param3, string param4); // Blizzard maps only
@@ -1854,6 +1861,7 @@ native bool     GameIsCooperative ();
 native bool     GameAreHeroDuplicatesAllowed ();
 
 native void     GameSetNextMap (string inMap);
+native void     GameSetNextCampaignIndex (playergroup inPlayerGroup, int inCampaignIndex);
 native void     SetNextMissionDifficulty (playergroup inPlayerGroup, int inDifficultyLevel);
 native bool     GameIsTransitionMap ();
 native void     GameSetTransitionMap (string transitionMap);
@@ -2331,6 +2339,7 @@ native bool         PingIsVisible (int p);
 native void         PingSetUseUnitTeamColor (int p, bool useUnitTeamColor);
 native void         PingSetUseUnitVisibility (int p, bool useUnitVisibility);
 native void         PingSetObserver (int p, bool isObserver);
+native void         PingSetUsePlayerVision (int p, bool usePlayerVision);
 
 native void         TriggerAddEventPing (trigger t, int player);
 
@@ -2530,6 +2539,7 @@ const int c_playerPropDamageDealtPercent    = 16;
 const int c_playerPropDamageTakenPercent    = 17;
 const int c_playerPropDamageDealtTime       = 18;
 const int c_playerPropDamageTakenTime       = 19;
+const int c_playerPropCurriculumScore       = 20;
 
 // Player property operations
 const int c_playerPropOperSetTo         = 0;
@@ -2565,6 +2575,8 @@ native string   PlayerArtifact (int inPlayer, int inArtifactIndex);
 native int      PlayerArtifactRank (int inPlayer, int inArtifactIndex);
 native string   PlayerCommander (int inPlayer);
 native int      PlayerCommanderLevel (int inPlayer);
+native int      PlayerCommanderMasteryLevel (int inPlayer);
+native int      PlayerCommanderMasteryTalentRank (int inPlayer, int inTalentIndex);
 native int      PlayerDifficulty (int inPlayer);
 native void     PlayerSetDifficulty (int inPlayer, int inDifficulty);
 native void     PlayerSetLighting (int inPlayer, string inLight, fixed inBlendTime);
@@ -2592,6 +2604,9 @@ native void     PlayerSetBounds (int inPlayer, region inRegion);
 
 // Player Licenses
 const int c_playerLicenseLibertyFull        = 162;
+const int c_playerLicenseNovaPack1          = 16515;
+const int c_playerLicenseNovaPack2          = 16533;
+const int c_playerLicenseNovaPack3          = 16534;
 
 native void     PlayerSetColorIndex (int inPlayer, int inIndex, bool inChangeUnits);
 native int      PlayerGetColorIndex (int inPlayer, bool inDefault);
@@ -2630,6 +2645,8 @@ native void PlayerSetSkin (int inPlayer, string inSkin);
 native void PlayerSetMount (int inPlayer, string inMount);
 native void PlayerSetCommander (int inPlayer, string inCommander);
 native void PlayerSetCommanderLevel (int inPlayer, int inCommanderLevel);
+native void PlayerSetCommanderMasteryLevel (int inPlayer, int inMasteryLevel);
+native void PlayerAddReward (int inPlayer, string inReward);
 
 native void PlayerAddLabel (int inPlayer, string inLabel);
 native bool PlayerRemoveLabel (int inPlayer, string inLabel);
@@ -3473,6 +3490,7 @@ native void     Wait (fixed inSecs, int inTimeType);
 // AI Time
 native void     AITimePause (bool inPause);
 native bool     AITimeIsPaused ();
+native fixed    AIGetTime ();
 
 // Timers
 const fixed c_timerDurationInfinite = -1.0;
@@ -3723,6 +3741,9 @@ native unitgroup UnitCreate (
 
 native unit UnitLastCreated ();
 native unitgroup UnitLastCreatedGroup ();
+native unit UnitGetOriginalCaster (unit inUnit);
+native string UnitGetOriginalEffect (unit inUnit);
+native unit UnitGetMagazine (unit inUnit);
 native unit UnitFromId (int id);
 native void UnitLoadModel (unit inUnit);
 native void UnitUnloadModel (unit inUnit);
@@ -3818,6 +3839,10 @@ const int c_unitStateStoppable          = 32;
 const int c_unitStateResistant          = 33;
 const int c_unitStateSilenced           = 34;
 const int c_unitStateDazed              = 35;
+const int c_unitStateInsideUnitTransport	= 36; // Read-only
+const int c_unitStateInsidePlayerTransport	= 37; // Read-only
+const int c_unitStateIsChangeling	    = 38; // Read-only
+const int c_unitStateSleeping           = 39;
 
 native void UnitSetState (unit inUnit, int inState, bool inVal);
 native bool UnitTestState (unit inUnit, int inState);
@@ -4093,6 +4118,7 @@ const int c_unitBehaviorFlagRefreshStack        = 30;
 const int c_unitBehaviorFlagUpdateDurationWhileDisabled = 31;
 // Behavior info flags
 const int c_unitBehaviorFlagHidden              = 32;
+const int c_unitBehaviorFlagAlwaysUseGameText   = 33;
 // Behavior count
 const int c_unitBehaviorCountAll                = -1;
 
@@ -4582,6 +4608,8 @@ native void         UnitClearSelection (int inPlayer);
 
 native bool         UnitIsSelected (unit inUnit, int inPlayer);
 native unitgroup    UnitGroupSelected (int inPlayer);
+native unitgroup    UnitSubgroupSelected (int inPlayer);
+native int          UnitSubgroupIndexSelected (int inPlayer);
 
 native void         UnitFlashSelection (unit inUnit, fixed inPeriod);
 

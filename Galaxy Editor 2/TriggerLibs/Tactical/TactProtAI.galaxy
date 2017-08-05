@@ -1799,15 +1799,21 @@ void AIThinkDisruptorPhased (int player, unit aiUnit, unitgroup scanGroup) {
 
     if (loc == null) {        
         targetUnit = UnitGroupClosestToPoint(targetGroup,  UnitGetPosition(aiUnit));
-        if (targetUnit != null) {
-            loc = UnitGetPosition(targetUnit);
-        }
-        if (loc == null) {  
+        if (targetUnit == null) {
             return;
         }
     }
+    else {
+        targetUnit = UnitGroupClosestToPoint(targetGroup,  loc);
+    }
     
-    OrderSetTargetPoint(ord, loc);
+    if (targetUnit != null) {
+        OrderSetTargetUnit(ord, targetUnit);                        
+    }
+    else {
+        OrderSetTargetPoint(ord, loc);    
+    }
+
     if (UnitOrderIsValid(aiUnit, ord)) {
         AICast(aiUnit, ord, c_noMarker, c_castHold);
     }

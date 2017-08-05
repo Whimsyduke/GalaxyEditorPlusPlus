@@ -217,6 +217,7 @@ const int c_diffAutoTransport           = 31; // Should transports automatically
 const int c_diffSplitAttacking          = 32; // Should allied melee AI work together to attack a single enemy or split their attacks for a more fun experience (desirable of lower levels).
 const int c_diffAllowTransportGather    = 33; // Allow the transport synapse to load/unload gathering units. (disabling this may be useful to prevent unloading of preloaded transports).
 const int c_diffAvoidMindControlled     = 34; // The AI will try to avoid killing its own mind controlled units and instead try to kill the enemy infestor (or other controlling unit) first.
+const int c_diffAllowKiting             = 35; // Allow units to kite while attacking. (eg. Cyclone).
 
 native void AISetDifficulty (int player, int index, bool state);
 native bool AIGetDifficulty (int player, int index);

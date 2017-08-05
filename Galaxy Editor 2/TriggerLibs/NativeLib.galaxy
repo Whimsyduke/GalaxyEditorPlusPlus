@@ -894,8 +894,7 @@ void libNtve_gf_RemoveDoodadsinRegion (region lp_target, string lp_doodadType) {
         lv_animTermsString = ("ScopeContains " + (lp_doodadType));
         lv_animTermsString = (lv_animTermsString + "; ");
     }
-    else {
-    }
+
     lv_animTermsString = (lv_animTermsString + "!HasStatus DoodadKilled");
     ActorRegionSend(lv_actorRegion, c_actorIntersectAgainstRadiusContact, "Destroy", "Doodad", lv_animTermsString);
     ActorScopeKill(ActorScopeFromActor(lv_actorRegion));
@@ -1016,8 +1015,7 @@ void libNtve_gf_ShowHideDoodadsInRegion (bool lp_showHide, region lp_target, str
     if ((lp_doodadType != null)) {
         lv_termsString = ("ScopeContains " + lp_doodadType);
     }
-    else {
-    }
+
     ActorRegionSend(lv_actorRegion, c_actorIntersectAgainstRadiusContact, (lv_actorMessageString), "Doodad", lv_termsString);
     ActorScopeKill(ActorScopeFromActor(lv_actorRegion));
 }
@@ -1142,33 +1140,27 @@ void libNtve_gf_PlayAnimation (actor lp_target, string lp_identifier, string lp_
     if ((lv_fullMatchFlag == true)) {
         lv_flagString = (lv_flagString + "FullMatch");
     }
-    else {
-    }
+
     if ((lv_playForeverFlag == true)) {
         if ((lv_fullMatchFlag == true)) {
             lv_flagString = (lv_flagString + ",");
         }
-        else {
-        }
+
         lv_flagString = (lv_flagString + "PlayForever");
     }
-    else {
-    }
+
     if ((lv_nonLoopingFlag == true)) {
         if (((lv_fullMatchFlag == true) || (lv_playForeverFlag == true))) {
             lv_flagString = (lv_flagString + ",");
         }
-        else {
-        }
+
         lv_flagString = (lv_flagString + "NonLooping");
     }
-    else {
-    }
+
     if ((lv_flagString == "")) {
         lv_flagString = "0";
     }
-    else {
-    }
+
     lv_actorMessageString = ("AnimPlay " + lp_identifier + " " + lv_animationString + " " + lv_flagString + " " + FixedToString(lp_blendTime, c_fixedPrecisionAny));
     ActorSend(lp_target, (lv_actorMessageString));
 }
@@ -1198,41 +1190,34 @@ void libNtve_gf_PlayAnimationOnDoodadsInRegion (region lp_target, string lp_dood
     if ((lv_fullMatchFlag == true)) {
         lv_flagString = (lv_flagString + "FullMatch");
     }
-    else {
-    }
+
     if ((lv_playForeverFlag == true)) {
         if ((lv_fullMatchFlag == true)) {
             lv_flagString = (lv_flagString + ",");
         }
-        else {
-        }
+
         lv_flagString = (lv_flagString + "PlayForever");
     }
-    else {
-    }
+
     if ((lv_nonLoopingFlag == true)) {
         if (((lv_fullMatchFlag == true) || (lv_playForeverFlag == true))) {
             lv_flagString = (lv_flagString + ",");
         }
-        else {
-        }
+
         lv_flagString = (lv_flagString + "NonLooping");
     }
-    else {
-    }
+
     if ((lv_flagString == "")) {
         lv_flagString = "0";
     }
-    else {
-    }
+
     lv_actorMessageString = ("AnimPlay " + lp_identifier + " " + lv_animationString + " " + lv_flagString + " " + FixedToString(lp_blendTime, c_fixedPrecisionAny));
     ActorRegionCreate(null, "TriggerRegion", lp_target);
     lv_actorRegion = libNtve_gf_ActorLastCreated();
     if ((lp_doodadType != null)) {
         lv_termsString = ("ScopeContains " + lp_doodadType);
     }
-    else {
-    }
+
     ActorRegionSend(lv_actorRegion, c_actorIntersectAgainstRadiusContact, (lv_actorMessageString), "Doodad", lv_termsString);
     ActorScopeKill(ActorScopeFromActor(lv_actorRegion));
 }
@@ -1255,8 +1240,7 @@ void libNtve_gf_KillDoodadsInRegion (region lp_target, string lp_doodadType) {
         lv_statusTermsString = lv_animTermsString;
         lv_animTermsString = (lv_animTermsString + "; ");
     }
-    else {
-    }
+
     lv_animTermsString = (lv_animTermsString + "!HasStatus DoodadKilled");
     ActorRegionSend(lv_actorRegion, c_actorIntersectAgainstRadiusContact, "AnimPlay Death Death PlayForever,NonLooping", "Doodad", lv_animTermsString);
     ActorRegionSend(lv_actorRegion, c_actorIntersectAgainstRadiusContact, "StatusIncrement DoodadKilled", "Doodad", lv_statusTermsString);
@@ -1282,8 +1266,7 @@ void libNtve_gf_ClearAnimationOnDoodadsInRegion (region lp_target, string lp_doo
     if ((lp_doodadType != null)) {
         lv_termsString = ("ScopeContains " + lp_doodadType);
     }
-    else {
-    }
+
     ActorRegionSend(lv_actorRegion, c_actorIntersectAgainstRadiusContact, libNtve_gf_AnimClear(lp_identifier, -1.0), "Doodad", lv_termsString);
 }
 
@@ -1427,6 +1410,22 @@ camerainfo libNtve_gf_CopyOfCameraObject (camerainfo lp_cam) {
     return lv_newCam;
 }
 
+fixed libNtve_gf_CatalogFieldValueGetAsReal (int lp_catalog, string lp_entry, string lp_fieldPath, int lp_player) {
+    // Implementation
+    return StringToFixed(CatalogFieldValueGet(lp_catalog, lp_entry, lp_fieldPath, lp_player));
+}
+
+fixed libNtve_gf_CatalogReferenceGetAsReal (string lp_reference, int lp_player) {
+    // Variable Declarations
+    string lv_ref;
+
+    // Variable Initialization
+    lv_ref = lp_reference;
+
+    // Implementation
+    return StringToFixed(CatalogReferenceGet(lv_ref, lp_player));
+}
+
 fixed libNtve_gf_CostOfAbility (string lp_ability, string lp_costType) {
     // Variable Declarations
     string lv_value;
@@ -1445,6 +1444,80 @@ fixed libNtve_gf_CostOfAbility (string lp_ability, string lp_costType) {
     }
     lv_value = CatalogFieldValueGet(c_gameCatalogAbil, lp_ability, (lv_field), 1);
     return StringToFixed(lv_value);
+}
+
+bool libNtve_gf_CatalogFieldValueSetAsReal (int lp_catalog, string lp_entry, string lp_fieldPath, int lp_player, fixed lp_value) {
+    // Implementation
+    return CatalogFieldValueSet(lp_catalog, lp_entry, lp_fieldPath, lp_player, FixedToString(lp_value, c_fixedPrecisionAny));
+}
+
+bool libNtve_gf_CatalogFieldValueModifyBasedOnDefaultValue (int lp_catalog, string lp_entry, string lp_fieldPath, int lp_player, fixed lp_value, int lp_operation) {
+    int auto95ABF8B8_val;
+
+    // Variable Declarations
+    fixed lv_default;
+
+    // Variable Initialization
+    lv_default = libNtve_gf_CatalogFieldValueGetAsReal(lp_catalog, lp_entry, lp_fieldPath, c_playerAny);
+
+    // Implementation
+    auto95ABF8B8_val = lp_operation;
+    if (auto95ABF8B8_val == c_upgradeOperationAdd) {
+        return libNtve_gf_CatalogFieldValueSetAsReal(lp_catalog, lp_entry, lp_fieldPath, lp_player, (lv_default + lp_value));
+    }
+    else if (auto95ABF8B8_val == c_upgradeOperationSubtract) {
+        return libNtve_gf_CatalogFieldValueSetAsReal(lp_catalog, lp_entry, lp_fieldPath, lp_player, (lv_default - lp_value));
+    }
+    else if (auto95ABF8B8_val == c_upgradeOperationMultiply) {
+        return libNtve_gf_CatalogFieldValueSetAsReal(lp_catalog, lp_entry, lp_fieldPath, lp_player, (lv_default * lp_value));
+    }
+    else if (auto95ABF8B8_val == c_upgradeOperationDivide) {
+        return libNtve_gf_CatalogFieldValueSetAsReal(lp_catalog, lp_entry, lp_fieldPath, lp_player, (lv_default / lp_value));
+    }
+    else if (auto95ABF8B8_val == c_upgradeOperationSet) {
+        return libNtve_gf_CatalogFieldValueSetAsReal(lp_catalog, lp_entry, lp_fieldPath, lp_player, lp_value);
+    }
+    else {
+        return libNtve_gf_CatalogFieldValueSetAsReal(lp_catalog, lp_entry, lp_fieldPath, lp_player, (lv_default + lp_value));
+    }
+}
+
+bool libNtve_gf_CatalogReferenceSetAsReal (string lp_reference, int lp_player, fixed lp_value) {
+    // Implementation
+    return CatalogReferenceSet(lp_reference, lp_player, FixedToString(lp_value, c_fixedPrecisionAny));
+}
+
+bool libNtve_gf_CatalogReferenceModifyBasedOnDefaultValue (string lp_reference, int lp_player, fixed lp_value, int lp_operation) {
+    int auto70738DD1_val;
+
+    // Variable Declarations
+    string lv_ref;
+    fixed lv_default;
+
+    // Variable Initialization
+    lv_ref = lp_reference;
+    lv_default = libNtve_gf_CatalogReferenceGetAsReal(lv_ref, c_playerAny);
+
+    // Implementation
+    auto70738DD1_val = lp_operation;
+    if (auto70738DD1_val == c_upgradeOperationAdd) {
+        return libNtve_gf_CatalogReferenceSetAsReal(lp_reference, lp_player, (lv_default + lp_value));
+    }
+    else if (auto70738DD1_val == c_upgradeOperationSubtract) {
+        return libNtve_gf_CatalogReferenceSetAsReal(lp_reference, lp_player, (lv_default - lp_value));
+    }
+    else if (auto70738DD1_val == c_upgradeOperationMultiply) {
+        return libNtve_gf_CatalogReferenceSetAsReal(lp_reference, lp_player, (lv_default * lp_value));
+    }
+    else if (auto70738DD1_val == c_upgradeOperationDivide) {
+        return libNtve_gf_CatalogReferenceSetAsReal(lp_reference, lp_player, (lv_default / lp_value));
+    }
+    else if (auto70738DD1_val == c_upgradeOperationSet) {
+        return libNtve_gf_CatalogReferenceSetAsReal(lp_reference, lp_player, lp_value);
+    }
+    else {
+        return libNtve_gf_CatalogReferenceSetAsReal(lp_reference, lp_player, (lv_default + lp_value));
+    }
 }
 
 void libNtve_gf__CineModeTurnOnOffForPlayer (int lp_player, bool lp_onOff) {
@@ -1545,8 +1618,7 @@ void libNtve_gf__CineModeHideUI (playergroup lp_players) {
         if (((GameMapIsBlizzard() == true) || (lv_uIFrame != c_syncFrameTypeBattleUI)) && (libNtve_gv__GameUIFrameFiltered[(lv_uIFrame)] == false)) {
             UISetFrameVisible(lp_players, lv_uIFrame, false);
         }
-        else {
-        }
+
     }
 }
 
@@ -1632,14 +1704,12 @@ void libNtve_gf_CinematicMode (bool lp_onOff, playergroup lp_players, fixed lp_d
             if ((libNtve_gf_PlayerInCinematicMode(lv_pickedPlayer) == true)) {
                 PlayerGroupRemove(lv_validPlayers, lv_pickedPlayer);
             }
-            else {
-            }
+
         }
         if ((PlayerGroupCount(lv_validPlayers) == 0)) {
             return ;
         }
-        else {
-        }
+
         UISetHotkeyAllowed(lv_validPlayers, c_hotkeyCameraFollow, false);
         libNtve_gf__CineModeTurnOnOffForPlayerGroup(lv_validPlayers, true);
         libNtve_gf__CineModeHideUI(lv_validPlayers);
@@ -1678,19 +1748,16 @@ void libNtve_gf_CinematicMode (bool lp_onOff, playergroup lp_players, fixed lp_d
             if ((libNtve_gf_PlayerInCinematicMode(lv_pickedPlayer) == false)) {
                 PlayerGroupRemove(lv_validPlayers, lv_pickedPlayer);
             }
-            else {
-            }
+
         }
         if ((PlayerGroupCount(lv_validPlayers) == 0)) {
             return ;
         }
-        else {
-        }
+
         if ((libNtve_gv__CineTransitionStyle == libNtve_ge_CinematicTransitionStyle_Mission) && (lp_onOff == false)) {
             TransmissionClearGroup(lp_players);
         }
-        else {
-        }
+
         libNtve_gf_HideAllCinematicPortraits(lv_validPlayers);
         libNtve_gf__CineModeTurnOnOffForPlayerGroup(lv_validPlayers, false);
         libNtve_gf_SetAllSoundChannelVolumes(libNtve_ge_VolumeChannelMode_Game, lv_validPlayers, MaxF(lp_duration, 1.5));
@@ -1733,8 +1800,7 @@ void libNtve_gf_GlobalCinematicSetting (bool lp_onOff) {
     if ((libNtve_gv__CineModeGlobalOn == lp_onOff)) {
         return ;
     }
-    else {
-    }
+
     if ((lp_onOff == true)) {
         libNtve_gv__CineModeSavedSpeed = GameGetSpeedValue();
         GameSetSpeedValue(c_gameSpeedNormal);
@@ -1754,8 +1820,7 @@ void libNtve_gf_GlobalCinematicSetting (bool lp_onOff) {
         if ((libNtve_gv__CineModeSavedAIPaused == false)) {
             AITimePause(false);
         }
-        else {
-        }
+
         GameSetSpeedLocked(false);
         GameSetSeedLocked(false);
         GamePauseAllCharges(false);
@@ -1779,7 +1844,7 @@ bool libNtve_gf_PlayerInCinematicMode (int lp_player) {
 
 void libNtve_gf_MovieDynamicSubtitlesandDuration (string lp_soundFile) {
     // Implementation
-    MovieAddSubTitleText((StringExternal("Param/Value/lib_Ntve_2790CD6C") + StringExternal(CatalogFieldValueGet(c_gameCatalogSound, lp_soundFile, "AssetArray.Speaker", c_playerAny)) + StringExternal("Param/Value/lib_Ntve_112EB177") + StringExternal(CatalogFieldValueGet(c_gameCatalogSound, lp_soundFile, "AssetArray.Subtitle", c_playerAny))), ((1000 * FixedToInt(SoundLengthSync(SoundLink(lp_soundFile, 0)))) + 400), -1);
+    MovieAddSubTitleText((StringExternal("Param/Value/lib_Ntve_1081F0A4") + StringToText(CatalogFieldValueGet(c_gameCatalogSound, lp_soundFile, "AssetArray[" + IntToString(0) + "].Speaker", c_playerAny)) + StringExternal("Param/Value/lib_Ntve_6565C051") + StringToText(CatalogFieldValueGet(c_gameCatalogSound, lp_soundFile, "AssetArray[" + IntToString(0) + "].Subtitle", c_playerAny))), ((1000 * FixedToInt(SoundLengthSync(SoundLink(lp_soundFile, 0)))) + 400), -1);
 }
 
 text libNtve_gf_ConvertBooleanToText (bool lp_value) {
@@ -1902,8 +1967,7 @@ int libNtve_gf_ConvertIntegerToDebugMessageType (int lp_value) {
     if (((lp_value < 1) || (lp_value > 16))) {
         return 1;
     }
-    else {
-    }
+
     return lp_value;
 }
 
@@ -1951,8 +2015,7 @@ int libNtve_gf_CreateDialogItemButton (int lp_dialog, int lp_width, int lp_heigh
     if ((lp_hoverImage != "")) {
         libNtve_gf_SetDialogItemImage2(lv_dialogitem, lp_hoverImage, PlayerGroupAll());
     }
-    else {
-    }
+
     return lv_dialogitem;
 }
 
@@ -2011,13 +2074,11 @@ int libNtve_gf_CreateDialogItemLabel (int lp_dialog, int lp_width, int lp_height
     if ((lp_color != ColorWithAlpha(0,0,0,0))) {
         libNtve_gf_SetDialogItemColor(lv_dialogitem, lp_color, PlayerGroupAll());
     }
-    else {
-    }
+
     if ((lp_textWriteout == true)) {
         libNtve_gf_SetDialogItemTextWriteoutDuration(lv_dialogitem, lp_textWriteoutDuration, PlayerGroupAll());
     }
-    else {
-    }
+
     return lv_dialogitem;
 }
 
@@ -2392,15 +2453,13 @@ void libNtve_gf_DisplayScreenButton (int lp_screenButtonID, text lp_text, int lp
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_Ntve_3EFBEA6A") + IntToText(libNtve_gv_c_ScreenButtonMaxCount) + StringExternal("Param/Value/lib_Ntve_8BE5995A")));
         return ;
     }
-    else {
-    }
+
     if ((libNtve_gv_screenButtonDialogs[lp_screenButtonID] == c_invalidDialogId)) {
         DialogCreate(1, 1, c_anchorCenter, 0, 0, true);
         libNtve_gv_screenButtonDialogs[lp_screenButtonID] = DialogLastCreated();
         DialogSetImageVisible(DialogLastCreated(), false);
     }
-    else {
-    }
+
     DialogSetSize(libNtve_gv_screenButtonDialogs[lp_screenButtonID], lp_width, lp_height);
     DialogSetPosition(libNtve_gv_screenButtonDialogs[lp_screenButtonID], lp_anchor, lp_offsetX, lp_offsetY);
     if ((libNtve_gv_screenButtons[lp_screenButtonID] == c_invalidDialogControlId)) {
@@ -2411,8 +2470,7 @@ void libNtve_gf_DisplayScreenButton (int lp_screenButtonID, text lp_text, int lp
         libNtve_gf_SetDialogItemImage2(DialogControlLastCreated(), libNtve_gv_screenButtonsHoverImage[lp_screenButtonID], PlayerGroupAll());
         libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "ScreenButtonText", PlayerGroupAll());
     }
-    else {
-    }
+
     DialogControlSetSize(libNtve_gv_screenButtons[lp_screenButtonID], PlayerGroupAll(), lp_width, lp_height);
     DialogControlSetPosition(libNtve_gv_screenButtons[lp_screenButtonID], PlayerGroupAll(), c_anchorCenter, 0, 0);
     DialogControlSetPropertyAsText(libNtve_gv_screenButtons[lp_screenButtonID], c_triggerControlPropertyText, PlayerGroupAll(), lp_text);
@@ -2425,8 +2483,7 @@ void libNtve_gf_HideScreenButton (bool lp_showHide, int lp_screenButtonID) {
     if ((libNtve_gv_screenButtonDialogs[lp_screenButtonID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     DialogSetVisible(libNtve_gv_screenButtonDialogs[lp_screenButtonID], PlayerGroupAll(), lp_showHide);
 }
 
@@ -2435,8 +2492,7 @@ void libNtve_gf_FlashScreenButton (int lp_screenButtonID, fixed lp_flashTime, co
     if ((libNtve_gv_screenButtonDialogs[lp_screenButtonID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     libNtve_gv_tP_FlashScreenButtonID = lp_screenButtonID;
     libNtve_gv_tP_FlashScreenButtonFlashTime = lp_flashTime;
     libNtve_gv_tP_FlashScreenButtonColor1 = lp_color1;
@@ -2449,18 +2505,15 @@ void libNtve_gf_StopFlashingScreenButton (int lp_screenButtonID) {
     if ((libNtve_gv_screenButtonDialogs[lp_screenButtonID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     if ((libNtve_gv_screenButtonsFlashing[lp_screenButtonID] == false)) {
         return ;
     }
-    else {
-    }
+
     if ((libNtve_gv_screenButtonsFlashStopping[lp_screenButtonID] == true)) {
         return ;
     }
-    else {
-    }
+
     libNtve_gv_screenButtonsFlashStopping[lp_screenButtonID] = true;
     libNtve_gf_SetDialogItemImageType(libNtve_gv_screenButtons[lp_screenButtonID], libNtve_gv_screenButtonsBorderType[lp_screenButtonID], PlayerGroupAll());
     libNtve_gf_SetDialogItemImage(libNtve_gf_ScreenButton(lp_screenButtonID), libNtve_gv_screenButtonsFlashingBorderImage[lp_screenButtonID], PlayerGroupAll());
@@ -2500,14 +2553,12 @@ void libNtve_gf_DisplayScreenImage (int lp_screenImageID, string lp_image, int l
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_Ntve_83A50D3D") + IntToText(libNtve_gv_c_ScreenImageMaxCount) + StringExternal("Param/Value/lib_Ntve_B9D80F71")));
         return ;
     }
-    else {
-    }
+
     if ((libNtve_gv_screenImageDialogs[lp_screenImageID] == c_invalidDialogId)) {
         DialogCreate(1, 1, c_anchorCenter, 0, 0, false);
         libNtve_gv_screenImageDialogs[lp_screenImageID] = DialogLastCreated();
     }
-    else {
-    }
+
     DialogSetImageVisible(libNtve_gv_screenImageDialogs[lp_screenImageID], false);
     DialogSetSize(libNtve_gv_screenImageDialogs[lp_screenImageID], lp_width, lp_height);
     DialogSetPosition(libNtve_gv_screenImageDialogs[lp_screenImageID], lp_anchor, lp_offsetX, lp_offsetY);
@@ -2516,8 +2567,7 @@ void libNtve_gf_DisplayScreenImage (int lp_screenImageID, string lp_image, int l
         DialogControlCreate(libNtve_gv_screenImageDialogs[lp_screenImageID], c_triggerControlTypeImage);
         libNtve_gv_screenImageDialogImages[lp_screenImageID] = DialogControlLastCreated();
     }
-    else {
-    }
+
     libNtve_gf_SetDialogItemImageType(libNtve_gv_screenImageDialogImages[lp_screenImageID], c_triggerImageTypeNormal, PlayerGroupAll());
     libNtve_gf_SetDialogItemImage(libNtve_gv_screenImageDialogImages[lp_screenImageID], lp_image, PlayerGroupAll());
     libNtve_gf_SetDialogItemBlendMode(libNtve_gv_screenImageDialogImages[lp_screenImageID], lp_blendMode, PlayerGroupAll());
@@ -2533,8 +2583,7 @@ void libNtve_gf_HideScreenImage (bool lp_showHideOption, int lp_screenImageID) {
     if ((libNtve_gv_screenImageDialogs[lp_screenImageID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     DialogSetVisible(libNtve_gv_screenImageDialogs[lp_screenImageID], PlayerGroupAll(), lp_showHideOption);
 }
 
@@ -2552,8 +2601,7 @@ void libNtve_gf_StopPulsingScreenImage (int lp_screenImageID) {
     if ((libNtve_gv_screenImageDialogs[lp_screenImageID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     libNtve_gv_screenImagePulsing[lp_screenImageID] = false;
 }
 
@@ -2573,14 +2621,12 @@ void libNtve_gf_DisplayScreenLabel (int lp_screenLabelID, text lp_label, string 
         UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, (StringExternal("Param/Value/lib_Ntve_78462626") + IntToText(libNtve_gv_c_ScreenLabelMaxCount) + StringExternal("Param/Value/lib_Ntve_333F226E")));
         return ;
     }
-    else {
-    }
+
     if ((libNtve_gv_screenLabelDialogs[lp_screenLabelID] == c_invalidDialogId)) {
         DialogCreate(1, 1, c_anchorCenter, 0, 0, false);
         libNtve_gv_screenLabelDialogs[lp_screenLabelID] = DialogLastCreated();
     }
-    else {
-    }
+
     DialogSetImageVisible(libNtve_gv_screenLabelDialogs[lp_screenLabelID], false);
     DialogSetSize(libNtve_gv_screenLabelDialogs[lp_screenLabelID], lp_width, lp_height);
     DialogSetPosition(libNtve_gv_screenLabelDialogs[lp_screenLabelID], lp_anchor, lp_offsetX, lp_offsetY);
@@ -2590,8 +2636,7 @@ void libNtve_gf_DisplayScreenLabel (int lp_screenLabelID, text lp_label, string 
         DialogControlSetFullDialog(DialogControlLastCreated(), PlayerGroupAll(), true);
         DialogControlSetPosition(DialogControlLastCreated(), PlayerGroupAll(), c_anchorCenter, 0, 0);
     }
-    else {
-    }
+
     libNtve_gf_SetDialogItemText(libNtve_gv_screenLabelDialogLabels[lp_screenLabelID], lp_label, PlayerGroupAll());
     libNtve_gf_SetDialogItemStyle(libNtve_gv_screenLabelDialogLabels[lp_screenLabelID], lp_style, PlayerGroupAll());
     DialogSetVisible(libNtve_gv_screenLabelDialogs[lp_screenLabelID], PlayerGroupAll(), true);
@@ -2602,8 +2647,7 @@ void libNtve_gf_HideScreenImage2 (bool lp_showHideOption, int lp_screenLabelID) 
     if ((libNtve_gv_screenLabelDialogs[lp_screenLabelID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     DialogSetVisible(libNtve_gv_screenLabelDialogs[lp_screenLabelID], PlayerGroupAll(), lp_showHideOption);
 }
 
@@ -2637,14 +2681,12 @@ void libNtve_gf_CreateExplosionAtPoint (int lp_size, int lp_race, point lp_point
         if ((lp_race == libNtve_ge_ExplosionType_Zerg)) {
             lv_race = "Zerg";
         }
-        else {
-        }
+
     }
     if ((lp_size == libNtve_ge_ExplosionSize_Small)) {
         lv_size = "Small";
     }
-    else {
-    }
+
     ActorSend(lv_explosion, (("Signal " + lv_race + lv_size)));
 }
 
@@ -2742,13 +2784,11 @@ int libNtve_gf_ArithmeticIntClamp (int lp_value, int lp_min, int lp_max) {
     if ((lp_value < lp_min)) {
         return lp_min;
     }
-    else {
-    }
+
     if ((lp_value > lp_max)) {
         return lp_max;
     }
-    else {
-    }
+
     return lp_value;
 }
 
@@ -2757,14 +2797,17 @@ fixed libNtve_gf_ArithmeticRealClamp (fixed lp_value, fixed lp_min, fixed lp_max
     if ((lp_value < lp_min)) {
         return lp_min;
     }
-    else {
-    }
+
     if ((lp_value > lp_max)) {
         return lp_max;
     }
-    else {
-    }
+
     return lp_value;
+}
+
+fixed libNtve_gf_Log (fixed lp_x, fixed lp_x2) {
+    // Implementation
+    return (Log2(lp_x)/Log2(lp_x2));
 }
 
 fixed libNtve_gf_RandomPercent () {
@@ -2810,6 +2853,56 @@ void libNtve_gf_CreatePingFacingAngle (playergroup lp_players, string lp_model, 
     // Implementation
     lv_pointWithAngle = libNtve_gf_PointFacingAngle(lp_position, lp_angle);
     PingCreate(lp_players, lp_model, lv_pointWithAngle, lp_color, lp_duration);
+}
+
+void libNtve_gf_PlayerApplySkinReplacingExistingUnit (int lp_player, string lp_skin, bool lp_activateDeactivate) {
+    int auto8B0EB0F9_ae;
+    int auto8B0EB0F9_ai;
+
+    // Variable Declarations
+    string lv_modelOld;
+    string lv_modelNew;
+    int lv_i;
+    int lv_c;
+    string lv_entry;
+    actor lv_ar;
+    string lv_fromPath;
+    string lv_toPath;
+    string lv_replacementType;
+
+    // Variable Initialization
+    lv_modelOld = "";
+    lv_modelNew = "";
+    lv_c = (CatalogFieldValueCount(c_gameCatalogSkin, lp_skin, "ReplacementArray", c_playerAny) - 1);
+    lv_fromPath = "From";
+    lv_toPath = "To";
+    lv_replacementType = "";
+
+    // Implementation
+    PlayerApplySkin(lp_player, lp_skin, lp_activateDeactivate);
+    if ((lp_activateDeactivate == false)) {
+        lv_fromPath = "To";
+        lv_toPath = "From";
+    }
+
+    ActorRegionCreate(null, "TriggerRegion", RegionEntireMap());
+    lv_ar = libNtve_gf_ActorLastCreated();
+    auto8B0EB0F9_ae = lv_c;
+    auto8B0EB0F9_ai = 1;
+    lv_i = 0;
+    for ( ; ( (auto8B0EB0F9_ai >= 0 && lv_i <= auto8B0EB0F9_ae) || (auto8B0EB0F9_ai <= 0 && lv_i >= auto8B0EB0F9_ae) ) ; lv_i += auto8B0EB0F9_ai ) {
+        lv_replacementType = CatalogFieldValueGet(c_gameCatalogSkin, lp_skin, "ReplacementArray[" + IntToString(lv_i) + "].Catalog", c_playerAny);
+        if ((lv_replacementType == "Model")) {
+            lv_modelOld = CatalogFieldValueGet(c_gameCatalogSkin, lp_skin, (("ReplacementArray[" + IntToString(lv_i) + "]." + lv_fromPath)), c_playerAny);
+            lv_modelNew = CatalogFieldValueGet(c_gameCatalogSkin, lp_skin, (("ReplacementArray[" + IntToString(lv_i) + "]." + lv_toPath)), c_playerAny);
+            if ((CatalogEntryIsValid(c_gameCatalogModel, lv_modelOld) == true) && (CatalogEntryIsValid(c_gameCatalogModel, lv_modelNew) == true)) {
+                ActorRegionSend(lv_ar, c_actorIntersectAgainstRadiusContact, (("ModelSwap " + lv_modelNew)), "Unit", ("ModelName " + lv_modelOld + "; PlayerId " + IntToString(lp_player) + " " + IntToString(lp_player)));
+            }
+
+        }
+
+    }
+    ActorSend(lv_ar, "Destroy");
 }
 
 void libNtve_gf_ClearAlliance (int lp_sourcePlayer, int lp_targetPlayer) {
@@ -2894,8 +2987,7 @@ void libNtve_gf_SetAllianceOneWay (int lp_sourcePlayer, int lp_targetPlayer, int
         else {
         }
     }
-    else {
-    }
+
 }
 
 void libNtve_gf_SetPlayerGroupAlliance (playergroup lp_players, int lp_alliance) {
@@ -2922,8 +3014,65 @@ void libNtve_gf_SetPlayerGroupAlliance (playergroup lp_players, int lp_alliance)
             if ((lv_player1 != lv_player2)) {
                 libNtve_gf_SetAllianceOneWay(lv_player1, lv_player2, lp_alliance);
             }
-            else {
+
+        }
+    }
+}
+
+void libNtve_gf_SetAllianceBetweenTwoPlayerGroups (playergroup lp_sourcePlayers, playergroup lp_targetPlayers, int lp_alliance) {
+    playergroup auto5D267C1B_g;
+    int auto5D267C1B_p;
+    playergroup auto0889F63A_g;
+    int auto0889F63A_p;
+
+    // Variable Declarations
+    int lv_player1;
+    int lv_player2;
+
+    // Variable Initialization
+
+    // Implementation
+    auto5D267C1B_g = lp_sourcePlayers; 
+    auto5D267C1B_p = 1;
+    for ( ; auto5D267C1B_p <= PlayerGroupCount(auto5D267C1B_g) ; auto5D267C1B_p += BoolToInt(lv_player1 == PlayerGroupPlayer(auto5D267C1B_g, auto5D267C1B_p)) ) {
+        lv_player1 = PlayerGroupPlayer(auto5D267C1B_g, auto5D267C1B_p);
+        auto0889F63A_g = lp_targetPlayers; 
+        auto0889F63A_p = 1;
+        for ( ; auto0889F63A_p <= PlayerGroupCount(auto0889F63A_g) ; auto0889F63A_p += BoolToInt(lv_player2 == PlayerGroupPlayer(auto0889F63A_g, auto0889F63A_p)) ) {
+            lv_player2 = PlayerGroupPlayer(auto0889F63A_g, auto0889F63A_p);
+            if ((lv_player1 != lv_player2)) {
+                libNtve_gf_SetAllianceOneWay(lv_player1, lv_player2, lp_alliance);
             }
+
+        }
+    }
+}
+
+void libNtve_gf_SetAllianceAspectForPlayerGroup (playergroup lp_players, int lp_inAllianceId, bool lp_ally) {
+    playergroup autoD869EC3F_g;
+    int autoD869EC3F_p;
+    playergroup autoF24022F6_g;
+    int autoF24022F6_p;
+
+    // Variable Declarations
+    int lv_player1;
+    int lv_player2;
+
+    // Variable Initialization
+
+    // Implementation
+    autoD869EC3F_g = lp_players; 
+    autoD869EC3F_p = 1;
+    for ( ; autoD869EC3F_p <= PlayerGroupCount(autoD869EC3F_g) ; autoD869EC3F_p += BoolToInt(lv_player1 == PlayerGroupPlayer(autoD869EC3F_g, autoD869EC3F_p)) ) {
+        lv_player1 = PlayerGroupPlayer(autoD869EC3F_g, autoD869EC3F_p);
+        autoF24022F6_g = lp_players; 
+        autoF24022F6_p = 1;
+        for ( ; autoF24022F6_p <= PlayerGroupCount(autoF24022F6_g) ; autoF24022F6_p += BoolToInt(lv_player2 == PlayerGroupPlayer(autoF24022F6_g, autoF24022F6_p)) ) {
+            lv_player2 = PlayerGroupPlayer(autoF24022F6_g, autoF24022F6_p);
+            if ((lv_player1 != lv_player2)) {
+                PlayerSetAlliance(lv_player1, lp_inAllianceId, lv_player2, lp_ally);
+            }
+
         }
     }
 }
@@ -2971,6 +3120,34 @@ void libNtve_gf_PlayerRemoveCooldown (int lp_inPlayer, string lp_inCooldown) {
     PlayerAddCooldown(lp_inPlayer, lp_inCooldown, (-1.0 * PlayerGetCooldown(lp_inPlayer, lp_inCooldown)));
 }
 
+playergroup libNtve_gf_AlliesEnemiesOfPlayerCountInactiveAndSelf (int lp_alliance, int lp_player) {
+    playergroup autoB554E2D1_g;
+    int autoB554E2D1_p;
+
+    // Variable Declarations
+    int lv_itPlayer;
+    playergroup lv_playerGroup;
+
+    // Variable Initialization
+    lv_playerGroup = PlayerGroupEmpty();
+
+    // Implementation
+    if ((lp_player == c_playerAny)) {
+        return PlayerGroupEmpty();
+    }
+
+    autoB554E2D1_g = PlayerGroupAll(); 
+    autoB554E2D1_p = 1;
+    for ( ; autoB554E2D1_p <= PlayerGroupCount(autoB554E2D1_g) ; autoB554E2D1_p += BoolToInt(lv_itPlayer == PlayerGroupPlayer(autoB554E2D1_g, autoB554E2D1_p)) ) {
+        lv_itPlayer = PlayerGroupPlayer(autoB554E2D1_g, autoB554E2D1_p);
+        if ((libNtve_gf_PlayerIsEnemy(lp_player, lv_itPlayer, lp_alliance) == true)) {
+            PlayerGroupAdd(lv_playerGroup, lv_itPlayer);
+        }
+
+    }
+    return lv_playerGroup;
+}
+
 void libNtve_gf_AddPlayerGroupToPlayerGroup (playergroup lp_sourceGroup, playergroup lp_targetGroup) {
     playergroup auto57A2B8C2_g;
     int auto57A2B8C2_p;
@@ -3005,6 +3182,42 @@ void libNtve_gf_RemovePlayerGroupFromPlayerGroup (playergroup lp_sourceGroup, pl
         lv_pickedPlayer = PlayerGroupPlayer(auto2647939F_g, auto2647939F_p);
         PlayerGroupRemove(lp_targetGroup, lv_pickedPlayer);
     }
+}
+
+playergroup libNtve_gf_UnionOfPlayerGroups (playergroup lp_groupA, playergroup lp_groupB) {
+    // Variable Declarations
+    playergroup lv_group;
+
+    // Variable Initialization
+    lv_group = PlayerGroupCopy(lp_groupA);
+
+    // Implementation
+    libNtve_gf_AddPlayerGroupToPlayerGroup(lp_groupB, lv_group);
+    return lv_group;
+}
+
+playergroup libNtve_gf_IntersectionOfPlayerGroups (playergroup lp_groupA, playergroup lp_groupB) {
+    playergroup auto6FEE7F4A_g;
+    int auto6FEE7F4A_p;
+
+    // Variable Declarations
+    playergroup lv_group;
+    int lv_itPlayer;
+
+    // Variable Initialization
+    lv_group = PlayerGroupEmpty();
+
+    // Implementation
+    auto6FEE7F4A_g = lp_groupA; 
+    auto6FEE7F4A_p = 1;
+    for ( ; auto6FEE7F4A_p <= PlayerGroupCount(auto6FEE7F4A_g) ; auto6FEE7F4A_p += BoolToInt(lv_itPlayer == PlayerGroupPlayer(auto6FEE7F4A_g, auto6FEE7F4A_p)) ) {
+        lv_itPlayer = PlayerGroupPlayer(auto6FEE7F4A_g, auto6FEE7F4A_p);
+        if ((PlayerGroupHasPlayer(lp_groupB, lv_itPlayer) == true)) {
+            PlayerGroupAdd(lv_group, lv_itPlayer);
+        }
+
+    }
+    return lv_group;
 }
 
 point libNtve_gf_PointFromPositionAndAngle (point lp_point, fixed lp_angle) {
@@ -3123,8 +3336,7 @@ int libNtve_gf_CinematicPortrait (int lp_position) {
     if ((libNtve_gv_cinematicPortraits[lv_index] != c_invalidPortraitId)) {
         return libNtve_gv_cinematicPortraits[lv_index];
     }
-    else {
-    }
+
     PortraitCreate(lv_offsetX, lv_offsetY, lv_anchor, lv_width, lv_height, null, "Dflt", "", true, true);
     libNtve_gv_cinematicPortraits[lv_index] = PortraitLastCreated();
     PortraitSetBorderVisible(libNtve_gv_cinematicPortraits[lv_index], true);
@@ -3138,33 +3350,27 @@ void libNtve_gf_HideAllCinematicPortraits (playergroup lp_players) {
     if ((libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitBottomLeft] != c_invalidPortraitId)) {
         PortraitSetVisible(libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitBottomLeft], lp_players, false, false);
     }
-    else {
-    }
+
     if ((libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitBottomRight] != c_invalidPortraitId)) {
         PortraitSetVisible(libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitBottomRight], lp_players, false, false);
     }
-    else {
-    }
+
     if ((libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitCenterLeft] != c_invalidPortraitId)) {
         PortraitSetVisible(libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitCenterLeft], lp_players, false, false);
     }
-    else {
-    }
+
     if ((libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitCenterRight] != c_invalidPortraitId)) {
         PortraitSetVisible(libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitCenterRight], lp_players, false, false);
     }
-    else {
-    }
+
     if ((libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitTopLeft] != c_invalidPortraitId)) {
         PortraitSetVisible(libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitTopLeft], lp_players, false, false);
     }
-    else {
-    }
+
     if ((libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitTopRight] != c_invalidPortraitId)) {
         PortraitSetVisible(libNtve_gv_cinematicPortraits[libNtve_ge_CinematicPortraitIndex_CinematicPortraitTopRight], lp_players, false, false);
     }
-    else {
-    }
+
 }
 
 int libNtve_gf_FullscreenPortrait () {
@@ -3178,8 +3384,7 @@ int libNtve_gf_FullscreenPortrait () {
     if ((libNtve_gv_cinematicPortraits[lv_index] != c_invalidPortraitId)) {
         return libNtve_gv_cinematicPortraits[lv_index];
     }
-    else {
-    }
+
     PortraitCreate(0, 0, c_anchorCenter, 0, 0, null, "Dflt", "", true, true);
     libNtve_gv_cinematicPortraits[lv_index] = PortraitLastCreated();
     PortraitSetFullscreen(libNtve_gv_cinematicPortraits[lv_index], true);
@@ -3226,8 +3431,7 @@ bool libNtve_gf_UnitTypeIsSelected (string lp_unitType, int lp_player) {
         if ((UnitGetType(lv_indexUnit) == lp_unitType)) {
             return true;
         }
-        else {
-        }
+
     }
     return false;
 }
@@ -3238,14 +3442,45 @@ void libNtve_gf_StoreUnitSelection (int lp_forPlayer, int lp_storeOption) {
     if ((lp_storeOption == libNtve_ge_UnitSelectionStoreOption_ClearUnitSelection)) {
         UnitClearSelection(lp_forPlayer);
     }
-    else {
-    }
+
 }
 
 void libNtve_gf_RestoreUnitSelection (int lp_forPlayer) {
     // Implementation
     UnitClearSelection(lp_forPlayer);
     UnitGroupSelect(libNtve_gv_unitSelectionStored[lp_forPlayer], lp_forPlayer, true);
+}
+
+void libNtve_gf_CopyUnitControlGroups (unit lp_sourceUnit, unit lp_targetUnit) {
+    playergroup auto8C5BEE0F_g;
+    int auto8C5BEE0F_p;
+    playergroup auto52E24D77_g;
+    int auto52E24D77_p;
+
+    // Variable Declarations
+    playergroup lv_clearSelectionGroup;
+    int lv_itPlayer;
+
+    // Variable Initialization
+    lv_clearSelectionGroup = PlayerGroupEmpty();
+
+    // Implementation
+    auto8C5BEE0F_g = PlayerGroupActive(); 
+    auto8C5BEE0F_p = 1;
+    for ( ; auto8C5BEE0F_p <= PlayerGroupCount(auto8C5BEE0F_g) ; auto8C5BEE0F_p += BoolToInt(lv_itPlayer == PlayerGroupPlayer(auto8C5BEE0F_g, auto8C5BEE0F_p)) ) {
+        lv_itPlayer = PlayerGroupPlayer(auto8C5BEE0F_g, auto8C5BEE0F_p);
+        if ((UnitIsSelected(lp_targetUnit, lv_itPlayer) == false)) {
+            PlayerGroupAdd(lv_clearSelectionGroup, lv_itPlayer);
+        }
+
+    }
+    UnitCreateEffectUnit(lp_targetUnit, "CopyTargetSelectionAndControlGroups", lp_sourceUnit);
+    auto52E24D77_g = lv_clearSelectionGroup; 
+    auto52E24D77_p = 1;
+    for ( ; auto52E24D77_p <= PlayerGroupCount(auto52E24D77_g) ; auto52E24D77_p += BoolToInt(lv_itPlayer == PlayerGroupPlayer(auto52E24D77_g, auto52E24D77_p)) ) {
+        lv_itPlayer = PlayerGroupPlayer(auto52E24D77_g, auto52E24D77_p);
+        UnitSelect(lp_targetUnit, lv_itPlayer, false);
+    }
 }
 
 void SoundPlayScene (soundlink lp_soundLink, playergroup lp_players, unitgroup lp_units, string lp_animation) {
@@ -3297,6 +3532,8 @@ void libNtve_gf_SetAllSoundChannelVolumes (int lp_mode, playergroup lp_players, 
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategorySpell, 40.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryTV, 100.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUI, 100.0, lp_duration);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser11, 0.0, 0.0);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser18, 0.0, 0.0);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryVoice, 0.0, lp_duration);
     }
     else if (auto37650D48_val == libNtve_ge_VolumeChannelMode_Speech) {
@@ -3323,6 +3560,8 @@ void libNtve_gf_SetAllSoundChannelVolumes (int lp_mode, playergroup lp_players, 
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategorySpell, 25.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryTV, 100.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUI, 25.0, lp_duration);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser11, 0.0, 0.0);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser18, 0.0, 0.0);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryVoice, 0.0, lp_duration);
     }
     else if (auto37650D48_val == libNtve_ge_VolumeChannelMode_Game) {
@@ -3349,6 +3588,8 @@ void libNtve_gf_SetAllSoundChannelVolumes (int lp_mode, playergroup lp_players, 
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategorySpell, 100.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryTV, 100.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUI, 100.0, lp_duration);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser11, 100.0, 0.0);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser18, 100.0, 0.0);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryVoice, 100.0, lp_duration);
     }
     else if (auto37650D48_val == libNtve_ge_VolumeChannelMode_Victory) {
@@ -3375,6 +3616,8 @@ void libNtve_gf_SetAllSoundChannelVolumes (int lp_mode, playergroup lp_players, 
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategorySpell, 0.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryTV, 0.0, lp_duration);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUI, 100.0, lp_duration);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser11, 0.0, 0.0);
+        SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryUser18, 0.0, 0.0);
         SoundChannelSetVolume(PlayerGroupAll(), c_soundCategoryVoice, 0.0, lp_duration);
     }
     else {
@@ -3423,8 +3666,7 @@ void libNtve_gf__StoryModeHideUI (playergroup lp_players) {
         if ((libNtve_gf_UIFrameFlagCheck(lv_indexFrame, libNtve_ge_UIFrameFlag_StoryModeFrame) == false) && (libNtve_gv__GameUIFrameFiltered[(lv_indexFrame)] == false)) {
             UISetFrameVisible(lp_players, lv_indexFrame, false);
         }
-        else {
-        }
+
     }
 }
 
@@ -3460,14 +3702,12 @@ void libNtve_gf_StoryMode (playergroup lp_players, bool lp_onOff) {
             if ((libNtve_gf_PlayerInStoryMode(lv_pickedPlayer) == true)) {
                 PlayerGroupRemove(lv_validPlayers, lv_pickedPlayer);
             }
-            else {
-            }
+
         }
         if ((PlayerGroupCount(lv_validPlayers) == 0)) {
             return ;
         }
-        else {
-        }
+
         libNtve_gf__StoryModeOnOffForPlayerGroup(lv_validPlayers, true);
         libNtve_gf__StoryModeHideUI(lv_validPlayers);
         autoD6B5FE03_g = lv_validPlayers; 
@@ -3491,14 +3731,12 @@ void libNtve_gf_StoryMode (playergroup lp_players, bool lp_onOff) {
             if ((libNtve_gf_PlayerInStoryMode(lv_pickedPlayer) == false)) {
                 PlayerGroupRemove(lv_validPlayers, lv_pickedPlayer);
             }
-            else {
-            }
+
         }
         if ((PlayerGroupCount(lv_validPlayers) == 0)) {
             return ;
         }
-        else {
-        }
+
         libNtve_gf__StoryModeOnOffForPlayerGroup(lv_validPlayers, false);
         libNtve_gf__StoryModeRestoreUI(lv_validPlayers);
         autoF122BA15_g = lv_validPlayers; 
@@ -3631,13 +3869,11 @@ int libNtve_gf__BB_HPBarCurrentWidth (int lp_barID) {
     if ((lv_max <= 0.0)) {
         lv_max = 1.0;
     }
-    else {
-    }
+
     if ((lv_current > lv_max)) {
         lv_current = lv_max;
     }
-    else {
-    }
+
     lv_width = FixedToInt((IntToFixed(libNtve_gf__BB_HPBarWidth(lp_barID)) * (lv_current / lv_max)));
     return lv_width;
 }
@@ -3692,8 +3928,7 @@ bool auto_libNtve_gf__BB_HPBarChange_TriggerFunc (bool testConds, bool runAction
     if (((libNtve_gv__BB_HPOldWidth[lp_barID] < 0) || (libNtve_gv__BB_HPOldWidth[lp_barID] > libNtve_gf__BB_HPBarWidth(lp_barID)))) {
         libNtve_gv__BB_HPOldWidth[lp_barID] = libNtve_gf__BB_HPBarWidth(lp_barID);
     }
-    else {
-    }
+
     lv_newWidth = libNtve_gf__BB_HPBarCurrentWidth(lp_barID);
     lv_width = (libNtve_gv__BB_HPOldWidth[lp_barID] - lv_newWidth);
     libNtve_gv__BB_HPOldWidth[lp_barID] = lv_newWidth;
@@ -3710,8 +3945,7 @@ bool auto_libNtve_gf__BB_HPBarChange_TriggerFunc (bool testConds, bool runAction
         Wait(0.8, c_timeReal);
         DialogControlDestroy(DialogControlLastCreated());
     }
-    else {
-    }
+
     return true;
 }
 
@@ -3726,14 +3960,12 @@ void libNtve_gf_DisplayBossBar (int lp_bossBarID, string lp_portrait, text lp_ti
     if ((lp_bossBarID <= 0)) {
         return ;
     }
-    else {
-    }
+
     if ((lp_bossBarID > libNtve_gv__BBC_BossBarMaxCount)) {
         UIDisplayMessage(lp_players, c_messageAreaSubtitle, (StringExternal("Param/Value/lib_Ntve_13ECDD4D") + IntToText(libNtve_gv__BBC_BossBarMaxCount) + StringExternal("Param/Value/lib_Ntve_84FA80EA")));
         return ;
     }
-    else {
-    }
+
     libNtve_gv__BB_Players[lp_bossBarID] = lp_players;
     libNtve_gv__BB_Portraits[lp_bossBarID] = lp_portrait;
     libNtve_gv__BB_Title[lp_bossBarID] = lp_title;
@@ -3778,8 +4010,7 @@ void libNtve_gf_DisplayBossBar (int lp_bossBarID, string lp_portrait, text lp_ti
         libNtve_gf_SetDialogItemStyle(DialogControlLastCreated(), "BossBarHP", PlayerGroupAll());
         libNtve_gf_SetDialogItemRenderPriority(DialogControlLastCreated(), 520, PlayerGroupAll());
     }
-    else {
-    }
+
     libNtve_gf_SetBossBarRace(lp_bossBarID, libNtve_ge_BossBarRace_Terran, false);
     libNtve_gf_RefreshBossBar(lp_bossBarID);
     DialogSetVisible(libNtve_gv__BB_Dialog[lp_bossBarID], libNtve_gv__BB_Players[lp_bossBarID], true);
@@ -3791,14 +4022,12 @@ void libNtve_gf_SetBossBarMaximumValue (int lp_bossBarID, int lp_max, bool lp_re
     if ((libNtve_gv__BB_MaxValue[lp_bossBarID] <= 0.0)) {
         libNtve_gv__BB_MaxValue[lp_bossBarID] = 1.0;
     }
-    else {
-    }
+
     libNtve_gv__BB_Boss[lp_bossBarID] = null;
     if ((lp_refresh == true)) {
         libNtve_gf_RefreshBossBar(lp_bossBarID);
     }
-    else {
-    }
+
 }
 
 void libNtve_gf_SetBossBarCurrentValue (int lp_bossBarID, int lp_current, bool lp_refresh) {
@@ -3807,14 +4036,12 @@ void libNtve_gf_SetBossBarCurrentValue (int lp_bossBarID, int lp_current, bool l
     if ((libNtve_gv__BB_CurrentValue[lp_bossBarID] < 0.0)) {
         libNtve_gv__BB_CurrentValue[lp_bossBarID] = 0.0;
     }
-    else {
-    }
+
     libNtve_gv__BB_Boss[lp_bossBarID] = null;
     if ((lp_refresh == true)) {
         libNtve_gf_RefreshBossBar(lp_bossBarID);
     }
-    else {
-    }
+
 }
 
 void libNtve_gf_SetBossBarBoss (int lp_bossBarID, unit lp_boss, bool lp_refresh) {
@@ -3822,16 +4049,14 @@ void libNtve_gf_SetBossBarBoss (int lp_bossBarID, unit lp_boss, bool lp_refresh)
     if ((lp_boss != null)) {
         TriggerEnable(libNtve_gt__BB_BossHPChanged, true);
     }
-    else {
-    }
+
     libNtve_gv__BB_Boss[lp_bossBarID] = lp_boss;
     libNtve_gv__BB_MaxValue[lp_bossBarID] = 0.0;
     libNtve_gv__BB_CurrentValue[lp_bossBarID] = 0.0;
     if ((lp_refresh == true)) {
         libNtve_gf_RefreshBossBar(lp_bossBarID);
     }
-    else {
-    }
+
 }
 
 void libNtve_gf_SetBossBarRace (int lp_bossBarID, int lp_race, bool lp_refresh) {
@@ -3867,8 +4092,7 @@ void libNtve_gf_MoveBossBar (int lp_bossBarID, int lp_anchor, int lp_offsetX, in
     if ((libNtve_gv__BB_Dialog[lp_bossBarID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     DialogSetPosition(libNtve_gv__BB_Dialog[lp_bossBarID], lp_anchor, lp_offsetX, lp_offsetY);
 }
 
@@ -3877,8 +4101,7 @@ void libNtve_gf_ShowHideBossBar (bool lp_showHide, int lp_bossBarID) {
     if ((libNtve_gv__BB_Dialog[lp_bossBarID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     DialogSetVisible(libNtve_gv__BB_Dialog[lp_bossBarID], libNtve_gv__BB_Players[lp_bossBarID], lp_showHide);
 }
 
@@ -3887,8 +4110,7 @@ void libNtve_gf_RefreshBossBar (int lp_bossBarID) {
     if ((libNtve_gv__BB_Dialog[lp_bossBarID] == c_invalidDialogId)) {
         return ;
     }
-    else {
-    }
+
     DialogControlSetSize(libNtve_gv__BB_BGImgPortrait[lp_bossBarID], libNtve_gv__BB_Players[lp_bossBarID], libNtve_gf__BB_PortraitBorderWidth(lp_bossBarID), libNtve_gf__BB_PortraitBorderHeight(lp_bossBarID));
     DialogControlSetPosition(libNtve_gv__BB_BGImgPortrait[lp_bossBarID], libNtve_gv__BB_Players[lp_bossBarID], c_anchorLeft, 18, 1);
     libNtve_gf_SetDialogItemImage(libNtve_gv__BB_PortraitImage[lp_bossBarID], libNtve_gv__BB_Portraits[lp_bossBarID], libNtve_gv__BB_Players[lp_bossBarID]);
@@ -3928,8 +4150,7 @@ void libNtve_gf__StoreGameUIVisibleStates (bool lp_storeRestore, playergroup lp_
         if ((libNtve_gv__GameUIStored[(lp_index)] == false)) {
             return ;
         }
-        else {
-        }
+
     }
     auto1380166C_g = lp_players; 
     auto1380166C_p = 1;
@@ -3950,8 +4171,7 @@ void libNtve_gf__StoreGameUIVisibleStates (bool lp_storeRestore, playergroup lp_
                     UISetFrameVisible(PlayerGroupSingle(lv_player), lv_indexFrame, libNtve_gv__GameUIVisible[lv_player][lv_indexFrame][(lp_index)]);
                 }
             }
-            else {
-            }
+
         }
     }
 }
@@ -3978,8 +4198,7 @@ void libNtve_gf_HideGameUI (bool lp_showHide, playergroup lp_players) {
             if ((libNtve_gf_PlayerInCinematicMode(lv_player) == false) && (libNtve_gf_PlayerInStoryMode(lv_player) == false)) {
                 UISetMode(PlayerGroupSingle(lv_player), c_uiModeConsole, c_transitionDurationImmediate);
             }
-            else {
-            }
+
         }
         libNtve_gf__StoreGameUIVisibleStates(false, lp_players, libNtve_ge_GameUIStoreIndex_GameUI);
     }
@@ -3991,8 +4210,7 @@ void libNtve_gf_HideGameUI (bool lp_showHide, playergroup lp_players) {
             if ((libNtve_gf_PlayerInCinematicMode(lv_player) == false) && (libNtve_gf_PlayerInStoryMode(lv_player) == false)) {
                 UISetMode(PlayerGroupSingle(lv_player), c_uiModeFullscreen, c_transitionDurationImmediate);
             }
-            else {
-            }
+
         }
         libNtve_gf__StoreGameUIVisibleStates(true, lp_players, libNtve_ge_GameUIStoreIndex_GameUI);
         lv_uIFrame = c_syncFrameTypeFirst;
@@ -4000,8 +4218,7 @@ void libNtve_gf_HideGameUI (bool lp_showHide, playergroup lp_players) {
             if (((GameMapIsBlizzard() == true) || (lv_uIFrame != c_syncFrameTypeBattleUI)) && (libNtve_gv__GameUIFrameFiltered[(lv_uIFrame)] == false)) {
                 UISetFrameVisible(lp_players, lv_uIFrame, false);
             }
-            else {
-            }
+
         }
     }
 }
@@ -4117,8 +4334,7 @@ void libNtve_gf_ReplaceUnit (unit lp_unit, string lp_unitType, int lp_options) {
         DataTableSetUnit(false, "%REPLACEDUNIT%", lp_unit);
         return ;
     }
-    else {
-    }
+
     lv_owner = UnitGetOwner(lp_unit);
     lv_position = UnitGetPosition(lp_unit);
     lv_facing = UnitGetFacing(lp_unit);
@@ -4136,13 +4352,11 @@ void libNtve_gf_ReplaceUnit (unit lp_unit, string lp_unitType, int lp_options) {
         if ((UnitGetPropertyFixed(lp_unit, c_unitPropShieldsMax, c_unitPropCurrent) > 0.0)) {
             UnitSetPropertyFixed(lv_newUnit, c_unitPropShieldsPercent, UnitGetPropertyFixed(lp_unit, c_unitPropShieldsPercent, c_unitPropCurrent));
         }
-        else {
-        }
+
         if ((UnitGetPropertyFixed(lp_unit, c_unitPropEnergyMax, c_unitPropCurrent) > 0.0)) {
             UnitSetPropertyFixed(lv_newUnit, c_unitPropEnergyPercent, UnitGetPropertyFixed(lp_unit, c_unitPropEnergyPercent, c_unitPropCurrent));
         }
-        else {
-        }
+
     }
     else if (auto481D3762_val == libNtve_ge_ReplaceUnitOptions_NewUnitssMax) {
         UnitSetPropertyFixed(lv_newUnit, c_unitPropLife, UnitGetPropertyFixed(lv_newUnit, c_unitPropLifeMax, c_unitPropNormal));
@@ -4219,6 +4433,16 @@ void libNtve_gf_PauseUnit (unit lp_unit, bool lp_pauseUnpause) {
     }
 }
 
+void libNtve_gf_SleepUnit (unit lp_unit, bool lp_sleepWakeUp) {
+    // Implementation
+    if ((lp_sleepWakeUp == true)) {
+        UnitSetState(lp_unit, c_unitStateSleeping, true);
+    }
+    else {
+        UnitSetState(lp_unit, c_unitStateSleeping, false);
+    }
+}
+
 void libNtve_gf_ShowHideUnit (unit lp_unit, bool lp_showHide) {
     // Implementation
     if ((lp_showHide == true)) {
@@ -4242,6 +4466,11 @@ void libNtve_gf_ShareVisionofUnit (unit lp_unit, bool lp_shareUnshare, int lp_pl
 bool libNtve_gf_UnitIsPaused (unit lp_u) {
     // Implementation
     return UnitTestState(lp_u, c_unitStatePaused);
+}
+
+bool libNtve_gf_UnitIsSleepiing (unit lp_u) {
+    // Implementation
+    return UnitTestState(lp_u, c_unitStateSleeping);
 }
 
 bool libNtve_gf_UnitIsHidden (unit lp_u) {
@@ -4311,13 +4540,13 @@ int libNtve_gf_UnitGetPropertyResources (unit lp_u, bool lp_current) {
 
 bool libNtve_gf_UnitMoverExists (string lp_unitType, string lp_mover) {
     // Variable Declarations
-    int lv_invalidPlayer;
+    int lv_noPlayer;
 
     // Variable Initialization
-    lv_invalidPlayer = -1;
+    lv_noPlayer = 16;
 
     // Implementation
-    if ((CatalogFieldValueGet(c_gameCatalogUnit, lp_unitType, "Mover", lv_invalidPlayer) == lp_mover)) {
+    if ((CatalogFieldValueGet(c_gameCatalogUnit, lp_unitType, "Mover", lv_noPlayer) == lp_mover)) {
         return true;
     }
     else {
@@ -4331,8 +4560,7 @@ void libNtve_gf_UnitSetVariation (unit lp_unit, string lp_model, int lp_percent,
     if ((StringLength(lp_textures) > 0)) {
         libNtve_gf_SendActorMessageToUnit(lp_unit, MakeMsgTextureSelectBySlot("main", c_textureSlotComponentDefault, ("BestMatch " + lp_textures)));
     }
-    else {
-    }
+
 }
 
 void libNtve_gf_ChangeUnitDamage (unit lp_unit, int lp_takeDeal, int lp_option) {
@@ -4361,8 +4589,7 @@ void libNtve_gf_ChangeUnitDamage (unit lp_unit, int lp_takeDeal, int lp_option) 
     if ((lp_option == libNtve_ge_UnitDamageChangeOption_Full)) {
         return ;
     }
-    else {
-    }
+
     auto01104878_val = lp_takeDeal;
     if (auto01104878_val == libNtve_ge_UnitDamageTakenDealt_Damage_Take) {
         autoAD3C10F2_val = lp_option;
@@ -4404,7 +4631,7 @@ void libNtve_gf_ChangeUnitDamage (unit lp_unit, int lp_takeDeal, int lp_option) 
 }
 
 unitfilter libNtve_gf_ConvertTargetFilterStringToUnitFilter (string lp_targetFilterString) {
-    string auto4C294513_val;
+    string autoE509B1ED_val;
 
     // Variable Declarations
     string lv_newTargetFilterString;
@@ -4432,130 +4659,171 @@ unitfilter libNtve_gf_ConvertTargetFilterStringToUnitFilter (string lp_targetFil
         }
         else {
             if ((lv_wordOfFilterString != "-")) {
-                auto4C294513_val = lv_wordOfFilterString;
-                if (auto4C294513_val == "Air") {
+                autoE509B1ED_val = lv_wordOfFilterString;
+                if (autoE509B1ED_val == "Air") {
                     lv_filterType = c_targetFilterAir;
                 }
-                else if (auto4C294513_val == "Ally") {
+                else if (autoE509B1ED_val == "Ally") {
                     lv_filterType = c_targetFilterAlly;
                 }
-                else if (auto4C294513_val == "Armored") {
+                else if (autoE509B1ED_val == "Armored") {
                     lv_filterType = c_targetFilterArmored;
                 }
-                else if (auto4C294513_val == "Biological") {
+                else if (autoE509B1ED_val == "Benign") {
+                    lv_filterType = c_targetFilterBenign;
+                }
+                else if (autoE509B1ED_val == "Biological") {
                     lv_filterType = c_targetFilterBiological;
                 }
-                else if (auto4C294513_val == "Buried") {
+                else if (autoE509B1ED_val == "Buried") {
                     lv_filterType = c_targetFilterBuried;
                 }
-                else if (auto4C294513_val == "CanHaveEnergy") {
+                else if (autoE509B1ED_val == "CanHaveEnergy") {
                     lv_filterType = c_targetFilterCanHaveEnergy;
                 }
-                else if (auto4C294513_val == "CanHaveShields") {
+                else if (autoE509B1ED_val == "CanHaveShields") {
                     lv_filterType = c_targetFilterCanHaveShields;
                 }
-                else if (auto4C294513_val == "Cloaked") {
+                else if (autoE509B1ED_val == "Cloaked") {
                     lv_filterType = c_targetFilterCloaked;
                 }
-                else if (auto4C294513_val == "Dead") {
+                else if (autoE509B1ED_val == "Dazed") {
+                    lv_filterType = c_targetFilterDazed;
+                }
+                else if (autoE509B1ED_val == "Dead") {
                     lv_filterType = c_targetFilterDead;
                 }
-                else if (auto4C294513_val == "Destructible") {
+                else if (autoE509B1ED_val == "Destructible") {
                     lv_filterType = c_targetFilterDestructible;
                 }
-                else if (auto4C294513_val == "Enemy") {
+                else if (autoE509B1ED_val == "Detector") {
+                    lv_filterType = c_targetFilterDetector;
+                }
+                else if (autoE509B1ED_val == "Enemy") {
                     lv_filterType = c_targetFilterEnemy;
                 }
-                else if (auto4C294513_val == "Ground") {
+                else if (autoE509B1ED_val == "Ground") {
                     lv_filterType = c_targetFilterGround;
                 }
-                else if (auto4C294513_val == "Hallucination") {
+                else if (autoE509B1ED_val == "Hallucination") {
                     lv_filterType = c_targetFilterHallucination;
                 }
-                else if (auto4C294513_val == "HarvestableResource") {
+                else if (autoE509B1ED_val == "HarvestableResource") {
                     lv_filterType = c_targetFilterHarvestableResource;
                 }
-                else if (auto4C294513_val == "HasEnergy") {
+                else if (autoE509B1ED_val == "HasEnergy") {
                     lv_filterType = c_targetFilterHasEnergy;
                 }
-                else if (auto4C294513_val == "HasShields") {
+                else if (autoE509B1ED_val == "HasShields") {
                     lv_filterType = c_targetFilterHasShields;
                 }
-                else if (auto4C294513_val == "Hidden") {
+                else if (autoE509B1ED_val == "Heroic") {
+                    lv_filterType = c_targetFilterHeroic;
+                }
+                else if (autoE509B1ED_val == "Hidden") {
                     lv_filterType = c_targetFilterHidden;
                 }
-                else if (auto4C294513_val == "Hover") {
+                else if (autoE509B1ED_val == "Hover") {
                     lv_filterType = c_targetFilterHover;
                 }
-                else if (auto4C294513_val == "Invulnerable") {
+                else if (autoE509B1ED_val == "Invulnerable") {
                     lv_filterType = c_targetFilterInvulnerable;
                 }
-                else if (auto4C294513_val == "Item") {
+                else if (autoE509B1ED_val == "Item") {
                     lv_filterType = c_targetFilterItem;
                 }
-                else if (auto4C294513_val == "Light") {
+                else if (autoE509B1ED_val == "Light") {
                     lv_filterType = c_targetFilterLight;
                 }
-                else if (auto4C294513_val == "Massive") {
+                else if (autoE509B1ED_val == "MapBoss") {
+                    lv_filterType = c_targetFilterMapBoss;
+                }
+                else if (autoE509B1ED_val == "Massive") {
                     lv_filterType = c_targetFilterMassive;
                 }
-                else if (auto4C294513_val == "Mechanical") {
+                else if (autoE509B1ED_val == "Mechanical") {
                     lv_filterType = c_targetFilterMechanical;
                 }
-                else if (auto4C294513_val == "Missile") {
+                else if (autoE509B1ED_val == "Missile") {
                     lv_filterType = c_targetFilterMissile;
                 }
-                else if (auto4C294513_val == "Neutral") {
+                else if (autoE509B1ED_val == "Neutral") {
                     lv_filterType = c_targetFilterNeutral;
                 }
-                else if (auto4C294513_val == "Passive") {
+                else if (autoE509B1ED_val == "Outer") {
+                    lv_filterType = c_targetFilterOuter;
+                }
+                else if (autoE509B1ED_val == "Passive") {
                     lv_filterType = c_targetFilterPassive;
                 }
-                else if (auto4C294513_val == "Player") {
+                else if (autoE509B1ED_val == "Player") {
                     lv_filterType = c_targetFilterPlayer;
                 }
-                else if (auto4C294513_val == "PreventDefeat") {
+                else if (autoE509B1ED_val == "PreventDefeat") {
                     lv_filterType = c_targetFilterPreventDefeat;
                 }
-                else if (auto4C294513_val == "PreventReveal") {
+                else if (autoE509B1ED_val == "PreventReveal") {
                     lv_filterType = c_targetFilterPreventReveal;
                 }
-                else if (auto4C294513_val == "Psionic") {
+                else if (autoE509B1ED_val == "Psionic") {
                     lv_filterType = c_targetFilterPsionic;
                 }
-                else if (auto4C294513_val == "RawResource") {
+                else if (autoE509B1ED_val == "Radar") {
+                    lv_filterType = c_targetFilterRadar;
+                }
+                else if (autoE509B1ED_val == "RawResource") {
                     lv_filterType = c_targetFilterRawResource;
                 }
-                else if (auto4C294513_val == "Robotic") {
+                else if (autoE509B1ED_val == "Resistant") {
+                    lv_filterType = c_targetFilterResistant;
+                }
+                else if (autoE509B1ED_val == "Revivable") {
+                    lv_filterType = c_targetFilterRevivable;
+                }
+                else if (autoE509B1ED_val == "Robotic") {
                     lv_filterType = c_targetFilterRobotic;
                 }
-                else if (auto4C294513_val == "Self") {
+                else if (autoE509B1ED_val == "Self") {
                     lv_filterType = c_targetFilterSelf;
                 }
-                else if (auto4C294513_val == "Stasis") {
+                else if (autoE509B1ED_val == "Silenced") {
+                    lv_filterType = c_targetFilterSilenced;
+                }
+                else if (autoE509B1ED_val == "Stasis") {
                     lv_filterType = c_targetFilterStasis;
                 }
-                else if (auto4C294513_val == "Structure") {
+                else if (autoE509B1ED_val == "Structure") {
                     lv_filterType = c_targetFilterStructure;
                 }
-                else if (auto4C294513_val == "Uncommandable") {
+                else if (autoE509B1ED_val == "Stunned") {
+                    lv_filterType = c_targetFilterStunned;
+                }
+                else if (autoE509B1ED_val == "Summoned") {
+                    lv_filterType = c_targetFilterSummoned;
+                }
+                else if (autoE509B1ED_val == "Uncommandable") {
                     lv_filterType = c_targetFilterUncommandable;
                 }
-                else if (auto4C294513_val == "UnderConstruction") {
+                else if (autoE509B1ED_val == "UnderConstruction") {
                     lv_filterType = c_targetFilterUnderConstruction;
                 }
-                else if (auto4C294513_val == "Visible") {
+                else if (autoE509B1ED_val == "Unstoppable") {
+                    lv_filterType = c_targetFilterUnstoppable;
+                }
+                else if (autoE509B1ED_val == "User1") {
+                    lv_filterType = c_targetFilterUser1;
+                }
+                else if (autoE509B1ED_val == "Visible") {
                     lv_filterType = c_targetFilterVisible;
                 }
-                else if (auto4C294513_val == "Worker") {
+                else if (autoE509B1ED_val == "Worker") {
                     lv_filterType = c_targetFilterWorker;
                 }
                 else {
                 }
                 UnitFilterSetState(lv_unitFilter, lv_filterType, lv_filterState);
             }
-            else {
-            }
+
         }
         lv_wordIndex += 1;
         lv_wordOfFilterString = StringWord(lv_newTargetFilterString, lv_wordIndex);
@@ -4566,6 +4834,16 @@ unitfilter libNtve_gf_ConvertTargetFilterStringToUnitFilter (string lp_targetFil
 bool libNtve_gf_UnitIsInsideTransport (unit lp_u) {
     // Implementation
     return UnitTestState(lp_u, c_unitStateInsideTransport);
+}
+
+bool libNtve_gf_UnitIsInsideUnitTransport (unit lp_u) {
+    // Implementation
+    return UnitTestState(lp_u, c_unitStateInsideUnitTransport);
+}
+
+bool libNtve_gf_UnitIsInsidePlayerTransport (unit lp_u) {
+    // Implementation
+    return UnitTestState(lp_u, c_unitStateInsidePlayerTransport);
 }
 
 abilcmd libNtve_gf_EventItemAbilityOrUnitAbility () {
@@ -4587,12 +4865,32 @@ abilcmd libNtve_gf_EventItemAbilityOrUnitAbility () {
         if (((lv_classId == c_classIdCAbilEffectTarget) || (lv_classId == c_classIdCAbilEffectInstant))) {
             lv_abilUsed = StringToAbilCmd(CatalogFieldValueGet(c_gameCatalogItem, lv_itemType, "Abil", UnitGetOwner(lv_otherUnit)));
         }
-        else {
-        }
+
+    }
+
+    return lv_abilUsed;
+}
+
+void libNtve_gf_SetBehaviorCount (unit lp_inUnit, string lp_inBehavior, unit lp_inCaster, int lp_inCount) {
+    // Variable Declarations
+    int lv_count;
+    int lv_delta;
+
+    // Variable Initialization
+    lv_count = UnitBehaviorCount(lp_inUnit, lp_inBehavior);
+    lv_delta = AbsI((lp_inCount - lv_count));
+
+    // Implementation
+    if ((lv_delta == 0)) {
+        return ;
+    }
+
+    if ((lp_inCount > lv_count)) {
+        UnitBehaviorAdd(lp_inUnit, lp_inBehavior, lp_inCaster, lv_delta);
     }
     else {
+        UnitBehaviorRemove(lp_inUnit, lp_inBehavior, lv_delta);
     }
-    return lv_abilUsed;
 }
 
 bool libNtve_gf_UnitCanAttackUnit (unit lp_u, unit lp_s) {
@@ -4615,8 +4913,7 @@ bool libNtve_gf_UnitCanAttackUnit (unit lp_u, unit lp_s) {
         if ((UnitWeaponIsEnabled(lp_u, lv_weapon) == true) && (UnitFilterMatch(lp_s, UnitGetOwner(lp_u), lv_weaponFilter) == true)) {
             return true;
         }
-        else {
-        }
+
     }
     return false;
 }
@@ -4737,13 +5034,11 @@ unitgroup libNtve_gf_UnitsInRegionWithAllianceToPlayerMatchingCondition (string 
         if ((lp_type2 != "") && (lp_type2 != lp_type)) {
             UnitGroupAddUnitGroup(lv_resultGroup, UnitGroup(lp_type2, lp_player, lp_reg, UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
         }
-        else {
-        }
+
         if ((lp_type22 != "") && (lp_type22 != lp_type) && (lp_type22 != lp_type2)) {
             UnitGroupAddUnitGroup(lv_resultGroup, UnitGroup(lp_type22, lp_player, lp_reg, UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0));
         }
-        else {
-        }
+
     }
     else {
         lv_resultGroup = UnitGroupAlliance(lp_player, lp_alliance, lp_reg, lp_unitFilter, 0);
@@ -4765,12 +5060,10 @@ unitgroup libNtve_gf_UnitsInRegionWithAllianceToPlayerMatchingCondition (string 
                 if ((lv_matched == false)) {
                     UnitGroupRemove(lv_resultGroup, lv_indexUnit);
                 }
-                else {
-                }
+
             }
         }
-        else {
-        }
+
     }
     if ((lp_count != 0) && (lp_count >= 0)) {
         while (true) {
@@ -4783,8 +5076,7 @@ unitgroup libNtve_gf_UnitsInRegionWithAllianceToPlayerMatchingCondition (string 
             }
         }
     }
-    else {
-    }
+
     return lv_resultGroup;
 }
 
@@ -4807,8 +5099,7 @@ unitgroup libNtve_gf_UnitsInUnitGroupWithCustomValue (unitgroup lp_group, int lp
         if ((UnitGetCustomValue(lv_indexUnit, lp_index) == lp_value)) {
             UnitGroupAdd(lv_resultGroup, lv_indexUnit);
         }
-        else {
-        }
+
     }
     return lv_resultGroup;
 }
@@ -4879,8 +5170,7 @@ unit libNtve_gf_ClosestUnitToPoint (point lp_point, unitgroup lp_group) {
             lv_distanceShortest = lv_distance;
             lv_closestUnit = lv_pickedUnit;
         }
-        else {
-        }
+
     }
     return lv_closestUnit;
 }
@@ -4919,6 +5209,30 @@ point libNtve_gf_CenterOfUnitGroup (unitgroup lp_unitGroup) {
     }
 }
 
+int libNtve_gf_UserDataInstanceGetIndex (string lp_userType, string lp_instance) {
+    int autoD00D9D69_ae;
+    int autoD00D9D69_ai;
+
+    // Variable Declarations
+    int lv_index;
+    int lv_count;
+
+    // Variable Initialization
+    lv_count = UserDataInstanceCount(lp_userType);
+
+    // Implementation
+    autoD00D9D69_ae = lv_count;
+    autoD00D9D69_ai = 1;
+    lv_index = 1;
+    for ( ; ( (autoD00D9D69_ai >= 0 && lv_index <= autoD00D9D69_ae) || (autoD00D9D69_ai <= 0 && lv_index >= autoD00D9D69_ae) ) ; lv_index += autoD00D9D69_ai ) {
+        if ((UserDataInstance(lp_userType, lv_index) == lp_instance)) {
+            return lv_index;
+        }
+
+    }
+    return -1;
+}
+
 void libNtve_gf_ShowHidePlacementModels (bool lp_show) {
     // Implementation
     if ((lp_show == true)) {
@@ -4955,8 +5269,7 @@ bool libNtve_gt_ScreenButtonClicked_Func (bool testConds, bool runActions) {
             TriggerExecute(libNtve_gv_screenButtonCallbacks[lv_index], true, false);
             return true;
         }
-        else {
-        }
+
     }
     return true;
 }
@@ -4997,23 +5310,20 @@ bool libNtve_gt_FlashScreenButton_Func (bool testConds, bool runActions) {
     if (((lv_flashTime <= 0.0) || (lv_flashTimeHalf <= 0.0))) {
         return true;
     }
-    else {
-    }
+
     while (!((libNtve_gv_screenButtonsFlashStopping[lv_iD] == false))) {
         Wait(0.125, c_timeReal);
     }
     if (((libNtve_gf_ScreenButtonDialog(lv_iD) == c_invalidDialogId) || (libNtve_gv_screenButtonsFlashing[lv_iD] == true))) {
         return true;
     }
-    else {
-    }
+
     libNtve_gv_screenButtonsFlashing[lv_iD] = true;
     while (true) {
         if (((libNtve_gf_ScreenButtonDialog(lv_iD) == c_invalidDialogId) || (libNtve_gv_screenButtonsFlashing[lv_iD] == false) || (libNtve_gv_screenButtonsFlashStopping[lv_iD] == true))) {
             break;
         }
-        else {
-        }
+
         libNtve_gf_SetDialogItemImageType(libNtve_gf_ScreenButton(lv_iD), libNtve_gv_screenButtonsFlashingBorderType[lv_iD], PlayerGroupAll());
         libNtve_gf_SetDialogItemImage(libNtve_gf_ScreenButton(lv_iD), libNtve_gv_screenButtonsFlashingBorderImage[lv_iD], PlayerGroupAll());
         libNtve_gf_SetDialogItemImage2(libNtve_gf_ScreenButton(lv_iD), libNtve_gv_screenButtonsFlashingHoverImage[lv_iD], PlayerGroupAll());
@@ -5021,8 +5331,7 @@ bool libNtve_gt_FlashScreenButton_Func (bool testConds, bool runActions) {
         if (((libNtve_gf_ScreenButtonDialog(lv_iD) == c_invalidDialogId) || (libNtve_gv_screenButtonsFlashing[lv_iD] == false) || (libNtve_gv_screenButtonsFlashStopping[lv_iD] == true))) {
             break;
         }
-        else {
-        }
+
         libNtve_gf_SetDialogItemImageType(libNtve_gf_ScreenButton(lv_iD), libNtve_gv_screenButtonsBorderType[lv_iD], PlayerGroupAll());
         libNtve_gf_SetDialogItemImage(libNtve_gf_ScreenButton(lv_iD), libNtve_gv_screenButtonsBorderImage[lv_iD], PlayerGroupAll());
         libNtve_gf_SetDialogItemImage2(libNtve_gf_ScreenButton(lv_iD), libNtve_gv_screenButtonsHoverImage[lv_iD], PlayerGroupAll());
@@ -5066,8 +5375,7 @@ bool libNtve_gt_PulseScreenImage_Func (bool testConds, bool runActions) {
     if (((lv_period <= 0.0) || (libNtve_gv_screenImageDialogs[lv_screenImageID] == c_invalidDialogId) || (libNtve_gv_screenImagePulsing[lv_screenImageID] == true))) {
         return true;
     }
-    else {
-    }
+
     libNtve_gv_screenImagePulsing[lv_screenImageID] = true;
     lv_halfPeriod = (lv_period / 2.0);
     libNtve_gf_HideScreenImage(true, lv_screenImageID);
@@ -5078,15 +5386,13 @@ bool libNtve_gt_PulseScreenImage_Func (bool testConds, bool runActions) {
         if ((libNtve_gv_screenImagePulsing[lv_screenImageID] == false)) {
             return true;
         }
-        else {
-        }
+
         DialogControlFadeTransparency(libNtve_gv_screenImageDialogImages[lv_screenImageID], PlayerGroupAll(), lv_halfPeriod, lv_transparency1);
         Wait(lv_halfPeriod, c_timeGame);
         if ((libNtve_gv_screenImagePulsing[lv_screenImageID] == false)) {
             return true;
         }
-        else {
-        }
+
     }
     return true;
 }
@@ -5121,19 +5427,16 @@ bool libNtve_gt__BB_BossHPChanged_Func (bool testConds, bool runActions) {
         if ((libNtve_gv__BB_Boss[lv_index] == EventUnit())) {
             libNtve_gf_RefreshBossBar(lv_index);
         }
-        else {
-        }
+
         if ((libNtve_gv__BB_Boss[lv_index] != null)) {
             lv_bossSet = true;
         }
-        else {
-        }
+
     }
     if ((lv_bossSet == false)) {
         TriggerEnable(TriggerGetCurrent(), false);
     }
-    else {
-    }
+
     return true;
 }
 

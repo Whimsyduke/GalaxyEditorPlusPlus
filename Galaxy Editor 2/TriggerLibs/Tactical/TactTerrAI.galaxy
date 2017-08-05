@@ -1720,6 +1720,7 @@ void AIThinkLiberator (int player, unit aiUnit, unitgroup scanGroup) {
     int onGroundCount;
     unitgroup targetGroupGround;
     unitgroup targetGroupAir;
+    unit maybeChangeling;
     point bestPoint;
     region enemyRegion;
     unitfilter filter;
@@ -1756,7 +1757,18 @@ void AIThinkLiberator (int player, unit aiUnit, unitgroup scanGroup) {
     enemyRegion = RegionCircle(UnitGetPosition(aiUnit), c_liberatorMaxTargetRange);
     targetGroupGround = UnitGroupAlliance(player, c_unitAllianceEnemy, enemyRegion, filter, c_noMaxCount);
     onGroundCount = UnitGroupCount(targetGroupGround, c_unitCountAll);
-
+    
+    if (!AIGetDifficulty(player, c_diffSpotChangelings)) {
+        while (onGroundCount > 0) {
+            maybeChangeling = UnitGroupUnit(targetGroupGround, onGroundCount);
+            if (UnitTestState(maybeChangeling, c_unitStateIsChangeling)) {
+                UnitGroupRemove(targetGroupGround, maybeChangeling);
+            }
+            onGroundCount = onGroundCount - 1;
+        }
+    }
+    
+    onGroundCount = UnitGroupCount(targetGroupGround, c_unitCountAll);
     if (onGroundCount == 0 && inAirCount == 0) {
         // no targets nearby
         if (UnitOrderCount(aiUnit) != 0) {

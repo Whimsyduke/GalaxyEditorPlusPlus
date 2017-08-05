@@ -11,21 +11,3 @@
 //  EClassIdCSkin
 const int c_classIdCSkin = 0;
 const string c_classIdCSkinName = "CSkin";
-
-//  EVariationContext
-const int c_variationContextAll = 0;
-const int c_variationContextGame = 1;
-const int c_variationContextHeroCutscene = 2;
-const string c_variationContextAllName = "All";
-const string c_variationContextGameName = "Game";
-const string c_variationContextHeroCutsceneName = "HeroCutscene";
-
-//  ESkinRarity
-const int c_skinRarityNormal = 0;
-const int c_skinRarityEpic = 1;
-const int c_skinRarityMaster = 2;
-const int c_skinRarityLegendary = 3;
-const string c_skinRarityNormalName = "Normal";
-const string c_skinRarityEpicName = "Epic";
-const string c_skinRarityMasterName = "Master";
-const string c_skinRarityLegendaryName = "Legendary";

@@ -21,3 +21,11 @@ const string c_commanderTalentTypePassiveName = "Passive";
 const string c_commanderTalentTypeAbilityName = "Ability";
 const string c_commanderTalentTypeBundleName = "Bundle";
 const string c_commanderTalentTypeUnitName = "Unit";
+
+//  ECommanderMasteryTalentType
+const int c_commanderMasteryTalentTypeNone = 0;
+const int c_commanderMasteryTalentTypeSeconds = 1;
+const int c_commanderMasteryTalentTypePercent = 2;
+const string c_commanderMasteryTalentTypeNoneName = "None";
+const string c_commanderMasteryTalentTypeSecondsName = "Seconds";
+const string c_commanderMasteryTalentTypePercentName = "Percent";

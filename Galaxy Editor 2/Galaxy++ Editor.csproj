@@ -452,9 +452,6 @@
     </Compile>
     <Content Include="Resources\Comment.png" />
     <Content Include="Resources\Uncomment.png" />
-    <Content Include="TriggerLibs\LibraryList.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <EmbeddedResource Include="AboutForm.en.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -1201,345 +1198,129 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Changelog.txt" />
-    <None Include="TriggerLibs\AI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\BaseAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\BuildAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\CampaignAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Computer.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\DebugAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Abil.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Achievement.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\AchievementTerm.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Actor.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ActorSupport.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Alert.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ArmyCategory.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ArmyUnit.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ArmyUpgrade.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Artifact.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ArtifactSlot.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\AttachMethod.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\BankCondition.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Beam.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Behavior.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Boost.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Bundle.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Button.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Camera.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Campaign.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Character.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Cliff.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\CliffMesh.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Commander.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Config.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Conversation.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ConversationState.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Cursor.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\DSP.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Effect.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Error.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Footprint.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\FoW.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Game.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\GameData.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\GameDataAllNatives.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\GameUI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Herd.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\HerdNode.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Hero.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\HeroAbil.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\HeroStat.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Item.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ItemClass.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ItemContainer.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Kinetic.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\LensFlareSet.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Light.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Location.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Loot.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Map.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Model.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Mount.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Mover.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Objective.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\PhysicsMaterial.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Ping.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Preload.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Race.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Requirement.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\RequirementNode.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Reverb.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Reward.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ScoreResult.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\ScoreValue.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Shape.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Skin.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Sound.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\SoundExclusivity.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\SoundMixSnapshot.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Soundtrack.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\TacCooldown.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Tactical.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Talent.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\TalentProfile.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\TargetFind.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\TargetSort.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Terrain.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\TerrainObject.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\TerrainTex.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Texture.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Tile.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Trophy.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Turret.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Unit.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Upgrade.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\User.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Validator.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\VoiceOver.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Water.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\GameData\Weapon.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\MeleeAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\MeleeBuildAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\MeleeHighAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\MeleeLowAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\MeleeWaveAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\NativeLib.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\NativeLib.TriggerLib">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\NativeLib_h.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\natives.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\RequirementsAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\SharedAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Tactical\TactCampAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Tactical\TacticalAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Tactical\TactProtAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Tactical\TactTerrAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TriggerLibs\Tactical\TactZergAI.galaxy">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="TriggerLibs\Abil.galaxy" />
+    <None Include="TriggerLibs\Achievement.galaxy" />
+    <None Include="TriggerLibs\AchievementTerm.galaxy" />
+    <None Include="TriggerLibs\Actor.galaxy" />
+    <None Include="TriggerLibs\ActorSupport.galaxy" />
+    <None Include="TriggerLibs\AI.galaxy" />
+    <None Include="TriggerLibs\Alert.galaxy" />
+    <None Include="TriggerLibs\ArmyCategory.galaxy" />
+    <None Include="TriggerLibs\ArmyUnit.galaxy" />
+    <None Include="TriggerLibs\ArmyUpgrade.galaxy" />
+    <None Include="TriggerLibs\Artifact.galaxy" />
+    <None Include="TriggerLibs\ArtifactSlot.galaxy" />
+    <None Include="TriggerLibs\AttachMethod.galaxy" />
+    <None Include="TriggerLibs\BankCondition.galaxy" />
+    <None Include="TriggerLibs\BaseAI.galaxy" />
+    <None Include="TriggerLibs\Beam.galaxy" />
+    <None Include="TriggerLibs\Behavior.galaxy" />
+    <None Include="TriggerLibs\Boost.galaxy" />
+    <None Include="TriggerLibs\BuildAI.galaxy" />
+    <None Include="TriggerLibs\Bundle.galaxy" />
+    <None Include="TriggerLibs\Button.galaxy" />
+    <None Include="TriggerLibs\Camera.galaxy" />
+    <None Include="TriggerLibs\Campaign.galaxy" />
+    <None Include="TriggerLibs\CampaignAI.galaxy" />
+    <None Include="TriggerLibs\Character.galaxy" />
+    <None Include="TriggerLibs\Cliff.galaxy" />
+    <None Include="TriggerLibs\CliffMesh.galaxy" />
+    <None Include="TriggerLibs\ColorStyle.galaxy" />
+    <None Include="TriggerLibs\Commander.galaxy" />
+    <None Include="TriggerLibs\Computer.galaxy" />
+    <None Include="TriggerLibs\Config.galaxy" />
+    <None Include="TriggerLibs\ConsoleSkin.galaxy" />
+    <None Include="TriggerLibs\Conversation.galaxy" />
+    <None Include="TriggerLibs\ConversationState.galaxy" />
+    <None Include="TriggerLibs\Cursor.galaxy" />
+    <None Include="TriggerLibs\DebugAI.galaxy" />
+    <None Include="TriggerLibs\DecalPack.galaxy" />
+    <None Include="TriggerLibs\DSP.galaxy" />
+    <None Include="TriggerLibs\Effect.galaxy" />
+    <None Include="TriggerLibs\Emoticon.galaxy" />
+    <None Include="TriggerLibs\EmoticonPack.galaxy" />
+    <None Include="TriggerLibs\Error.galaxy" />
+    <None Include="TriggerLibs\Footprint.galaxy" />
+    <None Include="TriggerLibs\FoW.galaxy" />
+    <None Include="TriggerLibs\Game.galaxy" />
+    <None Include="TriggerLibs\GameData.galaxy" />
+    <None Include="TriggerLibs\GameDataAllNatives.galaxy" />
+    <None Include="TriggerLibs\GameUI.galaxy" />
+    <None Include="TriggerLibs\Herd.galaxy" />
+    <None Include="TriggerLibs\HerdNode.galaxy" />
+    <None Include="TriggerLibs\Hero.galaxy" />
+    <None Include="TriggerLibs\HeroAbil.galaxy" />
+    <None Include="TriggerLibs\HeroStat.galaxy" />
+    <None Include="TriggerLibs\Item.galaxy" />
+    <None Include="TriggerLibs\ItemClass.galaxy" />
+    <None Include="TriggerLibs\ItemContainer.galaxy" />
+    <None Include="TriggerLibs\Kinetic.galaxy" />
+    <None Include="TriggerLibs\LensFlareSet.galaxy" />
+    <None Include="TriggerLibs\Light.galaxy" />
+    <None Include="TriggerLibs\Location.galaxy" />
+    <None Include="TriggerLibs\Loot.galaxy" />
+    <None Include="TriggerLibs\Map.galaxy" />
+    <None Include="TriggerLibs\MeleeAI.galaxy" />
+    <None Include="TriggerLibs\MeleeBuildAI.galaxy" />
+    <None Include="TriggerLibs\MeleeHighAI.galaxy" />
+    <None Include="TriggerLibs\MeleeLowAI.galaxy" />
+    <None Include="TriggerLibs\MeleeWaveAI.galaxy" />
+    <None Include="TriggerLibs\Model.galaxy" />
+    <None Include="TriggerLibs\Mount.galaxy" />
+    <None Include="TriggerLibs\Mover.galaxy" />
+    <None Include="TriggerLibs\NativeLib.galaxy" />
+    <None Include="TriggerLibs\NativeLib_h.galaxy" />
+    <None Include="TriggerLibs\natives.galaxy" />
+    <None Include="TriggerLibs\Objective.galaxy" />
+    <None Include="TriggerLibs\PhysicsMaterial.galaxy" />
+    <None Include="TriggerLibs\Ping.galaxy" />
+    <None Include="TriggerLibs\PortraitPack.galaxy" />
+    <None Include="TriggerLibs\Preload.galaxy" />
+    <None Include="TriggerLibs\Race.galaxy" />
+    <None Include="TriggerLibs\Requirement.galaxy" />
+    <None Include="TriggerLibs\RequirementNode.galaxy" />
+    <None Include="TriggerLibs\RequirementsAI.galaxy" />
+    <None Include="TriggerLibs\Reverb.galaxy" />
+    <None Include="TriggerLibs\Reward.galaxy" />
+    <None Include="TriggerLibs\ScoreResult.galaxy" />
+    <None Include="TriggerLibs\ScoreValue.galaxy" />
+    <None Include="TriggerLibs\Shape.galaxy" />
+    <None Include="TriggerLibs\SharedAI.galaxy" />
+    <None Include="TriggerLibs\Skin.galaxy" />
+    <None Include="TriggerLibs\SkinPack.galaxy" />
+    <None Include="TriggerLibs\Sound.galaxy" />
+    <None Include="TriggerLibs\SoundExclusivity.galaxy" />
+    <None Include="TriggerLibs\SoundMixSnapshot.galaxy" />
+    <None Include="TriggerLibs\Soundtrack.galaxy" />
+    <None Include="TriggerLibs\SprayPack.galaxy" />
+    <None Include="TriggerLibs\TacCooldown.galaxy" />
+    <None Include="TriggerLibs\TactCampAI.galaxy" />
+    <None Include="TriggerLibs\Tactical.galaxy" />
+    <None Include="TriggerLibs\TacticalAI.galaxy" />
+    <None Include="TriggerLibs\TactProtAI.galaxy" />
+    <None Include="TriggerLibs\TactTerrAI.galaxy" />
+    <None Include="TriggerLibs\TactZergAI.galaxy" />
+    <None Include="TriggerLibs\Talent.galaxy" />
+    <None Include="TriggerLibs\TalentProfile.galaxy" />
+    <None Include="TriggerLibs\TargetFind.galaxy" />
+    <None Include="TriggerLibs\TargetSort.galaxy" />
+    <None Include="TriggerLibs\Terrain.galaxy" />
+    <None Include="TriggerLibs\TerrainObject.galaxy" />
+    <None Include="TriggerLibs\TerrainTex.galaxy" />
+    <None Include="TriggerLibs\Texture.galaxy" />
+    <None Include="TriggerLibs\TextureSheet.galaxy" />
+    <None Include="TriggerLibs\Tile.galaxy" />
+    <None Include="TriggerLibs\Trophy.galaxy" />
+    <None Include="TriggerLibs\Turret.galaxy" />
+    <None Include="TriggerLibs\Unit.galaxy" />
+    <None Include="TriggerLibs\Upgrade.galaxy" />
+    <None Include="TriggerLibs\User.galaxy" />
+    <None Include="TriggerLibs\Validator.galaxy" />
+    <None Include="TriggerLibs\VoiceOver.galaxy" />
+    <None Include="TriggerLibs\VoicePack.galaxy" />
+    <None Include="TriggerLibs\WarChest.galaxy" />
+    <None Include="TriggerLibs\Water.galaxy" />
+    <None Include="TriggerLibs\Weapon.galaxy" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
@@ -1567,6 +1348,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
