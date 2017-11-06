@@ -108,7 +108,8 @@ namespace Galaxy_Editor_2
             foreach (FileInfo file in galaxyFiles)
             {
                 string fileContent = File.ReadAllText(file.FullName, Encoding.ASCII);
-                ParseFile(fileContent);
+                //ParseFile(fileContent);
+                ParseFile(CleanLineComments(fileContent));
             }
             ////Console.WriteLine("Sc2 Path:");
             ////Console.WriteLine(Options.General.SC2Exe.FullName);
@@ -158,6 +159,25 @@ namespace Galaxy_Editor_2
         //        ParseFile(fileContent);
         //    }
         //}
+
+        // Removes all line comments from the input string.
+        private string CleanLineComments(string input)
+        {
+            string lineComments = @"//(.*?)\r?\n";
+            string strings = @"""((\\[^\n]|[^""\n])*)""";
+
+            return Regex.Replace(input,
+                lineComments + "|" + strings,
+                me =>
+                {
+                    if (me.Value.StartsWith("//"))
+                        return Environment.NewLine;
+                    // Keep the literal strings
+                    return me.Value;
+                },
+                RegexOptions.Singleline);
+        }
+
         private void ParseFile(string fileContents)
         {
             ParseFunctions(fileContents);

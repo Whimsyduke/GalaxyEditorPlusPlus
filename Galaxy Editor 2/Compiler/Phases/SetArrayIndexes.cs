@@ -52,7 +52,9 @@ namespace Galaxy_Editor_2.Compiler.Phases
                 base.CaseAArrayTempType(node);
                 if (value <= 0)
                 {
-                    errors.Add(new ErrorCollection.Error(node.GetToken(), "Array dimention must be greater than 0."));
+                    if (value < 0)
+                        errors.Add(new ErrorCollection.Error(node.GetToken(), "Array dimention must be greater than 0."));
+                    value = 1;
                 }
                 node.SetIntDim(new TIntegerLiteral(value.ToString()));
             }

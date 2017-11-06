@@ -3980,7 +3980,8 @@ namespace Galaxy_Editor_2
            }
            this.chineseSimpleToolStripMenuItem.Checked = true;
            ApplyResource();
-       }
+           RebuildProjectView();
+        }
 
        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
        {
@@ -3994,7 +3995,8 @@ namespace Galaxy_Editor_2
            }
            this.englishToolStripMenuItem.Checked = true;
            ApplyResource();
-       }
+           RebuildProjectView();
+        }
 
        public AboutForm F_AboutForm;
        public SearcDefinitionsForm F_SearcDefinitionsForm;
