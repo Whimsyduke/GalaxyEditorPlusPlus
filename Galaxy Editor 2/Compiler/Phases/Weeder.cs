@@ -7,7 +7,6 @@ using System.Text;
 using Galaxy_Editor_2.Compiler.Generated.analysis;
 using Galaxy_Editor_2.Compiler.Generated.node;
 using Galaxy_Editor_2.Compiler.Generated.parser;
-using System.Globalization;
 using System.Threading;
 using System.Resources;
 

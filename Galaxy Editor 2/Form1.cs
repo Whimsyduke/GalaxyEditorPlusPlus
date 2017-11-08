@@ -1,4 +1,5 @@
-﻿using System;
+﻿//#define NO_OUTPUT_FILE
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,7 @@ using SharedClasses;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 using System.Globalization;
 using System.Resources;
+
 
 namespace Galaxy_Editor_2
 {
@@ -2115,6 +2117,7 @@ namespace Galaxy_Editor_2
             //Save all first
             SaveAll();
            /* foreach (OpenFileData openFile in openFiles)
+            * 
             {
                 Save(openFile, true);
             }
@@ -2122,6 +2125,7 @@ namespace Galaxy_Editor_2
 
             UploadToMap();*/
 
+#if NO_OUTPUT_FILE
             //Clear output directory
             //Close open galaxy files
             for (int i = 0; i < openFiles.Count; i++)
@@ -2147,7 +2151,7 @@ namespace Galaxy_Editor_2
                 info.Delete();
             }*/
 
-
+#endif
             compiler.Compile();
             
             RebuildProjectView();
@@ -2656,7 +2660,7 @@ namespace Galaxy_Editor_2
                 return;
             }
 
-
+#if NO_OUTPUT_FILE
             openProjectOutputDir.FixConflicts(".galaxy", "BankList.xml");
             RebuildProjectView();
             if (!copyOutputToMap && !saveCompiledMap)
@@ -2995,7 +2999,7 @@ namespace Galaxy_Editor_2
                     Process.Start(sc2Exe.FullName, args);
                 }
             }
-            
+#endif
         }
 
         public static void EnsurePathCreated(DirectoryInfo dir)

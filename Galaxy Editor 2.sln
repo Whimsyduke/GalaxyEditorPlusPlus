@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedClasses", "SharedClasses\SharedClasses.csproj", "{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy++ Editor", "Galaxy Editor 2\Galaxy++ Editor.csproj", "{F280F7B2-DD21-459A-8BDC-ED3CD43855FE}"
 EndProject
 Global
@@ -17,17 +15,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Release|x86.ActiveCfg = Release|Any CPU
-		{2C2CAB7D-206B-444E-9700-F7A598BAAFF6}.Release|x86.Build.0 = Release|Any CPU
 		{F280F7B2-DD21-459A-8BDC-ED3CD43855FE}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{F280F7B2-DD21-459A-8BDC-ED3CD43855FE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{F280F7B2-DD21-459A-8BDC-ED3CD43855FE}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -41,5 +28,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E2CC730-98DD-4ADB-8B39-4BE9CBA28A8C}
 	EndGlobalSection
 EndGlobal

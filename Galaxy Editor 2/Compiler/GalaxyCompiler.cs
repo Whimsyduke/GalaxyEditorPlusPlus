@@ -654,6 +654,7 @@ namespace Galaxy_Editor_2.Compiler
                     reader.Close();
                     continue;
 
+#if NO_OUTPUT_FILE
                     Parser parser = new Parser(new Lexer(reader));
                     try
                     {
@@ -777,7 +778,6 @@ namespace Galaxy_Editor_2.Compiler
                         sourceNode.SetName(new TIdentifier(filename));
                         root.GetSourceFiles().Add(start.GetPSourceFile());
 
-
                     }
                     catch (ParserException err)
                     {
@@ -787,7 +787,9 @@ namespace Galaxy_Editor_2.Compiler
                         errors.Add(new ErrorCollection.Error(err.Token, filename, errMsg));
                     }
                     reader.Close();
+#endif
                 }
+#if NO_OUTPUT_FILE
                 //Parse project dialogs
                 foreach (
                     DialogItem dialogItem in Form1.GetDialogsFiles(ProjectProperties.CurrentProjectPropperties.SrcFolder))
@@ -950,7 +952,8 @@ namespace Galaxy_Editor_2.Compiler
                         reader.Close();
                     }
                 }
-               // Preprocessor.Parse(sources, errors);
+#endif
+                // Preprocessor.Parse(sources, errors);
                 for (int i = 0; i < fileNames.Count; i++)
                 {
                     string filename = fileNames[i];
@@ -1099,6 +1102,7 @@ namespace Galaxy_Editor_2.Compiler
 
 
 
+#if NO_OUTPUT_FILE
                 //Load libraries
                 foreach (Library lib in ProjectProperties.CurrentProjectPropperties.Libraries)
                 {
@@ -1239,7 +1243,7 @@ namespace Galaxy_Editor_2.Compiler
                         }
                     }
                 }
-
+#endif
                 string rootFileName = "";
                 DirectoryInfo outputDir = ProjectDir.CreateSubdirectory("output");
                 try
